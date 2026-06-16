@@ -11,6 +11,11 @@ const HASH_DURATION = 1.1;
 // Time to wait after landing on home before scrolling, so the page-transition
 // curtain has revealed and the smooth scroll is actually visible.
 const REVEAL_DELAY = 1000;
+// When leaving another route, smooth-scroll the current page to the top first
+// (duration in seconds), then route after it finishes — matching how non-hash
+// links navigate, so the scroll up is smooth and not an instant jump.
+const LEAVE_DURATION = 0.7;
+const LEAVE_DELAY = LEAVE_DURATION * 1000;
 
 /** True if `to` is an in-page hash link (e.g. "/#solutions"). */
 const isHashLink = (to: string): boolean => HASH_LINK.test(to);
@@ -23,9 +28,10 @@ const scrollToSection = (lenis: Lenis | null, id: string) => {
  * Smooth-scrolls a hash link with Lenis.
  *
  * - On home: scrolls to the section right away.
- * - Elsewhere: routes to home first (without the hash, so the browser never
- *   does its native instant jump), then smooth-scrolls to the section once the
- *   home route has mounted and the transition curtain has cleared.
+ * - Elsewhere: smooth-scrolls the current page to the top first, then routes to
+ *   home (without the hash, so the browser never does its native instant jump),
+ *   then smooth-scrolls to the section once the home route has mounted and the
+ *   transition curtain has cleared.
  *
  * Returns `true` when `to` was a hash link and was handled, so callers can fall
  * back to normal routing otherwise.
@@ -53,8 +59,13 @@ const navigateToHash = (
   };
 
   router.events.on('routeChangeComplete', handleComplete);
-  router.push('/');
-  onDone?.();
+
+  // Smooth-scroll up first, then route once the scroll has finished.
+  lenis?.scrollTo(0, { duration: LEAVE_DURATION });
+  setTimeout(() => {
+    router.push('/');
+    onDone?.();
+  }, LEAVE_DELAY);
   return true;
 };
 
