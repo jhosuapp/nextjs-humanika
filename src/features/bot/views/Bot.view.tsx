@@ -18,11 +18,8 @@ const BotView = ({ t }: Props): JSX.Element => {
   const router = useRouter();
   const locale = router.locale ?? 'es';
 
-  const startWord = (t('wakeWords.start') as string) ?? 'hola';
-  const interruptWord = (t('wakeWords.interrupt') as string) ?? 'pregunta';
-
   const { permission, request } = useMicPermission();
-  const engine = useBotEngine({ locale, startWord, interruptWord });
+  const engine = useBotEngine({ locale });
 
   return (
     <MainContent className={styles.shell}>

@@ -18,7 +18,7 @@ const InactivityWarning = ({ t, visible, onDismiss }: Props): JSX.Element => (
   <AnimatePresence>
     {visible ? (
       <motion.div
-        className={styles.toast}
+        className={`${styles.toast} gl-dropshadow`}
         initial={{ opacity: 0, y: -16 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -8 }}
@@ -27,7 +27,7 @@ const InactivityWarning = ({ t, visible, onDismiss }: Props): JSX.Element => (
         aria-live="polite"
       >
         <FontAwesomeIcon icon={faClock} className={styles.icon} aria-hidden="true" />
-        <span className={styles.text}>{t('inactivity.warning')}</span>
+        <span className={`${styles.text} gl-label`}>{t('inactivity.warning')}</span>
         <button
           type="button"
           className={styles.button}

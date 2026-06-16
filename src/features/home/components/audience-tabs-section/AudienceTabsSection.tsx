@@ -99,35 +99,37 @@ const AudienceTabsSection = ({ t }: Props) => {
   });
 
   return (
-    <Container id="solutions" className={styles.section} aria-labelledby="audience-title" padding='xl'>
-      <FadeIn className={styles.header} y={16}>
-        <Text 
-          tag="h2" 
-          variant="title_small" 
-          color="secondary"
-          weight="bold"
-          delay={{ enter: revealDelay(0), exit: 0 }}
-          fadeUpTertiary
-        >
-          <strong className='gl-degradete-text font-bold'>{t('audience.title_strong')}</strong> {t('audience.title')}
-        </Text>
-        <Text 
-          tag="p" 
-          variant="description" 
-          color="muted"
-          delay={{ enter: revealDelay(1), exit: 0 }}
-          fadeUpTertiary
-        >
-          {t('audience.description')}
-        </Text>
-      </FadeIn>
+    <section className={ styles.bg }>
+      <Container id="solutions" className={styles.section} aria-labelledby="audience-title" padding='xl'>
+        <FadeIn className={styles.header} y={16}>
+          <Text 
+            tag="h2" 
+            variant="title_small" 
+            color="secondary"
+            weight="bold"
+            delay={{ enter: revealDelay(0), exit: 0 }}
+            fadeUpTertiary
+          >
+            <strong className='gl-degradete-text font-bold'>{t('audience.title_strong')}</strong> {t('audience.title')}
+          </Text>
+          <Text 
+            tag="p" 
+            variant="description" 
+            color="muted"
+            delay={{ enter: revealDelay(1), exit: 0 }}
+            fadeUpTertiary
+          >
+            {t('audience.description')}
+          </Text>
+        </FadeIn>
 
-      <MotionTabs<TabKey>
-        tabs={tabs}
-        layoutId="audience-tab-indicator"
-        className={styles.tabsHost}
-      />
-    </Container>
+        <MotionTabs<TabKey>
+          tabs={tabs}
+          layoutId="audience-tab-indicator"
+          className={styles.tabsHost}
+        />
+      </Container>
+    </section>
   );
 };
 

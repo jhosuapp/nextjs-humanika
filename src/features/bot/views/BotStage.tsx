@@ -51,6 +51,11 @@ const BotStage = ({
       />
 
       <div className={styles.toastSlot}>
+        <InactivityWarning
+          t={t}
+          visible={inactivityWarning}
+          onDismiss={() => engine.inactivity.reset()}
+        />
         <AnimatePresence mode="wait">
           {engine.state === 'THINKING' && (
             <motion.div
@@ -64,7 +69,7 @@ const BotStage = ({
               <BotSpinner />
             </motion.div>
           )}
-          {engine.state === 'LISTENING' && (
+          {engine.state === 'LISTENING' && !inactivityWarning && (
             <motion.div
               key="listening"
               className={`${styles.listening} gl-dropshadow`}
@@ -78,17 +83,9 @@ const BotStage = ({
             </motion.div>
           )}
         </AnimatePresence>
-        <InactivityWarning
-          t={t}
-          visible={inactivityWarning}
-          onDismiss={() => engine.inactivity.reset()}
-        />
       </div>
 
       <div className={styles.controls}>
-        {engine.state === 'THINKING' ? (
-          <StatusIndicator t={t} statusKey={statusKey} />
-        ) : null}
         <VoiceControl
           t={t}
           state={engine.state}
@@ -96,6 +93,9 @@ const BotStage = ({
           onStart={engine.start}
           onInterrupt={handleInterrupt}
         />
+        {engine.state === 'THINKING' ? (
+          <StatusIndicator t={t} statusKey={statusKey} />
+        ) : null}
       </div>
 
       <AnimatePresence>

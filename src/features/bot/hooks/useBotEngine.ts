@@ -1,10 +1,9 @@
-import { useCallback, useEffect, useMemo, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 
 import {
   MIN_INPUT_WORDS,
   STATUS_KEYS,
   VIDEOS,
-  WAKE_WORDS_FALLBACK,
   type StatusKey,
 } from "@/src/features/bot/data/bot-content";
 import { requestBotResponse } from "@/src/features/bot/actions/request-bot-response.action";
@@ -12,37 +11,20 @@ import { useBotStore } from "@/src/features/bot/stores/bot.store";
 import { useChatStore } from "@/src/features/bot/stores/chat.store";
 import { useInactivityTimer } from "@/src/features/bot/hooks/useInactivityTimer";
 import { useSpeechRecognition } from "@/src/features/bot/hooks/useSpeechRecognition";
-import {
-  useVideoPlayer,
-  BASE_VIDEO_VOLUME,
-} from "@/src/features/bot/hooks/useVideoPlayer";
-import { useVoiceActivity } from "@/src/features/bot/hooks/useVoiceActivity";
-import { useWakeWord, normalize } from "@/src/features/bot/hooks/useWakeWord";
+import { useVideoPlayer } from "@/src/features/bot/hooks/useVideoPlayer";
 
 interface UseBotEngineOptions {
   locale: string;
-  startWord: string;
-  interruptWord: string;
 }
 
 // Al entrar a LISTENING (el bot acaba de callar), se ignora la voz captada
 // durante este lapso para no tomar como pregunta la cola de audio del propio bot.
 const LISTENING_GRACE_MS = 500;
 
-// Mientras el bot habla (INTRO/RESPONDING), al detectar voz del usuario (VAD) se
-// baja casi a silencio el audio del bot para que las voces no se crucen y el
-// micrófono capte el "pregunta" al primer intento. Se restaura al callar.
-const DUCK_VOLUME = 0.08;
-const DUCK_RESTORE_MS = 1000;
-
 // Cuántos mensajes recientes (usuario+bot) se envían como contexto al clasificador.
 const HISTORY_TURNS = 6;
 
-const useBotEngine = ({
-  locale,
-  startWord,
-  interruptWord,
-}: UseBotEngineOptions) => {
+const useBotEngine = ({ locale }: UseBotEngineOptions) => {
   const state = useBotStore((s) => s.state);
   const setState = useBotStore((s) => s.setState);
   const setStatusKey = useBotStore((s) => s.setStatusKey);
@@ -62,11 +44,6 @@ const useBotEngine = ({
   const stateRef = useRef(state);
   const statusIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const listeningSinceRef = useRef(0);
-  const duckTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  // Marca que la frase en curso es una interrupción (se dijo "pregunta" mientras el
-  // bot hablaba): el corte es inmediato en un interim, pero el texto se recorta y
-  // envía en el final.
-  const interruptArmedRef = useRef(false);
 
   useEffect(() => {
     stateRef.current = state;
@@ -77,10 +54,6 @@ const useBotEngine = ({
       if (statusIntervalRef.current) {
         clearInterval(statusIntervalRef.current);
         statusIntervalRef.current = null;
-      }
-      if (duckTimeoutRef.current) {
-        clearTimeout(duckTimeoutRef.current);
-        duckTimeoutRef.current = null;
       }
       // On unmount during THINKING, the in-flight request becomes orphaned — recover to a stable state.
       const store = useBotStore.getState();
@@ -169,198 +142,26 @@ const useBotEngine = ({
     ],
   );
 
-  // Sets normalizados para clasificar cada wake word detectada por categoría.
-  const startWordSet = useMemo(
-    () => new Set([startWord, ...WAKE_WORDS_FALLBACK.start].map(normalize)),
-    [startWord],
-  );
-  const interruptWordSet = useMemo(
-    () =>
-      new Set([interruptWord, ...WAKE_WORDS_FALLBACK.interrupt].map(normalize)),
-    [interruptWord],
-  );
-
-  const handleWake = useCallback(
-    (words: string[]) => {
-      const current = stateRef.current;
-      const hasInterrupt = words.some((w) => interruptWordSet.has(w));
-      const hasStart = words.some((w) => startWordSet.has(w));
-
-      // La interrupción tiene prioridad mientras el bot habla o piensa, aunque el
-      // transcript también traiga la palabra de inicio (ej. "hola pregunta").
-      if (
-        hasInterrupt &&
-        (current === "INTRO" ||
-          current === "RESPONDING" ||
-          current === "THINKING")
-      ) {
-        setState("LISTENING");
-        return;
-      }
-
-      if (hasStart && current === "IDLE") {
-        setState("INTRO");
-      }
-    },
-    [interruptWordSet, setState, startWordSet],
-  );
-
-  const allWakeWords = useMemo(
-    () => [
-      startWord,
-      interruptWord,
-      ...WAKE_WORDS_FALLBACK.start,
-      ...WAKE_WORDS_FALLBACK.interrupt,
-    ],
-    [interruptWord, startWord],
-  );
-
-  const wake = useWakeWord({ words: allWakeWords, onDetect: handleWake });
-
-  // Coincidencia por prefijo (consistente con la detección): "pregunta" cubre
-  // "preguntas"/"pregúntame". Se usa para recortar el preámbulo antes de la instrucción.
-  const tokenMatches = useCallback(
-    (token: string, set: Set<string>): boolean => {
-      const t = normalize(token);
-      if (!t) return false;
-      for (const w of set) {
-        if (t === w || t.startsWith(w)) return true;
-      }
-      return false;
-    },
-    [],
-  );
-
-  // Devuelve solo la instrucción: descarta el preámbulo (saludo/nombre) anterior a
-  // la primera palabra de interrupción y la corrida inicial de wake words.
-  // Ej.: "hola mi nombre es jhosua penagos pregunta por que soy asi" → "por que soy asi".
-  const extractInstruction = useCallback(
-    (tokens: string[]): string[] => {
-      let toks = tokens;
-      const firstInterrupt = toks.findIndex((t) =>
-        tokenMatches(t, interruptWordSet),
-      );
-      if (firstInterrupt >= 0) toks = toks.slice(firstInterrupt);
-      let i = 0;
-      while (
-        i < toks.length &&
-        (tokenMatches(toks[i], interruptWordSet) ||
-          tokenMatches(toks[i], startWordSet))
-      ) {
-        i += 1;
-      }
-      return toks.slice(i);
-    },
-    [interruptWordSet, startWordSet, tokenMatches],
-  );
-
+  // El micrófono solo corre en LISTENING, así que el resultado se interpreta
+  // siempre como una pregunta del usuario. Se ignora la cola de audio del bot
+  // (gracia inicial) y los resultados que lleguen fuera de LISTENING.
   const handleSpeechResult = useCallback(
     (transcript: string, isFinal: boolean) => {
-      const current = stateRef.current;
       console.log(
-        `[mic] estado=${current} final=${isFinal} →`,
+        `[mic] estado=${stateRef.current} final=${isFinal} →`,
         JSON.stringify(transcript),
       );
-
-      const tokens = transcript.trim().split(/\s+/).filter(Boolean);
-      const hasInterrupt = tokens.some((t) => tokenMatches(t, interruptWordSet));
-
-      // EL DISCRIMINADOR ES EL VIDEO ACTIVO (no el estado, que puede cambiar en un
-      // interim antes de que llegue el final y arruinar la decisión).
-      const activeSrc = videoPlayer.getActiveSrc() ?? "";
-      const onWaitVideo = !activeSrc || activeSrc.includes("default-wait-answer");
-
-      // INTERRUPCIÓN INMEDIATA: si el bot está hablando (video ≠ espera) y se oye la
-      // palabra de interrupción, cortar YA — incluso en un interim, sin esperar al
-      // final (que tarda 1-2 s). Se "arma" el flag para recortar el texto en el final.
-      if (!onWaitVideo && hasInterrupt) {
-        interruptArmedRef.current = true;
-        if (stateRef.current !== "LISTENING") setState("LISTENING");
-      }
-
-      // Los ENVÍOS de texto se deciden solo en el resultado final.
       if (!isFinal) return;
-
-      // Frase que vino como interrupción: descartar todo lo anterior a "pregunta" y
-      // enviar la instrucción posterior. Si solo dijo "pregunta", ya quedó escuchando.
-      if (interruptArmedRef.current) {
-        interruptArmedRef.current = false;
-        const instruction = extractInstruction(tokens);
-        if (instruction.length >= MIN_INPUT_WORDS) {
-          sendToBackend(instruction.join(" "));
-        }
-        return;
-      }
-
-      // Bot hablando (video ≠ espera) pero sin "pregunta": no se interrumpe.
-      if (!onWaitVideo) return;
-
-      // Reproduciendo default-wait-answer (escucha pura).
-      if (current === "LISTENING") {
-        // La gracia ignora la cola de audio del bot; si dijo una palabra de
-        // interrupción es intencional y no se descarta.
-        if (
-          !hasInterrupt &&
-          Date.now() - listeningSinceRef.current < LISTENING_GRACE_MS
-        ) {
-          return;
-        }
-        // Frase COMPLETA verbatim, aunque diga "pregunta". Solo se ignora si es SOLO
-        // palabra(s) de activación (residuo de la interrupción).
-        const onlyWake =
-          tokens.length > 0 &&
-          tokens.every(
-            (t) =>
-              tokenMatches(t, interruptWordSet) ||
-              tokenMatches(t, startWordSet),
-          );
-        if (onlyWake) return;
-        const text = transcript.trim();
-        if (text) sendToBackend(text);
-        return;
-      }
-
-      // Video de espera pero IDLE/THINKING: detectar "hola" (IDLE→INTRO) o una
-      // interrupción durante THINKING.
-      wake.inspect(transcript);
+      if (stateRef.current !== "LISTENING") return;
+      if (Date.now() - listeningSinceRef.current < LISTENING_GRACE_MS) return;
+      const text = transcript.trim();
+      if (text.split(/\s+/).filter(Boolean).length < MIN_INPUT_WORDS) return;
+      sendToBackend(text);
     },
-    [
-      extractInstruction,
-      interruptWordSet,
-      sendToBackend,
-      setState,
-      startWordSet,
-      tokenMatches,
-      videoPlayer,
-      wake,
-    ],
+    [sendToBackend],
   );
 
   const speech = useSpeechRecognition({ locale, onResult: handleSpeechResult });
-
-  // Ducking proactivo por energía de voz: en cuanto el usuario empieza a hablar
-  // mientras el bot responde, se baja casi a silencio el audio del bot (las voces
-  // dejan de cruzarse) para reconocer la interrupción al primer intento. Se
-  // restaura al callar. Funciona aunque el usuario use parlantes (sin audífonos).
-  const handleVoiceActive = useCallback(() => {
-    const s = stateRef.current;
-    if (s !== "INTRO" && s !== "RESPONDING") return;
-    videoPlayer.setActiveVolume(DUCK_VOLUME);
-    if (duckTimeoutRef.current) clearTimeout(duckTimeoutRef.current);
-    duckTimeoutRef.current = setTimeout(() => {
-      duckTimeoutRef.current = null;
-      const now = stateRef.current;
-      if (now === "INTRO" || now === "RESPONDING") {
-        videoPlayer.setActiveVolume(BASE_VIDEO_VOLUME);
-      }
-    }, DUCK_RESTORE_MS);
-  }, [videoPlayer]);
-
-  useVoiceActivity({
-    enabled:
-      state === "THINKING" || state === "INTRO" || state === "RESPONDING",
-    onActive: handleVoiceActive,
-  });
 
   const start = useCallback(() => {
     if (stateRef.current === "IDLE") {
@@ -416,16 +217,17 @@ const useBotEngine = ({
       statusIntervalRef.current = null;
       setStatusKey(null);
     }
-    // Al dejar los estados en que el bot habla, cancelar cualquier atenuación pendiente.
-    if (state !== "INTRO" && state !== "RESPONDING" && duckTimeoutRef.current) {
-      clearTimeout(duckTimeoutRef.current);
-      duckTimeoutRef.current = null;
+    // El micrófono solo escucha en LISTENING (el bot esperando al usuario, o tras
+    // pulsar el botón para interrumpir). En cualquier otro estado se apaga.
+    if (state === "LISTENING") {
+      if (!speech.isListening) speech.start().catch(() => undefined);
+    } else if (speech.isListening) {
+      speech.stop();
     }
     switch (state) {
       case "IDLE": {
         setBotVideo(VIDEOS.defaultWait, { loop: true, muted: true });
         videoPlayer.play(VIDEOS.defaultWait, { loop: true, muted: true });
-        if (!speech.isListening) speech.start().catch(() => undefined);
         break;
       }
       case "INTRO": {
@@ -437,14 +239,12 @@ const useBotEngine = ({
             if (stateRef.current === "INTRO") setState("LISTENING");
           },
         });
-        if (!speech.isListening) speech.start().catch(() => undefined);
         break;
       }
       case "LISTENING": {
         listeningSinceRef.current = Date.now();
         setBotVideo(VIDEOS.defaultWait, { loop: true, muted: true });
         videoPlayer.play(VIDEOS.defaultWait, { loop: true, muted: true });
-        if (!speech.isListening) speech.start().catch(() => undefined);
         break;
       }
       case "THINKING": {
@@ -453,14 +253,6 @@ const useBotEngine = ({
         break;
       }
       case "RESPONDING": {
-        break;
-      }
-      case "ERROR": {
-        speech.stop();
-        break;
-      }
-      case "PERMISSION_PENDING": {
-        speech.stop();
         break;
       }
       default:

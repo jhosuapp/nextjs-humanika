@@ -2,7 +2,7 @@
   "page": {
     "eyebrow": "Bot en vivo",
     "headline": "Habla con tu avatar de IA",
-    "subhead": "Una conversación natural por voz. Dí \"hola\" para empezar o usa el botón."
+    "subhead": "Una conversación natural por voz. Oprime el botón para empezar."
   },
   "permission": {
     "title": "Necesitamos tu micrófono",
@@ -14,12 +14,12 @@
   },
   "idle": {
     "ctaStart": "Iniciar conversación",
-    "wakeHint": "Di \"hola\" u oprime el botón para empezar",
+    "wakeHint": "Oprime el botón para empezar",
     "welcome": "Listo cuando tú lo estés"
   },
   "listening": {
     "instruction": "Te estoy escuchando",
-    "interruptHint": "Di \"pregunta\" para interrumpir y hacer una nueva pregunta"
+    "interruptHint": "Toca el botón para interrumpir"
   },
   "intro": {
     "label": "Presentando…"
@@ -53,8 +53,6 @@
     "stay": "Sigo aquí"
   },
   "wakeWords": {
-    "start": "hola",
-    "interrupt": "pregunta",
-    "initBot": "Conocer Humanika"
+    "initBot": "Conoce Humanika"
   }
 }

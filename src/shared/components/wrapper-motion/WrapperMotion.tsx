@@ -13,9 +13,10 @@ type WrapperProps = {
   zoomIn?: boolean;
   immediate?: boolean;
   className?: string;
+  classNameSecondary?: string;
 }
 
-const WrapperMotion = ({ children, delay, fadeUpTertiary, zoomIn, immediate, className = '' }: WrapperProps): JSX.Element => {
+const WrapperMotion = ({ children, delay, fadeUpTertiary, zoomIn, immediate, className = '', classNameSecondary = '' }: WrapperProps): JSX.Element => {
   const { initial, animate, exit } = zoomIn
     ? zoomInMotion(delay?.enter, delay?.exit)
     : fadeUpTertiary
@@ -31,6 +32,7 @@ const WrapperMotion = ({ children, delay, fadeUpTertiary, zoomIn, immediate, cla
           : { whileInView: animate, viewport: { once: true, amount: 0.2 } }
         )}
         exit={exit}
+        className={classNameSecondary}
       >
         {children}
       </motion.div>

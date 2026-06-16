@@ -18,8 +18,6 @@ interface UseVideoPlayerResult {
   refB: React.RefObject<HTMLVideoElement | null>;
   active: Slot;
   play: (src: string, opts?: PlayOptions) => Promise<void>;
-  /** Ajusta el volumen del slot activo (0–1). Se usa para atenuar (ducking) el audio del bot al detectar voz. */
-  setActiveVolume: (volume: number) => void;
   /** Devuelve el `src` del video que se está reproduciendo en el slot activo (o null). */
   getActiveSrc: () => string | null;
 }
@@ -116,21 +114,12 @@ const useVideoPlayer = (): UseVideoPlayerResult => {
     [getRef],
   );
 
-  const setActiveVolume = useCallback(
-    (volume: number) => {
-      const el = getRef(activeRef.current);
-      if (!el) return;
-      el.volume = Math.min(1, Math.max(0, volume));
-    },
-    [getRef],
-  );
-
   const getActiveSrc = useCallback(
     () => currentSrcRef.current[activeRef.current],
     [],
   );
 
-  return { refA, refB, active, play, setActiveVolume, getActiveSrc };
+  return { refA, refB, active, play, getActiveSrc };
 };
 
-export { useVideoPlayer, BASE_VIDEO_VOLUME };
+export { useVideoPlayer };

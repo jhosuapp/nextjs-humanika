@@ -26,7 +26,7 @@ const TrustedByStrip = ({ t }: TrustedByStripProps) => {
         <Text
           tag="p"
           variant="description_xs"
-          color="muted"
+          color="primary"
           weight="semibold"
           delay={{ enter: revealDelay(0), exit: 0 }}
           fadeUpTertiary

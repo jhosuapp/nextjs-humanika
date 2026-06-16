@@ -2,7 +2,7 @@
   "page": {
     "eyebrow": "Live bot",
     "headline": "Talk to your AI avatar",
-    "subhead": "A natural voice conversation. Say \"hello\" to start, or use the button."
+    "subhead": "A natural voice conversation. Tap the button to start."
   },
   "permission": {
     "title": "We need your microphone",
@@ -14,12 +14,12 @@
   },
   "idle": {
     "ctaStart": "Start conversation",
-    "wakeHint": "You can also say \"hello\" to begin",
+    "wakeHint": "Tap the button to start",
     "welcome": "Ready when you are"
   },
   "listening": {
     "instruction": "Listening",
-    "interruptHint": "Say \"question\" anytime to be heard again"
+    "interruptHint": "Tap the button to interrupt"
   },
   "intro": {
     "label": "Introducing…"
@@ -53,7 +53,6 @@
     "stay": "I'm still here"
   },
   "wakeWords": {
-    "start": "hello",
-    "interrupt": "question"
+    "initBot": "Meet Humanika"
   }
 }

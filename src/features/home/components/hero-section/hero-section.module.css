@@ -6,7 +6,7 @@
 }
 
 .heroSection__wrapper {
-  @apply items-center lg:!flex-row gap-10 !pb-28;
+  @apply items-center flex-col-reverse lg:!flex-row gap-10 !pb-28;
 }
 
 .heroSection__bot {
@@ -27,6 +27,10 @@
 
 .heroSection__buttons {
   @apply flex gap-2 md:gap-4 mt-4 md:mt-6 flex-wrap max-w-96;
+}
+
+.heroSection__buttons button {
+  @apply w-full sm:w-fit;
 }
 
 .heroSection__buttons button span {

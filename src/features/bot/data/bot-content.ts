@@ -20,30 +20,6 @@ const INACTIVITY_WARNING_MS = 4 * 60 * 1000 + 30 * 1000;
 
 const MIN_INPUT_WORDS = 1;
 
-const WAKE_WORDS_FALLBACK = {
-  start: ["hola", "hello", "olá", "ola", "bonjour", "hallo"],
-  // Tokens de una sola palabra (la detección compara token a token con match por
-  // prefijo). "pregunta" ya cubre frases como "tengo una pregunta".
-  interrupt: [
-    // es
-    "pregunta",
-    "pregunto",
-    "preguntar",
-    "espera",
-    "disculpa",
-    // en
-    "question",
-    "wait",
-    "sorry",
-    // pt
-    "pergunta",
-    // fr / de
-    "frage",
-    "attends",
-    "warte",
-  ],
-};
-
 type StatusKey = (typeof STATUS_KEYS)[number];
 
 export {
@@ -52,6 +28,5 @@ export {
   INACTIVITY_MS,
   INACTIVITY_WARNING_MS,
   MIN_INPUT_WORDS,
-  WAKE_WORDS_FALLBACK,
 };
 export type { BotResponse, BotApiPayload, ConversationTurn, StatusKey };

@@ -65,7 +65,7 @@ const CaseStudiesSection = ({ t }: CaseStudiesSectionProps) => {
 
         <StaggerGroup className={styles.grid} stagger={REVEAL.stagger} amount={REVEAL.amount}>
           {caseStudies.items.map((item) => (
-            <WrapperMotion fadeUpTertiary delay={{ enter: 0, exit: 0 }}>
+            <WrapperMotion fadeUpTertiary delay={{ enter: 0, exit: 0 }} classNameSecondary='h-full'>
               <StaggerItem key={item.id} className={styles.cell}>
                 <motion.article
                   className={styles.card}

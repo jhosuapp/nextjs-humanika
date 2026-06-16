@@ -13,7 +13,7 @@
 }
 
 .toastSlot {
-  @apply absolute left-0 right-0 top-6 z-10 flex justify-center px-6 pointer-events-none;
+  @apply absolute left-0 right-0 top-6 z-10 flex flex-col gap-2 px-6 pointer-events-none;
 }
 
 .embedded .toastSlot {
@@ -29,10 +29,5 @@
 }
 
 .listening {
-  @apply absolute top-[10vh] mt-4;
-}
-
-.embedded .listening {
-  @apply mt-0;
-  top: 52%;
+  @apply w-fit;
 }
