@@ -163,25 +163,23 @@ const FaqSection = ({ t }: Props) => {
           </StaggerGroup>
         </WrapperMotion>
 
-        <WrapperMotion delay={{ enter: 0.1, exit: 0 }} fadeUpTertiary>
-          <div className={styles.footer}>
-            <Text
-              tag="p" 
-              variant="description_small" 
-              color="muted"
-              delay={{ enter: 0, exit: 0 }}
-              immediate
-            >
-              {t('faq.stillHaveQuestion')}
-            </Text>
-            <Button
-              text={t('faq.contactCta') as string}
-              style="whatsapp"
-              type="button"
-              iconRight={ faWhatsapp }
-            />
-          </div>
-        </WrapperMotion>
+        <div className={styles.footer}>
+          <Text
+            tag="p" 
+            variant="description_small" 
+            color="muted"
+            delay={{ enter: 0, exit: 0 }}
+            immediate
+          >
+            {t('faq.stillHaveQuestion')}
+          </Text>
+          <Button
+            text={t('faq.contactCta') as string}
+            style="whatsapp"
+            type="button"
+            iconRight={ faWhatsapp }
+          />
+        </div>
       </Container>
     </div>
   );

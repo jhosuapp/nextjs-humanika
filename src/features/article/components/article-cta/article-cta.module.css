@@ -1,7 +1,7 @@
 @reference "tailwindcss";
 
 .inner {
-  @apply mx-auto pb-20;
+  @apply mx-auto pb-6;
   max-width: 48rem;
 }
 
