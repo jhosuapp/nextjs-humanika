@@ -1,0 +1,232 @@
+{
+  "seo": {
+    "title": "Agentes de IA para empresas: del documento a la acción | Humanika",
+    "description": "Los agentes de IA empresariales no son chatbots: operan con contexto, reglas, permisos y trazabilidad para llevar los procesos del documento a la acción."
+  },
+  "hero": {
+    "eyebrow": "Perspectiva",
+    "titleLead": "Agentes de IA para empresas: del ",
+    "titleAccent": "documento a la acción",
+    "titleTrail": ".",
+    "imageAlt": "Equipo empresarial colaborando con agentes de inteligencia artificial",
+    "meta": {
+      "readingTime": "7 min de lectura",
+      "date": "Junio 2026",
+      "author": "Equipo Humanika"
+    },
+    "lead": [
+      "Muchas empresas ya usan inteligencia artificial. Tienen acceso a ChatGPT, Claude, Gemini, Copilot y otras herramientas avanzadas. Sin embargo, sus procesos siguen dependiendo de documentos dispersos, correos, formularios, hojas de cálculo, sistemas internos y validaciones manuales.",
+      "Ahí aparece una nueva categoría: los agentes de IA para empresas. No hablamos de chatbots que solo responden preguntas. Hablamos de colaboradores digitales capaces de entender información, aplicar reglas, consultar sistemas, ejecutar acciones controladas y escalar casos al equipo humano cuando sea necesario."
+    ]
+  },
+  "intro": {
+    "quote": "El problema no es la falta de IA. El problema es que la IA, por sí sola, no conoce el contexto de la organización, no entiende sus reglas internas, no está conectada a sus sistemas y no deja trazabilidad suficiente para operar con confianza."
+  },
+  "toc": {
+    "title": "En este artículo",
+    "comparacion": "Chatbot vs. agente",
+    "cuello": "El cuello de botella",
+    "diferencia": "Qué lo hace diferente",
+    "documento": "Del documento a la acción",
+    "donde": "Dónde aporta valor",
+    "educacion": "Casos en educación",
+    "empresas": "Casos en empresas",
+    "gobierno": "La IA necesita gobierno",
+    "humanika": "Humanika"
+  },
+  "comparison": {
+    "eyebrow": "La diferencia",
+    "title": "Un chatbot responde. Un agente empresarial opera.",
+    "left": {
+      "label": "Chatbot",
+      "items": [
+        "Solo responde la pregunta que recibe",
+        "No conoce el contexto de la organización",
+        "No está conectado a los sistemas internos",
+        "No deja trazabilidad de sus acciones"
+      ]
+    },
+    "right": {
+      "label": "Agente empresarial",
+      "items": [
+        "Entiende información y aplica reglas de negocio",
+        "Consulta documentos y sistemas autorizados",
+        "Ejecuta acciones controladas dentro de un proceso",
+        "Escala casos al equipo humano y registra todo"
+      ]
+    }
+  },
+  "cuello": {
+    "eyebrow": "El punto de partida",
+    "title": "El cuello de botella no siempre está en la atención",
+    "paragraphs": [
+      "Durante años, muchas organizaciones intentaron automatizar la atención al cliente con chatbots. El objetivo era responder más rápido y reducir preguntas repetitivas. Eso sigue siendo útil, pero ya no es suficiente.",
+      "Hoy, muchos cuellos de botella están dentro de la operación:"
+    ],
+    "bottlenecks": [
+      "Solicitudes que llegan con documentos adjuntos.",
+      "Formularios que deben revisarse manualmente.",
+      "Requisitos que cambian según el tipo de usuario.",
+      "Casos que dependen de varias áreas.",
+      "Información distribuida entre sistemas diferentes.",
+      "Procesos que requieren validación antes de avanzar.",
+      "Equipos saturados resolviendo preguntas repetitivas.",
+      "Conocimiento institucional que solo ciertas personas dominan."
+    ],
+    "emphasis": "En estos escenarios, una respuesta automática no resuelve el problema completo. La organización necesita agentes capaces de acompañar el proceso, no solo contestar mensajes."
+  },
+  "diferencia": {
+    "eyebrow": "Qué cambia",
+    "title": "Qué hace diferente a un agente empresarial de IA",
+    "paragraphs": [
+      "Un agente empresarial de IA debe operar con contexto, reglas, permisos y trazabilidad. Eso significa que puede:"
+    ],
+    "capabilities": [
+      "Consultar documentos internos autorizados.",
+      "Responder con base en conocimiento validado.",
+      "Aplicar reglas de negocio.",
+      "Identificar cuándo falta información.",
+      "Clasificar solicitudes.",
+      "Consultar sistemas externos.",
+      "Crear o actualizar registros.",
+      "Escalar casos sensibles o incompletos.",
+      "Registrar fuentes, acciones y decisiones.",
+      "Medir uso, errores, consumo y resultados."
+    ],
+    "emphasis": "La diferencia no está en que el agente “hable bonito”. La diferencia está en que pueda integrarse a la operación real de la empresa."
+  },
+  "documento": {
+    "eyebrow": "El flujo real",
+    "title": "Del documento a la acción",
+    "paragraphs": [
+      "En muchas organizaciones, los documentos siguen siendo el punto de partida de procesos importantes."
+    ],
+    "triggers": [
+      "Un estudiante envía un soporte.",
+      "Un proveedor carga una factura.",
+      "Un cliente adjunta un contrato.",
+      "Un colaborador solicita un certificado.",
+      "Un área comparte una política.",
+      "Un usuario envía un formulario incompleto."
+    ],
+    "flow": [
+      "Cada documento puede activar una cadena de trabajo: revisar, clasificar, validar, consultar, aprobar, registrar, responder o escalar. Cuando ese flujo depende completamente de personas, aparecen demoras, reprocesos y falta de visibilidad.",
+      "Un agente de IA bien implementado puede ayudar a reducir esa fricción."
+    ],
+    "highlightLead": "No se trata solo de extraer texto de un PDF. Se trata de ",
+    "highlightTerm": "entender qué significa ese documento dentro de un proceso",
+    "highlightTrail": " y qué debe pasar después."
+  },
+  "domains": {
+    "eyebrow": "El alcance",
+    "title": "Dónde aportan valor los agentes de IA",
+    "description": "Los mismos principios —contexto, reglas, permisos y trazabilidad— habilitan casos de uso de alto volumen en distintos sectores.",
+    "items": {
+      "educacion": "Educación · admisiones, atención y trámites",
+      "empresas": "Empresas · soporte, operación y conocimiento",
+      "gobierno": "Gobierno de IA · permisos, límites y auditoría"
+    }
+  },
+  "educacion": {
+    "eyebrow": "Sector educación",
+    "title": "Casos de uso en educación",
+    "paragraphs": [
+      "En instituciones educativas, los agentes de IA pueden apoyar procesos de alto volumen como:"
+    ],
+    "useCases": [
+      "Admisiones.",
+      "Atención estudiantil.",
+      "Campus virtual.",
+      "Solicitudes académicas.",
+      "Certificados.",
+      "PQRS.",
+      "Retención estudiantil.",
+      "Educación continua.",
+      "Soporte a estudiantes.",
+      "Consulta de reglamentos.",
+      "Orientación sobre fechas, pagos y requisitos."
+    ],
+    "examples": [
+      "Por ejemplo, un agente puede acompañar a un aspirante durante el proceso de inscripción, responder preguntas frecuentes, validar requisitos básicos, registrar intención comercial y escalar al asesor correcto cuando el caso lo requiera.",
+      "También puede apoyar a estudiantes activos consultando información del campus virtual, recordando actividades, orientando trámites o resolviendo dudas sobre procesos institucionales."
+    ],
+    "emphasis": "El resultado no es solo más velocidad. Es mejor atención, más trazabilidad y menor carga operativa para los equipos."
+  },
+  "empresas": {
+    "eyebrow": "Sector empresarial",
+    "title": "Casos de uso en empresas",
+    "paragraphs": [
+      "En empresas medianas y grandes, los agentes de IA pueden apoyar procesos como:"
+    ],
+    "useCases": [
+      "Onboarding.",
+      "Capacitación interna.",
+      "Consulta de políticas.",
+      "Mesa de ayuda.",
+      "Gestión de solicitudes internas.",
+      "Soporte comercial.",
+      "Revisión documental.",
+      "Procesos administrativos.",
+      "Atención a clientes.",
+      "Escalamiento de casos.",
+      "Consulta de conocimiento organizacional."
+    ],
+    "examples": [
+      "Un área de Talento Humano, por ejemplo, puede convertir manuales, políticas y procesos internos en un colaborador digital disponible para responder preguntas del equipo.",
+      "Un área de soporte puede reducir tickets repetitivos y escalar únicamente los casos que requieren intervención humana. Un área comercial puede usar agentes para responder preguntas frecuentes, calificar oportunidades y registrar información en el CRM."
+    ]
+  },
+  "gobierno": {
+    "eyebrow": "El requisito",
+    "title": "La IA necesita gobierno",
+    "paragraphs": [
+      "Implementar agentes de IA en una organización no consiste en conectar un modelo y dejarlo responder libremente. Una solución empresarial debe definir:"
+    ],
+    "rules": [
+      "Qué conocimiento puede consultar el agente.",
+      "Qué acciones puede ejecutar.",
+      "Qué sistemas puede usar.",
+      "Qué permisos tiene.",
+      "Cuándo debe escalar a humano.",
+      "Qué información debe registrar.",
+      "Cómo se auditan sus respuestas.",
+      "Cómo se miden errores, consumo y resultados."
+    ],
+    "quote": "Sin gobierno, la IA se vuelve riesgosa.",
+    "quoteAccent": "Con gobierno, puede convertirse en capacidad operativa real."
+  },
+  "humanika": {
+    "eyebrow": "Nuestra mirada",
+    "title": "Cómo lo aborda Humanika",
+    "paragraphs": [
+      "Humanika diseña, implementa y opera colaboradores digitales impulsados por inteligencia artificial. Estos colaboradores se conectan al conocimiento, los sistemas, los canales y las reglas de cada organización para ayudar a resolver procesos reales.",
+      "Pueden operar en canales como WhatsApp, web, Microsoft Teams, voz o interfaces digitales, y pueden integrarse con sistemas como CRM, LMS, calendarios, APIs corporativas o plataformas internas."
+    ],
+    "highlightLead": "El objetivo no es crear otro chatbot. El objetivo es convertir conocimiento y procesos en ",
+    "highlightTerm": "capacidad operativa medible",
+    "highlightTrail": ".",
+    "future": [
+      "La próxima etapa de la inteligencia artificial empresarial no será solo tener asistentes que respondan. Será tener agentes capaces de apoyar procesos completos con contexto, reglas, sistemas, trazabilidad y escalamiento humano.",
+      "Las organizaciones que entiendan esto antes podrán reducir carga operativa, mejorar tiempos de respuesta, aprovechar mejor su conocimiento interno y crear nuevas formas de trabajo asistidas por IA."
+    ],
+    "quote": "La pregunta ya no es si su empresa debe usar inteligencia artificial.",
+    "quoteAccent": "La pregunta es: ¿qué procesos podrían operar mejor si contaran con colaboradores digitales conectados al conocimiento y los sistemas de su organización?",
+    "closing": [
+      "Humanika ayuda a identificar, diseñar e implementar esos casos de uso mediante diagnóstico, implementación y pilotos funcionales."
+    ]
+  },
+  "takeaways": {
+    "title": "En resumen",
+    "items": [
+      "Muchas empresas ya usan IA, pero sus procesos siguen dependiendo de documentos dispersos y validaciones manuales.",
+      "Un agente empresarial no es un chatbot: opera con contexto, reglas, permisos y trazabilidad.",
+      "El valor está en pasar del documento a la acción, integrando la IA a la operación real.",
+      "Sin gobierno, la IA es un riesgo; con gobierno, se convierte en capacidad operativa medible."
+    ]
+  },
+  "cta": {
+    "title": "¿Qué procesos de su empresa podrían operar mejor con un agente de IA?",
+    "description": "Humanika ayuda a identificar, diseñar e implementar casos de uso mediante diagnóstico, implementación y pilotos funcionales.",
+    "button": "Hablar con un especialista"
+  }
+}

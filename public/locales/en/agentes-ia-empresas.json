@@ -1,0 +1,232 @@
+{
+  "seo": {
+    "title": "Enterprise AI agents: from document to action | Humanika",
+    "description": "Enterprise AI agents are not chatbots: they operate with context, rules, permissions and traceability to move processes from document to action."
+  },
+  "hero": {
+    "eyebrow": "Perspective",
+    "titleLead": "Enterprise AI agents: from ",
+    "titleAccent": "document to action",
+    "titleTrail": ".",
+    "imageAlt": "A business team collaborating with artificial intelligence agents",
+    "meta": {
+      "readingTime": "7 min read",
+      "date": "June 2026",
+      "author": "Humanika Team"
+    },
+    "lead": [
+      "Many companies already use artificial intelligence. They have access to ChatGPT, Claude, Gemini, Copilot and other advanced tools. Yet their processes still depend on scattered documents, emails, forms, spreadsheets, internal systems and manual approvals.",
+      "That is where a new category appears: enterprise AI agents. We are not talking about chatbots that only answer questions. We are talking about digital coworkers capable of understanding information, applying rules, querying systems, executing controlled actions and escalating cases to the human team when needed."
+    ]
+  },
+  "intro": {
+    "quote": "The problem is not the lack of AI. The problem is that AI, on its own, does not know the organization's context, does not understand its internal rules, is not connected to its systems and does not leave enough traceability to operate with confidence."
+  },
+  "toc": {
+    "title": "In this article",
+    "comparacion": "Chatbot vs. agent",
+    "cuello": "The bottleneck",
+    "diferencia": "What makes it different",
+    "documento": "From document to action",
+    "donde": "Where it adds value",
+    "educacion": "Cases in education",
+    "empresas": "Cases in companies",
+    "gobierno": "AI needs governance",
+    "humanika": "Humanika"
+  },
+  "comparison": {
+    "eyebrow": "The difference",
+    "title": "A chatbot answers. An enterprise agent operates.",
+    "left": {
+      "label": "Chatbot",
+      "items": [
+        "Only answers the question it receives",
+        "Does not know the organization's context",
+        "Is not connected to internal systems",
+        "Leaves no traceability of its actions"
+      ]
+    },
+    "right": {
+      "label": "Enterprise agent",
+      "items": [
+        "Understands information and applies business rules",
+        "Queries authorized documents and systems",
+        "Executes controlled actions within a process",
+        "Escalates cases to the human team and logs everything"
+      ]
+    }
+  },
+  "cuello": {
+    "eyebrow": "The starting point",
+    "title": "The bottleneck is not always in customer service",
+    "paragraphs": [
+      "For years, many organizations tried to automate customer service with chatbots. The goal was to respond faster and reduce repetitive questions. That is still useful, but it is no longer enough.",
+      "Today, many bottlenecks live inside operations:"
+    ],
+    "bottlenecks": [
+      "Requests that arrive with attached documents.",
+      "Forms that must be reviewed manually.",
+      "Requirements that change depending on the type of user.",
+      "Cases that depend on several teams.",
+      "Information spread across different systems.",
+      "Processes that require validation before moving forward.",
+      "Overloaded teams resolving repetitive questions.",
+      "Institutional knowledge that only a few people master."
+    ],
+    "emphasis": "In these scenarios, an automatic answer does not solve the whole problem. The organization needs agents able to support the process, not just reply to messages."
+  },
+  "diferencia": {
+    "eyebrow": "What changes",
+    "title": "What makes an enterprise AI agent different",
+    "paragraphs": [
+      "An enterprise AI agent must operate with context, rules, permissions and traceability. That means it can:"
+    ],
+    "capabilities": [
+      "Query authorized internal documents.",
+      "Answer based on validated knowledge.",
+      "Apply business rules.",
+      "Identify when information is missing.",
+      "Classify requests.",
+      "Query external systems.",
+      "Create or update records.",
+      "Escalate sensitive or incomplete cases.",
+      "Log sources, actions and decisions.",
+      "Measure usage, errors, consumption and results."
+    ],
+    "emphasis": "The difference is not that the agent “sounds nice.” The difference is that it can integrate into the company's real operation."
+  },
+  "documento": {
+    "eyebrow": "The real flow",
+    "title": "From document to action",
+    "paragraphs": [
+      "In many organizations, documents are still the starting point of important processes."
+    ],
+    "triggers": [
+      "A student submits supporting paperwork.",
+      "A supplier uploads an invoice.",
+      "A client attaches a contract.",
+      "An employee requests a certificate.",
+      "A team shares a policy.",
+      "A user submits an incomplete form."
+    ],
+    "flow": [
+      "Each document can trigger a chain of work: review, classify, validate, query, approve, log, respond or escalate. When that flow depends entirely on people, delays, rework and lack of visibility appear.",
+      "A well-implemented AI agent can help reduce that friction."
+    ],
+    "highlightLead": "It is not just about extracting text from a PDF. It is about ",
+    "highlightTerm": "understanding what that document means inside a process",
+    "highlightTrail": " and what should happen next."
+  },
+  "domains": {
+    "eyebrow": "The scope",
+    "title": "Where AI agents add value",
+    "description": "The same principles —context, rules, permissions and traceability— enable high-volume use cases across different sectors.",
+    "items": {
+      "educacion": "Education · admissions, support and procedures",
+      "empresas": "Companies · support, operations and knowledge",
+      "gobierno": "AI governance · permissions, limits and auditing"
+    }
+  },
+  "educacion": {
+    "eyebrow": "Education sector",
+    "title": "Use cases in education",
+    "paragraphs": [
+      "In educational institutions, AI agents can support high-volume processes such as:"
+    ],
+    "useCases": [
+      "Admissions.",
+      "Student support.",
+      "Virtual campus.",
+      "Academic requests.",
+      "Certificates.",
+      "Complaints and requests.",
+      "Student retention.",
+      "Continuing education.",
+      "Student help desk.",
+      "Regulation lookups.",
+      "Guidance on dates, payments and requirements."
+    ],
+    "examples": [
+      "For example, an agent can support an applicant during enrollment, answer frequent questions, validate basic requirements, log commercial intent and escalate to the right advisor when the case requires it.",
+      "It can also support active students by checking virtual campus information, reminding them of activities, guiding procedures or resolving doubts about institutional processes."
+    ],
+    "emphasis": "The result is not only more speed. It is better service, more traceability and a lighter operational load for the teams."
+  },
+  "empresas": {
+    "eyebrow": "Business sector",
+    "title": "Use cases in companies",
+    "paragraphs": [
+      "In medium and large companies, AI agents can support processes such as:"
+    ],
+    "useCases": [
+      "Onboarding.",
+      "Internal training.",
+      "Policy lookups.",
+      "Help desk.",
+      "Internal request management.",
+      "Sales support.",
+      "Document review.",
+      "Administrative processes.",
+      "Customer service.",
+      "Case escalation.",
+      "Organizational knowledge lookups."
+    ],
+    "examples": [
+      "An HR team, for example, can turn manuals, policies and internal processes into a digital coworker available to answer the team's questions.",
+      "A support team can reduce repetitive tickets and escalate only the cases that require human intervention. A sales team can use agents to answer frequent questions, qualify opportunities and log information in the CRM."
+    ]
+  },
+  "gobierno": {
+    "eyebrow": "The requirement",
+    "title": "AI needs governance",
+    "paragraphs": [
+      "Deploying AI agents in an organization is not about plugging in a model and letting it answer freely. An enterprise solution must define:"
+    ],
+    "rules": [
+      "What knowledge the agent can consult.",
+      "What actions it can execute.",
+      "What systems it can use.",
+      "What permissions it has.",
+      "When it must escalate to a human.",
+      "What information it must log.",
+      "How its answers are audited.",
+      "How errors, consumption and results are measured."
+    ],
+    "quote": "Without governance, AI becomes risky.",
+    "quoteAccent": "With governance, it can become real operational capacity."
+  },
+  "humanika": {
+    "eyebrow": "Our take",
+    "title": "How Humanika approaches it",
+    "paragraphs": [
+      "Humanika designs, implements and operates digital coworkers powered by artificial intelligence. These coworkers connect to each organization's knowledge, systems, channels and rules to help resolve real processes.",
+      "They can operate on channels like WhatsApp, web, Microsoft Teams, voice or digital interfaces, and can integrate with systems such as CRM, LMS, calendars, corporate APIs or internal platforms."
+    ],
+    "highlightLead": "The goal is not to build another chatbot. The goal is to turn knowledge and processes into ",
+    "highlightTerm": "measurable operational capacity",
+    "highlightTrail": ".",
+    "future": [
+      "The next stage of enterprise artificial intelligence will not just be having assistants that answer. It will be having agents capable of supporting complete processes with context, rules, systems, traceability and human escalation.",
+      "Organizations that understand this sooner will be able to reduce operational load, improve response times, make better use of their internal knowledge and create new AI-assisted ways of working."
+    ],
+    "quote": "The question is no longer whether your company should use artificial intelligence.",
+    "quoteAccent": "The question is: which processes could operate better if they had digital coworkers connected to your organization's knowledge and systems?",
+    "closing": [
+      "Humanika helps identify, design and implement those use cases through diagnosis, implementation and functional pilots."
+    ]
+  },
+  "takeaways": {
+    "title": "In short",
+    "items": [
+      "Many companies already use AI, but their processes still depend on scattered documents and manual approvals.",
+      "An enterprise agent is not a chatbot: it operates with context, rules, permissions and traceability.",
+      "The value lies in moving from document to action, integrating AI into the real operation.",
+      "Without governance, AI is a risk; with governance, it becomes measurable operational capacity."
+    ]
+  },
+  "cta": {
+    "title": "Which of your company's processes could operate better with an AI agent?",
+    "description": "Humanika helps identify, design and implement use cases through diagnosis, implementation and functional pilots.",
+    "button": "Talk to a specialist"
+  }
+}

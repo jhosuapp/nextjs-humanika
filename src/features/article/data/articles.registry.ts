@@ -2,6 +2,7 @@ import type { ArticleContent } from "@/src/features/article/types/article.types"
 import { crearConfianzaContent } from "./crear-confianza.content";
 import { fuerzaLaboralHibridaContent } from "./fuerza-laboral-hibrida.content";
 import { colaboradoresDigitalesContent } from "./colaboradores-digitales.content";
+import { agentesIaEmpresasContent } from "./agentes-ia-empresas.content";
 
 /**
  * Single source of truth for every article.
@@ -32,6 +33,12 @@ type ArticleEntry = {
 };
 
 const articlesRegistry: ReadonlyArray<ArticleEntry> = [
+  {
+    slug: "agentes-ia-empresas",
+    content: agentesIaEmpresasContent,
+    cover: "/images/bg-update.jpg",
+    publishedAt: "2026-06-16",
+  },
   {
     slug: "colaboradores-digitales",
     content: colaboradoresDigitalesContent,
