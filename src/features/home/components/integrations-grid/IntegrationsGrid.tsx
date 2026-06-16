@@ -49,7 +49,7 @@ const IntegrationsGrid = ({ t }: IntegrationsGridProps) => {
         <StaggerGroup className={styles.grid} stagger={REVEAL.stagger} amount={REVEAL.amount}>
           {integrations.logos.map((logo) => (
             <StaggerItem key={logo.name}>
-              <div className={styles.tile}>
+              <div className={`${styles.tile} gl-gradient-box`}>
                 <Spotlight size={200} color="rgba(0, 177, 215, 0.14)" />
                 <Image
                   src={logo.src}
@@ -59,7 +59,16 @@ const IntegrationsGrid = ({ t }: IntegrationsGridProps) => {
                   unoptimized
                   className={styles.logo}
                 />
-                <span className={styles.tileLabel}>{logo.name}</span>
+                <Text
+                  tag="p" 
+                  variant="description_small" 
+                  color="muted"
+                  delay={{ enter: revealDelay(1), exit: 0 }}
+                  fadeUpTertiary
+                  immediate
+                >
+                  {logo.name}
+                </Text>
               </div>
             </StaggerItem>
           ))}

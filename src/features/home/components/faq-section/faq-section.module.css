@@ -21,16 +21,15 @@
 }
 
 .item {
-  @apply overflow-hidden rounded-2xl border transition-[background,border-color,box-shadow] duration-200;
-  background: var(--surface-elevated);
-  border-color: var(--border-subtle);
+  @apply overflow-hidden rounded-2xl transition-[box-shadow] duration-200;
 }
 
 .item:hover {
-  border-color: rgba(11, 16, 36, 0.14);
   box-shadow: 0 6px 24px -16px rgba(11, 16, 36, 0.16);
 }
 
+/* Active FAQ keeps its original soft single-layer fill + subtle blue border,
+   overriding the gradient-border box by selector specificity. */
 .item[data-open="true"] {
   border-color: rgba(0, 190, 255, 0.35);
   background: linear-gradient(

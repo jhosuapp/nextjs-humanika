@@ -21,7 +21,7 @@ type LogoProps = {
 
 const LOGO_SRC = {
   light: '/svg/logo-humanika.svg',
-  dark: '/svg/logo-white.svg',
+  dark: '/svg/logo-humanika-white.svg',
 } as const;
 
 /** Brand logo. Swaps the asset based on the active theme and shrinks on mobile

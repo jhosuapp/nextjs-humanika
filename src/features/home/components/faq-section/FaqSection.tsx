@@ -35,7 +35,7 @@ const AccordionItem = ({ id, question, answer, isOpen, onToggle }: AccordionItem
   const buttonId = `faq-trigger-${id}`;
 
   return (
-    <div className={styles.item} data-open={isOpen}>
+    <div className={`${styles.item} gl-gradient-box`} data-open={isOpen}>
       <h3 className={styles.itemHeading}>
         <button
           id={buttonId}

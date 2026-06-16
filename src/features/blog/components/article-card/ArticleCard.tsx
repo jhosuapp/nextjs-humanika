@@ -6,6 +6,7 @@ import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 import { CustomLink } from '@/src/shared/components/custom-link/CustomLink';
 
 import styles from './article-card.module.css';
+import { Text } from '@/src/shared/components/text/Text';
 
 type ArticleCardProps = {
   href: string;
@@ -35,7 +36,7 @@ const ArticleCard = ({
   readMore,
 }: ArticleCardProps): JSX.Element => {
   return (
-    <CustomLink to={href} className={styles.card}>
+    <CustomLink to={href} className={`${styles.card} gl-gradient-box`}>
       <figure className={styles.media}>
         <Image
           src={cover}
@@ -48,15 +49,42 @@ const ArticleCard = ({
       </figure>
 
       <div className={styles.body}>
-        <p className={styles.eyebrow}>{eyebrow}</p>
+        <Text
+          tag="p"
+          variant="description_xs"
+          color="primary"
+          weight="semibold"
+          immediate
+          fadeUpTertiary
+        >
+          {eyebrow}
+        </Text>
 
-        <h2 className={styles.title}>
+        <Text
+          className={styles.title}
+          tag="h2"
+          variant="subtitle_small"
+          color="secondary"
+          weight="normal"
+          immediate
+          fadeUpTertiary
+        >
           {titleLead}
           <strong className="gl-degradete-text font-bold">{titleAccent}</strong>
           {titleTrail}
-        </h2>
+        </Text>
 
-        <p className={styles.excerpt}>{excerpt}</p>
+        <Text
+          className={ styles.excerpt }
+          tag="p"
+          variant="description_small"
+          color="muted"
+          weight="normal"
+          immediate
+          fadeUpTertiary
+        >
+          {excerpt}
+        </Text>
 
         <div className={styles.footer}>
           <p className={styles.meta}>

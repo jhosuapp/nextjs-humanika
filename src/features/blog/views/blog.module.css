@@ -10,22 +10,6 @@
   max-width: 44rem;
 }
 
-.eyebrow {
-  @apply tracking-[0.28em];
-}
-
-.title {
-  @apply m-0;
-  font-size: clamp(2rem, 5vw, 3.25rem);
-  line-height: 1.08;
-  letter-spacing: -0.01em;
-}
-
-.lead {
-  @apply m-0;
-  max-width: 36rem;
-}
-
 .grid {
   @apply grid gap-6 list-none p-0 mt-12 lg:mt-16;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));

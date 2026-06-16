@@ -28,7 +28,7 @@ const AudienceTabsSection = ({ t }: Props) => {
       key: tabItem.key,
       label: t(`audience.${tabItem.key}.label`) as string,
       content: (
-        <article className={styles.panel}>
+        <article className={`${styles.panel} gl-gradient-box`}>
           <div className={styles.panelText}>
             <Text 
               tag="p" 

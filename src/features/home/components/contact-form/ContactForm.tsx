@@ -27,7 +27,7 @@ const ContactForm = ({ t }: ContactFormProps):JSX.Element => {
     <Container>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className={ styles.contactForm }
+        className={ `${styles.contactForm} gl-gradient-box` }
         noValidate
       >
         <Controller

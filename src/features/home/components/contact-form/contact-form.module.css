@@ -2,10 +2,7 @@
 
 .contactForm {
   @apply flex flex-col lg:flex-row relative items-end -top-16 -mb-16 px-5 lg:px-10 py-5 lg:py-12 rounded-2xl shadow-lg gap-4;
-  border: 1px solid transparent;
-  background:
-    linear-gradient(var(--background), var(--background)) padding-box,
-    linear-gradient(135deg, var(--primary), var(--tertiary)) border-box;
+  --gl-box-fill: linear-gradient(var(--background), var(--background));
 }
 
 .contactForm button {

@@ -22,18 +22,14 @@
 }
 
 .tile {
-  @apply relative flex aspect-square flex-col items-center justify-center gap-3 overflow-hidden rounded-2xl p-6 border;
-  background: var(--surface-elevated);
-  border-color: var(--border-subtle);
+  @apply relative flex aspect-square flex-col items-center justify-center text-center gap-3 overflow-hidden rounded-2xl p-6;
   transition:
-    border-color 0.3s ease,
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 
 .tile:hover {
   @apply -translate-y-1;
-  border-color: rgba(0, 177, 215, 0.35);
   box-shadow: var(--shadow-floating);
 }
 
@@ -55,14 +51,4 @@
   .tile:hover {
     transform: none;
   }
-}
-
-/* En modo oscuro: tile oscura (token) + logos en blanco */
-:global(:root[data-theme="dark"]) .logo {
-  filter: brightness(0) invert(1);
-}
-
-.tileLabel {
-  @apply relative z-10 text-sm font-semibold text-center tracking-[-0.005em];
-  color: var(--foreground);
 }

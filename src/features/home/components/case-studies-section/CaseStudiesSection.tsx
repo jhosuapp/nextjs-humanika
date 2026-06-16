@@ -68,7 +68,7 @@ const CaseStudiesSection = ({ t }: CaseStudiesSectionProps) => {
             <WrapperMotion fadeUpTertiary delay={{ enter: 0, exit: 0 }} classNameSecondary='h-full'>
               <StaggerItem key={item.id} className={styles.cell}>
                 <motion.article
-                  className={styles.card}
+                  className={`${styles.card} gl-gradient-box`}
                   whileHover={reduce ? undefined : { y: -4 }}
                   {...fadeUpTertiaryMotion(0,0)}
                 >

@@ -30,10 +30,10 @@ const headerStaticData: HeaderStaticData = {
       key: "articles",
       href: "/blog",
       children: [
-        // { key: "allArticles", href: "/blog" },
         { key: "digitalCoworkers", href: "/blog/colaboradores-digitales" },
         { key: "trust", href: "/blog/crear-confianza" },
         { key: "fuerzaLaboral", href: "/blog/fuerza-laboral-hibrida" },
+        { key: "allArticles", href: "/blog" },
       ],
     },
     { key: "about150", href: "https://150porciento.com/", external: true },

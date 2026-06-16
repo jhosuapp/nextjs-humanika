@@ -231,6 +231,30 @@ body {
   @apply m-0 text-sm font-normal text-center text-secondary;
 }
 
+/* Reusable gradient-border box (same treatment as the ContactForm card).
+   Keep the consumer's own `rounded-*` utility for the radius.
+   Override the inner fill per state with `--gl-box-fill` (must be an <image>,
+   e.g. a linear-gradient, since it is not the last background layer). */
+.gl-gradient-box {
+  border: 1px solid transparent;
+  background:
+    var(
+        --gl-box-fill,
+        linear-gradient(var(--surface-elevated), var(--surface-elevated))
+      )
+      padding-box,
+    /* Top-lit edge: a soft brand highlight along the top/left that dissolves
+       into the theme's neutral border for the rest of the frame. */
+      linear-gradient(
+        145deg,
+        rgba(0, 177, 215, 0.6) 0%,
+        rgba(23, 241, 209, 0.32) 18%,
+        var(--border-subtle) 48%,
+        var(--border-soft) 100%
+      )
+      border-box;
+}
+
 .gl-degradete-text {
   @apply tracking-[-0.01em] text-transparent bg-clip-text pr-[0.05em];
   background-image: linear-gradient(

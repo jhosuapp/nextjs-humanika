@@ -25,7 +25,7 @@ const CookieConsent = ({ t }: CookieConsentProps): JSX.Element => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, ease: EASE },
+      transition: { duration: 0.5, ease: EASE, delay: 5 },
     },
     exit: reduce
       ? { opacity: 0 }
@@ -45,7 +45,7 @@ const CookieConsent = ({ t }: CookieConsentProps): JSX.Element => {
           animate="visible"
           exit="exit"
         >
-          <div className={styles.inner}>
+          <div className={`${styles.inner} gl-gradient-box`}>
             <div className={styles.copy}>
               <p className={styles.title}>{t('cookies.banner.title') as string}</p>
               <p className={styles.description}>{t('cookies.banner.description') as string}</p>

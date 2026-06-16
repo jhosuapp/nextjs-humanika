@@ -11,10 +11,10 @@ import styles from './blog.module.css';
 
 type BlogViewProps = { t: ITranslations };
 
+// Cards are built from the registry; every visible string is resolved from the
+// matching article namespace (loaded by pages/blog/index.tsx), so the listing
+// stays in sync with each article's own copy automatically.
 const BlogView = ({ t }: BlogViewProps): JSX.Element => {
-  // Cards are built from the registry; every visible string is resolved from the
-  // matching article namespace (loaded by pages/blog/index.tsx), so the listing
-  // stays in sync with each article's own copy automatically.
   const articles = getSortedArticles();
   const readMore = t('card.readMore') as string;
 
@@ -23,7 +23,6 @@ const BlogView = ({ t }: BlogViewProps): JSX.Element => {
       <Container padding="xl">
         <header className={styles.heading}>
           <Text
-            className={styles.eyebrow}
             tag="p"
             variant="description_xs"
             color="primary"
@@ -36,7 +35,6 @@ const BlogView = ({ t }: BlogViewProps): JSX.Element => {
 
           <Text
             tag="h1"
-            className={styles.title}
             variant="title"
             color="secondary"
             weight="bold"
@@ -48,8 +46,7 @@ const BlogView = ({ t }: BlogViewProps): JSX.Element => {
 
           <Text
             tag="p"
-            className={styles.lead}
-            variant="subtitle_small"
+            variant="description"
             color="muted"
             weight="normal"
             delay={{ enter: 0.56, exit: 0.12 }}
@@ -70,7 +67,8 @@ const BlogView = ({ t }: BlogViewProps): JSX.Element => {
               <WrapperMotion
                 key={ns}
                 className={styles.gridItem}
-                delay={{ enter: 0.12 + index * 0.08, exit: 0.1 }}
+                delay={{ enter: 0.50 + index * 0.08, exit: 0.1 }}
+                immediate
               >
                 <ArticleCard
                   href={`/blog/${ns}`}

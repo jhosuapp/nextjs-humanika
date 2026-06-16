@@ -18,9 +18,11 @@
 }
 
 .card {
-  @apply relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center gap-12 overflow-hidden rounded-3xl border;
-  background: color-mix(in srgb, var(--surface-elevated) 87.5%, transparent);
-  border-color: var(--border-subtle);
+  @apply relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center gap-12 overflow-hidden rounded-2xl;
+  --gl-box-fill: linear-gradient(
+    color-mix(in srgb, var(--surface-elevated) 87.5%, transparent),
+    color-mix(in srgb, var(--surface-elevated) 87.5%, transparent)
+  );
   padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 5vw, 5rem);
   box-shadow: 0 40px 120px -40px rgba(0, 22, 67, 0.22);
   backdrop-filter: blur(20px);

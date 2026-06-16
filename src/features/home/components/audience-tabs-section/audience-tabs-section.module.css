@@ -23,9 +23,7 @@
 }
 
 .panel {
-  @apply grid w-full items-center gap-10 rounded-3xl p-8 border grid-cols-1 lg:grid-cols-2 lg:p-12;
-  background: var(--surface-elevated);
-  border-color: var(--border-subtle);
+  @apply grid w-full items-center gap-10 rounded-2xl p-8 grid-cols-1 lg:grid-cols-2 lg:p-12;
 }
 
 .panelText {
@@ -38,7 +36,7 @@
 
 .bullet {
   @apply text-sm relative pl-5;
-  color: var(--foreground);
+  color: var(--text-muted);
 }
 
 .bullet::before {
@@ -50,7 +48,7 @@
 
 .availability {
   @apply mt-2 flex flex-wrap items-center gap-x-1.5 gap-y-1 rounded-xl border px-3.5 py-2.5 text-sm leading-relaxed;
-  color: var(--foreground);
+  color: var(--text-muted);
   border-color: var(--border-subtle);
   background: linear-gradient(
     160deg,

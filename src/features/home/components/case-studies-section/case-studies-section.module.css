@@ -25,16 +25,11 @@
 }
 
 .card {
-  @apply relative flex h-full flex-col items-start gap-3 overflow-hidden rounded-2xl border p-6;
-  background: var(--surface-elevated);
-  border-color: var(--border-subtle);
-  transition:
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
+  @apply relative flex h-full flex-col items-start gap-3 overflow-hidden rounded-2xl p-6;
+  transition: box-shadow 0.3s ease;
 }
 
 .card:hover {
-  border-color: rgba(0, 177, 215, 0.35);
   box-shadow: var(--shadow-floating);
 }
 

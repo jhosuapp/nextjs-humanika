@@ -98,7 +98,7 @@ const ProcessStepsSection = ({ t }: Props) => {
               progress={parallaxProgress}
             />
           ))}
-        <div className={styles.card}>
+        <div className={`${styles.card} gl-gradient-box`}>
           <Text
             tag="h2"
             variant="title_small"
@@ -141,11 +141,11 @@ const ProcessStepsSection = ({ t }: Props) => {
             </div>
           </WrapperMotion>
         </div>
-        <div className={ `${styles.card} ${styles.cardSecondary} gl-dropshadow` }>
+        <div className={ `${styles.card} ${styles.cardSecondary} gl-gradient-box` }>
           <Text
             tag="p"
             variant="description_small"
-            color="secondary"
+            color="muted"
             weight="semibold"
             delay={{ enter: revealDelay(0), exit: 0 }}
             className="text-center"
