@@ -2,19 +2,15 @@ import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   motion,
-  useMotionValueEvent,
   useReducedMotion,
-  type MotionValue,
   type Variants,
 } from 'framer-motion';
-import { useState } from 'react';
 
 import styles from './process-steps-section.module.css';
 
 type ProcessStepProps = {
   index: number;
-  progress: MotionValue<number>;
-  threshold: number;
+  active: boolean;
   icon: IconDefinition;
   label: string;
 };
@@ -109,20 +105,8 @@ const glowVariants: Variants = {
   },
 };
 
-const ProcessStep = ({
-  index,
-  progress,
-  threshold,
-  icon,
-  label,
-}: ProcessStepProps) => {
+const ProcessStep = ({ index, active, icon, label }: ProcessStepProps) => {
   const reduce = useReducedMotion();
-  const [active, setActive] = useState(() => progress.get() >= threshold);
-
-  useMotionValueEvent(progress, 'change', (latest) => {
-    setActive(latest >= threshold);
-  });
-
   const state = reduce || active ? 'active' : 'inactive';
 
   return (

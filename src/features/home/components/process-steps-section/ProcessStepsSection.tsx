@@ -1,13 +1,5 @@
-import {
-  motion,
-  useMotionTemplate,
-  useMotionValueEvent,
-  useReducedMotion,
-  useScroll,
-  useSpring,
-  useTransform,
-} from 'framer-motion';
-import { useRef, useState } from 'react';
+import { motion, useInView, useReducedMotion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 
 import { Text } from '@/src/shared/components/text/Text';
 import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
@@ -22,58 +14,28 @@ import Image from 'next/image';
 
 type Props = { t: ITranslations };
 
-const STEP_THRESHOLDS = [0, 0.38, 0.58, 0.78] as const;
-
-const resolveActiveStep = (latest: number): number => {
-  let active = 0;
-  for (let i = 0; i < STEP_THRESHOLDS.length; i++) {
-    if (latest >= STEP_THRESHOLDS[i]) active = i;
-  }
-  return active;
-};
+const STEP_COUNT = homeStaticData.process.steps.length;
 
 const ProcessStepsSection = ({ t }: Props) => {
   const reduce = useReducedMotion();
   const wrapperRef = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll({
-    target: wrapperRef,
-    offset: ['start start', 'end end'],
-  });
-  const { scrollYProgress: parallaxProgress } = useScroll({
-    target: wrapperRef,
-    offset: ['start end', 'end start'],
-  });
+  // Fire the whole timeline once, when the section scrolls into view —
+  // no longer tied to scroll progress.
+  const inView = useInView(wrapperRef, { once: true, amount: 0.4 });
 
-  const lineProgressRaw = useTransform(scrollYProgress, [0.12, 0.85], [0, 1]);
-  const lineProgress = useSpring(lineProgressRaw, {
-    stiffness: 90,
-    damping: 22,
-    mass: 0.5,
-  });
+  // -1 = nothing revealed yet. Once in view, the steps light up one after
+  // another via staggered timers (reduced motion shows them all at once).
+  const [activeStep, setActiveStep] = useState(reduce ? STEP_COUNT - 1 : -1);
 
-  const cometRaw = useTransform(scrollYProgress, [0.08, 0.9], [12.5, 87.5]);
-  const cometX = useSpring(cometRaw, {
-    stiffness: 110,
-    damping: 20,
-    mass: 0.5,
-  });
-  const cometLeft = useMotionTemplate`${cometX}%`;
-  const cometOpacity = useTransform(
-    scrollYProgress,
-    [0.06, 0.12, 0.88, 0.94],
-    [0, 1, 1, 0],
-  );
+  useEffect(() => {
+    if (!inView || reduce) return;
+    const timers = homeStaticData.process.steps.map((_, i) =>
+      window.setTimeout(() => setActiveStep(i), 250 + i * 450),
+    );
+    return () => timers.forEach((id) => window.clearTimeout(id));
+  }, [inView, reduce]);
 
-  const [activeStep, setActiveStep] = useState(() =>
-    resolveActiveStep(scrollYProgress.get()),
-  );
-
-  useMotionValueEvent(scrollYProgress, 'change', (latest) => {
-    const next = resolveActiveStep(latest);
-    setActiveStep((prev) => (prev === next ? prev : next));
-  });
-
-  const activeIcon = homeStaticData.process.steps[activeStep].icon;
+  const activeIcon = homeStaticData.process.steps[Math.max(activeStep, 0)].icon;
 
   return (
     <section
@@ -95,7 +57,6 @@ const ProcessStepsSection = ({ t }: Props) => {
               size={item.size}
               rotate={item.rotate}
               accent={item.accent}
-              progress={parallaxProgress}
             />
           ))}
         <div className={`${styles.card} gl-gradient-box`}>
@@ -119,21 +80,27 @@ const ProcessStepsSection = ({ t }: Props) => {
               <motion.div
                 className={styles.lineFill}
                 aria-hidden="true"
-                style={{ '--p': reduce ? 1 : lineProgress } as React.CSSProperties}
+                initial={{ '--p': reduce ? 1 : 0 }}
+                animate={inView || reduce ? { '--p': 1 } : undefined}
+                transition={{ duration: 1.6, ease: 'easeInOut' }}
               />
               {!reduce && (
                 <motion.span
                   className={styles.comet}
                   aria-hidden="true"
-                  style={{ left: cometLeft, opacity: cometOpacity }}
+                  initial={{ left: '12.5%', opacity: 0 }}
+                  animate={inView ? { left: '87.5%', opacity: [0, 1, 1, 0] } : undefined}
+                  transition={{
+                    left: { duration: 1.8, ease: 'easeInOut' },
+                    opacity: { duration: 1.8, ease: 'easeInOut', times: [0, 0.08, 0.85, 1] },
+                  }}
                 />
               )}
               {homeStaticData.process.steps.map((step, i) => (
                 <ProcessStep
                   key={step.id}
                   index={i}
-                  progress={scrollYProgress}
-                  threshold={STEP_THRESHOLDS[i]}
+                  active={i <= activeStep}
                   icon={step.icon}
                   label={t(`process.steps.${step.id}.label`) as string}
                 />

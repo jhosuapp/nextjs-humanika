@@ -2,14 +2,12 @@
 
 .wrapper {
   @apply relative w-full;
-  height: 250vh;
   background-color: var(--bg-section);
 }
 
 .sticky {
-  @apply sticky flex w-full flex-col items-center justify-center gap-2;
-  height: calc(100svh - var(--h-header));
-  top: var(--h-header);
+  @apply relative flex w-full flex-col items-center justify-center gap-2;
+  min-height: calc(100svh - var(--h-header));
   padding: clamp(1rem, 4vw, 3rem) clamp(1rem, 5vw, 4rem);
 }
 

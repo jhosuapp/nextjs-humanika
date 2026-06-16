@@ -1,11 +1,6 @@
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  AnimatePresence,
-  motion,
-  useTransform,
-  type MotionValue,
-} from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import styles from './process-steps-section.module.css';
 
@@ -17,7 +12,6 @@ type FloatIconProps = {
   size: number;
   rotate?: number;
   accent?: boolean;
-  progress: MotionValue<number>;
 };
 
 const FloatIcon = ({
@@ -28,10 +22,7 @@ const FloatIcon = ({
   size,
   rotate = 0,
   accent = false,
-  progress,
 }: FloatIconProps) => {
-  const y = useTransform(progress, [0, 1], [offset, -offset]);
-
   const classNames = [
     styles.floatIcon,
     side === 'left' ? styles.floatIconLeft : styles.floatIconRight,
@@ -48,8 +39,9 @@ const FloatIcon = ({
         top: `${topPercent}%`,
         ['--float-size' as string]: `${size}px`,
         rotate,
-        y,
       }}
+      animate={{ y: [offset, -offset, offset] }}
+      transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
     >
       <AnimatePresence mode="popLayout" initial={false}>
         <motion.span
