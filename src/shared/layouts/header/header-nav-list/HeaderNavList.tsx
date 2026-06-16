@@ -2,6 +2,7 @@ import { motion, useReducedMotion, type Variants } from 'framer-motion';
 
 import { DURATION, EASE } from '@/src/shared/helpers/motion-variants';
 import { useLenisStore } from '@/src/shared/stores/lenis.store';
+import { navigateToHash } from '@/src/shared/helpers/hash-navigation';
 import { useRouter } from 'next/router';
 
 import { NavDropdown, type NavLink } from './NavDropdown';
@@ -37,18 +38,7 @@ const HeaderNavList = ({
   const router = useRouter();
 
   const navigate = (href: string) => {
-    const hashMatch = href.match(/^(?:\/)?#(.+)$/);
-
-    if (hashMatch) {
-      const isHome = router.pathname === '/';
-      if (isHome) {
-        lenis?.scrollTo(`#${hashMatch[1]}`, { duration: 0.9, offset: -80 });
-        onItemClick?.();
-      } else {
-        router.push(href).then(() => onItemClick?.());
-      }
-      return;
-    }
+    if (navigateToHash(href, router, lenis, onItemClick)) return;
 
     lenis?.scrollTo(0, { duration: 0.7 });
     setTimeout(() => {

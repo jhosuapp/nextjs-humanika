@@ -2,7 +2,6 @@
 
 .section {
   @apply w-full;
-  background: var(--bg-section);
 }
 
 .head {

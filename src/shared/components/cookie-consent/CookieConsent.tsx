@@ -1,10 +1,10 @@
 import { AnimatePresence, motion, useReducedMotion, type Variants } from 'framer-motion';
-import Link from 'next/link';
 import { useEffect, type JSX } from 'react';
 
 import { EASE } from '@/src/shared/helpers/motion-variants';
 import { useCookieConsentStore } from '@/src/shared/stores/cookie-consent.store';
 import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
+import { CustomLink } from '@/src/shared/components/custom-link/CustomLink';
 
 import styles from './cookie-consent.module.css';
 
@@ -49,13 +49,13 @@ const CookieConsent = ({ t }: CookieConsentProps): JSX.Element => {
             <div className={styles.copy}>
               <p className={styles.title}>{t('cookies.banner.title') as string}</p>
               <p className={styles.description}>{t('cookies.banner.description') as string}</p>
-              <Link
-                href="/privacy"
+              <CustomLink
+                to="/privacy"
                 className={styles.learnMore}
-                aria-label={t('cookies.banner.learnMoreAria') as string}
+                ariaLabel={t('cookies.banner.learnMoreAria') as string}
               >
                 {t('cookies.banner.learnMore') as string}
-              </Link>
+              </CustomLink>
             </div>
 
             <div className={styles.actions}>

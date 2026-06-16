@@ -25,7 +25,7 @@ const HomeView = ({ t, tBot }: HomeViewProps): JSX.Element => {
       <AudienceTabsSection t={t} />
       <ProcessStepsSection t={t} />
       <IntegrationsGrid t={t} />
-      <StatsSection t={t} />
+      {/* <StatsSection t={t} /> */}
       <CaseStudiesSection t={t} />
       <FaqSection t={t} />
     </MainContent>

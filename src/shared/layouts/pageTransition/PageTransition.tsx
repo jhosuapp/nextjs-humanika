@@ -1,22 +1,29 @@
-import { ReactNode, useEffect, useState, type JSX } from 'react';
+import { ReactNode, useEffect, useState, useSyncExternalStore, type JSX } from 'react';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 
 import { anim, text } from './pageTransition.motion';
-import { routes } from '../../constants/routes.constant';
+import { getSessionTransitionPhrase } from '../../constants/transition-phrases.constant';
 import { SVG } from './PageTransitionSVG';
-import { useLoaderStore } from '../../stores/loader.store';
 
 import styles from './pageTransition.module.css';
+import { useLoaderStore } from '../../stores/loader.store';
 
 type PageTransitionProps = {
     children: ReactNode;
 }
 
-const PageTransition = ({ children }: PageTransitionProps): JSX.Element => {
-    const pathname = useRouter().pathname;
+// No external subscription needed — the phrase never changes after it's chosen.
+const noopSubscribe = () => () => {};
 
+const PageTransition = ({ children }: PageTransitionProps): JSX.Element => {
+    const { locale } = useRouter();
     const isLoadingDelay = useLoaderStore(state => state.isLoadingDelay);
+    const phrase = useSyncExternalStore(
+        noopSubscribe,
+        () => getSessionTransitionPhrase(locale),
+        () => '',
+    );
 
     const [dimensions, setDimensions] = useState({
         width: 1920,
@@ -52,14 +59,14 @@ const PageTransition = ({ children }: PageTransitionProps): JSX.Element => {
                     className={`${styles.curve__route} ${styles.curve__route__transition}`}
                     {...anim(text)}
                 >
-                    150%
+                    {phrase}
                 </motion.p>
             ) : (
                 <motion.p
                     className={styles.curve__route}
                     {...anim(text)}
                 >
-                    {routes[pathname] ?? '404'}
+                    {phrase}
                 </motion.p>
             )}
 

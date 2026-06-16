@@ -21,6 +21,7 @@
 .playBtn svg,
 .playBtn span {
   @apply text-white;
+  text-wrap: nowrap;
 }
 
 .playBtn span {

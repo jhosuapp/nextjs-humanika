@@ -1,0 +1,194 @@
+{
+  "seo": {
+    "title": "De automatizar tareas a crear colaboradores digitales | Humanika",
+    "description": "La adopción de IA empresarial entra en una segunda etapa. Automation, Augmentation y Agency: los tres niveles de colaboración con inteligencia artificial."
+  },
+  "hero": {
+    "eyebrow": "Perspectiva",
+    "titleLead": "IA en la empresa: de automatizar tareas a crear ",
+    "titleAccent": "colaboradores digitales",
+    "titleTrail": ".",
+    "imageAlt": "Equipo de trabajo colaborando con un sistema de inteligencia artificial",
+    "meta": {
+      "readingTime": "8 min de lectura",
+      "date": "Junio 2026",
+      "author": "Equipo Humanika"
+    },
+    "lead": [
+      "La primera vez que una empresa prueba inteligencia artificial suele pedirle algo simple: redactar un correo, resumir una reunión, responder una pregunta frecuente, corregir un texto, organizar una tabla. El resultado sorprende porque aparece rápido, bien escrito y con una seguridad que antes parecía reservada para alguien que había pasado horas trabajando en ello.",
+      "Usar inteligencia artificial en empresas no es lo mismo que transformar una empresa con inteligencia artificial. Entre una cosa y la otra hay una distancia enorme, y en ella viven los procesos, los datos, los permisos y la supervisión humana."
+    ]
+  },
+  "intro": {
+    "quote": "Ese momento produce entusiasmo. También produce una falsa sensación de avance."
+  },
+  "toc": {
+    "title": "En este artículo",
+    "fluidez": "Fluidez en IA",
+    "niveles": "Los tres niveles",
+    "automation": "Automation",
+    "augmentation": "Augmentation",
+    "agency": "Agency",
+    "comparacion": "Chatbot vs. colaborador",
+    "madurez": "Madurez",
+    "pregunta": "La pregunta clave",
+    "humanika": "Humanika"
+  },
+  "fluidez": {
+    "eyebrow": "El salto pendiente",
+    "title": "Usar IA no es lo mismo que transformar con IA",
+    "paragraphs": [
+      "En la distancia entre usar y transformar viven los procesos, los datos, los permisos, la calidad de las respuestas, la supervisión humana, la trazabilidad y, sobre todo, la capacidad de entender qué trabajo debe hacer la IA y qué trabajo debe seguir haciendo una persona.",
+      "La adopción de IA empresarial está entrando en una segunda etapa. Ya no basta con tener acceso a un modelo conversacional, ni con instalar un chatbot en una página web o abrir un canal en WhatsApp. La pregunta de fondo cambió: no es si la IA puede responder, sino si puede operar de forma útil, segura y alineada con la realidad de la organización."
+    ],
+    "highlightLead": "Ahí aparece una idea clave: la fluidez en IA, o ",
+    "highlightTerm": "AI Fluency",
+    "highlightTrail": ". No como una moda académica, sino como una habilidad práctica: una empresa fluida en IA sabe colaborar con sistemas inteligentes de forma efectiva, eficiente, ética y segura.",
+    "emphasis": "Esa evolución puede entenderse en tres niveles: Automation, Augmentation y Agency."
+  },
+  "levels": {
+    "eyebrow": "El marco",
+    "title": "Tres niveles de colaboración con IA",
+    "description": "No son etapas que se sustituyen entre sí. Conviven, y una empresa madura sabe cuándo usar cada una.",
+    "items": {
+      "automation": "Automation · ejecutar tareas definidas",
+      "augmentation": "Augmentation · amplificar al equipo humano",
+      "agency": "Agency · operar con autonomía controlada"
+    }
+  },
+  "automation": {
+    "eyebrow": "Nivel 01",
+    "title": "Automatizar no es transformar",
+    "paragraphs": [
+      "El primer nivel es la automatización con inteligencia artificial. Es el uso más inmediato y, por eso mismo, el más común: la IA recibe una instrucción clara y ejecuta una tarea específica. Resume este documento. Clasifica estos mensajes. Redacta esta respuesta. Extrae los datos relevantes. Convierte estas notas en una minuta.",
+      "Funciona porque muchas organizaciones están llenas de trabajo repetitivo: correos que se parecen entre sí, preguntas frecuentes que consumen horas, solicitudes que deben clasificarse manualmente, reportes que alguien arma cada semana copiando información de varias fuentes."
+    ],
+    "examples": [
+      "Una universidad responde dudas básicas sobre admisiones.",
+      "Un equipo de soporte clasifica solicitudes antes de asignarlas.",
+      "Un área comercial genera primeros borradores de seguimiento.",
+      "Un equipo de operaciones convierte conversaciones en reportes."
+    ],
+    "limit": [
+      "El beneficio es evidente: menos fricción, más velocidad, menos desgaste humano en tareas de bajo valor. Pero la automatización tiene un límite. Si se implementa sin contexto, sin reglas y sin conexión con los procesos reales, se convierte en otra herramienta aislada. Responde, pero no necesariamente resuelve. Acelera una parte del trabajo, pero no mejora el sistema completo."
+    ],
+    "emphasis": "Muchas empresas se quedan atrapadas ahí: usan IA para producir más rápido, pero no para trabajar mejor."
+  },
+  "augmentation": {
+    "eyebrow": "Nivel 02",
+    "title": "La IA como aumento de capacidad",
+    "paragraphs": [
+      "El segundo nivel es más interesante: la aumentación. Aquí la inteligencia artificial deja de ser solo una máquina que ejecuta instrucciones y empieza a funcionar como un copiloto del equipo humano. No reemplaza el criterio de las personas: lo amplifica.",
+      "Un equipo comercial puede preparar una reunión con un prospecto. Un área de marketing puede adaptar una idea a distintos públicos. Un equipo de servicio puede analizar cientos de conversaciones y encontrar patrones que antes pasaban inadvertidos. Una universidad puede descubrir dónde se está perdiendo interés en el proceso de inscripción."
+    ],
+    "quote": "Automatizar es pedirle a la IA que haga algo definido.",
+    "quoteAccent": "Aumentar es usarla para explorar alternativas, encontrar relaciones, detectar riesgos y mejorar decisiones.",
+    "lectura": [
+      "En la práctica, esto convierte a la inteligencia artificial en una herramienta de lectura organizacional. Las empresas producen enormes cantidades de información todos los días —correos, chats, formularios, tickets, reuniones, documentos, campañas, comentarios de clientes—, pero buena parte queda dispersa, subutilizada o enterrada en sistemas que nadie tiene tiempo de revisar.",
+      "La IA puede ayudar a convertir ese ruido en señales. No decide por la empresa ni reemplaza la responsabilidad humana, pero puede mostrar patrones, resumir contexto, proponer hipótesis y preparar mejores insumos para decidir. En Humanika, este nivel es central: un colaborador digital no debería limitarse a contestar preguntas, también debería ayudar a los equipos a entender qué está ocurriendo."
+    ],
+    "emphasis": "Ahí la IA deja de ser un asistente de productividad individual y empieza a convertirse en una capacidad organizacional."
+  },
+  "agency": {
+    "eyebrow": "Nivel 03",
+    "title": "Cuando la IA empieza a operar",
+    "paragraphs": [
+      "El tercer nivel es la agencia, y también el más delicado. En este punto, la IA ya no espera una instrucción para cada paso: puede actuar con cierto grado de autonomía dentro de un marco definido. Puede atender una conversación, consultar documentos, buscar en una base de conocimiento, crear un ticket, registrar un lead, escalar un caso o ejecutar una acción autorizada.",
+      "Este es el territorio de los agentes de inteligencia artificial y los colaboradores digitales."
+    ],
+    "highlightLead": "Pero la palabra importante no es autonomía. La palabra importante es ",
+    "highlightTerm": "control",
+    "highlightTrail": ". Una empresa no puede permitir que un sistema actúe libremente sobre clientes, estudiantes, pacientes o datos internos. La autonomía sin gobierno es un riesgo; la autonomía con límites claros puede ser una ventaja operativa.",
+    "requisitos": [
+      "Un colaborador digital serio necesita saber quién es, qué puede hacer y qué no. Necesita un rol definido, una base de conocimiento autorizada, permisos concretos, reglas de escalamiento, trazabilidad de fuentes y supervisión humana. Debe poder explicar de dónde obtuvo una respuesta, reconocer cuando no tiene información suficiente y escalar cuando el caso excede su alcance.",
+      "La IA empresarial empieza a volverse realmente valiosa cuando se conecta con los sistemas que la organización ya usa: CRM, bases documentales, plataformas académicas, calendarios, sistemas de tickets, canales de mensajería y fuentes internas de conocimiento. No se trata de poner una interfaz conversacional encima del desorden, sino de crear una capa inteligente que ayude a ordenar la operación."
+    ]
+  },
+  "comparison": {
+    "eyebrow": "La diferencia",
+    "title": "Un chatbot responde. Un colaborador digital opera.",
+    "left": {
+      "label": "Chatbot",
+      "items": [
+        "Responde a la pregunta que recibe",
+        "Intenta cerrar la conversación",
+        "Depende de instrucciones generales",
+        "Vive aislado de los procesos"
+      ]
+    },
+    "right": {
+      "label": "Colaborador digital",
+      "items": [
+        "Opera dentro de un proceso definido",
+        "Sabe cuándo resolver, orientar o escalar",
+        "Trabaja con conocimiento, playbooks y permisos",
+        "Se conecta al CRM, tickets y bases internas"
+      ]
+    }
+  },
+  "madurez": {
+    "eyebrow": "El equilibrio",
+    "title": "La madurez está en combinar los tres niveles",
+    "paragraphs": [
+      "Automation, Augmentation y Agency no son etapas que se sustituyen entre sí: conviven. Una empresa madura en inteligencia artificial automatiza tareas repetitivas, aumenta la capacidad de sus equipos y despliega colaboradores digitales con autonomía controlada donde el proceso lo permite."
+    ],
+    "examples": [
+      "Una universidad automatiza respuestas de admisiones, luego analiza por qué algunos aspirantes no terminan su inscripción y, más adelante, despliega un colaborador que orienta, captura datos, envía recordatorios y escala casos complejos.",
+      "Un equipo comercial empieza generando correos, después prepara reuniones y analiza prospectos, y luego suma un colaborador que acompaña el ciclo, sugiere próximos pasos y mantiene trazabilidad de oportunidades.",
+      "Un área de soporte clasifica tickets, después analiza patrones de atención y luego opera un colaborador que resuelve solicitudes frecuentes, consulta documentación interna y escala incidentes cuando corresponde."
+    ],
+    "emphasis": "El punto no es automatizar por automatizar. El punto es decidir qué tipo de colaboración con IA tiene sentido para cada proceso."
+  },
+  "pregunta": {
+    "eyebrow": "Lo que de verdad importa",
+    "title": "La pregunta que deberían hacerse las empresas",
+    "paragraphs": [
+      "La mayoría de discusiones sobre IA empresarial empieza por la herramienta: qué modelo usar, qué proveedor elegir, qué plataforma contratar. Son preguntas necesarias, pero incompletas. La pregunta más importante es otra: ¿la organización sabe trabajar con IA?",
+      "Saber trabajar con IA implica delegar con criterio, describir bien las tareas, evaluar críticamente los resultados y actuar con responsabilidad. También implica aceptar algo que muchas empresas prefieren evitar: la IA no arregla procesos mal diseñados. Si el conocimiento está desactualizado, si los permisos no están claros, si nadie sabe cuándo escalar, la IA amplifica esos problemas. Por eso la verdadera adopción no empieza con un modelo, sino con una decisión de diseño organizacional:"
+    ],
+    "decisiones": [
+      "Qué se delega.",
+      "Qué se supervisa.",
+      "Qué se automatiza.",
+      "Qué se aumenta.",
+      "Qué se permite operar.",
+      "Qué debe quedar siempre bajo criterio humano."
+    ],
+    "quote": "La IA puede equivocarse y sonar convincente aunque no tenga razón. Necesita contexto, límites y supervisión."
+  },
+  "humanika": {
+    "eyebrow": "Nuestra mirada",
+    "title": "Humanika y la próxima capa de IA empresarial",
+    "paragraphs": [
+      "Humanika parte de una premisa simple: las empresas no necesitan más chatbots genéricos. Necesitan colaboradores digitales especializados, conectados al conocimiento y a los procesos reales de la organización. Por eso aplicamos los tres niveles de colaboración con IA:"
+    ],
+    "niveles": [
+      "Automation, para reducir tareas repetitivas.",
+      "Augmentation, para mejorar la capacidad de análisis y producción de los equipos.",
+      "Agency, para operar procesos con autonomía controlada, trazabilidad y supervisión humana."
+    ],
+    "closing": [
+      "Un colaborador digital de Humanika puede atender usuarios por WhatsApp o web, consultar una base de conocimiento autorizada, seguir playbooks, ejecutar acciones permitidas, registrar conversaciones y escalar casos cuando el proceso lo exige. La diferencia no está en que use inteligencia artificial: está en cómo se diseña su trabajo.",
+      "El futuro de la IA en la empresa no será solo responder preguntas más rápido. Será crear nuevas formas de colaboración entre personas, sistemas y conocimiento. Algunas tareas serán automatizadas, otras aumentadas, y algunas podrán ser operadas por colaboradores digitales con límites claros."
+    ],
+    "quote": "Las organizaciones que entiendan esa diferencia estarán mejor preparadas para capturar valor real de la inteligencia artificial.",
+    "quoteAccent": "No porque tengan más herramientas, sino porque habrán aprendido a trabajar con ellas.",
+    "referencia": [
+      "Referencia: este artículo toma como base el concepto de AI Fluency y los modos de colaboración Automation, Augmentation y Agency difundidos en materiales educativos de Anthropic y el AI Fluency Framework de Rick Dakan y Joseph Feller. Humanika adapta estos principios al contexto empresarial y al diseño de colaboradores digitales."
+    ]
+  },
+  "takeaways": {
+    "title": "En resumen",
+    "items": [
+      "Usar IA no es transformar con IA: la diferencia está en los procesos, los datos, los permisos y la supervisión humana.",
+      "La colaboración con IA tiene tres niveles que conviven —Automation, Augmentation y Agency—, no etapas que se reemplazan.",
+      "Un chatbot responde; un colaborador digital opera dentro de un proceso, con conocimiento, permisos y autonomía controlada.",
+      "La IA no arregla procesos mal diseñados: la adopción real empieza con una decisión de diseño organizacional."
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para diseñar un colaborador digital, no un chatbot más?",
+    "description": "Conversemos sobre qué procesos automatizar, cuáles aumentar y dónde desplegar colaboradores digitales con autonomía controlada.",
+    "button": "Hablar con un especialista"
+  }
+}

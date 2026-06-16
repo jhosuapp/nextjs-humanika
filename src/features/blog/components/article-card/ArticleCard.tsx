@@ -1,8 +1,9 @@
 import type { JSX } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
+
+import { CustomLink } from '@/src/shared/components/custom-link/CustomLink';
 
 import styles from './article-card.module.css';
 
@@ -34,7 +35,7 @@ const ArticleCard = ({
   readMore,
 }: ArticleCardProps): JSX.Element => {
   return (
-    <Link href={href} className={styles.card}>
+    <CustomLink to={href} className={styles.card}>
       <figure className={styles.media}>
         <Image
           src={cover}
@@ -70,7 +71,7 @@ const ArticleCard = ({
           </span>
         </div>
       </div>
-    </Link>
+    </CustomLink>
   );
 };
 

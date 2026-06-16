@@ -31,6 +31,7 @@ const headerStaticData: HeaderStaticData = {
       href: "/blog",
       children: [
         // { key: "allArticles", href: "/blog" },
+        { key: "digitalCoworkers", href: "/blog/colaboradores-digitales" },
         { key: "trust", href: "/blog/crear-confianza" },
         { key: "fuerzaLaboral", href: "/blog/fuerza-laboral-hibrida" },
       ],

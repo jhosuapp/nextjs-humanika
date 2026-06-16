@@ -19,19 +19,19 @@
 }
 
 .curve .curve__route {
-  @apply fixed text-center z-[103] left-0 right-0 top-[40vh] w-full font-bold uppercase pointer-events-none text-xl lg:text-5xl 2xl:text-7xl;
+  @apply fixed text-center z-[103] left-0 right-0 top-[40vh] w-full font-bold uppercase pointer-events-none text-xl lg:text-3xl 2xl:text-5xl;
   will-change: opacity, transform;
   color: var(--secondary);
 }
 
 .curve .curve__route__transition {
-  animation: 1s ease forwards 1 transition-text;
+  animation: 0.5s ease forwards 1 transition-text;
 }
 
 @keyframes transition-text {
   from {
     opacity: 0 !important;
-    transform: translateZ(0) scale(0.5);
+    transform: translateZ(0) scale(0.75);
   }
   to {
     opacity: 1 !important;

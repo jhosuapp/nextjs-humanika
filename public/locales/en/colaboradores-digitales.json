@@ -1,0 +1,194 @@
+{
+  "seo": {
+    "title": "From automating tasks to building digital coworkers | Humanika",
+    "description": "Enterprise AI adoption is entering a second stage. Automation, Augmentation and Agency: the three levels of collaboration with artificial intelligence."
+  },
+  "hero": {
+    "eyebrow": "Perspective",
+    "titleLead": "AI in the enterprise: from automating tasks to building ",
+    "titleAccent": "digital coworkers",
+    "titleTrail": ".",
+    "imageAlt": "A team collaborating with an artificial intelligence system",
+    "meta": {
+      "readingTime": "8 min read",
+      "date": "June 2026",
+      "author": "Humanika Team"
+    },
+    "lead": [
+      "The first time a company tries artificial intelligence, it usually asks for something simple: draft an email, summarize a meeting, answer a frequent question, fix a text, organize a table. The result is surprising because it appears fast, well written and with a confidence that used to be reserved for someone who had spent hours working on it.",
+      "Using artificial intelligence in companies is not the same as transforming a company with artificial intelligence. Between the two there is an enormous distance, and that is where processes, data, permissions and human oversight live."
+    ]
+  },
+  "intro": {
+    "quote": "That first moment produces excitement. It also produces a false sense of progress."
+  },
+  "toc": {
+    "title": "In this article",
+    "fluidez": "AI fluency",
+    "niveles": "The three levels",
+    "automation": "Automation",
+    "augmentation": "Augmentation",
+    "agency": "Agency",
+    "comparacion": "Chatbot vs. coworker",
+    "madurez": "Maturity",
+    "pregunta": "The key question",
+    "humanika": "Humanika"
+  },
+  "fluidez": {
+    "eyebrow": "The pending leap",
+    "title": "Using AI is not the same as transforming with AI",
+    "paragraphs": [
+      "In the distance between using and transforming live the processes, the data, the permissions, the quality of the answers, human oversight, traceability and, above all, the ability to understand what work AI should do and what work a person should keep doing.",
+      "Enterprise AI adoption is entering a second stage. Having access to a conversational model is no longer enough, nor is installing a chatbot on a website or opening a WhatsApp channel. The underlying question changed: it is not whether AI can answer, but whether it can operate in a useful, safe way aligned with the reality of the organization."
+    ],
+    "highlightLead": "That is where a key idea appears: fluency in AI, or ",
+    "highlightTerm": "AI Fluency",
+    "highlightTrail": ". Not as an academic fad, but as a practical skill: a company fluent in AI knows how to collaborate with intelligent systems in an effective, efficient, ethical and safe way.",
+    "emphasis": "That evolution can be understood across three levels: Automation, Augmentation and Agency."
+  },
+  "levels": {
+    "eyebrow": "The framework",
+    "title": "Three levels of AI collaboration",
+    "description": "They are not stages that replace one another. They coexist, and a mature company knows when to use each.",
+    "items": {
+      "automation": "Automation · run defined tasks",
+      "augmentation": "Augmentation · amplify the human team",
+      "agency": "Agency · operate with controlled autonomy"
+    }
+  },
+  "automation": {
+    "eyebrow": "Level 01",
+    "title": "Automating is not transforming",
+    "paragraphs": [
+      "The first level is automation with artificial intelligence. It is the most immediate use and, for that very reason, the most common: AI receives a clear instruction and executes a specific task. Summarize this document. Classify these messages. Draft this reply. Extract the relevant data. Turn these notes into minutes.",
+      "It works because many organizations are full of repetitive work: emails that look alike, frequent questions that consume hours, requests that must be classified manually, reports someone assembles every week by copying information from several sources."
+    ],
+    "examples": [
+      "A university answers basic admissions questions.",
+      "A support team classifies requests before assigning them.",
+      "A sales team generates first follow-up drafts.",
+      "An operations team turns conversations into reports."
+    ],
+    "limit": [
+      "The benefit is obvious: less friction, more speed, less human burnout on low-value tasks. But automation has a limit. If it is implemented without context, without rules and without connection to the real processes, it becomes just another isolated tool. It answers, but it does not necessarily solve. It speeds up part of the work, but it does not improve the whole system."
+    ],
+    "emphasis": "Many companies get stuck there: they use AI to produce faster, but not to work better."
+  },
+  "augmentation": {
+    "eyebrow": "Level 02",
+    "title": "AI as a capacity boost",
+    "paragraphs": [
+      "The second level is more interesting: augmentation. Here artificial intelligence stops being just a machine that executes instructions and starts working as a copilot for the human team. It does not replace people's judgment: it amplifies it.",
+      "A sales team can prepare a meeting with a prospect. A marketing team can adapt an idea to different audiences. A service team can analyze hundreds of conversations and find patterns that previously went unnoticed. A university can discover where interest is being lost in the enrollment process."
+    ],
+    "quote": "Automating is asking AI to do something defined.",
+    "quoteAccent": "Augmenting is using it to explore alternatives, find relationships, detect risks and improve decisions.",
+    "lectura": [
+      "In practice, this turns artificial intelligence into a tool for organizational reading. Companies produce enormous amounts of information every day —emails, chats, forms, tickets, meetings, documents, campaigns, customer comments—, but much of it stays scattered, underused or buried in systems no one has time to review.",
+      "AI can help turn that noise into signals. It does not decide for the company nor replace human responsibility, but it can show patterns, summarize context, propose hypotheses and prepare better inputs for deciding. At Humanika, this level is central: a digital coworker should not limit itself to answering questions, it should also help teams understand what is happening."
+    ],
+    "emphasis": "There AI stops being an individual productivity assistant and starts becoming an organizational capability."
+  },
+  "agency": {
+    "eyebrow": "Level 03",
+    "title": "When AI starts to operate",
+    "paragraphs": [
+      "The third level is agency, and also the most delicate. At this point, AI no longer waits for an instruction for every step: it can act with a certain degree of autonomy within a defined framework. It can handle a conversation, consult documents, search a knowledge base, create a ticket, register a lead, escalate a case or execute an authorized action.",
+      "This is the territory of artificial intelligence agents and digital coworkers."
+    ],
+    "highlightLead": "But the important word is not autonomy. The important word is ",
+    "highlightTerm": "control",
+    "highlightTrail": ". A company cannot let a system act freely over customers, students, patients or internal data. Autonomy without governance is a risk; autonomy with clear limits can be an operational advantage.",
+    "requisitos": [
+      "A serious digital coworker needs to know who it is, what it can do and what it cannot. It needs a defined role, an authorized knowledge base, concrete permissions, escalation rules, source traceability and human oversight. It must be able to explain where it got an answer, recognize when it lacks enough information and escalate when a case exceeds its scope.",
+      "Enterprise AI starts to become truly valuable when it connects with the systems the organization already uses: CRM, document bases, academic platforms, calendars, ticketing systems, messaging channels and internal knowledge sources. It is not about putting a conversational interface on top of the mess, but about creating an intelligent layer that helps order the operation."
+    ]
+  },
+  "comparison": {
+    "eyebrow": "The difference",
+    "title": "A chatbot answers. A digital coworker operates.",
+    "left": {
+      "label": "Chatbot",
+      "items": [
+        "Answers the question it receives",
+        "Tries to close the conversation",
+        "Relies on general instructions",
+        "Lives isolated from the processes"
+      ]
+    },
+    "right": {
+      "label": "Digital coworker",
+      "items": [
+        "Operates within a defined process",
+        "Knows when to solve, guide or escalate",
+        "Works with knowledge, playbooks and permissions",
+        "Connects to the CRM, tickets and internal bases"
+      ]
+    }
+  },
+  "madurez": {
+    "eyebrow": "The balance",
+    "title": "Maturity is in combining the three levels",
+    "paragraphs": [
+      "Automation, Augmentation and Agency are not stages that replace one another: they coexist. A company mature in artificial intelligence automates repetitive tasks, augments the capacity of its teams and deploys digital coworkers with controlled autonomy where the process allows it."
+    ],
+    "examples": [
+      "A university automates admissions answers, then analyzes why some applicants do not finish enrolling and, later, deploys a coworker that guides, captures data, sends reminders and escalates complex cases.",
+      "A sales team starts generating emails, then prepares meetings and analyzes prospects, and later adds a coworker that accompanies the cycle, suggests next steps and keeps traceability of opportunities.",
+      "A support team classifies tickets, then analyzes service patterns and later operates a coworker that solves frequent requests, consults internal documentation and escalates incidents when appropriate."
+    ],
+    "emphasis": "The point is not to automate for the sake of automating. The point is to decide what kind of AI collaboration makes sense for each process."
+  },
+  "pregunta": {
+    "eyebrow": "What truly matters",
+    "title": "The question companies should be asking",
+    "paragraphs": [
+      "Most discussions about enterprise AI start with the tool: which model to use, which provider to choose, which platform to contract. These are necessary but incomplete questions. The most important question is another: does the organization know how to work with AI?",
+      "Knowing how to work with AI means delegating with judgment, describing tasks well, critically evaluating results and acting responsibly. It also means accepting something many companies prefer to avoid: AI does not fix badly designed processes. If knowledge is outdated, if permissions are unclear, if no one knows when to escalate, AI amplifies those problems. That is why real adoption does not start with a model, but with an organizational design decision:"
+    ],
+    "decisiones": [
+      "What is delegated.",
+      "What is supervised.",
+      "What is automated.",
+      "What is augmented.",
+      "What is allowed to operate.",
+      "What must always remain under human judgment."
+    ],
+    "quote": "AI can be wrong and sound convincing even when it is not right. It needs context, limits and oversight."
+  },
+  "humanika": {
+    "eyebrow": "Our view",
+    "title": "Humanika and the next layer of enterprise AI",
+    "paragraphs": [
+      "Humanika starts from a simple premise: companies do not need more generic chatbots. They need specialized digital coworkers, connected to the knowledge and real processes of the organization. That is why we apply the three levels of AI collaboration:"
+    ],
+    "niveles": [
+      "Automation, to reduce repetitive tasks.",
+      "Augmentation, to improve teams' analysis and production capacity.",
+      "Agency, to operate processes with controlled autonomy, traceability and human oversight."
+    ],
+    "closing": [
+      "A Humanika digital coworker can serve users over WhatsApp or web, consult an authorized knowledge base, follow playbooks, execute permitted actions, log conversations and escalate cases when the process requires it. The difference is not that it uses artificial intelligence: it is in how its work is designed.",
+      "The future of AI in the enterprise will not just be answering questions faster. It will be creating new forms of collaboration between people, systems and knowledge. Some tasks will be automated, others augmented, and some will be operated by digital coworkers with clear limits."
+    ],
+    "quote": "The organizations that understand that difference will be better prepared to capture real value from artificial intelligence.",
+    "quoteAccent": "Not because they have more tools, but because they will have learned to work with them.",
+    "referencia": [
+      "Reference: this article is based on the concept of AI Fluency and the Automation, Augmentation and Agency modes of collaboration shared in Anthropic's educational materials and the AI Fluency Framework by Rick Dakan and Joseph Feller. Humanika adapts these principles to the enterprise context and to the design of digital coworkers."
+    ]
+  },
+  "takeaways": {
+    "title": "In short",
+    "items": [
+      "Using AI is not transforming with AI: the difference is in the processes, the data, the permissions and human oversight.",
+      "AI collaboration has three levels that coexist —Automation, Augmentation and Agency—, not stages that replace each other.",
+      "A chatbot answers; a digital coworker operates within a process, with knowledge, permissions and controlled autonomy.",
+      "AI does not fix badly designed processes: real adoption starts with an organizational design decision."
+    ]
+  },
+  "cta": {
+    "title": "Ready to design a digital coworker, not just another chatbot?",
+    "description": "Let's talk about which processes to automate, which to augment and where to deploy digital coworkers with controlled autonomy.",
+    "button": "Talk to a specialist"
+  }
+}

@@ -1,8 +1,8 @@
 import { motion, useReducedMotion } from 'framer-motion';
-import Link from 'next/link';
 import type { JSX } from 'react';
 
 import { staggerParent, staggerChild } from '@/src/shared/helpers/motion-variants';
+import { CustomLink } from '@/src/shared/components/custom-link/CustomLink';
 
 import styles from './rich-text.module.css';
 
@@ -75,23 +75,15 @@ const RichText = ({ blocks, className = '' }: RichTextProps): JSX.Element => {
         }
 
         if (block.type === 'link') {
-          const isExternal = block.external;
           return (
             <motion.div key={i} variants={childVariants}>
-              {isExternal ? (
-                <a
-                  href={block.href}
-                  className={styles.linkBlock}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {block.text}
-                </a>
-              ) : (
-                <Link href={block.href} className={styles.linkBlock}>
-                  {block.text}
-                </Link>
-              )}
+              <CustomLink
+                to={block.href}
+                className={styles.linkBlock}
+                external={block.external}
+              >
+                {block.text}
+              </CustomLink>
             </motion.div>
           );
         }
