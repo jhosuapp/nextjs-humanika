@@ -1,0 +1,47 @@
+{
+  "seo": {
+    "title": "[EDITAR] Caso de éxito | 150%",
+    "description": "[EDITAR] Descripción breve del caso para SEO (qué marca, qué hicimos y qué resultado)."
+  },
+  "hero": {
+    "eyebrow": "Educación",
+    "title": "[EDITAR] Título del caso de éxito",
+    "description": "[EDITAR] Resumen de una o dos líneas que explique el colaborador digital y el valor que generó.",
+    "imageAlt": "[EDITAR] Texto alternativo de la imagen demostrativa"
+  },
+  "categories": ["[EDITAR] Industria", "WhatsApp", "[EDITAR] Tipo"],
+  "metric": {
+    "prefix": "",
+    "suffix": "",
+    "value": "24/7"
+  },
+  "card": {
+    "title": "[EDITAR] Título corto",
+    "excerpt": "[EDITAR] Descripción corta para la tarjeta del caso."
+  },
+  "overview": {
+    "paragraphs": [
+      "[EDITAR] Primer párrafo: contexto del cliente y el reto que enfrentaba.",
+      "[EDITAR] Segundo párrafo: qué construimos y cómo funcionó la solución."
+    ]
+  },
+  "highlights": {
+    "challenge": {
+      "label": "Reto",
+      "text": "[EDITAR] El problema concreto a resolver."
+    },
+    "solution": {
+      "label": "Solución",
+      "text": "[EDITAR] El colaborador digital que implementamos."
+    },
+    "result": {
+      "label": "Resultado",
+      "text": "[EDITAR] El impacto medible que generó."
+    }
+  },
+  "cta": {
+    "title": "¿Quieres un resultado así para tu marca?",
+    "description": "Diseñamos colaboradores digitales que convierten procesos en conversaciones medibles.",
+    "button": "Hablar por WhatsApp"
+  }
+}

@@ -2,23 +2,23 @@ import { useTranslation } from "next-i18next/pages";
 import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
 import type { GetStaticPropsContext } from "next";
 
-import { HomeView } from "@/src/features/home/views/Home.view";
+import { CaseStudiesView } from "@/src/features/case-studies/views/CaseStudies.view";
 import { getCaseStudySlugs } from "@/src/features/case-studies/data/case-studies.registry";
 import { PageLayout } from "@/src/shared/layouts/page-layout/PageLayout";
 import { PageTransition } from "@/src/shared/layouts/pageTransition/PageTransition";
 
-export default function Home() {
-  const { t } = useTranslation("home");
-  const { t: tc } = useTranslation("common");
-  const { t: tBot } = useTranslation("bot");
+export default function CaseStudiesPage() {
+  // `casos` is the listing's own namespace; each case namespace is also loaded
+  // (see getStaticProps) so the cards can read each case's hero copy.
+  const { t } = useTranslation("casos");
 
   return (
     <PageLayout
-      title={tc("seo.homeTitle") as string}
-      description={tc("seo.homeDescription") as string}
+      title={t("seo.title") as string}
+      description={t("seo.description") as string}
     >
       <PageTransition>
-        <HomeView t={t} tBot={tBot} />
+        <CaseStudiesView t={t} />
       </PageTransition>
     </PageLayout>
   );
@@ -29,8 +29,7 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
     props: {
       ...(await serverSideTranslations(locale ?? "es", [
         "common",
-        "home",
-        "bot",
+        "casos",
         ...getCaseStudySlugs(),
       ])),
     },

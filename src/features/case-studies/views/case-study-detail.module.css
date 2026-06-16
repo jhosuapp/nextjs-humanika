@@ -1,0 +1,97 @@
+@reference "tailwindcss";
+
+.page {
+  @apply w-full;
+  background: var(--background);
+}
+
+/* Hero */
+.hero {
+  @apply flex flex-col items-center text-center gap-6 mx-auto;
+  max-width: 48rem;
+}
+
+.eyebrow {
+  @apply tracking-[0.28em];
+}
+
+.title {
+  @apply m-0;
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.description {
+  @apply mx-auto;
+  max-width: 40rem;
+}
+
+.tags {
+  @apply flex flex-wrap items-center justify-center gap-2 list-none p-0 m-0;
+}
+
+.tag {
+  @apply inline-flex items-center rounded-full px-3 py-1;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-section);
+  border: 1px solid var(--border-soft);
+}
+
+/* Demonstrative image */
+.mediaWrap {
+  @apply w-full mx-auto mt-12 lg:mt-16;
+  max-width: 56rem;
+}
+
+.media {
+  @apply relative w-full overflow-hidden rounded-2xl m-0;
+  aspect-ratio: 16 / 9;
+  background: var(--bg-section);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 24px 60px -30px rgba(11, 16, 36, 0.45);
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.mediaOverlay {
+  @apply pointer-events-none absolute inset-0;
+  background: linear-gradient(
+    180deg,
+    transparent 55%,
+    rgba(0, 22, 67, 0.28) 100%
+  );
+}
+
+/* Body */
+.body {
+  @apply flex flex-col gap-12 lg:gap-16 mx-auto w-full mt-12 lg:mt-16;
+  max-width: 46rem;
+}
+
+.overview {
+  @apply flex flex-col gap-4;
+}
+
+.highlights {
+  @apply grid gap-4 grid-cols-1 md:grid-cols-3;
+}
+
+.highlight {
+  @apply flex h-full flex-col gap-2 rounded-2xl p-5;
+}
+
+.highlightLabel {
+  @apply text-xs font-semibold uppercase tracking-wide;
+  color: var(--primary);
+}
+
+.highlightText {
+  @apply text-sm leading-relaxed m-0;
+  color: var(--text-muted);
+}

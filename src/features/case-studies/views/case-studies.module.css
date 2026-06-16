@@ -1,0 +1,20 @@
+@reference "tailwindcss";
+
+.page {
+  @apply w-full;
+  background: var(--background);
+}
+
+.heading {
+  @apply flex flex-col items-center text-center gap-5 mx-auto;
+  max-width: 44rem;
+}
+
+.grid {
+  @apply grid gap-6 list-none p-0 mt-12 lg:mt-16;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+}
+
+.gridItem {
+  @apply h-full;
+}

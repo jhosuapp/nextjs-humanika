@@ -134,40 +134,8 @@
     "eyebrow": "Success stories",
     "title": "Real results across industries.",
     "description": "A glimpse of how digital workers create measurable impact for organizations in different sectors.",
-    "items": {
-      "mass-consumption": {
-        "industry": "Consumer goods",
-        "prefix": "+",
-        "suffix": "M",
-        "metric": "+1M",
-        "title": "Conversational brand activation",
-        "description": "Interactive WhatsApp campaigns that reach millions of consumers and capture data in real time."
-      },
-      "education": {
-        "industry": "Education",
-        "prefix": "",
-        "suffix": "",
-        "metric": "24/7",
-        "title": "An always-available digital tutor",
-        "description": "Continuous academic support that answers questions and accelerates learning for students and teachers."
-      },
-      "health": {
-        "industry": "Healthcare",
-        "prefix": "-",
-        "suffix": "%",
-        "metric": "-40%",
-        "title": "Less operational load in service",
-        "description": "Automating frequent inquiries and scheduling, freeing teams to focus on higher-value cases."
-      },
-      "real-estate": {
-        "industry": "Real estate",
-        "prefix": "+",
-        "suffix": "%",
-        "metric": "+30%",
-        "title": "More qualified opportunities",
-        "description": "Instant response to prospects and lead pre-qualification so the sales team closes faster."
-      }
-    }
+    "cardCta": "View case",
+    "viewAll": "View all cases"
   },
 
   "pricing": {

@@ -1,0 +1,110 @@
+@reference "tailwindcss";
+
+.card {
+  @apply relative flex flex-col h-full overflow-hidden rounded-2xl no-underline;
+  background: var(--bg-section-alt);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 18px 48px -32px rgba(11, 16, 36, 0.4);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: 0 28px 60px -30px rgba(11, 16, 36, 0.5);
+}
+
+.media {
+  @apply relative w-full overflow-hidden m-0;
+  aspect-ratio: 16 / 10;
+  background: var(--bg-section);
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.04);
+}
+
+.overlay {
+  @apply pointer-events-none absolute inset-0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 22, 67, 0.08) 0%,
+    rgba(0, 22, 67, 0.42) 100%
+  );
+}
+
+.logoBadge {
+  @apply absolute left-4 bottom-4 inline-flex items-center justify-center rounded-lg px-3 py-2;
+  background: rgba(11, 16, 36, 0.72);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 24px -12px rgba(11, 16, 36, 0.55);
+}
+
+.logo {
+  @apply h-6 w-auto object-contain;
+  max-width: 88px;
+  /* Logos are white PNGs — keep them white on the dark badge. */
+  filter: brightness(0) invert(1);
+}
+
+.body {
+  @apply flex flex-col flex-1 gap-3 p-6;
+}
+
+.title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tags {
+  @apply flex flex-wrap gap-2 list-none p-0 m-0;
+}
+
+.tag {
+  @apply inline-flex items-center rounded-full px-3 py-1;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-section);
+  border: 1px solid var(--border-soft);
+}
+
+.footer {
+  @apply flex items-center justify-between gap-4 mt-auto pt-4;
+  border-top: 1px solid var(--border-soft);
+}
+
+.readMore {
+  @apply inline-flex items-center gap-2 whitespace-nowrap;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.readMore svg {
+  width: 0.9em;
+  height: 0.9em;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .readMore svg {
+  transform: translateX(4px);
+}

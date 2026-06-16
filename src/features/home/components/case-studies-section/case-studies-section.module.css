@@ -24,9 +24,20 @@
   @apply h-full;
 }
 
+.cardLink {
+  @apply block h-full no-underline rounded-2xl;
+}
+
+.cardLink:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
 .card {
-  @apply relative flex h-full flex-col items-start gap-3 overflow-hidden rounded-2xl p-6;
-  transition: box-shadow 0.3s ease;
+  @apply relative flex h-full flex-col gap-5 overflow-hidden rounded-2xl p-6;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
 .card:hover {
@@ -37,82 +48,114 @@
 .accent {
   @apply pointer-events-none absolute left-0 top-0 h-[3px] w-full origin-left scale-x-0;
   background: var(--gradient-brand);
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .card:hover .accent {
   @apply scale-x-100;
 }
 
+/* Header: brand chip + industry */
 .cardHead {
-  @apply relative z-10 flex items-center gap-3;
+  @apply relative z-10 flex items-center justify-between gap-3;
+}
+
+.logoChip {
+  @apply inline-flex items-center justify-center rounded-lg px-2.5;
+  height: 2.25rem;
+  background: var(--surface-inverted);
+  border: 1px solid var(--border-subtle);
 }
 
 .logo {
-  @apply h-7 w-auto object-contain;
-  max-width: 96px;
-  opacity: 0.9;
-}
-
-:global(:root[data-theme="dark"]) .logo {
+  @apply h-5 w-auto object-contain;
+  max-width: 84px;
+  /* Logos are white PNGs — keep them white on the dark chip in both themes. */
   filter: brightness(0) invert(1);
 }
 
-.iconWrap {
-  @apply inline-flex items-center justify-center rounded-lg;
-  width: 36px;
-  height: 36px;
-  background: var(--gradient-brand);
-  color: var(--text-on-dark);
-}
-
-.icon {
-  width: 18px;
-  height: 18px;
-}
-
 .industry {
-  @apply text-xs font-semibold uppercase tracking-wide;
+  @apply text-[0.7rem] font-semibold uppercase;
+  letter-spacing: 0.14em;
   color: var(--text-muted);
 }
 
-.metric {
-  @apply relative z-10 font-extrabold leading-tight tracking-tight tabular-nums;
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
-  color: var(--primary);
+/* Body: title is the hero, description supports it */
+.cardBody {
+  @apply relative z-10 flex flex-col gap-2;
 }
 
 .cardTitle {
-  @apply relative z-10 text-base font-semibold leading-snug tracking-[-0.01em];
+  @apply text-[1.05rem] font-semibold leading-snug tracking-[-0.01em];
   color: var(--foreground);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .cardDescription {
-  @apply relative z-10 text-sm leading-relaxed;
+  @apply text-sm leading-relaxed;
   color: var(--text-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.arrow {
-  @apply relative z-10 mt-auto inline-flex h-9 w-9 translate-y-1 items-center justify-center rounded-full opacity-0;
+/* Footer: supporting metric + read affordance */
+.cardFoot {
+  @apply relative z-10 mt-auto flex items-center justify-between gap-3 pt-4;
+  border-top: 1px solid var(--border-soft);
+}
+
+.metric {
+  @apply font-bold leading-none tracking-tight tabular-nums;
+  font-size: 1.25rem;
   color: var(--primary);
-  background: rgba(0, 177, 215, 0.1);
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
 }
 
-.card:hover .arrow {
-  @apply translate-x-1 translate-y-0 opacity-100;
+.cta {
+  @apply inline-flex items-center gap-1.5 whitespace-nowrap text-sm font-semibold;
+  color: var(--primary);
+}
+
+.cta svg {
+  width: 0.85em;
+  height: 0.85em;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .cta svg {
+  transform: translateX(3px);
+}
+
+.footer {
+  @apply mt-10 flex justify-center;
+}
+
+.viewAll {
+  @apply inline-flex items-center gap-2 no-underline;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary);
+  transition: gap 0.3s ease;
+}
+
+.viewAll svg {
+  width: 0.9em;
+  height: 0.9em;
+  transition: transform 0.3s ease;
+}
+
+.viewAll:hover svg {
+  transform: translateX(4px);
 }
 
 @media (prefers-reduced-motion: reduce) {
   .card,
   .accent,
-  .arrow {
+  .cta svg {
     transition: none;
-  }
-
-  .arrow {
-    @apply opacity-100 translate-y-0;
   }
 }

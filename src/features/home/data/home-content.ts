@@ -2,15 +2,11 @@ import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import {
   faBolt,
   faBrain,
-  faBuilding,
   faCalendarCheck,
-  faCartShopping,
   faChartLine,
   faCommentDots,
   faGear,
-  faGraduationCap,
   faHeadset,
-  faHeartPulse,
   faLayerGroup,
   faMicrophone,
   faPalette,
@@ -63,15 +59,6 @@ type StatItemStatic = {
   decimals?: number;
 };
 
-type CaseStudyStatic = {
-  id: "mass-consumption" | "education" | "health" | "real-estate";
-  icon: IconDefinition;
-  logo?: string;
-  /** When present, the metric animates as a count-up; otherwise the static
-   *  i18n `metric` string is shown (e.g. "24/7"). */
-  count?: { to: number; decimals?: number };
-};
-
 type PricingFeatureStatic = {
   id: "hosting" | "ai" | "support";
 };
@@ -104,9 +91,6 @@ type HomeStaticData = {
   };
   stats: {
     items: ReadonlyArray<StatItemStatic>;
-  };
-  caseStudies: {
-    items: ReadonlyArray<CaseStudyStatic>;
   };
   pricing: {
     features: ReadonlyArray<PricingFeatureStatic>;
@@ -275,14 +259,6 @@ const homeStaticData: HomeStaticData = {
       { id: "industries", icon: faLayerGroup, to: 4 },
     ],
   },
-  caseStudies: {
-    items: [
-      { id: "mass-consumption", icon: faCartShopping, count: { to: 1 } },
-      { id: "education", icon: faGraduationCap },
-      { id: "health", icon: faHeartPulse, count: { to: 40 } },
-      { id: "real-estate", icon: faBuilding, count: { to: 30 } },
-    ],
-  },
   pricing: {
     features: [{ id: "hosting" }, { id: "ai" }, { id: "support" }],
     cta: { href: "#contact" },
@@ -311,5 +287,4 @@ export type {
   ProcessStepStatic,
   FloatIconStatic,
   StatItemStatic,
-  CaseStudyStatic,
 };

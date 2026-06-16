@@ -1,0 +1,47 @@
+{
+  "seo": {
+    "title": "Corona: a WhatsApp chatbot for the World Cup promo | 150%",
+    "description": "How Corona activated its World Cup promotion with a WhatsApp chatbot that let consumers register winning codes and capture data in real time."
+  },
+  "hero": {
+    "eyebrow": "Mass consumption",
+    "title": "Corona activated its World Cup promo with a WhatsApp chatbot",
+    "description": "A digital coworker on WhatsApp that turned every package into an entry: code validation, winner confirmation and data capture in a single conversation.",
+    "imageAlt": "Person registering a winning code from the Corona promotion on WhatsApp"
+  },
+  "categories": ["Mass consumption", "WhatsApp", "Brand activation"],
+  "metric": {
+    "prefix": "+",
+    "suffix": "M",
+    "value": "+1M"
+  },
+  "card": {
+    "title": "Conversational brand activation",
+    "excerpt": "A WhatsApp chatbot to register the World Cup promo's winning codes — no apps, no complicated forms."
+  },
+  "overview": {
+    "paragraphs": [
+      "During the World Cup, Corona launched a nationwide promotion with winning codes printed on its products. The challenge was clear: make registering a code as simple as sending a message — no app downloads, no long forms.",
+      "We built a WhatsApp chatbot that guided consumers step by step inside the conversation: it validated the code, confirmed whether it was a winner and securely registered their data, all in real time."
+    ]
+  },
+  "highlights": {
+    "challenge": {
+      "label": "Challenge",
+      "text": "Enable mass registration of winning codes with zero friction, on a channel people already use every day."
+    },
+    "solution": {
+      "label": "Solution",
+      "text": "A conversational WhatsApp chatbot that validates codes, identifies winners and securely captures data, available 24/7."
+    },
+    "result": {
+      "label": "Result",
+      "text": "An activation that turned every package into a direct touchpoint with the consumer, with entries registered in real time."
+    }
+  },
+  "cta": {
+    "title": "Want an activation like this for your brand?",
+    "description": "We design digital coworkers on WhatsApp that turn campaigns into measurable conversations.",
+    "button": "Chat on WhatsApp"
+  }
+}

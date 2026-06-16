@@ -1,0 +1,47 @@
+{
+  "seo": {
+    "title": "Corona: chatbot de WhatsApp para la promo del Mundial | 150%",
+    "description": "Cómo Corona activó su promoción del Mundial con un chatbot de WhatsApp que permitía registrar códigos ganadores y capturar datos de los consumidores en tiempo real."
+  },
+  "hero": {
+    "eyebrow": "Consumo masivo",
+    "title": "Corona activó su promo del Mundial con un chatbot de WhatsApp",
+    "description": "Un colaborador digital en WhatsApp que convirtió cada empaque en una participación: validación de códigos, confirmación de ganadores y registro de datos en una sola conversación.",
+    "imageAlt": "Persona registrando un código ganador de la promoción de Corona por WhatsApp"
+  },
+  "categories": ["Consumo masivo", "WhatsApp", "Activación de marca"],
+  "metric": {
+    "prefix": "+",
+    "suffix": "M",
+    "value": "+1M"
+  },
+  "card": {
+    "title": "Activación de marca conversacional",
+    "excerpt": "Chatbot de WhatsApp para registrar los códigos ganadores de la promo del Mundial, sin apps ni formularios complicados."
+  },
+  "overview": {
+    "paragraphs": [
+      "Durante el Mundial, Corona lanzó una promoción nacional con códigos ganadores impresos en sus productos. El reto era claro: que registrar un código fuera tan simple como enviar un mensaje, sin descargar apps ni llenar formularios largos.",
+      "Creamos un chatbot de WhatsApp que guiaba al consumidor paso a paso dentro de la conversación: validaba el código, confirmaba si era ganador y registraba sus datos de forma segura, todo en tiempo real."
+    ]
+  },
+  "highlights": {
+    "challenge": {
+      "label": "Reto",
+      "text": "Permitir el registro masivo de códigos ganadores sin fricción, por un canal que la gente ya usa todos los días."
+    },
+    "solution": {
+      "label": "Solución",
+      "text": "Un chatbot conversacional en WhatsApp que valida códigos, identifica ganadores y captura datos de forma segura, disponible 24/7."
+    },
+    "result": {
+      "label": "Resultado",
+      "text": "Una activación que convirtió cada empaque en un punto de contacto directo con el consumidor, con participaciones registradas en tiempo real."
+    }
+  },
+  "cta": {
+    "title": "¿Quieres una activación así para tu marca?",
+    "description": "Diseñamos colaboradores digitales en WhatsApp que convierten campañas en conversaciones medibles.",
+    "button": "Hablar por WhatsApp"
+  }
+}

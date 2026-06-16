@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { motion, useReducedMotion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 
 import { FadeIn } from '@/src/shared/components/motion/FadeIn';
 import {
@@ -10,8 +10,9 @@ import {
 } from '@/src/shared/components/motion/StaggerGroup';
 import { AnimatedCounter } from '@/src/shared/components/motion/AnimatedCounter';
 import { Spotlight } from '@/src/shared/components/spotlight/Spotlight';
+import { CustomLink } from '@/src/shared/components/custom-link/CustomLink';
 import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
-import { homeStaticData } from '@/src/features/home/data/home-content';
+import { getSortedCaseStudies } from '@/src/features/case-studies/data/case-studies.registry';
 
 import { Container } from '../container/Container';
 import { Text } from '@/src/shared/components/text/Text';
@@ -24,7 +25,7 @@ type CaseStudiesSectionProps = { t: ITranslations };
 
 const CaseStudiesSection = ({ t }: CaseStudiesSectionProps) => {
   const reduce = useReducedMotion();
-  const { caseStudies } = homeStaticData;
+  const caseStudies = getSortedCaseStudies();
 
   return (
     <section className={styles.section} aria-labelledby="case-studies-title">
@@ -64,65 +65,80 @@ const CaseStudiesSection = ({ t }: CaseStudiesSectionProps) => {
         </FadeIn>
 
         <StaggerGroup className={styles.grid} stagger={REVEAL.stagger} amount={REVEAL.amount}>
-          {caseStudies.items.map((item) => (
-            <WrapperMotion fadeUpTertiary delay={{ enter: 0, exit: 0 }} classNameSecondary='h-full'>
-              <StaggerItem key={item.id} className={styles.cell}>
-                <motion.article
-                  className={`${styles.card} gl-gradient-box`}
-                  whileHover={reduce ? undefined : { y: -4 }}
-                  {...fadeUpTertiaryMotion(0,0)}
-                >
-                  <Spotlight size={220} color="rgba(0, 177, 215, 0.12)" />
-                  <span className={styles.accent} aria-hidden="true" />
-                  <div className={styles.cardHead}>
-                    {item.logo ? (
-                      <Image
-                        src={item.logo}
-                        alt=""
-                        width={96}
-                        height={32}
-                        unoptimized
-                        className={styles.logo}
-                      />
-                    ) : (
-                      <span className={styles.iconWrap} aria-hidden="true">
-                        <FontAwesomeIcon icon={item.icon} className={styles.icon} />
-                      </span>
-                    )}
-                    <span className={styles.industry}>
-                      {t(`caseStudies.items.${item.id}.industry`)}
-                    </span>
-                  </div>
+          {caseStudies.map((item) => {
+            const ns = item.slug;
 
-                  {item.count ? (
-                    <AnimatedCounter
-                      className={styles.metric}
-                      to={item.count.to}
-                      decimals={item.count.decimals ?? 0}
-                      prefix={t(`caseStudies.items.${item.id}.prefix`) as string}
-                      suffix={t(`caseStudies.items.${item.id}.suffix`) as string}
-                    />
-                  ) : (
-                    <span className={styles.metric}>
-                      {t(`caseStudies.items.${item.id}.metric`)}
-                    </span>
-                  )}
+            return (
+              <WrapperMotion key={ns} fadeUpTertiary delay={{ enter: 0, exit: 0 }} classNameSecondary='h-full'>
+                <StaggerItem className={styles.cell}>
+                  <CustomLink to={`/casos-de-exito/${ns}`} className={styles.cardLink}>
+                    <motion.article
+                      className={`${styles.card} gl-gradient-box`}
+                      whileHover={reduce ? undefined : { y: -4 }}
+                      {...fadeUpTertiaryMotion(0, 0)}
+                    >
+                      <Spotlight size={240} color="rgba(0, 177, 215, 0.1)" />
+                      <span className={styles.accent} aria-hidden="true" />
 
-                  <h3 className={styles.cardTitle}>
-                    {t(`caseStudies.items.${item.id}.title`)}
-                  </h3>
-                  <p className={styles.cardDescription}>
-                    {t(`caseStudies.items.${item.id}.description`)}
-                  </p>
+                      <header className={styles.cardHead}>
+                        <span className={styles.logoChip}>
+                          <Image
+                            src={item.logo}
+                            alt=""
+                            width={84}
+                            height={24}
+                            unoptimized
+                            className={styles.logo}
+                          />
+                        </span>
+                        <span className={styles.industry}>
+                          {t(`${ns}:hero.eyebrow`)}
+                        </span>
+                      </header>
 
-                  <span className={styles.arrow} aria-hidden="true">
-                    <FontAwesomeIcon icon={faArrowRight} />
-                  </span>
-                </motion.article>
-              </StaggerItem>
-            </WrapperMotion>
-          ))}
+                      <div className={styles.cardBody}>
+                        <h3 className={styles.cardTitle}>
+                          {t(`${ns}:card.title`)}
+                        </h3>
+                        <p className={styles.cardDescription}>
+                          {t(`${ns}:card.excerpt`)}
+                        </p>
+                      </div>
+
+                      <footer className={styles.cardFoot}>
+                        {item.count ? (
+                          <AnimatedCounter
+                            className={styles.metric}
+                            to={item.count.to}
+                            decimals={item.count.decimals ?? 0}
+                            prefix={t(`${ns}:metric.prefix`) as string}
+                            suffix={t(`${ns}:metric.suffix`) as string}
+                          />
+                        ) : (
+                          <span className={styles.metric}>
+                            {t(`${ns}:metric.value`)}
+                          </span>
+                        )}
+
+                        <span className={styles.cta}>
+                          {t('caseStudies.cardCta')}
+                          <FontAwesomeIcon icon={faArrowRight} aria-hidden="true" />
+                        </span>
+                      </footer>
+                    </motion.article>
+                  </CustomLink>
+                </StaggerItem>
+              </WrapperMotion>
+            );
+          })}
         </StaggerGroup>
+
+        <FadeIn className={styles.footer}>
+          <CustomLink to="/casos-de-exito" className={styles.viewAll}>
+            {t('caseStudies.viewAll')}
+            <FontAwesomeIcon icon={faArrowRightLong} aria-hidden="true" />
+          </CustomLink>
+        </FadeIn>
       </Container>
     </section>
   );

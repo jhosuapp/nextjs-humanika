@@ -1,0 +1,67 @@
+import type { CaseStudyEntry } from "@/src/features/case-studies/types/case-study.types";
+
+/**
+ * Single source of truth for every success story ("caso de éxito").
+ *
+ * Each entry is purely structural (slug, cover, logo, metric, date). All visible
+ * copy lives in the matching i18n namespace `public/locales/<locale>/<slug>.json`.
+ *
+ * The `slug` doubles as:
+ *   - the URL segment  →  /casos-de-exito/<slug>
+ *   - the i18n namespace loaded by the detail page, the listing and the home
+ *     "Casos de éxito" section.
+ *
+ * To publish a new case study:
+ *   1. public/locales/<locale>/<slug>.json  — the copy.
+ *   2. add one entry here. The /casos-de-exito listing, the /casos-de-exito/<slug>
+ *      route and the home section pick it up automatically — no new page file.
+ *
+ * NOTE: `corona` is real. `caso-2/3/4` are placeholders — rename the slug, swap
+ * the logo/cover and fill the JSON once the real client data is provided.
+ */
+const caseStudiesRegistry: ReadonlyArray<CaseStudyEntry> = [
+  {
+    slug: "corona",
+    cover: "/images/ventas-y-crecimiento.jpg",
+    logo: "/logos/corona.png",
+    count: { to: 1 },
+    publishedAt: "2026-06-16",
+  },
+  {
+    slug: "caso-2",
+    cover: "/images/servicio-y-soporte.jpg",
+    logo: "/logos/pepsi.png",
+    publishedAt: "2026-06-10",
+  },
+  {
+    slug: "caso-3",
+    cover: "/images/formacion-empresarial.jpg",
+    logo: "/logos/alpina.png",
+    publishedAt: "2026-06-04",
+  },
+  {
+    slug: "caso-4",
+    cover: "/images/productividad-y-opetaciones.jpg",
+    logo: "/logos/bon-yurt.png",
+    publishedAt: "2026-05-28",
+  },
+];
+
+/** Newest-first list for the listing and the home section. */
+const getSortedCaseStudies = (): ReadonlyArray<CaseStudyEntry> =>
+  [...caseStudiesRegistry].sort((a, b) =>
+    b.publishedAt.localeCompare(a.publishedAt),
+  );
+
+const getCaseStudySlugs = (): string[] =>
+  caseStudiesRegistry.map((c) => c.slug);
+
+const getCaseStudyBySlug = (slug: string): CaseStudyEntry | undefined =>
+  caseStudiesRegistry.find((c) => c.slug === slug);
+
+export {
+  caseStudiesRegistry,
+  getSortedCaseStudies,
+  getCaseStudySlugs,
+  getCaseStudyBySlug,
+};
