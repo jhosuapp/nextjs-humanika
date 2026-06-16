@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { motion, useReducedMotion } from 'framer-motion';
 
 import { FadeIn } from '@/src/shared/components/motion/FadeIn';
 import {
@@ -8,16 +7,15 @@ import {
 } from '@/src/shared/components/motion/StaggerGroup';
 import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
 import { homeStaticData } from '@/src/features/home/data/home-content';
+import { Spotlight } from '@/src/shared/components/spotlight/Spotlight';
 
 import styles from './integrations-grid.module.css';
-import { Button } from '@/src/shared/components/button/Button';
 import { Container } from '../container/Container';
 import { Text } from '@/src/shared/components/text/Text';
 
 type IntegrationsGridProps = { t: ITranslations };
 
 const IntegrationsGrid = ({ t }: IntegrationsGridProps) => {
-  const reduce = useReducedMotion();
   const { integrations } = homeStaticData;
 
   return (
@@ -50,11 +48,8 @@ const IntegrationsGrid = ({ t }: IntegrationsGridProps) => {
         <StaggerGroup className={styles.grid} stagger={0.05} amount={0.15}>
           {integrations.logos.map((logo) => (
             <StaggerItem key={logo.name}>
-              <motion.div
-                className={styles.tile}
-                whileHover={reduce ? undefined : { y: -3, scale: 1.02 }}
-                transition={{ duration: 0.2 }}
-              >
+              <div className={styles.tile}>
+                <Spotlight size={200} color="rgba(0, 177, 215, 0.14)" />
                 <Image
                   src={logo.src}
                   alt={logo.name}
@@ -64,7 +59,7 @@ const IntegrationsGrid = ({ t }: IntegrationsGridProps) => {
                   className={styles.logo}
                 />
                 <span className={styles.tileLabel}>{logo.name}</span>
-              </motion.div>
+              </div>
             </StaggerItem>
           ))}
         </StaggerGroup>

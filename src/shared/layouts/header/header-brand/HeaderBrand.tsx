@@ -3,15 +3,13 @@ import { useRouter } from 'next/router';
 
 import type { HeaderStaticData } from '../header-content';
 import { useLenisStore } from '@/src/shared/stores/lenis.store';
+import { Logo } from '@/src/shared/components/logo/Logo';
 
 import styles from './header-brand.module.css';
-import Image from 'next/image';
-import { useThemeStore } from '@/src/shared/stores/theme.store';
 
 type HeaderBrandProps = { brand: HeaderStaticData['brand'] };
 
 const HeaderBrand = ({ brand }: HeaderBrandProps) => {
-  const theme = useThemeStore(state => state.theme);
   const router = useRouter();
   const lenis = useLenisStore(state => state.lenis);
 
@@ -29,11 +27,7 @@ const HeaderBrand = ({ brand }: HeaderBrandProps) => {
       aria-label={`${brand.name} home`}
       onClick={handleClick}
     >
-      {theme === 'light' ? (
-        <Image src="/images/logo.png" alt={brand.name} width={170} height={33} />
-      ) : (
-        <Image src="/images/logo-white.png" alt={brand.name} width={170} height={33} />
-      )}
+      <Logo alt={brand.name} width={240} height={28} mobileHeight={24} />
     </Link>
   );
 };

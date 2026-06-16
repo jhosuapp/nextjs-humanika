@@ -1,0 +1,16 @@
+@reference "tailwindcss";
+
+/* Rendered size is driven by CSS vars set from props. Defaults keep the lockup
+ * aspect ratio (height drives size, width auto) to avoid distortion or
+ * next/image aspect-ratio warnings. Mobile vars override below 640px. */
+.logo {
+  width: var(--logo-w, auto);
+  height: var(--logo-h, 33px);
+}
+
+@media (max-width: 640px) {
+  .logo {
+    width: var(--logo-w-mobile, var(--logo-w, auto));
+    height: var(--logo-h-mobile, var(--logo-h, 33px));
+  }
+}

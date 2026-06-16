@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,9 +5,9 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
 import { footerStaticData } from '@/src/shared/layouts/footer/footer-content';
-import { useThemeStore } from '@/src/shared/stores/theme.store';
 import { useLenisStore } from '@/src/shared/stores/lenis.store';
 import { Container } from '@/src/features/home/components/container/Container';
+import { Logo } from '@/src/shared/components/logo/Logo';
 
 import styles from './footer-nav.module.css';
 
@@ -16,7 +15,6 @@ type FooterNavProps = { t: ITranslations };
 
 const FooterNav = ({ t }: FooterNavProps) => {
   const { brand, nav } = footerStaticData;
-  const theme = useThemeStore(state => state.theme);
   const lenis = useLenisStore(state => state.lenis);
   const router = useRouter();
 
@@ -47,11 +45,7 @@ const FooterNav = ({ t }: FooterNavProps) => {
           className={styles.brandMark}
           aria-label={t('footer.brand.homeAria', { name: brand.name }) as string}
         >
-          {theme === 'light' ? (
-            <Image src="/images/logo.png" alt={brand.name} width={170} height={33} />
-          ) : (
-            <Image src="/images/logo-white.png" alt={brand.name} width={170} height={33} />
-          )}
+          <Logo alt={brand.name} width={240} height={28} mobileHeight={26} />
         </Link>
       </div>
 

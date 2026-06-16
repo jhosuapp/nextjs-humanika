@@ -9,6 +9,8 @@ import { MainContent } from '@/src/shared/components/main-content/MainContent';
 import { HeroSection } from '../components/hero-section/HeroSection';
 import { ContactForm } from '../components/contact-form/ContactForm';
 import { IntegrationsGrid } from '../components/integrations-grid/IntegrationsGrid';
+import { StatsSection } from '../components/stats-section/StatsSection';
+import { CaseStudiesSection } from '../components/case-studies-section/CaseStudiesSection';
 
 import styles from './home.module.css';
 
@@ -23,6 +25,8 @@ const HomeView = ({ t, tBot }: HomeViewProps): JSX.Element => {
       <AudienceTabsSection t={t} />
       <ProcessStepsSection t={t} />
       <IntegrationsGrid t={t} />
+      <StatsSection t={t} />
+      <CaseStudiesSection t={t} />
       <FaqSection t={t} />
     </MainContent>
   );

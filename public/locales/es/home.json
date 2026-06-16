@@ -151,6 +151,68 @@
     }
   },
 
+  "stats": {
+    "eyebrow": "Trayectoria y resultados",
+    "title": "Experiencia comprobada, no solo tecnología.",
+    "items": {
+      "experience": {
+        "prefix": "+",
+        "suffix": " años",
+        "label": "creando soluciones digitales"
+      },
+      "interactions": {
+        "prefix": "+",
+        "suffix": "M",
+        "label": "de interacciones procesadas"
+      },
+      "industries": {
+        "prefix": "",
+        "suffix": " sectores",
+        "label": "Consumo masivo, educación, salud e inmobiliario"
+      }
+    }
+  },
+
+  "caseStudies": {
+    "eyebrow": "Casos de éxito",
+    "title": "Resultados reales en distintas industrias.",
+    "description": "Una muestra de cómo los colaboradores digitales generan impacto medible en organizaciones de diferentes sectores.",
+    "items": {
+      "mass-consumption": {
+        "industry": "Consumo masivo",
+        "prefix": "+",
+        "suffix": "M",
+        "metric": "+1M",
+        "title": "Activación de marca conversacional",
+        "description": "Campañas interactivas por WhatsApp que conectan con millones de consumidores y capturan datos en tiempo real."
+      },
+      "education": {
+        "industry": "Educación",
+        "prefix": "",
+        "suffix": "",
+        "metric": "24/7",
+        "title": "Tutor digital siempre disponible",
+        "description": "Acompañamiento académico permanente que resuelve dudas y acelera el aprendizaje de estudiantes y docentes."
+      },
+      "health": {
+        "industry": "Salud",
+        "prefix": "-",
+        "suffix": "%",
+        "metric": "-40%",
+        "title": "Menos carga operativa en atención",
+        "description": "Automatización de consultas frecuentes y agendamiento, liberando a los equipos para casos de mayor valor."
+      },
+      "real-estate": {
+        "industry": "Inmobiliario",
+        "prefix": "+",
+        "suffix": "%",
+        "metric": "+30%",
+        "title": "Más oportunidades calificadas",
+        "description": "Atención inmediata a interesados y precalificación de leads para que el equipo comercial cierre más rápido."
+      }
+    }
+  },
+
   "pricing": {
     "eyebrow": "Inversión empresarial",
     "titleLead": "Soluciones empresariales desde",

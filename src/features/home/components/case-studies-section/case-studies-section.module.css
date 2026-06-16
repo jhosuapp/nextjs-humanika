@@ -1,0 +1,124 @@
+@reference "tailwindcss";
+
+.section {
+  @apply w-full;
+  background: var(--bg-section);
+}
+
+.head {
+  @apply mx-auto flex max-w-3xl flex-col items-center justify-center gap-4 text-center;
+}
+
+.title {
+  @apply tracking-tight;
+}
+
+.description {
+  @apply max-w-xl mx-auto;
+}
+
+.grid {
+  @apply mt-12 grid w-full gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4;
+}
+
+.cell {
+  @apply h-full;
+}
+
+.card {
+  @apply relative flex h-full flex-col items-start gap-3 overflow-hidden rounded-2xl border p-6;
+  background: var(--surface-elevated);
+  border-color: var(--border-subtle);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(0, 177, 215, 0.35);
+  box-shadow: var(--shadow-floating);
+}
+
+/* Top accent bar that grows on hover */
+.accent {
+  @apply pointer-events-none absolute left-0 top-0 h-[3px] w-full origin-left scale-x-0;
+  background: var(--gradient-brand);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card:hover .accent {
+  @apply scale-x-100;
+}
+
+.cardHead {
+  @apply relative z-10 flex items-center gap-3;
+}
+
+.logo {
+  @apply h-7 w-auto object-contain;
+  max-width: 96px;
+  opacity: 0.9;
+}
+
+:global(:root[data-theme="dark"]) .logo {
+  filter: brightness(0) invert(1);
+}
+
+.iconWrap {
+  @apply inline-flex items-center justify-center rounded-lg;
+  width: 36px;
+  height: 36px;
+  background: var(--gradient-brand);
+  color: var(--text-on-dark);
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+}
+
+.industry {
+  @apply text-xs font-semibold uppercase tracking-wide;
+  color: var(--text-muted);
+}
+
+.metric {
+  @apply relative z-10 font-extrabold leading-tight tracking-tight tabular-nums;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  color: var(--primary);
+}
+
+.cardTitle {
+  @apply relative z-10 text-base font-semibold leading-snug tracking-[-0.01em];
+  color: var(--foreground);
+}
+
+.cardDescription {
+  @apply relative z-10 text-sm leading-relaxed;
+  color: var(--text-muted);
+}
+
+.arrow {
+  @apply relative z-10 mt-auto inline-flex h-9 w-9 translate-y-1 items-center justify-center rounded-full opacity-0;
+  color: var(--primary);
+  background: rgba(0, 177, 215, 0.1);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.card:hover .arrow {
+  @apply translate-x-1 translate-y-0 opacity-100;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .accent,
+  .arrow {
+    transition: none;
+  }
+
+  .arrow {
+    @apply opacity-100 translate-y-0;
+  }
+}

@@ -1,0 +1,11 @@
+@reference "tailwindcss";
+
+.spotlight {
+  @apply pointer-events-none absolute inset-0 z-0 opacity-0;
+  background: radial-gradient(
+    var(--spotlight-size, 240px) circle at var(--spotlight-x, 50%) var(--spotlight-y, 50%),
+    var(--spotlight-color, rgba(0, 177, 215, 0.16)),
+    transparent 65%
+  );
+  transition: opacity 0.3s ease;
+}

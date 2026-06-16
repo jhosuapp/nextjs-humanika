@@ -22,22 +22,39 @@
 }
 
 .tile {
-  @apply flex aspect-square flex-col items-center justify-center gap-3 rounded-2xl p-6 border transition-[transform,box-shadow] duration-200;
+  @apply relative flex aspect-square flex-col items-center justify-center gap-3 overflow-hidden rounded-2xl p-6 border;
   background: var(--surface-elevated);
   border-color: var(--border-subtle);
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .tile:hover {
-  @apply -translate-y-[3px] scale-[1.02];
-  box-shadow: 0 16px 40px -20px rgba(0, 22, 67, 0.25);
+  @apply -translate-y-1;
+  border-color: rgba(0, 177, 215, 0.35);
+  box-shadow: var(--shadow-floating);
 }
 
 .logo {
-  @apply h-9 w-9 lg:h-12 lg:w-12 object-contain transition-transform duration-200;
+  @apply relative z-10 h-9 w-9 lg:h-12 lg:w-12 object-contain;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .tile:hover .logo {
-  @apply scale-105;
+  @apply scale-110;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tile,
+  .logo {
+    transition: none;
+  }
+
+  .tile:hover {
+    transform: none;
+  }
 }
 
 /* En modo oscuro: tile oscura (token) + logos en blanco */
@@ -46,6 +63,6 @@
 }
 
 .tileLabel {
-  @apply text-sm font-semibold text-center tracking-[-0.005em];
+  @apply relative z-10 text-sm font-semibold text-center tracking-[-0.005em];
   color: var(--foreground);
 }
