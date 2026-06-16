@@ -13,6 +13,7 @@ import styles from './audience-tabs-section.module.css';
 import { Container } from '../container/Container';
 import { Text } from '@/src/shared/components/text/Text';
 import { WrapperMotion } from '@/src/shared/components/wrapper-motion/WrapperMotion';
+import { revealDelay } from '@/src/shared/helpers/motion-variants';
 
 type Props = { t: ITranslations };
 type TabKey = AudienceTabStatic['key'];
@@ -61,12 +62,13 @@ const AudienceTabsSection = ({ t }: Props) => {
             </Text>
             <ul className={styles.bullets}>
               {bullets.map((bullet, index) => (
-                <WrapperMotion 
-                  delay={{ enter: `0.${4 + index}` as any, exit: 0.1 }}
+                <WrapperMotion
+                  key={bullet}
+                  delay={{ enter: 0.4 + index * 0.1, exit: 0.1 }}
                   fadeUpTertiary
                   immediate
                 >
-                  <li key={bullet} className={styles.bullet}>
+                  <li className={styles.bullet}>
                     {bullet}
                   </li>
                 </WrapperMotion>
@@ -104,7 +106,7 @@ const AudienceTabsSection = ({ t }: Props) => {
           variant="title_small" 
           color="secondary"
           weight="bold"
-          delay={{ enter: 0, exit: 0 }}
+          delay={{ enter: revealDelay(0), exit: 0 }}
           fadeUpTertiary
         >
           <strong className='gl-degradete-text font-bold'>{t('audience.title_strong')}</strong> {t('audience.title')}
@@ -113,7 +115,7 @@ const AudienceTabsSection = ({ t }: Props) => {
           tag="p" 
           variant="description" 
           color="muted"
-          delay={{ enter: 0, exit: 0 }}
+          delay={{ enter: revealDelay(1), exit: 0 }}
           fadeUpTertiary
         >
           {t('audience.description')}

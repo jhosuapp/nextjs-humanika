@@ -12,11 +12,11 @@ import { useRef, useState } from 'react';
 import { Text } from '@/src/shared/components/text/Text';
 import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
 import { homeStaticData } from '@/src/features/home/data/home-content';
+import { revealDelay } from '@/src/shared/helpers/motion-variants';
 
 import { FloatIcon } from './FloatIcon';
 import { ProcessStep } from './ProcessStep';
 import styles from './process-steps-section.module.css';
-import { FadeIn } from '@/src/shared/components/motion/FadeIn';
 import { WrapperMotion } from '@/src/shared/components/wrapper-motion/WrapperMotion';
 import Image from 'next/image';
 
@@ -104,7 +104,7 @@ const ProcessStepsSection = ({ t }: Props) => {
             variant="title_small"
             color="secondary"
             weight="semibold"
-            delay={{ enter: 0.1, exit: 0.1 }}
+            delay={{ enter: revealDelay(0), exit: 0 }}
             className="text-center"
             fadeUpTertiary
           >
@@ -147,7 +147,7 @@ const ProcessStepsSection = ({ t }: Props) => {
             variant="description_small"
             color="secondary"
             weight="semibold"
-            delay={{ enter: 0.1, exit: 0.1 }}
+            delay={{ enter: revealDelay(0), exit: 0 }}
             className="text-center"
             fadeUpTertiary
           >

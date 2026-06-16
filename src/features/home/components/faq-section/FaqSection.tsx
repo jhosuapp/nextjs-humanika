@@ -8,7 +8,7 @@ import {
   StaggerGroup,
   StaggerItem,
 } from '@/src/shared/components/motion/StaggerGroup';
-import { DURATION, EASE } from '@/src/shared/helpers/motion-variants';
+import { DURATION, EASE, REVEAL, revealDelay } from '@/src/shared/helpers/motion-variants';
 import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
 import { homeStaticData } from '@/src/features/home/data/home-content';
 import { Button } from '@/src/shared/components/button/Button';
@@ -121,7 +121,7 @@ const FaqSection = ({ t }: Props) => {
             variant="description_xs" 
             color="primary"
             weight="semibold"
-            delay={{ enter: 0, exit: 0 }}
+            delay={{ enter: revealDelay(0), exit: 0 }}
             fadeUpTertiary
           >
             {t('faq.eyebrow')}
@@ -131,7 +131,7 @@ const FaqSection = ({ t }: Props) => {
             variant="title_small" 
             color="secondary"
             weight="semibold"
-            delay={{ enter: 0.1, exit: 0 }}
+            delay={{ enter: revealDelay(1), exit: 0 }}
             fadeUpTertiary
           >
             {t('faq.title')}
@@ -141,14 +141,14 @@ const FaqSection = ({ t }: Props) => {
             tag="p" 
             variant="description" 
             color="muted"
-            delay={{ enter: 0.15, exit: 0 }}
+            delay={{ enter: revealDelay(2), exit: 0 }}
             fadeUpTertiary
           >
             {t('faq.description')}
           </Text>
         </FadeIn>
         <WrapperMotion delay={{ enter: 0.1, exit: 0 }} fadeUpTertiary>
-          <StaggerGroup className={styles.list} stagger={0.06} amount={0.1}>
+          <StaggerGroup className={styles.list} stagger={REVEAL.stagger} amount={REVEAL.amount}>
             {faq.items.map((item) => (
               <StaggerItem key={item.id}>
                 <AccordionItem

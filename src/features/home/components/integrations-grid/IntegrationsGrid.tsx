@@ -8,6 +8,7 @@ import {
 import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
 import { homeStaticData } from '@/src/features/home/data/home-content';
 import { Spotlight } from '@/src/shared/components/spotlight/Spotlight';
+import { REVEAL, revealDelay } from '@/src/shared/helpers/motion-variants';
 
 import styles from './integrations-grid.module.css';
 import { Container } from '../container/Container';
@@ -28,7 +29,7 @@ const IntegrationsGrid = ({ t }: IntegrationsGridProps) => {
             variant="title_small" 
             color="secondary"
             weight="semibold"
-            delay={{ enter: 0.1, exit: 0 }}
+            delay={{ enter: revealDelay(0), exit: 0 }}
             fadeUpTertiary
           >
             {t('integrations.title')}
@@ -38,14 +39,14 @@ const IntegrationsGrid = ({ t }: IntegrationsGridProps) => {
             tag="p" 
             variant="description" 
             color="muted"
-            delay={{ enter: 0.15, exit: 0 }}
+            delay={{ enter: revealDelay(1), exit: 0 }}
             fadeUpTertiary
           >
             {t('integrations.description')}
           </Text>
         </FadeIn>
 
-        <StaggerGroup className={styles.grid} stagger={0.05} amount={0.15}>
+        <StaggerGroup className={styles.grid} stagger={REVEAL.stagger} amount={REVEAL.amount}>
           {integrations.logos.map((logo) => (
             <StaggerItem key={logo.name}>
               <div className={styles.tile}>

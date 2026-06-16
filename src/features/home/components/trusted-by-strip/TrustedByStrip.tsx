@@ -6,6 +6,7 @@ import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
 import { homeStaticData } from '@/src/features/home/data/home-content';
 import { Container } from '../container/Container';
 import { Text } from '@/src/shared/components/text/Text';
+import { revealDelay } from '@/src/shared/helpers/motion-variants';
 
 import styles from './trusted-by-strip.module.css';
 import { WrapperMotion } from '@/src/shared/components/wrapper-motion/WrapperMotion';
@@ -27,13 +28,13 @@ const TrustedByStrip = ({ t }: TrustedByStripProps) => {
           variant="description_xs"
           color="muted"
           weight="semibold"
-          delay={{ enter: 0, exit: 0 }}
+          delay={{ enter: revealDelay(0), exit: 0 }}
           fadeUpTertiary
         >
           {label}
         </Text>
       </FadeIn>
-      <WrapperMotion delay={{ enter: 0.2, exit: 0 }} fadeUpTertiary>
+      <WrapperMotion delay={{ enter: revealDelay(1), exit: 0 }} fadeUpTertiary>
         <div className={styles.rows}>
           {rows.map((row, rowIndex) => (
             <Marquee

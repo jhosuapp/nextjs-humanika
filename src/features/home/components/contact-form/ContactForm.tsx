@@ -168,7 +168,7 @@ const ContactForm = ({ t }: ContactFormProps):JSX.Element => {
           />
         </div>
 
-        <WrapperMotion delay={{ enter: 0.57, exit: 0.15 }} immediate>
+        <WrapperMotion delay={{ enter: 0.57, exit: 0.15 }} fadeUpTertiary immediate>
           <Button
             text={`${mutation.isSuccess ? t('contact.ctaSuccess') as string : t('contact.cta') as string}`}
             style="primary"
