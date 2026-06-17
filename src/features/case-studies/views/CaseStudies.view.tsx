@@ -65,7 +65,7 @@ const CaseStudiesView = ({ t }: CaseStudiesViewProps): JSX.Element => {
               <WrapperMotion
                 key={ns}
                 className={styles.gridItem}
-                delay={{ enter: 0.5 + index * 0.08, exit: 0.1 }}
+                delay={{ enter: 0.56, exit: 0.12 }}
                 immediate
               >
                 <CaseStudyCard
