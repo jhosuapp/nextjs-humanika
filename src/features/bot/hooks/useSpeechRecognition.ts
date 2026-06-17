@@ -45,13 +45,25 @@ type WindowWithSpeech = Window &
     webkitSpeechRecognition?: new () => SpeechRecognitionLike;
   };
 
+type WindowWithWebkitAudio = Window &
+  typeof globalThis & {
+    webkitAudioContext?: typeof AudioContext;
+  };
+
 const getNativeRecognitionCtor = (): (new () => SpeechRecognitionLike) | null => {
   if (typeof window === 'undefined') return null;
   const w = window as WindowWithSpeech;
   return w.SpeechRecognition ?? w.webkitSpeechRecognition ?? null;
 };
 
+// Fallback de corte por tiempo cuando WebAudio (VAD) no está disponible.
 const WHISPER_CHUNK_MS = 4000;
+// Detección de silencio (VAD): se corta la grabación cuando el usuario deja de
+// hablar, para enviar a Whisper de inmediato en lugar de esperar bloques fijos.
+const SILENCE_MS = 900; // silencio sostenido que cierra el turno
+const VAD_NOISE_FLOOR = 0.025; // RMS por debajo del cual se considera silencio
+const MIN_SPEECH_MS = 300; // duración mínima antes de poder cortar
+const MAX_UTTERANCE_MS = 12000; // tope de seguridad por turno
 
 const useSpeechRecognition = ({
   locale = 'es',
@@ -61,10 +73,13 @@ const useSpeechRecognition = ({
   const [error, setError] = useState<string | null>(null);
   const [engine, setEngine] = useState<'native' | 'whisper' | null>(null);
   const setSpeechEngine = useBotStore((s) => s.setSpeechEngine);
+  const setMicStream = useBotStore((s) => s.setMicStream);
 
   const recognitionRef = useRef<SpeechRecognitionLike | null>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
+  const vadRafRef = useRef<number | null>(null);
+  const vadCtxRef = useRef<AudioContext | null>(null);
   const onResultRef = useRef<SpeechResultCallback | undefined>(onResult);
   const localeRef = useRef(locale);
 
@@ -77,9 +92,18 @@ const useSpeechRecognition = ({
   }, [locale]);
 
   const cleanupStream = useCallback(() => {
+    if (vadRafRef.current !== null) {
+      cancelAnimationFrame(vadRafRef.current);
+      vadRafRef.current = null;
+    }
+    if (vadCtxRef.current) {
+      vadCtxRef.current.close().catch(() => undefined);
+      vadCtxRef.current = null;
+    }
     streamRef.current?.getTracks().forEach((t) => t.stop());
     streamRef.current = null;
-  }, []);
+    setMicStream(null);
+  }, [setMicStream]);
 
   const stop = useCallback(() => {
     const rec = recognitionRef.current;
@@ -117,15 +141,27 @@ const useSpeechRecognition = ({
         },
       });
       streamRef.current = stream;
-      const recorder = new MediaRecorder(stream);
-      mediaRecorderRef.current = recorder;
-      const chunks: BlobPart[] = [];
-      recorder.ondataavailable = (e) => {
-        if (e.data.size > 0) chunks.push(e.data);
-      };
-      recorder.onstop = async () => {
-        const blob = new Blob(chunks, { type: recorder.mimeType || 'audio/webm' });
-        chunks.length = 0;
+      // Compartir el stream para que useAudioLevel no abra un segundo micrófono.
+      setMicStream(stream);
+
+      // Analizador para VAD (detección de silencio). Si WebAudio no está, se cae
+      // al corte por tiempo fijo más abajo.
+      const AudioCtor =
+        window.AudioContext ?? (window as WindowWithWebkitAudio).webkitAudioContext;
+      let analyser: AnalyserNode | null = null;
+      let vadBuffer: Uint8Array<ArrayBuffer> | null = null;
+      if (AudioCtor) {
+        const ctx = new AudioCtor();
+        vadCtxRef.current = ctx;
+        ctx.resume?.().catch(() => undefined);
+        const src = ctx.createMediaStreamSource(stream);
+        analyser = ctx.createAnalyser();
+        analyser.fftSize = 256;
+        src.connect(analyser);
+        vadBuffer = new Uint8Array(new ArrayBuffer(analyser.fftSize));
+      }
+
+      const sendBlob = async (blob: Blob) => {
         if (blob.size === 0) return;
         try {
           const form = new FormData();
@@ -141,30 +177,90 @@ const useSpeechRecognition = ({
         } catch (e) {
           setError(e instanceof Error ? e.message : 'transcribe_failed');
         }
-        if (mediaRecorderRef.current && streamRef.current) {
-          // schedule next chunk
-          try {
-            mediaRecorderRef.current.start();
-            setTimeout(() => {
-              if (mediaRecorderRef.current?.state === 'recording') {
-                mediaRecorderRef.current.stop();
-              }
-            }, WHISPER_CHUNK_MS);
-          } catch {
-            /* recorder may have been stopped externally */
+      };
+
+      // Cada turno usa un MediaRecorder que se detiene por silencio (VAD) o por
+      // tope de seguridad; envía su blob y arranca el siguiente turno.
+      const startCycle = () => {
+        if (!streamRef.current) return;
+        const recorder = new MediaRecorder(streamRef.current);
+        mediaRecorderRef.current = recorder;
+        const chunks: BlobPart[] = [];
+        const startedAt = Date.now();
+        let hasSpoken = false;
+        let lastVoiceTs = startedAt;
+        let stopped = false;
+
+        const stopRecorder = () => {
+          if (stopped) return;
+          stopped = true;
+          if (vadRafRef.current !== null) {
+            cancelAnimationFrame(vadRafRef.current);
+            vadRafRef.current = null;
           }
+          if (recorder.state === 'recording') recorder.stop();
+        };
+
+        recorder.ondataavailable = (e) => {
+          if (e.data.size > 0) chunks.push(e.data);
+        };
+        recorder.onstop = () => {
+          const blob = new Blob(chunks, { type: recorder.mimeType || 'audio/webm' });
+          chunks.length = 0;
+          // Reagendar el siguiente turno YA (antes de la red) para que el micrófono
+          // no quede en un hueco mientras se transcribe. Sólo si seguimos siendo el
+          // recorder activo (en stop() externo, mediaRecorderRef.current ya es null).
+          if (mediaRecorderRef.current === recorder && streamRef.current) {
+            startCycle();
+          }
+          // Sólo se envía si hubo voz (evita mandar silencio puro a Whisper).
+          if (hasSpoken) void sendBlob(blob);
+        };
+
+        recorder.start();
+
+        if (analyser && vadBuffer) {
+          const tick = () => {
+            if (stopped || !analyser || !vadBuffer) return;
+            analyser.getByteTimeDomainData(vadBuffer);
+            let sum = 0;
+            for (let i = 0; i < vadBuffer.length; i += 1) {
+              const v = (vadBuffer[i] - 128) / 128;
+              sum += v * v;
+            }
+            const rms = Math.sqrt(sum / vadBuffer.length);
+            const now = Date.now();
+            if (rms > VAD_NOISE_FLOOR) {
+              hasSpoken = true;
+              lastVoiceTs = now;
+            }
+            const elapsed = now - startedAt;
+            const silenceFor = now - lastVoiceTs;
+            if (hasSpoken && silenceFor > SILENCE_MS && elapsed > MIN_SPEECH_MS) {
+              stopRecorder();
+              return;
+            }
+            if (elapsed > MAX_UTTERANCE_MS) {
+              stopRecorder();
+              return;
+            }
+            vadRafRef.current = requestAnimationFrame(tick);
+          };
+          vadRafRef.current = requestAnimationFrame(tick);
+        } else {
+          // Sin WebAudio: corte por tiempo fijo (comportamiento anterior).
+          hasSpoken = true;
+          setTimeout(stopRecorder, WHISPER_CHUNK_MS);
         }
       };
-      recorder.start();
-      setTimeout(() => {
-        if (recorder.state === 'recording') recorder.stop();
-      }, WHISPER_CHUNK_MS);
+
+      startCycle();
       setIsListening(true);
     } catch (e) {
       setError(e instanceof Error ? e.message : 'mic_failed');
       cleanupStream();
     }
-  }, [cleanupStream, setSpeechEngine]);
+  }, [cleanupStream, setMicStream, setSpeechEngine]);
 
   const startNative = useCallback((Ctor: new () => SpeechRecognitionLike) => {
     setEngine('native');

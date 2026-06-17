@@ -5,7 +5,7 @@
 }
 
 .video {
-  @apply absolute inset-0 h-full w-full object-contain transition-opacity duration-500 object-cover;
+  @apply absolute inset-0 h-full w-full object-cover transition-opacity duration-500;
   transform: translateZ(0);
   will-change: opacity;
 }

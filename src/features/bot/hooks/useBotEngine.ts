@@ -165,9 +165,13 @@ const useBotEngine = ({ locale }: UseBotEngineOptions) => {
 
   const start = useCallback(() => {
     if (stateRef.current === "IDLE") {
+      // Se invoca desde el onClick del botón → estamos dentro del gesto de usuario.
+      // Desbloqueamos ambos slots de video AQUÍ (síncrono) para que las respuestas
+      // posteriores (que reproducen tras un await de red) emitan audio en iOS.
+      videoPlayer.unlock();
       setState("INTRO");
     }
-  }, [setState]);
+  }, [setState, videoPlayer]);
 
   const submitText = useCallback(
     (text: string) => {

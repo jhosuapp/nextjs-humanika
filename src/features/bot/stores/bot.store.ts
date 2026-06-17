@@ -26,6 +26,13 @@ interface BotStoreState {
   inactivityWarning: boolean;
   isChatOpen: boolean;
   speechEngine: 'native' | 'whisper' | null;
+  /**
+   * Stream de micrófono activo (camino Whisper). Se comparte para que el medidor
+   * de nivel (useAudioLevel) reutilice este stream en lugar de abrir un segundo
+   * getUserMedia — en iOS dos streams simultáneos provocan contención y jank.
+   * No es serializable; vive sólo en memoria. Su dueño es useSpeechRecognition.
+   */
+  micStream: MediaStream | null;
 }
 
 interface BotStoreActions {
@@ -39,6 +46,7 @@ interface BotStoreActions {
   setChatOpen: (open: boolean) => void;
   toggleChat: () => void;
   setSpeechEngine: (engine: 'native' | 'whisper' | null) => void;
+  setMicStream: (stream: MediaStream | null) => void;
   reset: () => void;
 }
 
@@ -54,6 +62,7 @@ const initialState: BotStoreState = {
   inactivityWarning: false,
   isChatOpen: false,
   speechEngine: null,
+  micStream: null,
 };
 
 const storeAPI: StateCreator<
@@ -95,6 +104,10 @@ const storeAPI: StateCreator<
   setSpeechEngine: (speechEngine) =>
     set({ speechEngine }, false, 'setSpeechEngine'),
 
+  setMicStream: (micStream) => set({ micStream }, false, 'setMicStream'),
+
+  // No detenemos los tracks de micStream aquí: su dueño es useSpeechRecognition,
+  // que los libera en stop()/cleanupStream(). reset() sólo suelta la referencia.
   reset: () => set({ ...initialState }, false, 'reset'),
 });
 

@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
+import { VIDEOS } from '@/src/features/bot/data/bot-content';
+
 // Límite de volumen base para TODOS los videos (intro, respuestas…): nunca suenan
 // al 100% para que la voz del bot no se cruce con la del usuario. El ducking por
 // voz baja aún más este valor de forma puntual.
@@ -18,6 +20,13 @@ interface UseVideoPlayerResult {
   refB: React.RefObject<HTMLVideoElement | null>;
   active: Slot;
   play: (src: string, opts?: PlayOptions) => Promise<void>;
+  /**
+   * Desbloquea AMBOS elementos <video> para reproducción con audio en iOS.
+   * iOS sólo permite audio en un elemento cuyo play() ocurrió dentro de un gesto
+   * de usuario, y el desbloqueo es por elemento. Debe llamarse SÍNCRONAMENTE
+   * dentro del handler del gesto (p. ej. el onClick del botón de inicio).
+   */
+  unlock: () => void;
   /** Devuelve el `src` del video que se está reproduciendo en el slot activo (o null). */
   getActiveSrc: () => string | null;
 }
@@ -114,12 +123,49 @@ const useVideoPlayer = (): UseVideoPlayerResult => {
     [getRef],
   );
 
+  const unlock = useCallback(() => {
+    const activeSlot = activeRef.current;
+    (['A', 'B'] as Slot[]).forEach((slot) => {
+      const el = getRef(slot);
+      if (!el) return;
+
+      // El slot activo suele estar reproduciendo el loop muteado por defecto.
+      // Un play() ligado al gesto lo "activa por usuario" sin pausarlo ni cortar
+      // el loop visible.
+      if (slot === activeSlot && !el.paused) {
+        el.play().catch(() => {
+          /* ya en reproducción; ignorar */
+        });
+        return;
+      }
+
+      // Slot inactivo (invisible): darle un src cacheado si no tiene, reproducir
+      // muteado un instante y pausar. Eso lo deja desbloqueado para audio futuro.
+      if (!el.src) el.src = VIDEOS.defaultWait;
+      el.muted = true;
+      el.playsInline = true;
+      const p = el.play();
+      if (p) {
+        p.then(() => {
+          el.pause();
+          try {
+            el.currentTime = 0;
+          } catch {
+            /* readyState puede no estar listo */
+          }
+        }).catch(() => {
+          /* el play de desbloqueo puede rechazarse; no es crítico */
+        });
+      }
+    });
+  }, [getRef]);
+
   const getActiveSrc = useCallback(
     () => currentSrcRef.current[activeRef.current],
     [],
   );
 
-  return { refA, refB, active, play, getActiveSrc };
+  return { refA, refB, active, play, unlock, getActiveSrc };
 };
 
 export { useVideoPlayer };
