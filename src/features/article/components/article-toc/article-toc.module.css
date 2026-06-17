@@ -40,5 +40,5 @@
 
 .linkActive .marker {
   background: var(--primary);
-  box-shadow: 0 0 0 3px rgba(0, 177, 215, 0.18);
+  box-shadow: var(--shadow-focus-ring);
 }

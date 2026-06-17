@@ -46,7 +46,7 @@
   aspect-ratio: 16 / 9;
   background: var(--bg-section);
   border: 1px solid var(--border-subtle);
-  box-shadow: 0 24px 60px -30px rgba(11, 16, 36, 0.45);
+  box-shadow: var(--shadow-detail);
 }
 
 .heroImage {

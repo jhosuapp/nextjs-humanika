@@ -60,7 +60,7 @@
   content: "";
   @apply h-1.5 w-1.5 rounded-full;
   background: var(--primary);
-  box-shadow: 0 0 0 3px rgba(0, 190, 255, 0.18);
+  box-shadow: var(--shadow-focus-ring);
 }
 
 .panelMedia {
