@@ -9,6 +9,7 @@ import { ArticleCard } from '@/src/features/blog/components/article-card/Article
 import { useColumnCount } from '@/src/features/blog/hooks/useColumnCount';
 
 import styles from './blog.module.css';
+import { MetaPartner } from '@/src/shared/components/meta-partner/MetaPartner';
 
 type BlogViewProps = { t: ITranslations };
 
@@ -34,7 +35,7 @@ const BlogView = ({ t }: BlogViewProps): JSX.Element => {
       <WrapperMotion
         key={ns}
         className={styles.gridItem}
-        delay={{ enter: 0.5 + index * 0.08, exit: 0.1 }}
+        delay={{ enter: 0.56, exit: 0.12 }}
         immediate
       >
         <ArticleCard
@@ -100,6 +101,8 @@ const BlogView = ({ t }: BlogViewProps): JSX.Element => {
           ))}
         </div>
       </Container>
+
+      <MetaPartner />
     </div>
   );
 };

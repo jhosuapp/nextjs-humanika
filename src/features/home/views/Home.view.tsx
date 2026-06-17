@@ -13,6 +13,7 @@ import { StatsSection } from '../components/stats-section/StatsSection';
 import { CaseStudiesSection } from '../components/case-studies-section/CaseStudiesSection';
 
 import styles from './home.module.css';
+import { MetaPartner } from '@/src/shared/components/meta-partner/MetaPartner';
 
 type HomeViewProps = { t: ITranslations; tBot: ITranslations };
 
@@ -23,6 +24,7 @@ const HomeView = ({ t, tBot }: HomeViewProps): JSX.Element => {
       <ContactForm t={t} />
       <TrustedByStrip t={t} />
       <AudienceTabsSection t={t} />
+      <MetaPartner />
       <ProcessStepsSection t={t} />
       <IntegrationsGrid t={t} />
       {/* <StatsSection t={t} /> */}

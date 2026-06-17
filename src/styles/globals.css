@@ -5,6 +5,7 @@
   --secondary: #001643;
   --tertiary: #17f1d1;
   --cuartary: #e8f8ff;
+  --fifth: #0099d6;
   --btn-secondary: #001643;
   --h-header: 65px;
   --limit-width: 1280px;
@@ -245,7 +246,7 @@ body {
       padding-box,
     /* Top-lit edge: a soft brand highlight along the top/left that dissolves
        into the theme's neutral border for the rest of the frame. */
-      linear-gradient(
+    linear-gradient(
         145deg,
         rgba(0, 177, 215, 0.6) 0%,
         rgba(23, 241, 209, 0.32) 18%,
@@ -260,7 +261,7 @@ body {
   background-image: linear-gradient(
     135deg,
     var(--primary) 0%,
-    #0099d6 50%,
+    var(--fifth) 50%,
     var(--tertiary) 100%
   );
 }

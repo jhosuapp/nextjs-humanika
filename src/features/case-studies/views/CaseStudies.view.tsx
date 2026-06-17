@@ -8,6 +8,7 @@ import { getSortedCaseStudies } from '@/src/features/case-studies/data/case-stud
 import { CaseStudyCard } from '@/src/features/case-studies/components/case-study-card/CaseStudyCard';
 
 import styles from './case-studies.module.css';
+import { MetaPartner } from '@/src/shared/components/meta-partner/MetaPartner';
 
 type CaseStudiesViewProps = { t: ITranslations };
 
@@ -85,6 +86,8 @@ const CaseStudiesView = ({ t }: CaseStudiesViewProps): JSX.Element => {
           })}
         </div>
       </Container>
+
+      <MetaPartner />
     </div>
   );
 };

@@ -1,0 +1,29 @@
+@reference "tailwindcss";
+
+.metaPartner {
+  @apply w-full min-h-96 relative overflow-hidden rounded-2xl flex flex-col md:flex-row items-center justify-between px-20 xl:px-40 py-20;
+  box-shadow: 0 18px 48px -32px rgba(11, 16, 36, 0.4);
+  background: linear-gradient(
+    135deg,
+    #090432 0%,
+    #00438e 33%,
+    #0f0b4d 67%,
+    #141a7d 100%
+  );
+}
+
+.metaPartner__text {
+  @apply text-center !text-white;
+}
+
+.metaPartner__image {
+  @apply relative z-10 w-32 lg:w-40!;
+}
+
+.metaPartner__pill {
+  @apply absolute xl:left-20 bottom-0;
+}
+
+.metaPartner__pill__secondary {
+  @apply absolute xl:right-20 top-0;
+}

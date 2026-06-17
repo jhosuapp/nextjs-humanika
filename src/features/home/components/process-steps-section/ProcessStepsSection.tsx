@@ -6,7 +6,6 @@ import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
 import { homeStaticData } from '@/src/features/home/data/home-content';
 import { revealDelay } from '@/src/shared/helpers/motion-variants';
 
-import { FloatIcon } from './FloatIcon';
 import { ProcessStep } from './ProcessStep';
 import styles from './process-steps-section.module.css';
 import { WrapperMotion } from '@/src/shared/components/wrapper-motion/WrapperMotion';
@@ -35,8 +34,6 @@ const ProcessStepsSection = ({ t }: Props) => {
     return () => timers.forEach((id) => window.clearTimeout(id));
   }, [inView, reduce]);
 
-  const activeIcon = homeStaticData.process.steps[Math.max(activeStep, 0)].icon;
-
   return (
     <section
       id="process"
@@ -46,19 +43,6 @@ const ProcessStepsSection = ({ t }: Props) => {
     >
       <div className={styles.sticky}>
         <Image className={ styles.image } src={'/images/bg-update.jpg'} alt='test' width={1920} height={1220}/>
-        {!reduce &&
-          homeStaticData.process.floatIcons.map((item) => (
-            <FloatIcon
-              key={item.id}
-              icon={activeIcon}
-              side={item.side}
-              topPercent={item.topPercent}
-              offset={item.offset}
-              size={item.size}
-              rotate={item.rotate}
-              accent={item.accent}
-            />
-          ))}
         <div className={`${styles.card} gl-gradient-box`}>
           <Text
             tag="h2"
