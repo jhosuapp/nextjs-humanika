@@ -3,7 +3,6 @@ import { useCallback, useEffect, useState } from 'react';
 
 import { DURATION, EASE } from '@/src/shared/helpers/motion-variants';
 import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
-import { useActiveSection } from '@/src/shared/hooks/useActiveSection';
 
 import { headerStaticData } from './header-content';
 import { HeaderBrand } from './header-brand/HeaderBrand';
@@ -28,12 +27,6 @@ const Header = ({ t }: HeaderProps) => {
 
   const closeMenu = useCallback(() => setMenuOpen(false), []);
   const toggleMenu = useCallback(() => setMenuOpen((v) => !v), []);
-
-  const sectionIds = headerStaticData.nav
-    .map(item => item.href.match(/^(?:\/)?#(.+)$/)?.[1])
-    .filter((id): id is string => !!id);
-
-  const activeSection = useActiveSection(sectionIds);
 
   const translatedNav = headerStaticData.nav.map((item) => ({
     label: t(`nav.${item.key}`) as string,
@@ -63,7 +56,7 @@ const Header = ({ t }: HeaderProps) => {
         <HeaderBrand brand={headerStaticData.brand} />
 
         <nav className={styles.navDesktop} aria-label="Primary">
-          <HeaderNavList items={translatedNav} variant="desktop" activeSection={activeSection} />
+          <HeaderNavList items={translatedNav} variant="desktop" />
         </nav>
 
         <div className={styles.actions}>
@@ -73,7 +66,6 @@ const Header = ({ t }: HeaderProps) => {
             onToggle={toggleMenu}
             t={t}
             translatedNav={translatedNav}
-            activeSection={activeSection}
           />
         </div>
       </div>

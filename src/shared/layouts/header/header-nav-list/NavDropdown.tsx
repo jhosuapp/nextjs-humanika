@@ -30,7 +30,12 @@ const NavDropdown = ({ item, variant, onNavigate }: NavDropdownProps) => {
   const isMobile = variant === 'mobile';
 
   const currentPath = router.asPath.split(/[?#]/)[0];
-  const isChildActive = children.some((child) => currentPath === child.href);
+  // Active when on the section landing page (e.g. "/blog"), any nested route
+  // ("/blog/<article>"), or one of the explicitly listed children.
+  const isChildActive =
+    currentPath === item.href ||
+    currentPath.startsWith(`${item.href}/`) ||
+    children.some((child) => currentPath === child.href);
 
   // Desktop opens on hover; mobile is a click-driven accordion.
   const hoverHandlers = isMobile

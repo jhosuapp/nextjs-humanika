@@ -11,10 +11,13 @@
 }
 
 .grid {
-  @apply grid gap-6 list-none p-0 mt-12 lg:mt-16;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+  @apply flex items-start gap-6 list-none p-0 mt-12 lg:mt-16;
+}
+
+.column {
+  @apply flex flex-1 flex-col gap-6 min-w-0;
 }
 
 .gridItem {
-  @apply h-full;
+  @apply w-full;
 }

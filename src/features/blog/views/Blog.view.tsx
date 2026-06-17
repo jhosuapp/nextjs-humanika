@@ -1,4 +1,4 @@
-import type { JSX } from 'react';
+import { useRef, type JSX, type ReactNode } from 'react';
 
 import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
 import { Container } from '@/src/features/home/components/container/Container';
@@ -6,6 +6,7 @@ import { Text } from '@/src/shared/components/text/Text';
 import { WrapperMotion } from '@/src/shared/components/wrapper-motion/WrapperMotion';
 import { getSortedArticles } from '@/src/features/article/data/articles.registry';
 import { ArticleCard } from '@/src/features/blog/components/article-card/ArticleCard';
+import { useColumnCount } from '@/src/features/blog/hooks/useColumnCount';
 
 import styles from './blog.module.css';
 
@@ -17,6 +18,41 @@ type BlogViewProps = { t: ITranslations };
 const BlogView = ({ t }: BlogViewProps): JSX.Element => {
   const articles = getSortedArticles();
   const readMore = t('card.readMore') as string;
+
+  const gridRef = useRef<HTMLDivElement>(null);
+  const columnCount = useColumnCount(gridRef);
+
+  // Each card keeps its natural height; cards are dealt round-robin across the
+  // columns so the newest-first order still reads left-to-right, top-to-bottom.
+  const columns: ReactNode[][] = Array.from({ length: columnCount }, () => []);
+
+  articles.forEach((article, index) => {
+    const ns = article.slug;
+    const lead = t(`${ns}:hero.lead`, { returnObjects: true }) as string[];
+
+    columns[index % columnCount].push(
+      <WrapperMotion
+        key={ns}
+        className={styles.gridItem}
+        delay={{ enter: 0.5 + index * 0.08, exit: 0.1 }}
+        immediate
+      >
+        <ArticleCard
+          href={`/blog/${ns}`}
+          eyebrow={t(`${ns}:hero.eyebrow`) as string}
+          titleLead={t(`${ns}:hero.titleLead`) as string}
+          titleAccent={t(`${ns}:hero.titleAccent`) as string}
+          titleTrail={t(`${ns}:hero.titleTrail`) as string}
+          excerpt={lead[0] ?? ''}
+          readingTime={t(`${ns}:hero.meta.readingTime`) as string}
+          date={t(`${ns}:hero.meta.date`) as string}
+          cover={article.cover}
+          coverAlt={t(`${ns}:hero.imageAlt`) as string}
+          readMore={readMore}
+        />
+      </WrapperMotion>,
+    );
+  });
 
   return (
     <div className={styles.page}>
@@ -56,36 +92,12 @@ const BlogView = ({ t }: BlogViewProps): JSX.Element => {
           </Text>
         </header>
 
-        <div className={styles.grid}>
-          {articles.map((article, index) => {
-            const ns = article.slug;
-            const lead = t(`${ns}:hero.lead`, {
-              returnObjects: true,
-            }) as string[];
-
-            return (
-              <WrapperMotion
-                key={ns}
-                className={styles.gridItem}
-                delay={{ enter: 0.50 + index * 0.08, exit: 0.1 }}
-                immediate
-              >
-                <ArticleCard
-                  href={`/blog/${ns}`}
-                  eyebrow={t(`${ns}:hero.eyebrow`) as string}
-                  titleLead={t(`${ns}:hero.titleLead`) as string}
-                  titleAccent={t(`${ns}:hero.titleAccent`) as string}
-                  titleTrail={t(`${ns}:hero.titleTrail`) as string}
-                  excerpt={lead[0] ?? ''}
-                  readingTime={t(`${ns}:hero.meta.readingTime`) as string}
-                  date={t(`${ns}:hero.meta.date`) as string}
-                  cover={article.cover}
-                  coverAlt={t(`${ns}:hero.imageAlt`) as string}
-                  readMore={readMore}
-                />
-              </WrapperMotion>
-            );
-          })}
+        <div ref={gridRef} className={styles.grid}>
+          {columns.map((column, columnIndex) => (
+            <div key={columnIndex} className={styles.column}>
+              {column}
+            </div>
+          ))}
         </div>
       </Container>
     </div>

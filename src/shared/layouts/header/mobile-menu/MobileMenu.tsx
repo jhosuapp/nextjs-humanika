@@ -11,11 +11,8 @@ import { useEffect, useId, useState } from 'react';
 
 import { DURATION, EASE } from '@/src/shared/helpers/motion-variants';
 import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
-
 import { HeaderNavList } from '../header-nav-list/HeaderNavList';
-import { LanguageDropdown } from '../language-dropdown/LanguageDropdown';
-import { ThemeToggle } from '../theme-toggle/ThemeToggle';
-import { Button } from '@/src/shared/components/button/Button';
+
 import styles from './mobile-menu.module.css';
 
 type NavItem = {
@@ -31,7 +28,6 @@ type MobileMenuProps = {
   onToggle: () => void;
   t: ITranslations;
   translatedNav: ReadonlyArray<NavItem>;
-  activeSection?: string | null;
 };
 
 const panelVariants: Variants = {
@@ -65,7 +61,7 @@ const groupVariants: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: EASE } },
 };
 
-const MobileMenu = ({ open, onClose, onToggle, t, translatedNav, activeSection = null }: MobileMenuProps) => {
+const MobileMenu = ({ open, onClose, onToggle, t, translatedNav }: MobileMenuProps) => {
   const reduce = useReducedMotion();
   const panelId = useId();
   const [mounted, setMounted] = useState(false);
@@ -160,7 +156,6 @@ const MobileMenu = ({ open, onClose, onToggle, t, translatedNav, activeSection =
                     variant="mobile"
                     onItemClick={onClose}
                     animated
-                    activeSection={activeSection}
                   />
                 </motion.nav>
 

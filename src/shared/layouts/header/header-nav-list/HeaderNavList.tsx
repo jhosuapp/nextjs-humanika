@@ -13,7 +13,11 @@ type HeaderNavListProps = {
   variant?: 'desktop' | 'mobile';
   onItemClick?: () => void;
   animated?: boolean;
-  activeSection?: string | null;
+};
+
+const isActivePath = (href: string, currentPath: string): boolean => {
+  if (href === '/') return currentPath === '/';
+  return currentPath === href || currentPath.startsWith(`${href}/`);
 };
 
 const buildItemVariants = (reduce: boolean): Variants => ({
@@ -30,12 +34,12 @@ const HeaderNavList = ({
   variant = 'desktop',
   onItemClick,
   animated = false,
-  activeSection = null,
 }: HeaderNavListProps) => {
   const lenis = useLenisStore(state => state.lenis);
   const reduce = useReducedMotion();
   const itemVariants = buildItemVariants(!!reduce);
   const router = useRouter();
+  const currentPath = router.asPath.split(/[?#]/)[0];
 
   const navigate = (href: string) => {
     if (navigateToHash(href, router, lenis, onItemClick)) return;
@@ -76,8 +80,8 @@ const HeaderNavList = ({
           ) : (
             <a
               href={item.href}
-              className={`${styles.link} ${item.href.match(/^(?:\/)?#(.+)$/)?.[1] === activeSection ? styles.linkActive : ''}`}
-              aria-current={item.href.match(/^(?:\/)?#(.+)$/)?.[1] === activeSection ? 'true' : undefined}
+              className={`${styles.link} ${isActivePath(item.href, currentPath) ? styles.linkActive : ''}`}
+              aria-current={isActivePath(item.href, currentPath) ? 'page' : undefined}
               onClick={(e) => handleClick(e)}
             >
               {item.label}
