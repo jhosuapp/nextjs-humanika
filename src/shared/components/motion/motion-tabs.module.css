@@ -1,17 +1,20 @@
 @reference "tailwindcss";
 
 .root {
-  @apply flex flex-col gap-8 w-full;
+  @apply flex flex-col gap-6 w-full lg:gap-8;
 }
 
+/* ---------------------------------------------------------------- */
+/* Desktop tablist (hidden on mobile)                               */
+/* ---------------------------------------------------------------- */
 .list {
-  @apply flex flex-wrap items-center gap-2 self-center rounded-3xl lg:rounded-full border p-4 lg:p-1 flex-col lg:flex-row w-full lg:w-fit;
+  @apply hidden items-center gap-2 self-center rounded-full border p-1 w-fit lg:flex;
   border-color: var(--border-subtle);
   background: var(--surface-elevated);
 }
 
 .tab {
-  @apply relative inline-flex items-center justify-center rounded-xl lg:rounded-full px-5 py-2 text-xs lg:text-sm font-medium tracking-wide uppercase transition-colors;
+  @apply relative inline-flex items-center justify-center rounded-full px-5 py-2 text-sm font-medium tracking-wide uppercase transition-colors;
   color: var(--text-muted);
 }
 
@@ -29,11 +32,64 @@
 }
 
 .indicator {
-  @apply absolute inset-0 rounded-xl lg:rounded-full;
+  @apply absolute inset-0 rounded-full;
   background: var(--foreground);
   z-index: 0;
 }
 
+/* ---------------------------------------------------------------- */
+/* Accordion host (mobile) / single shared panel (desktop)          */
+/* ---------------------------------------------------------------- */
+.items {
+  @apply flex flex-col w-full;
+}
+
+.item {
+  @apply w-full border-b lg:border-b-0;
+  border-color: var(--border-subtle);
+}
+
+.item:last-child {
+  @apply border-b-0;
+}
+
+/* Mobile-only accordion trigger */
+.accHeader {
+  @apply flex w-full items-center justify-between gap-4 py-4 text-left text-sm font-semibold tracking-wide uppercase transition-colors lg:hidden;
+  color: var(--text-muted);
+}
+
+.accHeader:hover,
+.accHeaderActive,
+.accHeaderActive:hover {
+  color: var(--foreground);
+}
+
+.accIcon {
+  @apply shrink-0 text-xs transition-transform duration-300 ease-out;
+  color: var(--text-muted);
+}
+
+.accHeaderActive .accIcon {
+  color: var(--primary);
+}
+
+.accIconOpen {
+  @apply rotate-180;
+}
+
+/* Mobile accordion content. overflow-hidden lets the height animation clip. */
+.accPanel {
+  @apply w-full overflow-hidden;
+}
+
+.panelInner {
+  @apply pb-5;
+}
+
+/* ---------------------------------------------------------------- */
+/* Desktop single shared panel (cross-fade between tabs)            */
+/* ---------------------------------------------------------------- */
 .panelWrapper {
   @apply relative w-full overflow-hidden;
 }
