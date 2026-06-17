@@ -9,6 +9,7 @@ import { WrapperMotion } from '@/src/shared/components/wrapper-motion/WrapperMot
 import { ArticleCta } from '@/src/features/article/components/article-cta/ArticleCta';
 
 import styles from './case-study-detail.module.css';
+import { Reveal } from '../../article/components/reveal/Reveal';
 
 type CaseStudyDetailViewProps = {
   t: ITranslations;
@@ -98,26 +99,27 @@ const CaseStudyDetailView = ({
         <div className={styles.body}>
           <div className={styles.overview}>
             {paragraphs.map((paragraph, index) => (
-              <Text
-                key={index}
-                tag="p"
-                variant="description"
-                color="muted"
-                weight="normal"
-                delay={{ enter: 0.5, exit: 0.1 }}
-              >
-                {paragraph}
-              </Text>
+              <Reveal>
+                <Text
+                  key={index}
+                  tag="p"
+                  variant="description"
+                  color="muted"
+                  weight="normal"
+                  delay={{ enter: 0, exit: 0.1 }}
+                  immediate
+                >
+                  {paragraph}
+                </Text>
+              </Reveal>
             ))}
           </div>
 
           <div className={styles.highlights}>
-            {HIGHLIGHT_KEYS.map((key, index) => (
-              <WrapperMotion
+            {HIGHLIGHT_KEYS.map((key) => (
+              <Reveal
                 key={key}
                 className="h-full"
-                classNameSecondary="h-full"
-                delay={{ enter: 0.5 + index * 0.08, exit: 0.1 }}
               >
                 <div className={`${styles.highlight} gl-gradient-box`}>
                   <span className={styles.highlightLabel}>
@@ -127,7 +129,7 @@ const CaseStudyDetailView = ({
                     {t(`highlights.${key}.text`) as string}
                   </p>
                 </div>
-              </WrapperMotion>
+              </Reveal>
             ))}
           </div>
 
