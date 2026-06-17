@@ -24,22 +24,32 @@ const IntegrationsGrid = ({ t }: IntegrationsGridProps) => {
       <Container padding='xl'>
         <FadeIn className={styles.head}>
           <Text
-            className={styles.title}
-            tag="h2" 
-            variant="title_small" 
-            color="secondary"
+            tag="p"
+            variant="description_xs"
+            color="primary"
             weight="semibold"
             delay={{ enter: revealDelay(0), exit: 0 }}
+            fadeUpTertiary
+          >
+            {t('integrations.eyebrow')}
+          </Text>
+          <Text
+            className={styles.title}
+            tag="h2"
+            variant="title_small"
+            color="secondary"
+            weight="semibold"
+            delay={{ enter: revealDelay(1), exit: 0 }}
             fadeUpTertiary
           >
             {t('integrations.title')}
           </Text>
           <Text
             className={styles.description}
-            tag="p" 
-            variant="description" 
+            tag="p"
+            variant="description"
             color="muted"
-            delay={{ enter: revealDelay(1), exit: 0 }}
+            delay={{ enter: revealDelay(2), exit: 0 }}
             fadeUpTertiary
           >
             {t('integrations.description')}

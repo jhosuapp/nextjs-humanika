@@ -14,6 +14,7 @@ import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
 import { HeaderNavList } from '../header-nav-list/HeaderNavList';
 
 import styles from './mobile-menu.module.css';
+import { ThemeToggle } from '../theme-toggle/ThemeToggle';
 
 type NavItem = {
   label: string;
@@ -159,15 +160,15 @@ const MobileMenu = ({ open, onClose, onToggle, t, translatedNav }: MobileMenuPro
                   />
                 </motion.nav>
 
-                {/* <motion.div className={styles.divider} variants={groupVariants} aria-hidden="true" />
+                <motion.div className={styles.divider} variants={groupVariants} aria-hidden="true" />
 
                 <motion.div className={styles.controlsRow} variants={groupVariants}>
                   <div className={styles.controlsLabel}>{t('header.mobileMenu.preferences')}</div>
                   <div className={styles.controls}>
                     <ThemeToggle t={t} />
-                    <LanguageDropdown t={t} />
+                    {/* <LanguageDropdown t={t} /> */}
                   </div>
-                </motion.div> */}
+                </motion.div>
 
                 <motion.div className={styles.ctas} variants={groupVariants}>
                   {/* <Button

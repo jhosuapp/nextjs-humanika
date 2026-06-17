@@ -16,8 +16,10 @@ import type { CaseStudyEntry } from "@/src/features/case-studies/types/case-stud
  *   2. add one entry here. The /casos-de-exito listing, the /casos-de-exito/<slug>
  *      route and the home section pick it up automatically — no new page file.
  *
- * NOTE: `corona` is real. `caso-2/3/4` are placeholders — rename the slug, swap
- * the logo/cover and fill the JSON once the real client data is provided.
+ * NOTE: `corona`, `aguila`, `stella` and `michelob` are real WhatsApp-bot cases.
+ * To add another, drop its copy in public/locales/<locale>/<slug>.json and add
+ * one entry here; the listing, the /casos-de-exito/<slug> route and the home
+ * section pick it up automatically — no new page file.
  */
 const caseStudiesRegistry: ReadonlyArray<CaseStudyEntry> = [
   {
@@ -28,22 +30,22 @@ const caseStudiesRegistry: ReadonlyArray<CaseStudyEntry> = [
     publishedAt: "2026-06-16",
   },
   {
-    slug: "caso-2",
+    slug: "aguila",
     cover: "/images/servicio-y-soporte.jpg",
-    logo: "/logos/pepsi.png",
-    publishedAt: "2026-06-10",
+    logo: "/logos/aguila.png",
+    publishedAt: "2026-06-14",
   },
   {
-    slug: "caso-3",
-    cover: "/images/formacion-empresarial.jpg",
-    logo: "/logos/alpina.png",
-    publishedAt: "2026-06-04",
+    slug: "stella",
+    cover: "/images/contociento-organizacional.jpg",
+    logo: "/logos/stella.png",
+    publishedAt: "2026-06-12",
   },
   {
-    slug: "caso-4",
+    slug: "michelob",
     cover: "/images/productividad-y-opetaciones.jpg",
-    logo: "/logos/bon-yurt.png",
-    publishedAt: "2026-05-28",
+    logo: "/logos/michelob.png",
+    publishedAt: "2026-06-10",
   },
 ];
 

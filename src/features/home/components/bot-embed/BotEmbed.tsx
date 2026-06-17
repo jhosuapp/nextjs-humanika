@@ -59,7 +59,7 @@ const BotEmbed = ({ t }: Props): JSX.Element => {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.frame}>
+      <div className={`${styles.frame} gl-gradient-box`}>
         <video
           className={styles.previewVideo}
           src={VIDEOS.defaultWait}

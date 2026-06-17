@@ -1,0 +1,47 @@
+{
+  "seo": {
+    "title": "Águila: a 24/7 WhatsApp bot that automates interactions | 150%",
+    "description": "How Águila automates conversations with its consumers on WhatsApp with a digital coworker that answers and runs promotions around the clock."
+  },
+  "hero": {
+    "eyebrow": "Mass consumption",
+    "title": "Águila automates its interactions with a 24/7 WhatsApp bot",
+    "description": "A digital coworker that answers, runs promotions and chats with Águila fans on WhatsApp, every day and at any hour.",
+    "imageAlt": "Person chatting with the Águila WhatsApp bot"
+  },
+  "categories": ["Mass consumption", "WhatsApp", "Automation"],
+  "metric": {
+    "prefix": "",
+    "suffix": "",
+    "value": "24/7"
+  },
+  "card": {
+    "title": "Automated interactions on WhatsApp",
+    "excerpt": "A WhatsApp bot that serves, activates and chats with Águila consumers around the clock, with no waiting."
+  },
+  "overview": {
+    "paragraphs": [
+      "Águila needed to be present for its consumers on the channel they use most, without depending on business hours or a team handling every message by hand.",
+      "We built a digital coworker on WhatsApp that automates interactions: it answers questions, runs promotions and keeps the conversation alive 24 hours a day, 7 days a week."
+    ]
+  },
+  "highlights": {
+    "challenge": {
+      "label": "Challenge",
+      "text": "Handle the high volume of consumer messages without depending on business hours or manual support."
+    },
+    "solution": {
+      "label": "Solution",
+      "text": "A conversational WhatsApp bot that automates replies, activations and promotions, available 24/7."
+    },
+    "result": {
+      "label": "Result",
+      "text": "An always-on brand that chats with its consumers in real time, with no queues or waiting."
+    }
+  },
+  "cta": {
+    "title": "Want a WhatsApp bot like this for your brand?",
+    "description": "We design digital coworkers on WhatsApp that automate interactions and chat with your consumers 24/7.",
+    "button": "Chat with a specialist"
+  }
+}

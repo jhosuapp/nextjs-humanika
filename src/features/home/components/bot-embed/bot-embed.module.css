@@ -5,12 +5,10 @@
 }
 
 .frame {
-  @apply relative overflow-hidden rounded-3xl border;
+  @apply relative overflow-hidden rounded-3xl;
   height: calc(100vh - var(--h-header) - 172px - 120px);
   min-height: 500px;
   aspect-ratio: 3 / 4;
-  background: var(--bg-section);
-  border-color: var(--border-subtle);
   box-shadow: var(--shadow-floating);
 }
 

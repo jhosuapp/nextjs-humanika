@@ -1,0 +1,47 @@
+{
+  "seo": {
+    "title": "Stella Artois: bot de WhatsApp 24/7 que automatiza interacciones | 150%",
+    "description": "Cómo Stella Artois automatiza la atención y las experiencias premium de sus clientes en WhatsApp con un colaborador digital disponible 24/7."
+  },
+  "hero": {
+    "eyebrow": "Consumo masivo",
+    "title": "Stella Artois conversa con sus clientes 24/7 en WhatsApp",
+    "description": "Un colaborador digital que automatiza la atención, guía experiencias premium y responde a los clientes de Stella Artois en WhatsApp a cualquier hora.",
+    "imageAlt": "Persona conversando con el bot de WhatsApp de Stella Artois"
+  },
+  "categories": ["Consumo masivo", "WhatsApp", "Automatización"],
+  "metric": {
+    "prefix": "",
+    "suffix": "",
+    "value": "24/7"
+  },
+  "card": {
+    "title": "Experiencias premium automatizadas",
+    "excerpt": "Un bot de WhatsApp que atiende, guía y conversa con los clientes de Stella Artois las 24 horas, con una experiencia a la altura de la marca."
+  },
+  "overview": {
+    "paragraphs": [
+      "Stella Artois buscaba una atención a la altura de su marca premium, disponible siempre y sin la fricción de los canales tradicionales.",
+      "Creamos un colaborador digital en WhatsApp que automatiza las interacciones: resuelve dudas, guía experiencias y mantiene una conversación cuidada con cada cliente, las 24 horas."
+    ]
+  },
+  "highlights": {
+    "challenge": {
+      "label": "Reto",
+      "text": "Ofrecer una atención premium y constante sin saturar al equipo ni depender de horarios."
+    },
+    "solution": {
+      "label": "Solución",
+      "text": "Un bot conversacional en WhatsApp que automatiza la atención y guía experiencias premium, disponible 24/7."
+    },
+    "result": {
+      "label": "Resultado",
+      "text": "Una marca que atiende a cada cliente en tiempo real, con una experiencia consistente a cualquier hora."
+    }
+  },
+  "cta": {
+    "title": "¿Quieres un bot de WhatsApp así para tu marca?",
+    "description": "Diseñamos colaboradores digitales en WhatsApp que automatizan interacciones y conversan con tus clientes 24/7.",
+    "button": "Hablar con un especialista"
+  }
+}

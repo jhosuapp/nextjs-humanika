@@ -10,6 +10,7 @@ import { ArticleCta } from '@/src/features/article/components/article-cta/Articl
 
 import styles from './case-study-detail.module.css';
 import { Reveal } from '../../article/components/reveal/Reveal';
+import { CaseRelated } from '../components/detail/CaseRelated';
 
 type CaseStudyDetailViewProps = {
   t: ITranslations;
@@ -99,9 +100,8 @@ const CaseStudyDetailView = ({
         <div className={styles.body}>
           <div className={styles.overview}>
             {paragraphs.map((paragraph, index) => (
-              <Reveal>
+              <Reveal key={index}>
                 <Text
-                  key={index}
                   tag="p"
                   variant="description"
                   color="muted"
@@ -136,6 +136,8 @@ const CaseStudyDetailView = ({
           <ArticleCta t={t} tKey="cta" />
         </div>
       </Container>
+
+      <CaseRelated t={t} entry={entry} />
     </div>
   );
 };

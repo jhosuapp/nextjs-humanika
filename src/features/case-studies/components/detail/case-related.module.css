@@ -1,0 +1,18 @@
+@reference "tailwindcss";
+
+.section {
+  @apply w-full;
+  background: var(--bg-section);
+}
+
+.head {
+  @apply mb-10 flex max-w-2xl flex-col gap-3;
+}
+
+.grid {
+  @apply grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+.cell {
+  @apply h-full;
+}

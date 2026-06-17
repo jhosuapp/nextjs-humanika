@@ -60,18 +60,6 @@
       "tagline": "Avatares inteligentes diseñados para comunicación humana.",
       "homeAria": "Inicio de {{name}}"
     },
-    "newsletter": {
-      "eyebrow": "Newsletter",
-      "title": "Novedades directamente en tu bandeja de entrada.",
-      "description": "Un resumen mensual de lanzamientos, casos de uso y actualizaciones. Sin spam, cancela cuando quieras.",
-      "placeholder": "tu@empresa.com",
-      "cta": "Suscribirse",
-      "successMessage": "¡Gracias por unirte! Revisa tu bandeja de entrada para confirmar.",
-      "privacy": "Al suscribirte aceptas nuestra política de privacidad.",
-      "emailLabel": "Dirección de correo",
-      "emailError": "Por favor ingresa una dirección de correo válida.",
-      "subscribedLabel": "Suscrito"
-    },
     "nav": {
       "ariaLabel": "Navegación del pie de página",
       "explore": {
@@ -100,5 +88,10 @@
         "cookies": "Cookies"
       }
     }
+  },
+  "caseStudy": {
+    "relatedEyebrow": "Más historias",
+    "relatedTitle": "Otros casos de éxito",
+    "readMore": "Ver caso"
   }
 }

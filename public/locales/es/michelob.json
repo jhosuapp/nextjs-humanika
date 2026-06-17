@@ -1,0 +1,47 @@
+{
+  "seo": {
+    "title": "Michelob: bot de WhatsApp 24/7 que automatiza interacciones | 150%",
+    "description": "Cómo Michelob automatiza sus activaciones y la conversación con sus consumidores en WhatsApp con un colaborador digital disponible 24/7."
+  },
+  "hero": {
+    "eyebrow": "Consumo masivo",
+    "title": "Michelob automatiza sus activaciones con un bot de WhatsApp 24/7",
+    "description": "Un colaborador digital que automatiza interacciones, activa experiencias y conversa con los consumidores de Michelob en WhatsApp a toda hora.",
+    "imageAlt": "Persona conversando con el bot de WhatsApp de Michelob"
+  },
+  "categories": ["Consumo masivo", "WhatsApp", "Automatización"],
+  "metric": {
+    "prefix": "",
+    "suffix": "",
+    "value": "24/7"
+  },
+  "card": {
+    "title": "Activaciones automatizadas en WhatsApp",
+    "excerpt": "Un bot de WhatsApp que activa experiencias, atiende y conversa con los consumidores de Michelob las 24 horas."
+  },
+  "overview": {
+    "paragraphs": [
+      "Michelob quería conectar con su comunidad alrededor de sus activaciones y eventos, sin depender de horarios ni de atención manual mensaje a mensaje.",
+      "Creamos un colaborador digital en WhatsApp que automatiza las interacciones: activa experiencias, responde dudas y mantiene la conversación con cada consumidor las 24 horas."
+    ]
+  },
+  "highlights": {
+    "challenge": {
+      "label": "Reto",
+      "text": "Conectar con la comunidad alrededor de las activaciones sin depender de horarios ni de atención manual."
+    },
+    "solution": {
+      "label": "Solución",
+      "text": "Un bot conversacional en WhatsApp que automatiza activaciones, respuestas y experiencias, disponible 24/7."
+    },
+    "result": {
+      "label": "Resultado",
+      "text": "Una marca presente en cada activación, conversando con sus consumidores en tiempo real a cualquier hora."
+    }
+  },
+  "cta": {
+    "title": "¿Quieres un bot de WhatsApp así para tu marca?",
+    "description": "Diseñamos colaboradores digitales en WhatsApp que automatizan interacciones y conversan con tus consumidores 24/7.",
+    "button": "Hablar con un especialista"
+  }
+}

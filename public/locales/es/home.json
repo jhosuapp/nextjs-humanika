@@ -198,6 +198,7 @@
   },
 
   "integrations": {
+    "eyebrow": "Integraciones",
     "title": "Se integra con las herramientas que tu organización ya utiliza.",
     "description": "Los colaboradores digitales de Humanika pueden conectarse con plataformas de comunicación, gestión documental, CRM y sistemas empresariales para facilitar el acceso al conocimiento y apoyar procesos de negocio.",
     "cta": "Descubrir integraciones"

@@ -1,0 +1,47 @@
+{
+  "seo": {
+    "title": "Stella Artois: a 24/7 WhatsApp bot that automates interactions | 150%",
+    "description": "How Stella Artois automates support and premium experiences for its customers on WhatsApp with a digital coworker available 24/7."
+  },
+  "hero": {
+    "eyebrow": "Mass consumption",
+    "title": "Stella Artois chats with its customers 24/7 on WhatsApp",
+    "description": "A digital coworker that automates support, guides premium experiences and replies to Stella Artois customers on WhatsApp at any hour.",
+    "imageAlt": "Person chatting with the Stella Artois WhatsApp bot"
+  },
+  "categories": ["Mass consumption", "WhatsApp", "Automation"],
+  "metric": {
+    "prefix": "",
+    "suffix": "",
+    "value": "24/7"
+  },
+  "card": {
+    "title": "Automated premium experiences",
+    "excerpt": "A WhatsApp bot that serves, guides and chats with Stella Artois customers around the clock, with an experience that matches the brand."
+  },
+  "overview": {
+    "paragraphs": [
+      "Stella Artois wanted support worthy of its premium brand — always available and without the friction of traditional channels.",
+      "We built a digital coworker on WhatsApp that automates interactions: it answers questions, guides experiences and keeps a refined conversation with every customer, around the clock."
+    ]
+  },
+  "highlights": {
+    "challenge": {
+      "label": "Challenge",
+      "text": "Deliver premium, always-on support without overwhelming the team or depending on business hours."
+    },
+    "solution": {
+      "label": "Solution",
+      "text": "A conversational WhatsApp bot that automates support and guides premium experiences, available 24/7."
+    },
+    "result": {
+      "label": "Result",
+      "text": "A brand that serves every customer in real time, with a consistent experience at any hour."
+    }
+  },
+  "cta": {
+    "title": "Want a WhatsApp bot like this for your brand?",
+    "description": "We design digital coworkers on WhatsApp that automate interactions and chat with your customers 24/7.",
+    "button": "Chat with a specialist"
+  }
+}

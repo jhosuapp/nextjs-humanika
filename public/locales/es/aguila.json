@@ -1,0 +1,47 @@
+{
+  "seo": {
+    "title": "Águila: bot de WhatsApp 24/7 que automatiza interacciones | 150%",
+    "description": "Cómo Águila automatiza la conversación con sus consumidores en WhatsApp con un colaborador digital que responde y activa promociones las 24 horas."
+  },
+  "hero": {
+    "eyebrow": "Consumo masivo",
+    "title": "Águila automatiza sus interacciones con un bot de WhatsApp 24/7",
+    "description": "Un colaborador digital que responde, activa promociones y conversa con los fans de Águila en WhatsApp, todos los días y a toda hora.",
+    "imageAlt": "Persona conversando con el bot de WhatsApp de Águila"
+  },
+  "categories": ["Consumo masivo", "WhatsApp", "Automatización"],
+  "metric": {
+    "prefix": "",
+    "suffix": "",
+    "value": "24/7"
+  },
+  "card": {
+    "title": "Interacciones automatizadas en WhatsApp",
+    "excerpt": "Un bot de WhatsApp que atiende, activa y conversa con los consumidores de Águila las 24 horas, sin esperas."
+  },
+  "overview": {
+    "paragraphs": [
+      "Águila necesitaba estar presente para sus consumidores en el canal que más usan, sin depender de horarios ni de un equipo atendiendo manualmente cada mensaje.",
+      "Creamos un colaborador digital en WhatsApp que automatiza las interacciones: responde preguntas, activa promociones y mantiene la conversación viva las 24 horas, los 7 días de la semana."
+    ]
+  },
+  "highlights": {
+    "challenge": {
+      "label": "Reto",
+      "text": "Atender el alto volumen de mensajes de los consumidores sin depender de horarios ni de atención manual."
+    },
+    "solution": {
+      "label": "Solución",
+      "text": "Un bot conversacional en WhatsApp que automatiza respuestas, activaciones y promociones, disponible 24/7."
+    },
+    "result": {
+      "label": "Resultado",
+      "text": "Una marca siempre disponible que conversa con sus consumidores en tiempo real, sin filas ni esperas."
+    }
+  },
+  "cta": {
+    "title": "¿Quieres un bot de WhatsApp así para tu marca?",
+    "description": "Diseñamos colaboradores digitales en WhatsApp que automatizan interacciones y conversan con tus consumidores 24/7.",
+    "button": "Hablar con un especialista"
+  }
+}

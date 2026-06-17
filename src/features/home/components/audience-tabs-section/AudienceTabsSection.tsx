@@ -102,21 +102,31 @@ const AudienceTabsSection = ({ t }: Props) => {
     <section className={ styles.bg }>
       <Container id="solutions" className={styles.section} aria-labelledby="audience-title" padding='xl'>
         <FadeIn className={styles.header} y={16}>
-          <Text 
-            tag="h2" 
-            variant="title_small" 
+          <Text
+            tag="p"
+            variant="description_xs"
+            color="primary"
+            weight="semibold"
+            delay={{ enter: revealDelay(0), exit: 0 }}
+            fadeUpTertiary
+          >
+            {t('audience.eyebrow')}
+          </Text>
+          <Text
+            tag="h2"
+            variant="title_small"
             color="secondary"
             weight="bold"
-            delay={{ enter: revealDelay(0), exit: 0 }}
+            delay={{ enter: revealDelay(1), exit: 0 }}
             fadeUpTertiary
           >
             <strong className='gl-degradete-text font-bold'>{t('audience.title_strong')}</strong> {t('audience.title')}
           </Text>
-          <Text 
-            tag="p" 
-            variant="description" 
+          <Text
+            tag="p"
+            variant="description"
             color="muted"
-            delay={{ enter: revealDelay(1), exit: 0 }}
+            delay={{ enter: revealDelay(2), exit: 0 }}
             fadeUpTertiary
           >
             {t('audience.description')}

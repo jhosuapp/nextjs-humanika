@@ -48,7 +48,13 @@ export async function getStaticProps({
   return {
     props: {
       slug,
-      ...(await serverSideTranslations(locale ?? "es", ["common", slug])),
+      // Load every case namespace too, so the "related cases" section can read
+      // each card's copy cross-namespace (same pattern as the listing page).
+      ...(await serverSideTranslations(locale ?? "es", [
+        "common",
+        slug,
+        ...getCaseStudySlugs(),
+      ])),
     },
   };
 }

@@ -2,7 +2,7 @@
 
 .heroSection {
   @apply relative;
-  background-color: var(--bg-hero);
+  background: var(--bg-section);
 }
 
 .heroSection__wrapper {

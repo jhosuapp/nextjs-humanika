@@ -59,18 +59,6 @@
       "tagline": "Smart avatars built for human communication.",
       "homeAria": "{{name}} home"
     },
-    "newsletter": {
-      "eyebrow": "Newsletter",
-      "title": "Get updates straight to your inbox.",
-      "description": "A monthly digest of launches, use cases and platform updates. No spam, unsubscribe anytime.",
-      "placeholder": "you@company.com",
-      "cta": "Subscribe",
-      "successMessage": "Thanks for joining! Check your inbox to confirm.",
-      "privacy": "By subscribing you agree to our privacy policy.",
-      "emailLabel": "Email address",
-      "emailError": "Please enter a valid email address.",
-      "subscribedLabel": "Subscribed"
-    },
     "nav": {
       "ariaLabel": "Footer navigation",
       "explore": {
@@ -99,5 +87,10 @@
         "cookies": "Cookies"
       }
     }
+  },
+  "caseStudy": {
+    "relatedEyebrow": "More stories",
+    "relatedTitle": "More success stories",
+    "readMore": "View case"
   }
 }

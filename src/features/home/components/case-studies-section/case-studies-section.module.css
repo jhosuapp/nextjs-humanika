@@ -68,10 +68,7 @@
 }
 
 .logo {
-  @apply h-5 w-auto object-contain;
-  max-width: 84px;
-  /* Logos are white PNGs — keep them white on the dark chip in both themes. */
-  filter: brightness(0) invert(1);
+  @apply h-5 w-auto object-contain max-w-14;
 }
 
 .industry {
