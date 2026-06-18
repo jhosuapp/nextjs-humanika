@@ -7,12 +7,6 @@
 
 .card {
   @apply relative overflow-hidden flex flex-col items-start gap-5 rounded-3xl px-7 py-10 lg:px-12 lg:py-14;
-  background: linear-gradient(
-    135deg,
-    var(--bg-section) 0%,
-    var(--surface-elevated) 100%
-  );
-  border: 1px solid var(--border-subtle);
 }
 
 .glow {

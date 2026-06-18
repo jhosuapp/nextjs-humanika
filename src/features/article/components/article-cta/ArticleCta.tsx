@@ -17,7 +17,7 @@ const ArticleCta = ({ t, tKey = 'cta' }: ArticleCtaProps): JSX.Element => {
 
   return (
     <div className={styles.inner}>
-      <Reveal className={styles.card}>
+      <Reveal className={`${styles.card} gl-gradient-box`}>
         <div className={styles.glow} aria-hidden="true" />
         <div className={styles.copy}>
           <Text tag="h2" variant="title_small" color="secondary" weight="bold" noMotion>

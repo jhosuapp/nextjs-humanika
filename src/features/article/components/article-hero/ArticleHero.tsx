@@ -23,7 +23,6 @@ const ArticleHero = ({ t, tKey = 'hero', image }: ArticleHeroProps): JSX.Element
       <Container padding="xl">
         <div className={styles.heroInner}>
           <Text
-            className={styles.eyebrow}
             tag="p"
             variant="description_xs"
             color="primary"
@@ -36,7 +35,6 @@ const ArticleHero = ({ t, tKey = 'hero', image }: ArticleHeroProps): JSX.Element
 
           <Text
             tag="h1"
-            className={styles.title}
             variant="title"
             color="secondary"
             weight="bold"
@@ -63,19 +61,28 @@ const ArticleHero = ({ t, tKey = 'hero', image }: ArticleHeroProps): JSX.Element
           </WrapperMotion>
 
           <div className={styles.lead}>
-            {lead.map((paragraph, index) => (
-              <Text
-                key={index}
-                tag="p"
-                variant={index === 0 ? 'subtitle_small' : 'description'}
-                color="muted"
-                weight={index === 0 ? 'medium' : 'normal'}
-                delay={{ enter: 0.57 + index * 0.01, exit: 0.11 }}
-                immediate
-              >
-                {paragraph}
-              </Text>
-            ))}
+            {lead.map((paragraph, index) => {
+
+              if(index > 1){
+                return (
+                  <></>
+                )
+              }
+
+              return (
+                <Text
+                  key={index}
+                  tag="p"
+                  variant={'description'}
+                  color="muted"
+                  weight={index === 0 ? 'semibold' : 'normal'}
+                  delay={{ enter: 0.57 + index * 0.01, exit: 0.11 }}
+                  immediate
+                >
+                  {paragraph}
+                </Text>
+              )
+            })}
           </div>
         </div>
 

@@ -1,0 +1,166 @@
+{
+  "seo": {
+    "title": "Festival del Pollo Colombiano: IA, recetas y rutas en WhatsApp | 150%",
+    "description": "150% creó una experiencia conversacional en WhatsApp para el Festival del Pollo Colombiano: recetas con IA según tus ingredientes, imágenes generadas, recomendación de restaurantes cercanos y rutas en Maps o Waze."
+  },
+  "hero": {
+    "eyebrow": "Gastronomía",
+    "title": "El pollo encontró su ruta en WhatsApp",
+    "titleLead": "El pollo encontró su ruta en ",
+    "titleAccent": "WhatsApp",
+    "titleTrail": "",
+    "imageAlt": "Persona usando WhatsApp para encontrar restaurantes del Festival del Pollo Colombiano",
+    "meta": {
+      "author": "150%",
+      "readingTime": "6 min de lectura",
+      "date": "Junio 2026"
+    },
+    "lead": [
+      "En Colombia, el pollo no necesita demasiada explicación. Está en el almuerzo de todos los días, en el asadero del barrio, en la salida de fin de semana, en la comida familiar y en esa pregunta que aparece cuando nadie quiere cocinar: ¿qué comemos?",
+      "El pollo es cotidiano, democrático y emocional. Por eso, cuando el Festival del Pollo Colombiano salió a celebrar una de las categorías más queridas del país, el reto no era inventar el amor por el pollo. El reto era convertirlo en una experiencia digital útil, cercana y medible.",
+      "150% creó un sistema conversacional en WhatsApp que acompañaba al usuario desde dos momentos distintos: cuando quería cocinar en casa y cuando quería salir a comer. La experiencia combinó inteligencia artificial generativa, ubicación, recomendación de restaurantes, navegación asistida e insights de consumo."
+    ]
+  },
+  "categories": ["Gastronomía", "WhatsApp", "IA generativa"],
+  "metric": {
+    "prefix": "",
+    "suffix": " marcas",
+    "value": "210 marcas"
+  },
+  "card": {
+    "title": "IA, recetas y rutas para el Festival del Pollo",
+    "excerpt": "150% creó una experiencia conversacional en WhatsApp para el Festival del Pollo Colombiano: recetas personalizadas con IA según los ingredientes del usuario, imágenes de referencia, recomendación de restaurantes cercanos y rutas en Google Maps o Waze. Movió tráfico a restaurantes, capturó datos sin fricción y generó insights de consumo."
+  },
+  "intro": {
+    "quote": "Todo desde WhatsApp.",
+    "quoteAccent": "Sin descargar una app. Sin perderse en una web. Sin pedirle al usuario más de lo necesario antes de darle valor."
+  },
+  "toc": {
+    "title": "En este caso",
+    "receta": "De los ingredientes a la receta",
+    "restaurante": "Del antojo al restaurante",
+    "categoria": "Una categoría con país propio",
+    "guia": "WhatsApp como guía, no formulario",
+    "debajo": "Lo que pasaba debajo",
+    "insights": "Insights más allá del festival",
+    "cierre": "La inteligencia detrás del antojo"
+  },
+  "receta": {
+    "eyebrow": "La cocina",
+    "title": "De los ingredientes a la receta",
+    "paragraphs": [
+      "La primera capa de la experiencia partía de una pregunta simple: ¿qué tienes en la cocina?",
+      "El usuario reportaba los ingredientes disponibles y el sistema, con ayuda de inteligencia artificial, creaba una receta personalizada con pollo. No era una lista genérica. Era una respuesta construida a partir de lo que la persona decía tener.",
+      "Después, la experiencia generaba una imagen de referencia también con inteligencia artificial, para que el usuario no solo leyera la receta, sino que pudiera imaginarla."
+    ],
+    "emphasis": "Ese detalle cambia la relación con la herramienta. No se siente como un buscador. Se siente como alguien que te ayuda a resolver la comida.",
+    "closing": [
+      "La tecnología convertía ingredientes sueltos en una idea concreta. Y una idea concreta podía convertirse en una decisión de consumo."
+    ]
+  },
+  "restaurante": {
+    "eyebrow": "La salida",
+    "title": "Del antojo al restaurante más cercano",
+    "paragraphs": [
+      "La segunda capa vivía durante el Festival del Pollo Colombiano.",
+      "El usuario enviaba su ubicación por WhatsApp y el sistema le mostraba restaurantes cercanos participantes en el festival. Desde ahí, podía recibir opciones, elegir hacia dónde ir y abrir la ruta en Google Maps o Waze para llegar de la forma más fácil.",
+      "La experiencia no se quedaba en “mira estos restaurantes”. Acompañaba el trayecto.",
+      "Ese punto es clave. Muchas campañas gastronómicas generan deseo, pero dejan al usuario solo en el momento más importante: decidir dónde ir y cómo llegar. Aquí, WhatsApp cerraba esa brecha."
+    ],
+    "emphasis": "El sistema conectaba antojo, ubicación, restaurante y ruta. Una conversación que empezaba en el celular podía terminar en una mesa ocupada."
+  },
+  "categoria": {
+    "eyebrow": "El contexto",
+    "title": "Una categoría con país propio",
+    "paragraphs": [
+      "El Festival del Pollo Colombiano ya tiene escala cultural y gastronómica.",
+      "En su edición 2025, la plataforma oficial registró 210 marcas participantes, presencia en ciudades como Bogotá, Medellín, Cali, Bucaramanga, Barranquilla y Eje Cafetero, ganadores Estrella de Oro 2025 y miles de asistentes.",
+      "Eso explica por qué la herramienta tuvo buena recepción en pauta y participación."
+    ],
+    "emphasis": "No había que convencer al usuario de que el pollo importaba. Había que darle una forma fácil de vivir el festival.",
+    "closing": [
+      "La campaña tomó una categoría querida, un contexto gastronómico activo y un canal cotidiano para convertirlos en una experiencia de descubrimiento."
+    ]
+  },
+  "guia": {
+    "eyebrow": "El enfoque",
+    "title": "WhatsApp como guía, no como formulario",
+    "paragraphs": [
+      "Uno de los aciertos fue usar WhatsApp como guía."
+    ],
+    "items": [
+      "No como un formulario disfrazado.",
+      "No como una base de datos con botones.",
+      "No como una automatización fría."
+    ],
+    "closing": [
+      "El sistema entregaba valor antes de pedir demasiado. Primero ayudaba: una receta, una imagen, una recomendación, una ruta. Después, en los momentos correctos, captaba información útil para entender mejor al consumidor."
+    ],
+    "emphasis": "Esa secuencia importa. Cuando el usuario siente que la herramienta le resuelve algo, la entrega de datos deja de sentirse como una presión y empieza a sentirse como parte natural de la experiencia."
+  },
+  "debajo": {
+    "eyebrow": "La operación",
+    "title": "Lo que pasaba debajo",
+    "paragraphs": [
+      "Por fuera, la experiencia era simple: escribir por WhatsApp, contar qué ingredientes había en casa, recibir una receta, ver una imagen, compartir ubicación, encontrar restaurantes cercanos y abrir la ruta.",
+      "Por dentro, era una operación más sofisticada: inteligencia artificial generativa, creación de imágenes, reglas conversacionales, captura progresiva de datos, geolocalización, recomendación por cercanía, integración con mapas, trazabilidad de interacciones e insights de comportamiento."
+    ],
+    "emphasis": "WhatsApp era la interfaz. El pollo era el gancho. La inteligencia estaba en cómo todo se conectaba."
+  },
+  "insights": {
+    "eyebrow": "El dato",
+    "title": "Insights que van más allá del festival",
+    "paragraphs": [
+      "La experiencia permitió observar cómo interactúan los consumidores con una categoría que conocen y quieren."
+    ],
+    "items": [
+      "Qué buscan.",
+      "Qué preguntan.",
+      "Dónde están.",
+      "Qué restaurantes les quedan cerca.",
+      "Qué tipo de recetas activan interés.",
+      "Qué momentos generan más participación.",
+      "Qué rutas convierten conversación en visita."
+    ],
+    "closing": [
+      "Ese tipo de información es valiosa porque no aparece en una encuesta tradicional. Aparece cuando el usuario está haciendo algo real: resolver una comida, buscar un restaurante, moverse hacia un punto de consumo.",
+      "La diferencia es enorme."
+    ],
+    "emphasis": "Un insight declarado dice lo que alguien cree que haría. Un insight conversacional muestra lo que alguien está intentando hacer."
+  },
+  "cierre": {
+    "eyebrow": "La mirada",
+    "title": "La inteligencia detrás del antojo",
+    "paragraphs": [
+      "Este caso demuestra que una experiencia gastronómica puede hacer más que promocionar restaurantes."
+    ],
+    "capabilities": [
+      "Puede inspirar recetas.",
+      "Puede generar imágenes.",
+      "Puede recomendar lugares.",
+      "Puede mover tráfico físico.",
+      "Puede acompañar rutas.",
+      "Puede capturar datos sin fricción.",
+      "Puede producir insights de consumo.",
+      "Puede convertir WhatsApp en una capa operativa para una categoría completa."
+    ],
+    "closing": [
+      "El Festival del Pollo Colombiano puso el pollo en el centro de una conversación nacional. La tecnología hizo lo demás: escuchar, guiar, recomendar, conectar y medir."
+    ],
+    "emphasis": "Porque cuando una categoría ya tiene amor popular, la mejor tecnología no intenta reemplazar ese vínculo. Lo vuelve más fácil de vivir."
+  },
+  "takeaways": {
+    "title": "En resumen",
+    "items": [
+      "150% creó una experiencia conversacional en WhatsApp para acompañar el Festival del Pollo Colombiano.",
+      "Recetas personalizadas con IA a partir de los ingredientes del usuario, más imágenes de referencia generadas con IA.",
+      "Ubicación, recomendación de restaurantes cercanos y rutas en Google Maps o Waze hacia el punto de consumo.",
+      "Movió tráfico a restaurantes, capturó datos en momentos naturales y generó insights de consumo de la categoría."
+    ]
+  },
+  "cta": {
+    "title": "¿Quieres convertir tu categoría en una experiencia conversacional?",
+    "description": "Diseñamos experiencias en WhatsApp que combinan IA generativa, geolocalización, recomendación y datos para mover tráfico real e insights de consumo.",
+    "button": "Hablar con un especialista"
+  }
+}

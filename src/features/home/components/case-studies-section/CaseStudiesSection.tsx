@@ -12,7 +12,7 @@ import { AnimatedCounter } from '@/src/shared/components/motion/AnimatedCounter'
 import { Spotlight } from '@/src/shared/components/spotlight/Spotlight';
 import { CustomLink } from '@/src/shared/components/custom-link/CustomLink';
 import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
-import { getSortedCaseStudies } from '@/src/features/case-studies/data/case-studies.registry';
+import { getFeaturedCaseStudies } from '@/src/features/case-studies/data/case-studies.registry';
 
 import { Container } from '../container/Container';
 import { SectionHeader } from '@/src/shared/components/section-header/SectionHeader';
@@ -25,7 +25,7 @@ type CaseStudiesSectionProps = { t: ITranslations };
 
 const CaseStudiesSection = ({ t }: CaseStudiesSectionProps) => {
   const reduce = useReducedMotion();
-  const caseStudies = getSortedCaseStudies();
+  const caseStudies = getFeaturedCaseStudies();
 
   return (
     <section className={styles.section} aria-labelledby="case-studies-title">
@@ -56,11 +56,7 @@ const CaseStudiesSection = ({ t }: CaseStudiesSectionProps) => {
                       <span className={styles.accent} aria-hidden="true" />
 
                       <header className={styles.cardHead}>
-                        <span
-                          className={`${styles.logoChip} ${
-                            item.logoOnDark ? styles.logoChipDark : ''
-                          }`}
-                        >
+                        <span className={styles.logoChip}>
                           <Image
                             src={item.logo}
                             alt=""

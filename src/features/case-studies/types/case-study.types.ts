@@ -22,9 +22,14 @@ type CaseStudyEntry = {
   /** When present, the detail page renders with the block-based
    *  `ArticleRenderer` (blog-style layout) instead of the simple template. */
   content?: ArticleContent;
-  /** Set for white / monochrome-light logos: they get a dark chip on the home
-   *  featured section so they don't disappear on the light chip background. */
-  logoOnDark?: boolean;
+  /** Set for white / monochrome-light logos: they're painted solid dark on the
+   *  home featured chip so they don't disappear on the light chip background
+   *  (keeps the light chip design consistent across cards). */
+  darkenLogo?: boolean;
+  /** Defaults to true. When false, the case stays reachable (route, detail page
+   *  and listing) but is hidden from the home "destacados" and related-cases
+   *  rail. */
+  featured?: boolean;
 };
 
 export type { CaseStudyEntry };

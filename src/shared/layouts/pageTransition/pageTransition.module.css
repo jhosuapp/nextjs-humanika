@@ -21,7 +21,7 @@
 .curve .curve__route {
   @apply fixed text-center z-[103] left-0 right-0 top-[40vh] w-full font-bold uppercase pointer-events-none text-xl lg:text-3xl 2xl:text-5xl;
   will-change: opacity, transform;
-  color: var(--secondary);
+  color: #001643;
 }
 
 .curve .curve__route__transition {

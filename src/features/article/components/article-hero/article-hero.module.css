@@ -10,17 +10,6 @@
   max-width: 48rem;
 }
 
-.eyebrow {
-  @apply tracking-[0.28em];
-}
-
-.title {
-  @apply m-0;
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  line-height: 1.07;
-  letter-spacing: -0.01em;
-}
-
 .dividerWrap {
   @apply flex justify-center w-full;
 }
@@ -32,7 +21,7 @@
 
 .lead {
   @apply flex flex-col gap-4 mx-auto;
-  max-width: 40rem;
+  max-width: 44rem;
 }
 
 /* Featured image slot */

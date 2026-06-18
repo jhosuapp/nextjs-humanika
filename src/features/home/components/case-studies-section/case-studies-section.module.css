@@ -67,16 +67,15 @@
   border: 1px solid var(--border-subtle);
 }
 
-/* White / monochrome-light logos lose themselves on the light chip, so they get
-   a dark chip instead (flagged per case via `logoOnDark` in the registry). */
-.logoChipDark {
-  background: rgba(11, 16, 36, 0.92);
-  border-color: transparent;
-  box-shadow: 0 8px 24px -14px rgba(11, 16, 36, 0.5);
-}
-
 .logo {
   @apply h-6 w-auto object-contain max-w-18;
+  /* Normalize every brand logo to a single monochrome mark: solid black on the
+     light chip, solid white in dark mode. */
+  filter: brightness(0);
+}
+
+:root[data-theme="dark"] .logo {
+  filter: brightness(0) invert(1);
 }
 
 /* Body: title is the hero, description supports it */

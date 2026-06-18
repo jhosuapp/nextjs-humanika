@@ -2,8 +2,6 @@
 
 .card {
   @apply relative flex flex-col h-full overflow-hidden rounded-2xl no-underline;
-  background: var(--bg-section-alt);
-  border: 1px solid var(--border-subtle);
 }
 
 .media {

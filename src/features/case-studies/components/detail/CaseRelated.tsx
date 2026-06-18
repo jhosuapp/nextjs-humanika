@@ -4,7 +4,7 @@ import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
 import type { CaseStudyEntry } from '@/src/features/case-studies/types/case-study.types';
 import { Container } from '@/src/features/home/components/container/Container';
 import { Text } from '@/src/shared/components/text/Text';
-import { getSortedCaseStudies } from '@/src/features/case-studies/data/case-studies.registry';
+import { getFeaturedCaseStudies } from '@/src/features/case-studies/data/case-studies.registry';
 import { CaseStudyCard } from '@/src/features/case-studies/components/case-study-card/CaseStudyCard';
 
 import styles from './case-related.module.css';
@@ -13,7 +13,7 @@ import { Reveal } from '@/src/features/article/components/reveal/Reveal';
 type Props = { t: ITranslations; entry: CaseStudyEntry };
 
 const CaseRelated = ({ t, entry }: Props): JSX.Element | null => {
-  const related = getSortedCaseStudies()
+  const related = getFeaturedCaseStudies()
     .filter((item) => item.slug !== entry.slug)
     .slice(0, 3);
 

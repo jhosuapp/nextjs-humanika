@@ -11,17 +11,6 @@
   max-width: 48rem;
 }
 
-.eyebrow {
-  @apply tracking-[0.28em];
-}
-
-.title {
-  @apply m-0;
-  font-size: clamp(1.9rem, 4.5vw, 3rem);
-  line-height: 1.1;
-  letter-spacing: -0.01em;
-}
-
 .description {
   @apply mx-auto;
   max-width: 40rem;
@@ -85,7 +74,6 @@
 .highlight {
   @apply flex h-full flex-col gap-2 rounded-2xl p-5;
 }
-
 
 .highlightText {
   @apply text-sm leading-relaxed m-0;
