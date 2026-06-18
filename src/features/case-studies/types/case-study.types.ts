@@ -22,6 +22,9 @@ type CaseStudyEntry = {
   /** When present, the detail page renders with the block-based
    *  `ArticleRenderer` (blog-style layout) instead of the simple template. */
   content?: ArticleContent;
+  /** Set for white / monochrome-light logos: they get a dark chip on the home
+   *  featured section so they don't disappear on the light chip background. */
+  logoOnDark?: boolean;
 };
 
 export type { CaseStudyEntry };

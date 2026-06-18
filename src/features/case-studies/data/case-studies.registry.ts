@@ -37,7 +37,7 @@ const caseStudiesRegistry: ReadonlyArray<CaseStudyEntry> = [
   {
     slug: "aguila",
     cover: "/images/servicio-y-soporte.jpg",
-    logo: "/logos/aguila.png",
+    logo: "/logos/uses-cases/aguila.png",
     publishedAt: "2026-06-14",
     content: aguilaContent,
   },
@@ -54,6 +54,7 @@ const caseStudiesRegistry: ReadonlyArray<CaseStudyEntry> = [
     logo: "/logos/uses-cases/pepsico.svg",
     publishedAt: "2026-06-10",
     content: pepsicoContent,
+    logoOnDark: true,
   },
 ];
 

@@ -56,7 +56,11 @@ const CaseStudiesSection = ({ t }: CaseStudiesSectionProps) => {
                       <span className={styles.accent} aria-hidden="true" />
 
                       <header className={styles.cardHead}>
-                        <span className={styles.logoChip}>
+                        <span
+                          className={`${styles.logoChip} ${
+                            item.logoOnDark ? styles.logoChipDark : ''
+                          }`}
+                        >
                           <Image
                             src={item.logo}
                             alt=""
