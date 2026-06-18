@@ -1,47 +1,150 @@
 {
   "seo": {
-    "title": "Stella Artois: bot de WhatsApp 24/7 que automatiza interacciones | 150%",
-    "description": "Cómo Stella Artois automatiza la atención y las experiencias premium de sus clientes en WhatsApp con un colaborador digital disponible 24/7."
+    "title": "Stella Artois Perfect Serve: el servido perfecto medido por WhatsApp | 150%",
+    "description": "150%, junto a BeamB., llevó Stella Artois Perfect Serve a WhatsApp: reconocimiento de imagen, gamification, restaurantes aliados e insights para medir, enseñar y premiar el ritual del servido perfecto."
   },
   "hero": {
     "eyebrow": "Consumo masivo",
-    "title": "Stella Artois conversa con sus clientes 24/7 en WhatsApp",
-    "description": "Un colaborador digital que automatiza la atención, guía experiencias premium y responde a los clientes de Stella Artois en WhatsApp a cualquier hora.",
-    "imageAlt": "Persona conversando con el bot de WhatsApp de Stella Artois"
+    "title": "Cuando el servicio perfecto también se midió por WhatsApp",
+    "titleLead": "Cuando el servicio perfecto también se midió por ",
+    "titleAccent": "WhatsApp",
+    "titleTrail": "",
+    "imageAlt": "Cáliz de Stella Artois servido perfecto evaluado desde WhatsApp en un restaurante",
+    "meta": {
+      "author": "150% · BeamB.",
+      "readingTime": "5 min de lectura",
+      "date": "Junio 2026"
+    },
+    "lead": [
+      "En el tenis, un servicio perfecto puede cambiar un partido. Para Stella Artois, también podía cambiar la forma en que una persona vivía una cerveza en un restaurante.",
+      "Esa fue la idea detrás de Stella Artois Perfect Serve: una experiencia que tomó la precisión del tenis y la llevó al ritual de servir una Stella Artois. La marca, asociada a Wimbledon, encontró una analogía natural entre dos gestos: el saque impecable en la cancha y el servido perfecto en el cáliz.",
+      "La campaña empezó como una experiencia web en 2025 y luego evolucionó hacia WhatsApp, llevando la mecánica al canal más cotidiano del consumidor. 150%, acompañando a BeamB., ayudó a transformar esa experiencia en un sistema conversacional capaz de reconocer imágenes, activar dinámicas de gamification, interoperar con restaurantes aliados y convertir cada servido en una oportunidad de participación."
+    ]
   },
-  "categories": ["Consumo masivo", "WhatsApp", "Automatización"],
+  "categories": ["Consumo masivo", "WhatsApp", "Gamification"],
   "metric": {
     "prefix": "",
     "suffix": "",
-    "value": "24/7"
+    "value": "Perfect Serve"
   },
   "card": {
-    "title": "Experiencias premium automatizadas",
-    "excerpt": "Un bot de WhatsApp que atiende, guía y conversa con los clientes de Stella Artois las 24 horas, con una experiencia a la altura de la marca."
+    "title": "El servido perfecto, evaluado por WhatsApp",
+    "excerpt": "150%, junto a BeamB., transformó Stella Artois Perfect Serve en una experiencia conversacional para WhatsApp: reconocimiento de imagen, gamification, restaurantes aliados e insights de consumo para medir el servido, activar participación y educar sobre el ritual de marca."
   },
-  "overview": {
+  "intro": {
+    "quote": "No era solo una campaña.",
+    "quoteAccent": "Era una forma de medir, enseñar y premiar un ritual de marca."
+  },
+  "toc": {
+    "title": "En este caso",
+    "wimbledon": "De Wimbledon al restaurante",
+    "gamification": "Gamification con propósito",
+    "whatsapp": "WhatsApp como cancha principal",
+    "insights": "Lo que aprendió la marca",
+    "ensenar": "Enseñar sin volverlo pesado",
+    "humanika": "Por qué importa para Humanika"
+  },
+  "wimbledon": {
+    "eyebrow": "El territorio",
+    "title": "De Wimbledon al restaurante",
     "paragraphs": [
-      "Stella Artois buscaba una atención a la altura de su marca premium, disponible siempre y sin la fricción de los canales tradicionales.",
-      "Creamos un colaborador digital en WhatsApp que automatiza las interacciones: resuelve dudas, guía experiencias y mantiene una conversación cuidada con cada cliente, las 24 horas."
+      "Stella Artois no necesitaba inventar una historia nueva. Ya tenía una: Wimbledon, el tenis, la precisión, la elegancia y el valor de hacer bien las cosas.",
+      "Perfect Serve tomó ese territorio y lo convirtió en una experiencia participativa.",
+      "El usuario podía interactuar desde WhatsApp, cargar una imagen de su Stella servida en cáliz y recibir una evaluación del servido. El sistema analizaba la imagen, interpretaba si el servido cumplía con los criterios definidos por la marca y activaba una respuesta dentro de la mecánica promocional.",
+      "El gesto era simple: tomar una foto. Lo que pasaba detrás era mucho más complejo:"
+    ],
+    "items": [
+      "Reconocimiento de imagen",
+      "Validación de participación",
+      "Reglas de negocio",
+      "Ranking",
+      "Conexión con restaurantes",
+      "Asignación de oportunidades",
+      "Gestión de premios",
+      "Trazabilidad de datos"
+    ],
+    "emphasis": "La tecnología hacía visible algo que antes era invisible: la calidad del servido."
+  },
+  "gamification": {
+    "eyebrow": "La mecánica",
+    "title": "Gamification con propósito de marca",
+    "paragraphs": [
+      "La campaña no usó gamification como adorno. La usó para reforzar un comportamiento de marca.",
+      "Cada interacción tenía una intención: motivar al consumidor a reconocer el ritual, valorar el cáliz, entender qué significa un servido perfecto y participar desde el punto de consumo.",
+      "Los restaurantes aliados se volvieron parte de la experiencia. No eran solo lugares donde se servía la cerveza; eran nodos de una dinámica conectada, capaces de activar participación, acumular resultados y alimentar una competencia asociada al Perfect Serve.",
+      "Así, la experiencia unió tres capas que rara vez trabajan bien juntas:"
+    ],
+    "emphasis": "Marca, punto de venta y tecnología."
+  },
+  "whatsapp": {
+    "eyebrow": "El canal",
+    "title": "WhatsApp como cancha principal",
+    "paragraphs": [
+      "La evolución hacia WhatsApp fue clave.",
+      "La campaña dejó de depender únicamente de una experiencia web y pasó a vivir en un canal donde el usuario ya conversa, comparte imágenes y espera respuestas inmediatas.",
+      "Desde WhatsApp, el sistema podía guiar la participación, recibir imágenes, activar validaciones, entregar resultados, explicar la dinámica y mantener la conversación viva."
+    ],
+    "emphasis": "La experiencia no se sentía como un formulario. Se sentía como una interacción. Y esa diferencia importa.",
+    "closing": [
+      "Porque cuando una campaña vive en WhatsApp, la fricción baja. La participación se vuelve más natural. El dato aparece dentro del flujo. La marca no espera que el usuario vaya a buscarla; entra en el espacio donde el usuario ya está."
     ]
   },
-  "highlights": {
-    "challenge": {
-      "label": "Reto",
-      "text": "Ofrecer una atención premium y constante sin saturar al equipo ni depender de horarios."
-    },
-    "solution": {
-      "label": "Solución",
-      "text": "Un bot conversacional en WhatsApp que automatiza la atención y guía experiencias premium, disponible 24/7."
-    },
-    "result": {
-      "label": "Resultado",
-      "text": "Una marca que atiende a cada cliente en tiempo real, con una experiencia consistente a cualquier hora."
-    }
+  "insights": {
+    "eyebrow": "El dato",
+    "title": "Lo que aprendió la marca",
+    "paragraphs": [
+      "Perfect Serve también permitió generar insights interesantes de consumo y comportamiento.",
+      "Cada interacción podía ayudar a entender dónde se activaba mejor la experiencia, cómo participaban los usuarios, qué restaurantes generaban más dinámica, cómo respondían las personas a la mecánica y qué tan claro era el ritual de servido para el consumidor."
+    ],
+    "emphasis": "La campaña no solo premiaba. También observaba. No solo enseñaba. También medía.",
+    "closing": [
+      "Y no solo generaba participación. También convertía la experiencia de marca en información útil para optimizar presencia, servicio y activación en puntos de consumo."
+    ]
+  },
+  "ensenar": {
+    "eyebrow": "La educación de marca",
+    "title": "Enseñar sin volverlo pesado",
+    "paragraphs": [
+      "Uno de los aciertos de la campaña fue convertir la educación de marca en experiencia.",
+      "Perfect Serve no explicaba el ritual como una clase. Lo volvía juego, reto y conversación.",
+      "El usuario aprendía qué hace especial el servido de Stella Artois mientras participaba. El sistema no interrumpía la experiencia de consumo; la amplificaba."
+    ],
+    "emphasis": "Ese es el valor de una buena tecnología aplicada a marca: no poner una capa digital encima de la campaña, sino hacer que la idea funcione mejor."
+  },
+  "humanika": {
+    "eyebrow": "La mirada",
+    "title": "Por qué importa para Humanika",
+    "paragraphs": [
+      "Este caso conecta directamente con la lógica detrás de Humanika.",
+      "El valor no estaba en tener WhatsApp. Tampoco estaba solo en el reconocimiento de imagen. Ni siquiera estaba únicamente en la gamification.",
+      "El valor estaba en conectar todo eso en una operación coherente: canal, datos, reglas, puntos de venta, validación, experiencia de usuario, premios, contenido educativo e insights."
+    ],
+    "emphasis": "WhatsApp fue la interfaz. La inteligencia estaba debajo.",
+    "closing": [
+      "Humanika existe para escalar ese tipo de lógica: convertir canales cotidianos en experiencias inteligentes, medibles y operables; conectar sistemas, reglas y datos; y transformar una interacción aparentemente simple en capacidad real para la organización.",
+      "Perfect Serve demostró que una campaña puede hacer más que generar participación:"
+    ],
+    "capabilities": [
+      "Puede enseñar.",
+      "Puede medir.",
+      "Puede activar puntos de venta.",
+      "Puede producir datos.",
+      "Puede elevar una experiencia de marca.",
+      "Y puede hacerlo desde el canal donde la conversación ya existe."
+    ]
+  },
+  "takeaways": {
+    "title": "En resumen",
+    "items": [
+      "150%, junto a BeamB., llevó Stella Artois Perfect Serve a WhatsApp como experiencia conversacional.",
+      "Reconocimiento de imagen para evaluar el servido perfecto, con gamification y restaurantes aliados conectados.",
+      "La campaña midió el servido, activó participación y educó sobre el ritual de marca desde el punto de consumo.",
+      "WhatsApp se volvió una extensión inteligente del punto de consumo, generando insights de comportamiento."
+    ]
   },
   "cta": {
-    "title": "¿Quieres un bot de WhatsApp así para tu marca?",
-    "description": "Diseñamos colaboradores digitales en WhatsApp que automatizan interacciones y conversan con tus clientes 24/7.",
+    "title": "¿Quieres convertir tu punto de consumo en una experiencia inteligente?",
+    "description": "Diseñamos experiencias conversacionales que conectan canal, datos, reglas, puntos de venta y reconocimiento de imagen en una sola operación medible.",
     "button": "Hablar con un especialista"
   }
 }

@@ -63,18 +63,12 @@
 .logoChip {
   @apply inline-flex items-center justify-center rounded-lg px-2.5;
   height: 2.25rem;
-  background: var(--surface-inverted);
+  background: var(--bg-section);
   border: 1px solid var(--border-subtle);
 }
 
 .logo {
-  @apply h-5 w-auto object-contain max-w-14;
-}
-
-.industry {
-  @apply text-[0.7rem] font-semibold uppercase;
-  letter-spacing: 0.14em;
-  color: var(--text-muted);
+  @apply h-6 w-auto object-contain max-w-16;
 }
 
 /* Body: title is the hero, description supports it */

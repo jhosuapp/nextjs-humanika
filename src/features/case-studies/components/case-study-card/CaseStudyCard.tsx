@@ -32,7 +32,7 @@ const CaseStudyCard = ({
   readMore,
 }: CaseStudyCardProps): JSX.Element => {
   return (
-    <CustomLink to={href} className={`${styles.card} gl-gradient-box`}>
+    <CustomLink to={href} className={`${styles.card} gl-gradient-box gl-card`}>
       <figure className={styles.media}>
         <Image
           src={cover}

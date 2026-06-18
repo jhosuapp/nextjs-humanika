@@ -1,4 +1,8 @@
 import type { CaseStudyEntry } from "@/src/features/case-studies/types/case-study.types";
+import { coronaContent } from "@/src/features/case-studies/data/corona.content";
+import { aguilaContent } from "@/src/features/case-studies/data/aguila.content";
+import { stellaContent } from "@/src/features/case-studies/data/stella.content";
+import { pepsicoContent } from "@/src/features/case-studies/data/pepsico.content";
 
 /**
  * Single source of truth for every success story ("caso de éxito").
@@ -25,27 +29,31 @@ const caseStudiesRegistry: ReadonlyArray<CaseStudyEntry> = [
   {
     slug: "corona",
     cover: "/images/ventas-y-crecimiento.jpg",
-    logo: "/logos/corona.png",
+    logo: "/logos/uses-cases/corona.svg",
     count: { to: 1 },
     publishedAt: "2026-06-16",
+    content: coronaContent,
   },
   {
     slug: "aguila",
     cover: "/images/servicio-y-soporte.jpg",
     logo: "/logos/aguila.png",
     publishedAt: "2026-06-14",
+    content: aguilaContent,
   },
   {
     slug: "stella",
     cover: "/images/contociento-organizacional.jpg",
-    logo: "/logos/stella.png",
+    logo: "/logos/uses-cases/stella.png",
     publishedAt: "2026-06-12",
+    content: stellaContent,
   },
   {
-    slug: "michelob",
+    slug: "pepsico",
     cover: "/images/productividad-y-opetaciones.jpg",
-    logo: "/logos/michelob.png",
+    logo: "/logos/uses-cases/pepsico.svg",
     publishedAt: "2026-06-10",
+    content: pepsicoContent,
   },
 ];
 

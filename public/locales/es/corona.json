@@ -1,47 +1,171 @@
 {
   "seo": {
-    "title": "Corona: chatbot de WhatsApp para la promo del Mundial | 150%",
-    "description": "Cómo Corona activó su promoción del Mundial con un chatbot de WhatsApp que permitía registrar códigos ganadores y capturar datos de los consumidores en tiempo real."
+    "title": "Corona México: fidelización masiva por WhatsApp en el Mundial | 150%",
+    "description": "150% participó en una experiencia conversacional masiva para Corona México: corcholatas con códigos únicos, entrega inteligente de premios por localización, Oxxo y TaDa Delivery, avatares, gamification e insights en WhatsApp."
   },
   "hero": {
     "eyebrow": "Consumo masivo",
-    "title": "Corona activó su promo del Mundial con un chatbot de WhatsApp",
-    "description": "Un colaborador digital en WhatsApp que convirtió cada empaque en una participación: validación de códigos, confirmación de ganadores y registro de datos en una sola conversación.",
-    "imageAlt": "Persona registrando un código ganador de la promoción de Corona por WhatsApp"
+    "title": "El Mundial, las corcholatas y una conversación que movió millones",
+    "titleLead": "El Mundial, las corcholatas y una conversación que movió ",
+    "titleAccent": "millones",
+    "titleTrail": "",
+    "imageAlt": "Persona registrando el código de una corcholata de Corona por WhatsApp durante el Mundial",
+    "meta": {
+      "author": "150%",
+      "readingTime": "6 min de lectura",
+      "date": "Junio 2026"
+    },
+    "lead": [
+      "Antes de que el Mundial empezara, Corona México ya tenía una jugada en marcha. No estaba en la cancha. Estaba en la mano del consumidor.",
+      "Una corcholata. Un código único. Un mensaje por WhatsApp.",
+      "A partir de ese gesto mínimo, 150% participó en la creación de una de las experiencias conversacionales más masivas de la marca en México: un sistema de fidelización capaz de conectar códigos únicos, premios, ubicación, proveedores, e-commerce, avatares personalizados, mensajes masivos e insights de consumo en una sola experiencia."
+    ]
   },
-  "categories": ["Consumo masivo", "WhatsApp", "Activación de marca"],
+  "categories": ["Consumo masivo", "WhatsApp", "Fidelización"],
   "metric": {
     "prefix": "+",
     "suffix": "M",
     "value": "+1M"
   },
   "card": {
-    "title": "Activación de marca conversacional",
-    "excerpt": "Chatbot de WhatsApp para registrar los códigos ganadores de la promo del Mundial, sin apps ni formularios complicados."
+    "title": "Fidelización masiva por WhatsApp en el Mundial",
+    "excerpt": "150% participó en una experiencia masiva de fidelización para Corona México: corcholatas con códigos únicos, entrega inteligente de premios por localización, Oxxo y TaDa Delivery, avatares personalizados, gamification e insights de consumo en WhatsApp."
   },
-  "overview": {
+  "intro": {
+    "quote": "Todo pasaba en WhatsApp.",
+    "quoteAccent": "Sin descargar una app. Sin obligar al usuario a cambiar de canal. Sin convertir la promoción en un formulario interminable."
+  },
+  "toc": {
+    "title": "En este caso",
+    "corcholata": "La corcholata como puerta de entrada",
+    "premios": "Premios según la localización",
+    "gamification": "Gamification sin perder simplicidad",
+    "avatares": "Avatares más allá del premio",
+    "whatsapp": "WhatsApp como sistema operativo",
+    "resultados": "Millones de conversaciones",
+    "insights": "Lo que la marca pudo aprender",
+    "cierre": "La inteligencia debajo de la celebración"
+  },
+  "corcholata": {
+    "eyebrow": "La mecánica",
+    "title": "La corcholata como puerta de entrada",
     "paragraphs": [
-      "Durante el Mundial, Corona lanzó una promoción nacional con códigos ganadores impresos en sus productos. El reto era claro: que registrar un código fuera tan simple como enviar un mensaje, sin descargar apps ni llenar formularios largos.",
-      "Creamos un chatbot de WhatsApp que guiaba al consumidor paso a paso dentro de la conversación: validaba el código, confirmaba si era ganador y registraba sus datos de forma segura, todo en tiempo real."
+      "La campaña se activó previo y durante el Mundial, en un momento donde la conversación, la celebración y la participación estaban naturalmente encendidas. La tecnología no interrumpía ese momento. Lo aprovechaba.",
+      "La mecánica partía de un objeto simple y culturalmente reconocible: la corcholata.",
+      "Cada código único abría una posibilidad. El usuario podía entrar a la experiencia desde WhatsApp, registrar su participación, avanzar en la dinámica, recibir mensajes, activar oportunidades y acceder a premios según las reglas de la campaña.",
+      "Pero la corcholata era apenas la superficie. Debajo había un sistema diseñado para operar a gran escala:"
+    ],
+    "items": [
+      "Validación de códigos",
+      "Control de participación",
+      "Reglas promocionales",
+      "Entrega inteligente de premios",
+      "Segmentación",
+      "Localización",
+      "Interoperación con proveedores",
+      "Trazabilidad de datos"
+    ],
+    "emphasis": "Lo interesante no era solo que el usuario participara. Era que cada participación podía convertirse en una señal."
+  },
+  "premios": {
+    "eyebrow": "La operación",
+    "title": "Premios según el lugar donde estaba el usuario",
+    "paragraphs": [
+      "Uno de los componentes más potentes de la campaña fue la entrega inteligente de premios basada en la localización.",
+      "El sistema no operaba como una dinámica genérica. Podía considerar dónde estaba el usuario, qué opciones estaban disponibles cerca y qué proveedor podía cumplir mejor la entrega o redención.",
+      "Eso permitió integrar actores como tiendas de conveniencia, vendors y plataformas de comercio, incluyendo Oxxo y TaDa Delivery en México.",
+      "La experiencia conversacional se conectaba así con el mundo real: puntos de venta, disponibilidad, cobertura, redención y entrega."
+    ],
+    "emphasis": "WhatsApp era la interfaz. La operación estaba distribuida. La inteligencia estaba en la conexión."
+  },
+  "gamification": {
+    "eyebrow": "El equilibrio",
+    "title": "Gamification sin perder simplicidad",
+    "paragraphs": [
+      "La campaña tenía una capa clara de gamification: códigos, oportunidades, premios, participación y recompensas.",
+      "Pero el reto no era hacerla más compleja. Era hacerla más fácil.",
+      "La experiencia debía sentirse natural para millones de usuarios. Tenía que explicar, guiar, activar y responder sin fricción. Tenía que pedir datos en el momento correcto, no antes. Tenía que mantener al usuario participando sin hacerlo sentir atrapado en un proceso pesado."
+    ],
+    "emphasis": "Ese equilibrio fue clave.",
+    "closing": [
+      "La campaña logró captar información en puntos estratégicos del recorrido, cuando el usuario ya entendía el valor de participar y la conversación tenía sentido. No se trataba de pedir datos por pedirlos. Se trataba de construir confianza antes de pedir acción."
     ]
   },
-  "highlights": {
-    "challenge": {
-      "label": "Reto",
-      "text": "Permitir el registro masivo de códigos ganadores sin fricción, por un canal que la gente ya usa todos los días."
-    },
-    "solution": {
-      "label": "Solución",
-      "text": "Un chatbot conversacional en WhatsApp que valida códigos, identifica ganadores y captura datos de forma segura, disponible 24/7."
-    },
-    "result": {
-      "label": "Resultado",
-      "text": "Una activación que convirtió cada empaque en un punto de contacto directo con el consumidor, con participaciones registradas en tiempo real."
-    }
+  "avatares": {
+    "eyebrow": "La capa viral",
+    "title": "Avatares para llevar la experiencia más allá del premio",
+    "paragraphs": [
+      "Además de la mecánica promocional, la campaña integró una capa de creación de avatares personalizados.",
+      "No era un detalle menor.",
+      "Los avatares permitían transformar la participación en contenido compartible. Le daban al usuario algo propio, algo que podía guardar, mostrar o mover dentro de sus conversaciones. Esa capa ayudó a extender el alcance de la campaña más allá de la interacción inicial."
+    ],
+    "emphasis": "La promoción no terminaba en el premio. También podía convertirse en identidad, juego y conversación social.",
+    "closing": [
+      "En una campaña masiva, ese tipo de detalle importa: ayuda a que la experiencia no se sienta únicamente transaccional, sino también memorable."
+    ]
+  },
+  "whatsapp": {
+    "eyebrow": "El canal",
+    "title": "WhatsApp como sistema operativo de la campaña",
+    "paragraphs": [
+      "El verdadero centro de la experiencia fue WhatsApp.",
+      "Desde ahí se activaron conversaciones, registros, validaciones, mensajes masivos, respuestas, recordatorios, dinámicas de participación y entregas asociadas a proveedores.",
+      "La campaña demostró que WhatsApp puede operar como mucho más que un canal de atención. Puede convertirse en un sistema operativo para fidelización masiva, especialmente cuando se conecta con datos, reglas, localización, proveedores y automatización."
+    ],
+    "emphasis": "El usuario veía una conversación sencilla. La marca operaba una infraestructura compleja. Esa era la magia."
+  },
+  "resultados": {
+    "eyebrow": "El resultado",
+    "title": "Millones de conversaciones después",
+    "paragraphs": [
+      "La respuesta de los usuarios fue contundente.",
+      "La campaña generó millones de conversaciones y niveles de participación que confirmaron algo importante: cuando la mecánica es clara, el canal es familiar y la recompensa está bien integrada, los usuarios sí participan.",
+      "La capa de gamification y la entrega de premios fueron claves, pero el resultado no dependió solo del incentivo. Dependió de que la experiencia fuera fácil, cercana y conversacional."
+    ],
+    "emphasis": "Una promoción puede tener un gran premio y aun así fallar si el proceso es torpe. Aquí, el canal ayudó a que la participación fluyera."
+  },
+  "insights": {
+    "eyebrow": "El dato",
+    "title": "Lo que la marca pudo aprender",
+    "paragraphs": [
+      "Además de activar participación, la campaña generó insights valiosos de consumo y comportamiento.",
+      "Cada interacción ayudaba a entender cómo respondían los usuarios, en qué momentos participaban, qué zonas generaban más actividad, cómo se comportaban frente a distintos incentivos y qué tan efectiva era la conversación para moverlos dentro de la dinámica."
+    ],
+    "emphasis": "La campaña no solo entregaba premios. También escuchaba. No solo activaba usuarios. También construía datos. No solo generaba awareness. También producía inteligencia operativa."
+  },
+  "cierre": {
+    "eyebrow": "La mirada",
+    "title": "La inteligencia debajo de la celebración",
+    "paragraphs": [
+      "Este caso demuestra una idea central: las grandes campañas ya no viven únicamente en medios. Viven en sistemas."
+    ],
+    "layers": [
+      "Una corcholata puede ser el inicio.",
+      "WhatsApp puede ser el canal.",
+      "El premio puede ser el incentivo.",
+      "El avatar puede ser la capa viral."
+    ],
+    "connection": [
+      "Pero el verdadero valor aparece cuando todo eso se conecta: códigos únicos, proveedores, ubicación, e-commerce, reglas promocionales, mensajes masivos, datos, automatización e insights."
+    ],
+    "emphasis": "Esa es la diferencia entre una activación y una operación inteligente.",
+    "closing": [
+      "Corona México convirtió una mecánica de fidelización en una experiencia conversacional masiva, diseñada para participar, premiar, aprender y mantenerse cerca del consumidor durante uno de los momentos culturales más importantes del año."
+    ],
+    "finalEmphasis": "El Mundial se jugaba en la cancha. La fidelización se jugaba en WhatsApp."
+  },
+  "takeaways": {
+    "title": "En resumen",
+    "items": [
+      "150% participó en una experiencia masiva de fidelización para Corona México, previo y durante el Mundial.",
+      "Corcholatas con códigos únicos en WhatsApp, con entrega inteligente de premios según localización.",
+      "Integración con vendors como Oxxo y TaDa Delivery, avatares personalizados, gamification y mensajería masiva.",
+      "Resultado: millones de conversaciones e insights que convirtieron participación, premios y datos en una operación de marca."
+    ]
   },
   "cta": {
-    "title": "¿Quieres una activación así para tu marca?",
-    "description": "Diseñamos colaboradores digitales en WhatsApp que convierten campañas en conversaciones medibles.",
+    "title": "¿Quieres una experiencia de fidelización masiva por WhatsApp?",
+    "description": "Diseñamos experiencias conversacionales que conectan códigos, premios, localización, proveedores, datos e insights en una sola operación a gran escala.",
     "button": "Hablar con un especialista"
   }
 }

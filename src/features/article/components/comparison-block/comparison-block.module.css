@@ -36,16 +36,6 @@
   );
 }
 
-.label {
-  @apply text-xs font-semibold uppercase tracking-[0.16em] m-0;
-  color: var(--text-muted);
-}
-
-.labelAccent {
-  @apply text-xs font-semibold uppercase tracking-[0.16em] m-0;
-  color: var(--primary);
-}
-
 .list {
   @apply flex flex-col gap-3 m-0 p-0 list-none;
 }

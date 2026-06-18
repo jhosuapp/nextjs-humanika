@@ -1,3 +1,5 @@
+import type { ArticleContent } from "@/src/features/article/types/article.types";
+
 /**
  * Schema for a success story ("caso de éxito").
  *
@@ -17,6 +19,9 @@ type CaseStudyEntry = {
   count?: { to: number; decimals?: number };
   /** ISO publish date, used to order the listing (newest first). */
   publishedAt: string;
+  /** When present, the detail page renders with the block-based
+   *  `ArticleRenderer` (blog-style layout) instead of the simple template. */
+  content?: ArticleContent;
 };
 
 export type { CaseStudyEntry };

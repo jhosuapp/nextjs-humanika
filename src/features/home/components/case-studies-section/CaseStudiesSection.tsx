@@ -15,10 +15,10 @@ import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
 import { getSortedCaseStudies } from '@/src/features/case-studies/data/case-studies.registry';
 
 import { Container } from '../container/Container';
-import { Text } from '@/src/shared/components/text/Text';
+import { SectionHeader } from '@/src/shared/components/section-header/SectionHeader';
 import styles from './case-studies-section.module.css';
 import { fadeUpTertiaryMotion } from '@/src/shared/motion/fadeUp.motion';
-import { REVEAL, revealDelay } from '@/src/shared/helpers/motion-variants';
+import { REVEAL } from '@/src/shared/helpers/motion-variants';
 import { WrapperMotion } from '@/src/shared/components/wrapper-motion/WrapperMotion';
 
 type CaseStudiesSectionProps = { t: ITranslations };
@@ -30,39 +30,14 @@ const CaseStudiesSection = ({ t }: CaseStudiesSectionProps) => {
   return (
     <section className={styles.section} aria-labelledby="case-studies-title">
       <Container padding="xl">
-        <FadeIn className={styles.head}>
-          <Text
-            tag="p"
-            variant="description_xs"
-            color="primary"
-            weight="semibold"
-            delay={{ enter: revealDelay(0), exit: 0 }}
-            fadeUpTertiary
-          >
-            {t('caseStudies.eyebrow')}
-          </Text>
-          <Text
-            className={styles.title}
-            tag="h2"
-            variant="title_small"
-            color="secondary"
-            weight="semibold"
-            delay={{ enter: revealDelay(1), exit: 0 }}
-            fadeUpTertiary
-          >
-            {t('caseStudies.title')}
-          </Text>
-          <Text
-            className={styles.description}
-            tag="p"
-            variant="description"
-            color="muted"
-            delay={{ enter: revealDelay(2), exit: 0 }}
-            fadeUpTertiary
-          >
-            {t('caseStudies.description')}
-          </Text>
-        </FadeIn>
+        <SectionHeader
+          className={styles.head}
+          titleClassName={styles.title}
+          descriptionClassName={styles.description}
+          eyebrow={t('caseStudies.eyebrow')}
+          title={t('caseStudies.title')}
+          description={t('caseStudies.description')}
+        />
 
         <StaggerGroup className={styles.grid} stagger={REVEAL.stagger} amount={REVEAL.amount}>
           {caseStudies.map((item) => {
@@ -91,7 +66,7 @@ const CaseStudiesSection = ({ t }: CaseStudiesSectionProps) => {
                             className={styles.logo}
                           />
                         </span>
-                        <span className={styles.industry}>
+                        <span className="gl-eyebrow">
                           {t(`${ns}:hero.eyebrow`)}
                         </span>
                       </header>

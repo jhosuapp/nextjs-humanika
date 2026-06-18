@@ -7,6 +7,7 @@ import { Container } from '@/src/features/home/components/container/Container';
 import { Text } from '@/src/shared/components/text/Text';
 import { WrapperMotion } from '@/src/shared/components/wrapper-motion/WrapperMotion';
 import { ArticleCta } from '@/src/features/article/components/article-cta/ArticleCta';
+import { ArticleRenderer } from '@/src/features/article/renderer/ArticleRenderer';
 
 import styles from './case-study-detail.module.css';
 import { Reveal } from '../../article/components/reveal/Reveal';
@@ -23,6 +24,17 @@ const CaseStudyDetailView = ({
   t,
   entry,
 }: CaseStudyDetailViewProps): JSX.Element => {
+  // Rich cases carry a block schema and render with the article renderer
+  // (blog-style layout); the related-cases section is appended below it.
+  if (entry.content) {
+    return (
+      <>
+        <ArticleRenderer t={t} content={entry.content} />
+        <CaseRelated t={t} entry={entry} />
+      </>
+    );
+  }
+
   const categories = t('categories', { returnObjects: true }) as string[];
   const paragraphs = t('overview.paragraphs', {
     returnObjects: true,
@@ -122,7 +134,7 @@ const CaseStudyDetailView = ({
                 className="h-full"
               >
                 <div className={`${styles.highlight} gl-gradient-box`}>
-                  <span className={styles.highlightLabel}>
+                  <span className="gl-eyebrow-accent">
                     {t(`highlights.${key}.label`) as string}
                   </span>
                   <p className={styles.highlightText}>

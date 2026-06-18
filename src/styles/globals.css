@@ -173,6 +173,38 @@ body {
   @apply m-0 text-sm font-normal text-center text-secondary;
 }
 
+/* Eyebrow / kicker label (uppercase micro-heading above a title). The accent
+   variant swaps the muted tone for the brand colour. */
+.gl-eyebrow,
+.gl-eyebrow-accent {
+  @apply m-0 text-xs font-semibold uppercase tracking-[0.2em];
+}
+
+.gl-eyebrow {
+  color: var(--text-muted);
+}
+
+.gl-eyebrow-accent {
+  color: var(--primary);
+}
+
+/* Elevation behaviour for interactive cards: resting shadow plus a lift,
+   brand border and deeper shadow on hover. Owns only elevation so it composes
+   with a consumer's own surface (background/border, e.g. `gl-gradient-box`). */
+.gl-card {
+  box-shadow: var(--shadow-elevated);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.gl-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-elevated-hover);
+}
+
 /* Reusable gradient-border box (same treatment as the ContactForm card).
    Keep the consumer's own `rounded-*` utility for the radius.
    Override the inner fill per state with `--gl-box-fill` (must be an <image>,

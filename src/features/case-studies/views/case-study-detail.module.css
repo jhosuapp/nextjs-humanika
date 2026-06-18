@@ -86,10 +86,6 @@
   @apply flex h-full flex-col gap-2 rounded-2xl p-5;
 }
 
-.highlightLabel {
-  @apply text-xs font-semibold uppercase tracking-wide;
-  color: var(--primary);
-}
 
 .highlightText {
   @apply text-sm leading-relaxed m-0;

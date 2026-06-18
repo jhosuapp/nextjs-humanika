@@ -25,7 +25,7 @@ const ArticleSection = ({
       {index || eyebrow ? (
         <span className={styles.kicker}>
           {index ? <span className={styles.index}>{index}</span> : null}
-          {eyebrow ? <span className={styles.eyebrow}>{eyebrow}</span> : null}
+          {eyebrow ? <span className="gl-eyebrow">{eyebrow}</span> : null}
         </span>
       ) : null}
 

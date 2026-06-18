@@ -41,7 +41,7 @@ const ComparisonBlock = ({ t, tKey, id }: ComparisonBlockProps): JSX.Element => 
 
       <RevealGroup className={styles.grid}>
         <RevealItem className={`${styles.card} ${styles.cardMuted}`}>
-          <p className={styles.label}>{t(`${tKey}.left.label`) as string}</p>
+          <p className="gl-eyebrow">{t(`${tKey}.left.label`) as string}</p>
           <ul className={styles.list}>
             {left.map((item) => (
               <li key={item} className={styles.item}>
@@ -58,7 +58,7 @@ const ComparisonBlock = ({ t, tKey, id }: ComparisonBlockProps): JSX.Element => 
 
         <RevealItem className={`${styles.card} ${styles.cardAccent}`}>
           <div className={styles.cardGlow} aria-hidden="true" />
-          <p className={styles.labelAccent}>{t(`${tKey}.right.label`) as string}</p>
+          <p className="gl-eyebrow-accent">{t(`${tKey}.right.label`) as string}</p>
           <ul className={styles.list}>
             {right.map((item) => (
               <li key={item} className={styles.item}>

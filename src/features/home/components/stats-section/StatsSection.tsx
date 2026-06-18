@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { FadeIn } from '@/src/shared/components/motion/FadeIn';
 import {
   StaggerGroup,
   StaggerItem,
@@ -11,7 +10,7 @@ import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
 import { homeStaticData } from '@/src/features/home/data/home-content';
 
 import { Container } from '../container/Container';
-import { Text } from '@/src/shared/components/text/Text';
+import { SectionHeader } from '@/src/shared/components/section-header/SectionHeader';
 import styles from './stats-section.module.css';
 
 type StatsSectionProps = { t: ITranslations };
@@ -22,29 +21,12 @@ const StatsSection = ({ t }: StatsSectionProps) => {
   return (
     <section className={styles.section} aria-labelledby="stats-title">
       <Container padding="xl">
-        <FadeIn className={styles.head}>
-          <Text
-            tag="p"
-            variant="description_xs"
-            color="primary"
-            weight="semibold"
-            delay={{ enter: 0.05, exit: 0 }}
-            fadeUpTertiary
-          >
-            {t('stats.eyebrow')}
-          </Text>
-          <Text
-            className={styles.title}
-            tag="h2"
-            variant="title_small"
-            color="secondary"
-            weight="semibold"
-            delay={{ enter: 0.1, exit: 0 }}
-            fadeUpTertiary
-          >
-            {t('stats.title')}
-          </Text>
-        </FadeIn>
+        <SectionHeader
+          className={styles.head}
+          titleClassName={styles.title}
+          eyebrow={t('stats.eyebrow')}
+          title={t('stats.title')}
+        />
 
         <StaggerGroup className={styles.grid} stagger={0.1} amount={0.3}>
           {stats.items.map((item) => (

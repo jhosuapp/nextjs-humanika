@@ -3,17 +3,17 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { useState } from 'react';
 
-import { FadeIn } from '@/src/shared/components/motion/FadeIn';
 import {
   StaggerGroup,
   StaggerItem,
 } from '@/src/shared/components/motion/StaggerGroup';
-import { DURATION, EASE, REVEAL, revealDelay } from '@/src/shared/helpers/motion-variants';
+import { DURATION, EASE, REVEAL } from '@/src/shared/helpers/motion-variants';
 import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
 import { homeStaticData } from '@/src/features/home/data/home-content';
 import { Button } from '@/src/shared/components/button/Button';
 import { Text } from '@/src/shared/components/text/Text';
 import { Container } from '../container/Container';
+import { SectionHeader } from '@/src/shared/components/section-header/SectionHeader';
 import { WrapperMotion } from '@/src/shared/components/wrapper-motion/WrapperMotion';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
@@ -115,38 +115,14 @@ const FaqSection = ({ t }: Props) => {
   return (
     <div className={styles.bg}>
       <Container id="faqs" className={styles.section} aria-labelledby="faq-title" padding='xl'>
-        <FadeIn className={styles.header} y={16}>
-          <Text
-            tag="p" 
-            variant="description_xs" 
-            color="primary"
-            weight="semibold"
-            delay={{ enter: revealDelay(0), exit: 0 }}
-            fadeUpTertiary
-          >
-            {t('faq.eyebrow')}
-          </Text>
-          <Text
-            tag="h2" 
-            variant="title_small" 
-            color="secondary"
-            weight="semibold"
-            delay={{ enter: revealDelay(1), exit: 0 }}
-            fadeUpTertiary
-          >
-            {t('faq.title')}
-          </Text>
-          <Text
-            className={styles.headerDescription}
-            tag="p" 
-            variant="description" 
-            color="muted"
-            delay={{ enter: revealDelay(2), exit: 0 }}
-            fadeUpTertiary
-          >
-            {t('faq.description')}
-          </Text>
-        </FadeIn>
+        <SectionHeader
+          className={styles.header}
+          descriptionClassName={styles.headerDescription}
+          y={16}
+          eyebrow={t('faq.eyebrow')}
+          title={t('faq.title')}
+          description={t('faq.description')}
+        />
         <WrapperMotion delay={{ enter: 0.1, exit: 0 }} fadeUpTertiary>
           <StaggerGroup className={styles.list} stagger={REVEAL.stagger} amount={REVEAL.amount}>
             {faq.items.map((item) => (

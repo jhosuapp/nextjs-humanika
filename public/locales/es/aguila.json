@@ -1,47 +1,108 @@
 {
   "seo": {
-    "title": "Águila: bot de WhatsApp 24/7 que automatiza interacciones | 150%",
-    "description": "Cómo Águila automatiza la conversación con sus consumidores en WhatsApp con un colaborador digital que responde y activa promociones las 24 horas."
+    "title": "Cerveza Águila: WhatsApp como canal de fidelización en el Mundial | 150%",
+    "description": "Antes y durante el Mundial, 150% convirtió WhatsApp en un canal de fidelización masiva para Cerveza Águila: facturas, trivias, premios automáticos, TaDa y contenido personalizado en una sola conversación."
   },
   "hero": {
     "eyebrow": "Consumo masivo",
-    "title": "Águila automatiza sus interacciones con un bot de WhatsApp 24/7",
-    "description": "Un colaborador digital que responde, activa promociones y conversa con los fans de Águila en WhatsApp, todos los días y a toda hora.",
-    "imageAlt": "Persona conversando con el bot de WhatsApp de Águila"
+    "title": "El Mundial también se jugó por WhatsApp",
+    "titleLead": "El Mundial también se jugó por ",
+    "titleAccent": "WhatsApp",
+    "titleTrail": "",
+    "imageAlt": "Hincha participando en la promoción de Cerveza Águila por WhatsApp durante el Mundial",
+    "meta": {
+      "author": "150%",
+      "readingTime": "4 min de lectura",
+      "date": "Junio 2026"
+    },
+    "lead": [
+      "Antes de que rodara el balón, Cerveza Águila ya estaba jugando otro partido: estar en el celular de millones de colombianos, justo en el lugar donde pasan las conversaciones reales.",
+      "Desde ahí, 150% diseñó una experiencia promocional para Cerveza Águila antes y durante el Mundial. Por fuera, la mecánica era simple: participar, enviar una factura, responder trivias, acumular oportunidades y recibir premios. Por dentro, era una operación tecnológica de alto volumen conectando validación de datos, reglas promocionales, comercio digital, puntos de venta, automatización y contenido personalizado."
+    ]
   },
-  "categories": ["Consumo masivo", "WhatsApp", "Automatización"],
+  "categories": ["Consumo masivo", "WhatsApp", "Fidelización"],
   "metric": {
     "prefix": "",
     "suffix": "",
-    "value": "24/7"
+    "value": "Millones"
   },
   "card": {
-    "title": "Interacciones automatizadas en WhatsApp",
-    "excerpt": "Un bot de WhatsApp que atiende, activa y conversa con los consumidores de Águila las 24 horas, sin esperas."
+    "title": "WhatsApp como canal de fidelización masiva",
+    "excerpt": "Antes y durante el Mundial, 150% convirtió WhatsApp en un canal de fidelización masiva para Cerveza Águila: registrar usuarios, validar facturas, activar trivias, conectar TaDa y asignar premios automáticamente, todo en una sola conversación."
   },
-  "overview": {
+  "intro": {
+    "quote": "Todo pasaba en WhatsApp.",
+    "quoteAccent": "Sin fricción. Sin cambiar de canal. Sin convertir la campaña en un trámite."
+  },
+  "toc": {
+    "title": "En este caso",
+    "canal": "Un canal vivo de fidelización",
+    "detras": "Lo que pasaba detrás",
+    "resultados": "Millones de interacciones",
+    "humanika": "Por qué importa para Humanika"
+  },
+  "canal": {
+    "eyebrow": "La experiencia",
+    "title": "Un canal que se volvió hincha, tienda y premio",
     "paragraphs": [
-      "Águila necesitaba estar presente para sus consumidores en el canal que más usan, sin depender de horarios ni de un equipo atendiendo manualmente cada mensaje.",
-      "Creamos un colaborador digital en WhatsApp que automatiza las interacciones: responde preguntas, activa promociones y mantiene la conversación viva las 24 horas, los 7 días de la semana."
+      "La campaña no se trataba solo de responder mensajes. Se trataba de convertir WhatsApp en un canal vivo de fidelización.",
+      "El consumidor podía participar desde donde ya estaba. Enviaba su factura, entraba en la dinámica, respondía trivias, acumulaba oportunidades y recibía premios según las reglas de la promoción.",
+      "La experiencia también se conectó con TaDa, el commerce de la marca, y con dinámicas asociadas a los partidos de Colombia. Cuando el país estaba mirando la cancha, la campaña podía reaccionar al momento: activar incentivos, mover la conversación y mantener la compra dentro del ritual futbolero.",
+      "En paralelo, el sistema generaba imágenes personalizadas para los participantes, sumando una capa de contenido individual a una campaña de alcance masivo."
     ]
   },
-  "highlights": {
-    "challenge": {
-      "label": "Reto",
-      "text": "Atender el alto volumen de mensajes de los consumidores sin depender de horarios ni de atención manual."
-    },
-    "solution": {
-      "label": "Solución",
-      "text": "Un bot conversacional en WhatsApp que automatiza respuestas, activaciones y promociones, disponible 24/7."
-    },
-    "result": {
-      "label": "Resultado",
-      "text": "Una marca siempre disponible que conversa con sus consumidores en tiempo real, sin filas ni esperas."
-    }
+  "detras": {
+    "eyebrow": "La operación",
+    "title": "Lo que pasaba detrás",
+    "paragraphs": [
+      "Detrás de una conversación aparentemente sencilla había una operación compleja:"
+    ],
+    "items": [
+      "Validación de facturas",
+      "Registro de usuarios",
+      "Conexión con puntos de venta",
+      "Integración con comercio digital",
+      "Reglas promocionales",
+      "Asignación automática de premios",
+      "Trivias",
+      "Datos de partidos",
+      "Generación de piezas personalizadas"
+    ],
+    "emphasis": "La diferencia estuvo en que todo eso no se sintió como infraestructura. Se sintió como una conversación. Ese era el punto."
+  },
+  "resultados": {
+    "eyebrow": "El resultado",
+    "title": "Millones de interacciones después",
+    "paragraphs": [
+      "La campaña generó millones de interacciones y registros, consolidando WhatsApp como un canal de fidelización hiperfuncional para Cerveza Águila.",
+      "No fue solo una activación. Fue una forma de estar presente antes y durante el Mundial, conectando compra, emoción, premios y participación en un mismo flujo.",
+      "Para la marca, WhatsApp dejó de ser únicamente un canal de atención. Se convirtió en una plataforma directa de relación con el consumidor."
+    ]
+  },
+  "humanika": {
+    "eyebrow": "La mirada",
+    "title": "Por qué importa para Humanika",
+    "paragraphs": [
+      "Este caso anticipa una de las ideas centrales detrás de Humanika: los canales no son el valor por sí solos. El valor aparece cuando un canal se conecta con datos, sistemas, reglas, automatización y operación."
+    ],
+    "emphasis": "WhatsApp fue la puerta de entrada. La inteligencia estaba debajo.",
+    "closing": [
+      "La experiencia fue desarrollada por 150%, compañía creadora de Humanika, aplicando capacidades tecnológicas y metodológicas que hoy hacen parte de su enfoque: automatización conversacional, integración con sistemas, reglas de negocio, validación de datos, trazabilidad y operación a gran escala.",
+      "Eso es lo que Humanika busca escalar: convertir canales cotidianos en experiencias inteligentes, medibles y operables para las organizaciones."
+    ]
+  },
+  "takeaways": {
+    "title": "En resumen",
+    "items": [
+      "WhatsApp se convirtió en un canal de fidelización masiva, no solo de atención.",
+      "Registro de usuarios, validación de facturas, trivias y premios automáticos en un solo flujo.",
+      "Integración con TaDa y reacción en vivo a los partidos de Colombia, más imágenes personalizadas.",
+      "Resultado: millones de interacciones y registros antes y durante el Mundial."
+    ]
   },
   "cta": {
-    "title": "¿Quieres un bot de WhatsApp así para tu marca?",
-    "description": "Diseñamos colaboradores digitales en WhatsApp que automatizan interacciones y conversan con tus consumidores 24/7.",
+    "title": "¿Quieres convertir WhatsApp en un canal de fidelización para tu marca?",
+    "description": "Diseñamos experiencias conversacionales que conectan campañas, sistemas, reglas y premios en un mismo flujo, operadas a gran escala.",
     "button": "Hablar con un especialista"
   }
 }
