@@ -16,7 +16,7 @@ import type { ConversationTurn } from "@/src/features/bot/data/bot-content";
  *  1. CTA explícito (afirmaciones / interés en demo) — sobre todo si el turno previo ofreció un siguiente paso.
  *  2. Manejadores especiales OT (clima, groserías, piropos, personal, IA, presentación, interrupción, cierre, charla).
  *  3. Fuera de alcance (OT9).
- *  4. Mejor guion temático (A–L) por coincidencia de keywords.
+ *  4. Mejor guion temático (A–M) por coincidencia de keywords.
  *  5. Fallback → OT10 (no entendí).
  */
 
@@ -33,6 +33,15 @@ const FALLBACK_SCRIPT_ID = "OT10_NO_ENTENDI";
 const OUT_OF_SCOPE_SCRIPT_ID = "OT9_FUERA_ALCANCE";
 const CTA_SCRIPT_ID = "CTA_MAS_INFORMACION";
 const OPENAI_URL = "https://api.openai.com/v1/chat/completions";
+
+// Guiones "de cierre": terminan ofreciendo un siguiente paso ("¿te interesa...?").
+// Tras mostrarlos, cualquier muestra de interés o elección que no encaje en un
+// tema/OT distinto se encamina al CTA ("Excelente... contáctanos") en vez de a
+// "no entendí". Regla de negocio: "te interesa conocer más..." → "excelente, contáctanos".
+const CTA_LEADING_TERMINALS: ReadonlySet<string> = new Set([
+  "M_EDUCACION",
+  "M_INTEGRACIONES",
+]);
 
 /** Normaliza: minúsculas, sin acentos, sin signos, espacios colapsados. */
 const normalize = (text: string): string =>
@@ -171,7 +180,20 @@ const classifyWithKeywords = (
     };
   }
 
-  // 5. Fallback.
+  // 5. Tras un guion de cierre ("¿te interesa...?"), el interés que no encajó en
+  //    un tema/OT concreto se encamina al CTA en lugar de "no entendí".
+  if (previousScriptId && CTA_LEADING_TERMINALS.has(previousScriptId)) {
+    return {
+      scriptId: CTA_SCRIPT_ID,
+      confidence: 0.85,
+      reasonCode: "CTA",
+      reason:
+        "Guion de cierre previo: el interés del usuario se encamina al CTA.",
+      method: "keywords",
+    };
+  }
+
+  // 6. Fallback.
   return {
     scriptId: FALLBACK_SCRIPT_ID,
     confidence: 0.8,
@@ -202,7 +224,7 @@ const buildPrompt = (
     history.length > 0
       ? `\nHISTORIAL RECIENTE (del más antiguo al más reciente):\n${history
           .map((h) => `${h.role === "user" ? "Usuario" : "Avatar"}: ${h.text}`)
-          .join("\n")}\n\nSi el mensaje actual es un seguimiento (usa "eso", "y de...", pronombres, o se apoya en lo ya dicho), usa el historial para resolver a qué tema se refiere y elige el guion temático (A–L) u OT correspondiente.\n`
+          .join("\n")}\n\nSi el mensaje actual es un seguimiento (usa "eso", "y de...", pronombres, o se apoya en lo ya dicho), usa el historial para resolver a qué tema se refiere y elige el guion temático (A–M) u OT correspondiente.\n`
       : "";
 
   return `Eres un clasificador de intención para el avatar conversacional de Humanika (una empresa que crea colaboradores digitales con IA).
@@ -219,7 +241,8 @@ REGLAS DE PRIORIDAD (en este orden):
 4. Clima → OT5_CLIMA; groserías → OT6_GROSERIAS; piropos → OT7_PIROPOS; despedida → OT11_CIERRE; charla casual → OT3_CONVERSACION_GENERAL; interrupción → OT4_INTERRUPCION.
 5. Tema completamente ajeno a Humanika / colaboradores digitales / IA → OT9_FUERA_ALCANCE.
 6. Mensaje incomprensible o ambiguo → OT10_NO_ENTENDI.
-7. En cualquier otro caso, elige el mejor guion temático (A–L).
+7. En cualquier otro caso, elige el mejor guion temático (A–M).
+8. M_EDUCACION y M_INTEGRACIONES son guiones de cierre que terminan con "¿te interesa...?". Tras uno de ellos, si el usuario muestra interés, afirma o elige una de las opciones ofrecidas → CTA_MAS_INFORMACION.
 ${context}${transcript}
 Debes elegir SOLO un script_id del catálogo.
 ${previous ? `Contexto: guion previo = ${previous.id}.` : ""}

@@ -8,7 +8,7 @@ import scriptsJson from "@/src/features/bot/data/humanika-scripts.json";
 type HumanikaScript = {
   /** Identificador único, ej. "B1_COLABORADOR_DIGITAL". También nombra el video: /videos/<id>.mp4 */
   id: string;
-  /** Grupo temático: A–L para temas, OT para manejo especial, CTA para el llamado a la acción */
+  /** Grupo temático: A–M para temas, OT para manejo especial, CTA para el llamado a la acción */
   group: string;
   /** Guion completo que "habla" el avatar (texto mostrado en el chat) */
   text: string;

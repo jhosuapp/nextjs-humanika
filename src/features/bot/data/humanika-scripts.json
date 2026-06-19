@@ -136,6 +136,22 @@
     "triggers": []
   },
   {
+    "id": "M_EDUCACION",
+    "group": "M",
+    "text": "En educación, Humanika puede apoyar admisiones, atención a estudiantes, educación continua y soporte académico.\nUn colaborador digital puede responder preguntas, orientar procesos y escalar casos al equipo humano cuando sea necesario.\n¿Te interesa admisiones, atención estudiantil o formación?",
+    "description": "Sector educación: apoyo a admisiones, atención a estudiantes, educación continua y soporte académico. Úsalo cuando preguntan por educación, instituciones educativas, universidades, colegios, estudiantes o admisiones. Guion de cierre: termina ofreciendo un siguiente paso; tras él, cualquier muestra de interés o elección se encamina a CTA_MAS_INFORMACION.",
+    "keywords": ["educacion", "educativo", "educativa", "universidad", "universidades", "colegio", "colegios", "institucion educativa", "estudiantes", "admisiones", "atencion estudiantil", "soporte academico", "educacion continua", "academico", "matricula", "sector educativo"],
+    "triggers": []
+  },
+  {
+    "id": "M_INTEGRACIONES",
+    "group": "M",
+    "text": "Humanika puede conectarse con sistemas de gestión comercial, plataformas de aprendizaje, Google Drive, SharePoint, WhatsApp, web chat o Microsoft Teams.\nLa idea es conectar la inteligencia artificial con los procesos reales de la organización.\n¿Te interesa alguna integración específica?",
+    "description": "Integraciones de Humanika con sistemas externos: gestión comercial (CRM/ERP), plataformas de aprendizaje (LMS), Google Drive, SharePoint, WhatsApp, web chat y Microsoft Teams. Úsalo cuando preguntan por integraciones, conectar sistemas, CRM, ERP, LMS, Teams o canales. Guion de cierre: termina ofreciendo un siguiente paso; tras él, cualquier muestra de interés o elección se encamina a CTA_MAS_INFORMACION.",
+    "keywords": ["integracion", "integraciones", "integrar", "conectar", "conectarse", "sistemas", "gestion comercial", "crm", "erp", "plataformas de aprendizaje", "lms", "google drive", "sharepoint", "whatsapp", "web chat", "microsoft teams", "teams", "conectar sistemas"],
+    "triggers": []
+  },
+  {
     "id": "OT1_PRESENTACION",
     "group": "OT",
     "text": "Soy el avatar principal de Humanika.\nEstoy aquí para ayudarte a conocer cómo los colaboradores digitales pueden apoyar a las organizaciones a aprovechar mejor su conocimiento y sus procesos.\n¿Hay algún tema que te gustaría explorar?",
