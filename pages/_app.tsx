@@ -4,8 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { appWithTranslation, useTranslation } from "next-i18next/pages";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { useEffect } from "react";
 
 import { jakarta } from "@/src/config/fonts/fonts";
 import { CookieConsent } from "@/src/shared/components/cookie-consent/CookieConsent";
@@ -23,7 +22,6 @@ import "@/src/styles/globals.css";
 config.autoAddCss = false;
 
 function App({ Component, pageProps }: AppProps) {
-  const [queryClient] = useState(() => new QueryClient());
   const router = useRouter();
   const { t } = useTranslation("common");
   const setIsLoading = useLoaderStore((state) => state.setIsLoading);
@@ -49,22 +47,20 @@ function App({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <div className={`${jakarta.variable} contents`}>
-        <SmoothScroll />
-        <CustomScrollbar />
-        <Header t={t} />
-        <AnimatePresence mode="wait">
-          <motion.div key={router.asPath}>
-            <Component {...pageProps} />
-          </motion.div>
-        </AnimatePresence>
-        <Footer t={t} />
-        <CookieConsent t={t} />
-        <ThemeTransitionOverlay />
-        <Toast t={t} />
-      </div>
-    </QueryClientProvider>
+    <div className={`${jakarta.variable} contents`}>
+      <SmoothScroll />
+      <CustomScrollbar />
+      <Header t={t} />
+      <AnimatePresence mode="wait">
+        <motion.div key={router.asPath}>
+          <Component {...pageProps} />
+        </motion.div>
+      </AnimatePresence>
+      <Footer t={t} />
+      <CookieConsent t={t} />
+      <ThemeTransitionOverlay />
+      <Toast t={t} />
+    </div>
   );
 }
 

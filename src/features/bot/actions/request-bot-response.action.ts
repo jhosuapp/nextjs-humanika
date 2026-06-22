@@ -22,7 +22,7 @@ const requestBotResponse = async ({
   previousScriptId = null,
   history = [],
 }: BotApiPayload): Promise<BotResponse> => {
-  const { data } = await api.post<BotApiResponse>("/bot", {
+  const data = await api.post<BotApiResponse>("/bot", {
     input,
     locale,
     previousScriptId,

@@ -7,7 +7,7 @@ import type {
 const getContactsAction = async (
   params: ContactsQueryInput,
 ): Promise<ContactsResponse> => {
-  const { data } = await api.get<ContactsResponse>("/admin/contacts", {
+  const data = await api.get<ContactsResponse>("/admin/contacts", {
     params,
   });
   return data;
