@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef } from "react";
 
 import {
+  CLOSING_SCRIPT_ID,
   MIN_INPUT_WORDS,
   STATUS_KEYS,
   VIDEOS,
@@ -44,6 +45,9 @@ const useBotEngine = ({ locale }: UseBotEngineOptions) => {
   const stateRef = useRef(state);
   const statusIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const listeningSinceRef = useRef(0);
+  // reset() se declara después de sendToBackend, pero el onEnded del video de
+  // despedida necesita invocarlo; un ref siempre apunta a la versión más reciente.
+  const resetRef = useRef<() => void>(() => {});
 
   useEffect(() => {
     stateRef.current = state;
@@ -116,7 +120,12 @@ const useBotEngine = ({ locale }: UseBotEngineOptions) => {
           loop: false,
           muted: false,
           onEnded: () => {
-            if (stateRef.current === "RESPONDING") {
+            if (stateRef.current !== "RESPONDING") return;
+            // Despedida: al terminar el video de cierre, dejar de escuchar y
+            // reiniciar la conversación (volver a la pantalla inicial).
+            if (response.scriptId === CLOSING_SCRIPT_ID) {
+              resetRef.current();
+            } else {
               setState("LISTENING");
             }
           },
@@ -193,6 +202,10 @@ const useBotEngine = ({ locale }: UseBotEngineOptions) => {
     resetStore();
     setState(micPermission === "granted" ? "IDLE" : "PERMISSION_PENDING");
   }, [clearChat, micPermission, resetStore, setError, setState, speech]);
+
+  useEffect(() => {
+    resetRef.current = reset;
+  }, [reset]);
 
   const inactivity = useInactivityTimer({
     enabled: state !== "PERMISSION_PENDING" && state !== "ERROR",

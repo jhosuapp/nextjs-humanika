@@ -1,3 +1,5 @@
+import { WHATSAPP_URL } from "@/src/config/site";
+
 type UserConfirmationData = { name: string };
 
 type EmailPayload = { subject: string; html: string; text: string };
@@ -78,8 +80,8 @@ export function buildUserConfirmationEmail({
                 <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                   <tr>
                     <td bgcolor="#001643" style="border-radius:10px;">
-                      <a href="${SITE_URL}" target="_blank" style="display:inline-block;padding:14px 28px;font-size:15px;font-weight:600;color:#ffffff;text-decoration:none;border-radius:10px;background:#001643;mso-padding-alt:0;">
-                        Visita 150porciento.ai →
+                      <a href="${WHATSAPP_URL}" target="_blank" style="display:inline-block;padding:14px 28px;font-size:15px;font-weight:600;color:#ffffff;text-decoration:none;border-radius:10px;background:#001643;mso-padding-alt:0;">
+                        Escribir vía WhatsApp
                       </a>
                     </td>
                   </tr>
