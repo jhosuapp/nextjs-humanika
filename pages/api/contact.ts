@@ -74,9 +74,11 @@ async function handler(
         to: trimmed.email,
         ...buildUserConfirmationEmail({ name: trimmed.name }),
       }),
+      // Sin Reply-To: Brevo rechaza (554 5.7.7) los envíos que llevan un dominio
+      // webmail gratuito (gmail, etc.) en el Reply-To. El correo del lead va en el
+      // cuerpo (fila Email + botón "Responder"), así que no se pierde funcionalidad.
       sendMail({
         to: ADMIN_NOTIFICATION_EMAIL,
-        replyTo: trimmed.email,
         ...buildAdminNotificationEmail({ ...trimmed, submittedAt }),
       }),
     ]);

@@ -117,7 +117,7 @@ export function buildAdminNotificationEmail({
                   <tr>
                     <td style="padding:16px 20px;">
                       <p style="margin:0;font-size:13px;line-height:20px;color:#5a6781;mso-line-height-rule:exactly;">
-                        💡 <strong style="color:#001643;">Tip:</strong> al responder este correo, el destinatario será directamente ${safe.email} (Reply-To configurado).
+                        💡 <strong style="color:#001643;">Tip:</strong> para responder al lead, usa el botón de arriba o escríbele directamente a <a href="mailto:${safe.email}" style="color:#00b1d7;text-decoration:none;">${safe.email}</a>.
                       </p>
                     </td>
                   </tr>
