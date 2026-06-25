@@ -47,7 +47,11 @@ export async function sendMail({
   text,
   replyTo,
 }: SendMailArgs) {
-  const fromEmail = process.env.MAIL_FROM_EMAIL ?? "no-reply@150porciento.com";
+  // Temporal: se usa @150porciento.ai (no @150porciento.com) porque el buzón admin
+  // joshua@150porciento.com está en Zoho y rechaza (554 5.7.7) el correo enviado vía
+  // Brevo desde su mismo dominio mientras Brevo no esté en el SPF de .com.
+  // Revertir a @150porciento.com cuando el SPF incluya `include:spf.brevo.com`.
+  const fromEmail = process.env.MAIL_FROM_EMAIL ?? "no-reply@150porciento.ai";
   const fromName = process.env.MAIL_FROM_NAME ?? "150%";
 
   return getMailer().sendMail({
