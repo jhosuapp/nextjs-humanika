@@ -25,5 +25,6 @@
   },
   "status": {
     "loading": "Actualizando resultados…"
-  }
+  },
+  "logout": "Cerrar sesión"
 }

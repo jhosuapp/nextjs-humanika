@@ -1,32 +1,42 @@
 import { useTranslation } from "next-i18next/pages";
 import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
-import type { GetStaticPropsContext } from "next";
+import type { GetServerSidePropsContext } from "next";
 
+import { LoginView } from "@/src/features/login/views/Login.view";
 import { PageLayout } from "@/src/shared/layouts/page-layout/PageLayout";
 import { PageTransition } from "@/src/shared/layouts/pageTransition/PageTransition";
+import { isAuthenticated } from "@/src/shared/libs/session";
 
 export default function Login() {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation("login");
+  const { t: tc } = useTranslation("common");
 
   return (
     <PageLayout
-      title={t("seo.loginTitle") as string}
-      description={t("seo.loginDescription") as string}
+      title={tc("seo.loginTitle") as string}
+      description={tc("seo.loginDescription") as string}
       hasNoIndex
     >
       <PageTransition>
-        <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-        </div>
+        <LoginView t={t} />
       </PageTransition>
     </PageLayout>
   );
 }
 
-export async function getStaticProps({ locale }: GetStaticPropsContext) {
+export async function getServerSideProps({
+  locale,
+  req,
+}: GetServerSidePropsContext) {
+  if (isAuthenticated(req)) {
+    return {
+      redirect: { destination: "/dashboard", permanent: false },
+    };
+  }
+
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? "es", ["common"])),
+      ...(await serverSideTranslations(locale ?? "es", ["common", "login"])),
     },
   };
 }

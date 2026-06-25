@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import type { Prisma } from "@prisma/client";
 
 import { prisma } from "@/src/shared/libs/prisma";
+import { isAuthenticated } from "@/src/shared/libs/session";
 import {
   contactsQueryValidation,
   type ContactsResponse,
@@ -13,6 +14,10 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ContactsResponse | ErrorResponse>,
 ) {
+  if (!isAuthenticated(req)) {
+    return res.status(401).json({ error: "unauthorized" });
+  }
+
   if (req.method !== "GET") {
     res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "method_not_allowed" });

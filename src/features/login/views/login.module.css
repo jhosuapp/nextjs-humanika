@@ -1,0 +1,22 @@
+@reference "tailwindcss";
+
+.login {
+  @apply flex flex-1 items-center mx-auto justify-center min-h-[70vh];
+}
+
+.login__card {
+  @apply flex flex-col w-full max-w-md gap-4 px-6 lg:px-10 py-8 lg:py-12 rounded-2xl shadow-lg;
+  --gl-box-fill: linear-gradient(var(--background), var(--background));
+}
+
+.login__header {
+  @apply flex flex-col gap-2 mb-2;
+}
+
+.login__card button {
+  @apply w-full max-w-full;
+}
+
+.login__wrapper {
+  @apply w-full flex justify-center;
+}

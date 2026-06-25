@@ -1,0 +1,9 @@
+{
+  "title": "Iniciar sesión",
+  "subtitle": "Accede al panel interno de contactos.",
+  "usernameLabel": "Usuario",
+  "usernamePlaceholder": "Tu usuario",
+  "passwordLabel": "Contraseña",
+  "passwordPlaceholder": "Tu contraseña",
+  "cta": "Entrar"
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Sign in",
+  "subtitle": "Access the internal contacts panel.",
+  "usernameLabel": "Username",
+  "usernamePlaceholder": "Your username",
+  "passwordLabel": "Password",
+  "passwordPlaceholder": "Your password",
+  "cta": "Sign in"
+}

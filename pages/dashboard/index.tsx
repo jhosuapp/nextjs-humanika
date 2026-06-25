@@ -7,6 +7,7 @@ import type { ContactsResponse } from "@/src/features/dashboard/validations/cont
 import { PageLayout } from "@/src/shared/layouts/page-layout/PageLayout";
 import { PageTransition } from "@/src/shared/layouts/pageTransition/PageTransition";
 import { prisma } from "@/src/shared/libs/prisma";
+import { isAuthenticated } from "@/src/shared/libs/session";
 
 const PAGE_SIZE = 30;
 
@@ -33,7 +34,14 @@ export default function DashboardPage({ initial }: DashboardPageProps) {
 
 export async function getServerSideProps({
   locale,
+  req,
 }: GetServerSidePropsContext) {
+  if (!isAuthenticated(req)) {
+    return {
+      redirect: { destination: "/login", permanent: false },
+    };
+  }
+
   const [items, total] = await prisma.$transaction([
     prisma.contactForm.findMany({
       orderBy: { createdAt: "desc" },

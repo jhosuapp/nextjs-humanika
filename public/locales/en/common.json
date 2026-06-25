@@ -5,7 +5,9 @@
     "botTitle": "Conversational bot | 150%",
     "botDescription": "Talk to an AI avatar that responds in real time. Natural conversation by voice and chat.",
     "dashboardTitle": "Contacts | 150%",
-    "dashboardDescription": "Internal panel with contacts submitted through the form."
+    "dashboardDescription": "Internal panel with contacts submitted through the form.",
+    "loginTitle": "Sign in | 150%",
+    "loginDescription": "Access to the internal admin panel."
   },
   "cookies": {
     "banner": {
