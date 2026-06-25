@@ -15,3 +15,11 @@ model ContactForm {
   phone_number   String
   createdAt DateTime @default(now())
 }
+
+model AdminUser {
+  id           Int      @id @default(autoincrement())
+  username     String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
