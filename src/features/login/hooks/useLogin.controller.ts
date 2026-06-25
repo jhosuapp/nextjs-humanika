@@ -30,7 +30,6 @@ const useLoginController = () => {
     showToast("loading");
     try {
       await postLoginAction(formData);
-      showToast("success");
       router.push("/dashboard");
     } catch {
       showToast("error");
