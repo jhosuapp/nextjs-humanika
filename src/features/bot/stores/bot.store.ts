@@ -108,7 +108,16 @@ const storeAPI: StateCreator<
 
   // No detenemos los tracks de micStream aquí: su dueño es useSpeechRecognition,
   // que los libera en stop()/cleanupStream(). reset() sólo suelta la referencia.
-  reset: () => set({ ...initialState }, false, 'reset'),
+  //
+  // micPermission NO se reinicia: refleja un permiso otorgado por el navegador,
+  // no estado de conversación. Borrarlo dejaba el bot en PERMISSION_PENDING sin
+  // gate (modo embed) tras la inactividad → pantalla en blanco irrecuperable.
+  reset: () =>
+    set(
+      { ...initialState, micPermission: get().micPermission },
+      false,
+      'reset',
+    ),
 });
 
 const useBotStore = create<BotStoreState & BotStoreActions>()(
