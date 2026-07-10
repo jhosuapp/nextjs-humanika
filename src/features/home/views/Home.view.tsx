@@ -26,7 +26,7 @@ const HomeView = ({ t, tBot }: HomeViewProps): JSX.Element => {
       <MetaPartner />
       <ProcessStepsSection t={t} />
       <IntegrationsGrid t={t} />
-      <CaseStudiesSection t={t} />
+      {/* <CaseStudiesSection t={t} /> */}
       <FaqSection t={t} />
     </MainContent>
   );

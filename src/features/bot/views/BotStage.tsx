@@ -11,9 +11,9 @@ import { VideoStage } from '@/src/features/bot/components/video-stage/VideoStage
 import { VoiceControl } from '@/src/features/bot/components/voice-control/VoiceControl';
 import type { useBotEngine } from '@/src/features/bot/hooks/useBotEngine';
 import { useBotStore } from '@/src/features/bot/stores/bot.store';
+import { BotSpinner } from '../components/bot-spinner/BotSpinner';
 
 import styles from './bot-stage.module.css';
-import { BotSpinner } from '../components/bot-spinner/BotSpinner';
 
 interface Props {
   t: ITranslations;
@@ -50,12 +50,15 @@ const BotStage = ({
         active={engine.videoPlayer.active}
       />
 
-      <div className={styles.toastSlot}>
+      <div className={`${styles.toastSlot} ${styles.toastSlot__center}`}>
         <InactivityWarning
           t={t}
           visible={inactivityWarning}
           onDismiss={() => engine.inactivity.reset()}
         />
+      </div>
+
+      <div className={styles.toastSlot}>
         <AnimatePresence mode="wait">
           {engine.state === 'THINKING' && (
             <motion.div

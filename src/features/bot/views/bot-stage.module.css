@@ -16,6 +16,10 @@
   @apply absolute left-0 right-0 top-6 z-10 flex flex-col gap-2 px-6 pointer-events-none;
 }
 
+.toastSlot__center {
+  @apply bottom-0 top-0 flex items-center justify-center;
+}
+
 .embedded .toastSlot {
   @apply top-3 px-3;
 }

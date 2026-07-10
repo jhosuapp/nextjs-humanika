@@ -9,6 +9,7 @@ import { ITranslations } from '@/src/shared/interfaces/i18n.interface';
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 import styles from './hero-section.module.css';
+import { WHATSAPP_URL } from '@/src/config/site';
 
 type HeroSectionProps = {
   t: ITranslations;
@@ -77,6 +78,7 @@ const HeroSection = ({ t, tbot }: HeroSectionProps):JSX.Element => {
                   style="whatsapp"
                   type="button"
                   iconRight={ faWhatsapp }
+                  redirectTo={WHATSAPP_URL}
                 />
               </div>
             </WrapperMotion>

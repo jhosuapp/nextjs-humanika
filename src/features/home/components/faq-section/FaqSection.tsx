@@ -18,6 +18,7 @@ import { WrapperMotion } from '@/src/shared/components/wrapper-motion/WrapperMot
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 import styles from './faq-section.module.css';
+import { WHATSAPP_URL } from '@/src/config/site';
 
 type Props = { t: ITranslations };
 
@@ -154,6 +155,7 @@ const FaqSection = ({ t }: Props) => {
             style="whatsapp"
             type="button"
             iconRight={ faWhatsapp }
+            redirectTo={WHATSAPP_URL}
           />
         </div>
       </Container>

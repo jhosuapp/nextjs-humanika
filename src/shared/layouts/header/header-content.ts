@@ -23,7 +23,6 @@ const headerStaticData: HeaderStaticData = {
   brand: { name: "150%", mark: "L" },
   nav: [
     { key: "bot", href: "/" },
-    { key: "caseStudies", href: "/casos-de-exito" },
     {
       key: "articles",
       href: "/blog",
