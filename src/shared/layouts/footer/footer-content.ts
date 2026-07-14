@@ -83,7 +83,7 @@ const footerStaticData: FooterStaticData = {
       {
         key: "linkedin",
         name: "LinkedIn",
-        href: "https://www.linkedin.com/company/150porciento/",
+        href: "https://www.linkedin.com/showcase/inteligencia-artificial-empresas-150/",
         icon: faLinkedinIn,
       },
     ],

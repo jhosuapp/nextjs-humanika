@@ -139,11 +139,11 @@ const homeStaticData: HomeStaticData = {
   },
   audience: {
     tabs: [
-      { key: "training", image: "/images/formacion-empresarial.jpg" },
-      { key: "knowledge", image: "/images/contociento-organizacional.jpg" },
-      { key: "service", image: "/images/servicio-y-soporte.jpg" },
-      { key: "sales", image: "/images/ventas-y-crecimiento.jpg" },
-      { key: "operations", image: "/images/productividad-y-opetaciones.jpg" },
+      { key: "training", image: "/images/bg-article-1.jpeg" },
+      { key: "knowledge", image: "/images/bg-article-2.jpeg" },
+      { key: "service", image: "/images/bg-article-3.jpeg" },
+      { key: "sales", image: "/images/bg-article-4.jpeg" },
+      { key: "operations", image: "/images/bg-article-5.jpeg" },
     ],
   },
   process: {
