@@ -71,3 +71,7 @@
 .ctas {
   @apply flex w-full flex-col gap-2;
 }
+
+.ctas button {
+  @apply sm:w-fit w-full;
+}

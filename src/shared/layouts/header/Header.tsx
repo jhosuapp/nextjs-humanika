@@ -3,6 +3,8 @@ import { useCallback, useEffect, useState } from 'react';
 
 import { DURATION, EASE } from '@/src/shared/helpers/motion-variants';
 import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
+import { SCHEDULER_URL } from '@/src/config/site';
+import { Button } from '@/src/shared/components/button/Button';
 
 import { headerStaticData } from './header-content';
 import { HeaderBrand } from './header-brand/HeaderBrand';
@@ -60,6 +62,14 @@ const Header = ({ t }: HeaderProps) => {
         </nav>
 
         <div className={styles.actions}>
+          <div className={styles.ctas}>
+            <Button
+              text={t('header.scheduleConsulting') as string}
+              style="primary"
+              type="button"
+              redirectTo={SCHEDULER_URL}
+            />
+          </div>
           <MobileMenu
             open={menuOpen}
             onClose={closeMenu}

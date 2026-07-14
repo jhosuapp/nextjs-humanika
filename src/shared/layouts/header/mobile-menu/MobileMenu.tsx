@@ -11,6 +11,8 @@ import { useEffect, useId, useState } from 'react';
 
 import { DURATION, EASE } from '@/src/shared/helpers/motion-variants';
 import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
+import { SCHEDULER_URL } from '@/src/config/site';
+import { Button } from '@/src/shared/components/button/Button';
 import { HeaderNavList } from '../header-nav-list/HeaderNavList';
 
 import styles from './mobile-menu.module.css';
@@ -162,6 +164,13 @@ const MobileMenu = ({ open, onClose, onToggle, t, translatedNav }: MobileMenuPro
                 <motion.div className={styles.divider} variants={groupVariants} aria-hidden="true" />
 
                 <motion.div className={styles.ctas} variants={groupVariants}>
+                  <Button
+                    text={t('header.scheduleConsulting') as string}
+                    style="primary"
+                    type="button"
+                    redirectTo={SCHEDULER_URL}
+                    onClick={onClose}
+                  />
                 </motion.div>
               </motion.div>
             </>
