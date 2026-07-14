@@ -116,7 +116,7 @@ export function buildUserConfirmationEmail({
                 <p style="margin:0 0 6px 0;font-size:13px;line-height:20px;color:#aab6d3;mso-line-height-rule:exactly;">
                   <a href="${SITE_URL}" style="color:#17f1d1;text-decoration:none;">humanika.co</a>
                   &nbsp;·&nbsp;
-                  <a href="mailto:contacto@150porciento.com" style="color:#17f1d1;text-decoration:none;">contacto@150porciento.com</a>
+                  <a href="mailto:valerio@150porciento.com" style="color:#17f1d1;text-decoration:none;">valerio@150porciento.com</a>
                 </p>
                 <p style="margin:0;font-size:12px;line-height:18px;color:#aab6d3;mso-line-height-rule:exactly;">
                   © 2026 Humanika, una iniciativa de 150 Por Ciento. Todos los derechos reservados.
