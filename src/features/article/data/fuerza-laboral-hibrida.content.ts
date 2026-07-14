@@ -4,7 +4,7 @@ import type { ArticleContent } from "@/src/features/article/types/article.types"
 // resolved from public/locales/<locale>/fuerza-laboral-hibrida.json at render time.
 const fuerzaLaboralHibridaContent: ArticleContent = {
   blocks: [
-    { type: "hero", image: "/images/bg-update.jpg" },
+    { type: "hero", image: "/images/bg-article-4.jpeg" },
 
     { type: "quote", key: "intro.quote" },
 

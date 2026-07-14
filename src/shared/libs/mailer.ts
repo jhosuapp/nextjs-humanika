@@ -51,7 +51,7 @@ export async function sendMail({
   // joshua@150porciento.com está en Zoho y rechaza (554 5.7.7) el correo enviado vía
   // Brevo desde su mismo dominio mientras Brevo no esté en el SPF de .com.
   // Revertir a @150porciento.com cuando el SPF incluya `include:spf.brevo.com`.
-  const fromEmail = process.env.MAIL_FROM_EMAIL ?? "no-reply@150porciento.ai";
+  const fromEmail = process.env.MAIL_FROM_EMAIL ?? "no-reply@humanika.co";
   const fromName = process.env.MAIL_FROM_NAME ?? "150%";
 
   return getMailer().sendMail({

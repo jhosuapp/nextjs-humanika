@@ -10,7 +10,7 @@ import type { ArticleContent } from "@/src/features/article/types/article.types"
 // resolved from public/locales/<locale>/colaboradores-digitales.json at render time.
 const colaboradoresDigitalesContent: ArticleContent = {
   blocks: [
-    { type: "hero", image: "/images/bg-update.jpg" },
+    { type: "hero", image: "/images/bg-article-2.jpeg" },
 
     { type: "quote", key: "intro.quote" },
 
@@ -94,7 +94,12 @@ const colaboradoresDigitalesContent: ArticleContent = {
       ],
     },
 
-    { type: "comparison", key: "comparison", id: "comparacion", nav: "toc.comparacion" },
+    {
+      type: "comparison",
+      key: "comparison",
+      id: "comparacion",
+      nav: "toc.comparacion",
+    },
 
     {
       type: "section",

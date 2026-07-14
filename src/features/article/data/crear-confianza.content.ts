@@ -13,7 +13,7 @@ import type { ArticleContent } from "@/src/features/article/types/article.types"
 // from public/locales/<locale>/crear-confianza.json at render time.
 const crearConfianzaContent: ArticleContent = {
   blocks: [
-    { type: "hero", image: "/images/bg-update.jpg" },
+    { type: "hero", image: "/images/bg-article-3.jpeg" },
 
     {
       type: "section",

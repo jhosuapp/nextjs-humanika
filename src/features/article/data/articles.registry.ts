@@ -36,25 +36,25 @@ const articlesRegistry: ReadonlyArray<ArticleEntry> = [
   {
     slug: "agentes-ia-empresas",
     content: agentesIaEmpresasContent,
-    cover: "/images/bg-update.jpg",
+    cover: "/images/bg-article-1.jpeg",
     publishedAt: "2026-06-16",
   },
   {
     slug: "colaboradores-digitales",
     content: colaboradoresDigitalesContent,
-    cover: "/images/bg-update.jpg",
+    cover: "/images/bg-article-2.jpeg",
     publishedAt: "2026-06-16",
   },
   {
     slug: "fuerza-laboral-hibrida",
     content: fuerzaLaboralHibridaContent,
-    cover: "/images/bg-update.jpg",
+    cover: "/images/bg-article-3.jpeg",
     publishedAt: "2026-06-09",
   },
   {
     slug: "crear-confianza",
     content: crearConfianzaContent,
-    cover: "/images/bg-update.jpg",
+    cover: "/images/bg-article-4.jpeg",
     publishedAt: "2026-06-08",
   },
 ];

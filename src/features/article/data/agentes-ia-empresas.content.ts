@@ -10,7 +10,7 @@ import type { ArticleContent } from "@/src/features/article/types/article.types"
 // is resolved from public/locales/<locale>/agentes-ia-empresas.json at render time.
 const agentesIaEmpresasContent: ArticleContent = {
   blocks: [
-    { type: "hero", image: "/images/bg-update.jpg" },
+    { type: "hero", image: "/images/bg-article-1.jpeg" },
 
     { type: "quote", key: "intro.quote" },
 

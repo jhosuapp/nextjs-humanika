@@ -6,7 +6,7 @@ type EmailPayload = { subject: string; html: string; text: string };
 
 const LOGO_URL =
   "https://150porciento.com/wp-content/themes/150Theme/img/logo.svg";
-const SITE_URL = "https://150porciento.ai";
+const SITE_URL = "https://humanika.co";
 
 export function buildUserConfirmationEmail({
   name,
@@ -114,7 +114,7 @@ export function buildUserConfirmationEmail({
             <tr>
               <td style="background:#001643;padding:24px 32px;" align="center">
                 <p style="margin:0 0 6px 0;font-size:13px;line-height:20px;color:#aab6d3;mso-line-height-rule:exactly;">
-                  <a href="${SITE_URL}" style="color:#17f1d1;text-decoration:none;">150porciento.ai</a>
+                  <a href="${SITE_URL}" style="color:#17f1d1;text-decoration:none;">humanika.co</a>
                   &nbsp;·&nbsp;
                   <a href="mailto:contacto@150porciento.com" style="color:#17f1d1;text-decoration:none;">contacto@150porciento.com</a>
                 </p>
@@ -125,7 +125,7 @@ export function buildUserConfirmationEmail({
             </tr>
           </table>
           <p style="margin:16px 0 0 0;font-size:11px;line-height:16px;color:#5a6781;">
-            Recibiste este correo porque registraste una solicitud en 150porciento.ai.
+            Recibiste este correo porque registraste una solicitud en humanika.co.
           </p>
         </td>
       </tr>
