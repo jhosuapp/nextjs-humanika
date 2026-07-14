@@ -1,6 +1,29 @@
 export const SITE_URL = "https://humanika.co";
-export const SITE_NAME = "150%";
-export const SITE_OG_IMAGE = `${SITE_URL}/images/og-image.png`;
+
+// Marca pública del sitio (usada en <title>, og:site_name y schema).
+export const SITE_NAME = "Humanika";
+// Organización matriz: Humanika es una iniciativa de 150 Por Ciento.
+export const SITE_PARENT_ORG = "150 Por Ciento";
+
+// Descripción general del sitio — se usa como base del schema Organization y
+// como referencia para las metadescripciones. Redactada de forma factual y
+// autocontenida para posicionar en buscadores y en motores generativos (GEO).
+export const SITE_DESCRIPTION =
+  "Humanika diseña e implementa colaboradores digitales de inteligencia artificial —en web, WhatsApp, voz y humanos digitales— conectados al conocimiento, los sistemas y los procesos de tu organización para atender, capacitar y operar mejor.";
+
+// Imagen para Open Graph / Twitter Card (previsualización al compartir).
+export const SITE_OG_IMAGE = `${SITE_URL}/images/humanika.jpeg`;
+export const SITE_OG_IMAGE_WIDTH = 1600;
+export const SITE_OG_IMAGE_HEIGHT = 1600;
+export const SITE_OG_IMAGE_TYPE = "image/jpeg";
+
+// Logo raster para el schema Organization (rich results de Google).
+export const SITE_LOGO = `${SITE_URL}/images/logo-humanika.png`;
+
+// Presencia social (schema `sameAs`).
+export const SITE_LINKEDIN =
+  "https://www.linkedin.com/showcase/inteligencia-artificial-empresas-150/";
+
 export const ADMIN_NOTIFICATION_EMAIL = "valerio@150porciento.com";
 
 // Número de WhatsApp del negocio (formato internacional sin "+").

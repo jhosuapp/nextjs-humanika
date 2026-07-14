@@ -1,13 +1,13 @@
 {
   "seo": {
-    "homeTitle": "Home | 150%",
-    "homeDescription": "Smart avatars for web, WhatsApp, training, sales and BTL experiences.",
-    "botTitle": "Conversational bot | 150%",
-    "botDescription": "Talk to an AI avatar that responds in real time. Natural conversation by voice and chat.",
-    "dashboardTitle": "Contacts | 150%",
+    "homeTitle": "AI Digital Coworkers for Companies | Humanika",
+    "homeDescription": "Humanika builds AI digital coworkers across web, WhatsApp, voice and digital humans, connected to your organization's knowledge and processes.",
+    "botTitle": "Real-Time Conversational AI Avatar | Humanika",
+    "botDescription": "Talk with a Humanika AI avatar that responds in real time by voice and chat, with natural conversation connected to your company's knowledge.",
+    "dashboardTitle": "Contacts | Humanika",
     "dashboardDescription": "Internal panel with contacts submitted through the form.",
-    "loginTitle": "Sign in | 150%",
-    "loginDescription": "Access to the internal admin panel."
+    "loginTitle": "Sign in | Humanika",
+    "loginDescription": "Access to Humanika's internal admin panel."
   },
   "cookies": {
     "banner": {
