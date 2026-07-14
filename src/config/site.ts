@@ -12,9 +12,10 @@ export const SITE_DESCRIPTION =
   "Humanika diseña e implementa colaboradores digitales de inteligencia artificial —en web, WhatsApp, voz y humanos digitales— conectados al conocimiento, los sistemas y los procesos de tu organización para atender, capacitar y operar mejor.";
 
 // Imagen para Open Graph / Twitter Card (previsualización al compartir).
-export const SITE_OG_IMAGE = `${SITE_URL}/images/humanika.jpeg`;
-export const SITE_OG_IMAGE_WIDTH = 1600;
-export const SITE_OG_IMAGE_HEIGHT = 1600;
+// Formato 1200×630 (1.91:1), el óptimo para LinkedIn/Facebook/X sin recortes.
+export const SITE_OG_IMAGE = `${SITE_URL}/images/humanika-og.jpeg`;
+export const SITE_OG_IMAGE_WIDTH = 1200;
+export const SITE_OG_IMAGE_HEIGHT = 630;
 export const SITE_OG_IMAGE_TYPE = "image/jpeg";
 
 // Logo raster para el schema Organization (rich results de Google).
