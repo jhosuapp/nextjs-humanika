@@ -1,3 +1,8 @@
+import {
+  EMAIL_LOGO_CID,
+  humanikaLogoAttachment,
+} from "@/src/shared/emails/email-logo";
+
 type AdminNotificationData = {
   name: string;
   company: string;
@@ -6,10 +11,12 @@ type AdminNotificationData = {
   submittedAt: Date;
 };
 
-type EmailPayload = { subject: string; html: string; text: string };
-
-const LOGO_URL =
-  "https://150porciento.com/wp-content/themes/150Theme/img/logo-white-update.svg";
+type EmailPayload = {
+  subject: string;
+  html: string;
+  text: string;
+  attachments: ReturnType<typeof humanikaLogoAttachment>[];
+};
 
 export function buildAdminNotificationEmail({
   name,
@@ -40,14 +47,17 @@ export function buildAdminNotificationEmail({
     `Responder: mailto:${email}`,
   ].join("\n");
 
-  // NOTE: el logo viene en SVG. Gmail/Outlook no renderizan SVG inline en <img>.
-  // Si tras el primer envío real se ve roto, reemplazar LOGO_URL por un PNG ~600px.
   const html = `<!doctype html>
 <html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="x-apple-disable-message-reformatting" />
+    <meta name="color-scheme" content="light" />
+    <meta name="supported-color-schemes" content="light" />
+    <style>
+      :root { color-scheme: light; supported-color-schemes: light; }
+    </style>
     <title>${escapeHtml(subject)}</title>
   </head>
   <body style="margin:0;padding:0;background:#f6f8fc;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#0b1024;">
@@ -63,7 +73,7 @@ export function buildAdminNotificationEmail({
                 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                   <tr>
                     <td align="left" valign="middle">
-                      <img src="${LOGO_URL}" alt="150%" width="100" height="auto" style="display:block;border:0;outline:none;max-width:100px;height:auto;filter:brightness(0) invert(1);" />
+                      <img src="cid:${EMAIL_LOGO_CID}" alt="Humanika" width="160" height="18" style="display:block;border:0;outline:none;width:160px;max-width:160px;height:auto;" />
                     </td>
                     <td align="right" valign="middle">
                       <span style="display:inline-block;padding:6px 12px;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#001643;background:#17f1d1;border-radius:999px;">
@@ -138,7 +148,12 @@ export function buildAdminNotificationEmail({
   </body>
 </html>`;
 
-  return { subject, html, text };
+  return {
+    subject,
+    html,
+    text,
+    attachments: [humanikaLogoAttachment("white")],
+  };
 }
 
 function dataRow(label: string, value: string, withBorder: boolean): string {

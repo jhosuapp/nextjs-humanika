@@ -27,6 +27,16 @@ export default class MyDocument extends Document<Props> {
           <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
         </Head>
         <body className="min-h-dvh flex flex-col">
+          {/* Google Tag Manager (noscript) — fallback sin JS. El script principal
+              lo inyecta <GoogleTagManager> en _app.tsx. */}
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-T99QFB7B"
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
           <Main />
           <NextScript />
         </body>

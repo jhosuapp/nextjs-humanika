@@ -1,11 +1,18 @@
 import { WHATSAPP_URL } from "@/src/config/site";
+import {
+  EMAIL_LOGO_CID,
+  humanikaLogoAttachment,
+} from "@/src/shared/emails/email-logo";
 
 type UserConfirmationData = { name: string };
 
-type EmailPayload = { subject: string; html: string; text: string };
+type EmailPayload = {
+  subject: string;
+  html: string;
+  text: string;
+  attachments: ReturnType<typeof humanikaLogoAttachment>[];
+};
 
-const LOGO_URL =
-  "https://150porciento.com/wp-content/themes/150Theme/img/logo.svg";
 const SITE_URL = "https://humanika.co";
 
 export function buildUserConfirmationEmail({
@@ -29,14 +36,17 @@ export function buildUserConfirmationEmail({
     "© 2026 Humanika, una iniciativa de 150 Por Ciento. Todos los derechos reservados.",
   ].join("\n");
 
-  // NOTE: el logo viene en SVG. Gmail/Outlook no renderizan SVG inline en <img>.
-  // Si tras el primer envío real se ve roto, reemplazar LOGO_URL por un PNG ~600px.
   const html = `<!doctype html>
 <html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="x-apple-disable-message-reformatting" />
+    <meta name="color-scheme" content="light" />
+    <meta name="supported-color-schemes" content="light" />
+    <style>
+      :root { color-scheme: light; supported-color-schemes: light; }
+    </style>
     <title>${escapeHtml(subject)}</title>
   </head>
   <body style="margin:0;padding:0;background:#f6f8fc;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#0b1024;">
@@ -49,7 +59,7 @@ export function buildUserConfirmationEmail({
           <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 1px 2px rgba(11,16,36,0.04),0 8px 32px -16px rgba(11,16,36,0.12);">
             <tr>
               <td style="padding:28px 32px 20px 32px;background:#ffffff;" align="left">
-                <img src="${LOGO_URL}" alt="150%" width="120" height="auto" style="display:block;border:0;outline:none;max-width:120px;height:auto;" />
+                <img src="cid:${EMAIL_LOGO_CID}" alt="Humanika by 150%" width="180" height="21" style="display:block;border:0;outline:none;width:180px;max-width:180px;height:auto;" />
               </td>
             </tr>
             <tr>
@@ -133,7 +143,12 @@ export function buildUserConfirmationEmail({
   </body>
 </html>`;
 
-  return { subject, html, text };
+  return {
+    subject,
+    html,
+    text,
+    attachments: [humanikaLogoAttachment("color")],
+  };
 }
 
 function escapeHtml(value: string): string {

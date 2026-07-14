@@ -1,4 +1,7 @@
-import nodemailer, { type Transporter } from "nodemailer";
+import nodemailer, {
+  type SendMailOptions,
+  type Transporter,
+} from "nodemailer";
 
 const globalForMailer = globalThis as unknown as {
   mailer: Transporter | undefined;
@@ -38,6 +41,7 @@ type SendMailArgs = {
   html: string;
   text: string;
   replyTo?: string;
+  attachments?: SendMailOptions["attachments"];
 };
 
 export async function sendMail({
@@ -46,6 +50,7 @@ export async function sendMail({
   html,
   text,
   replyTo,
+  attachments,
 }: SendMailArgs) {
   // Temporal: se usa @150porciento.ai (no @150porciento.com) porque el buzón admin
   // joshua@150porciento.com está en Zoho y rechaza (554 5.7.7) el correo enviado vía
@@ -61,5 +66,6 @@ export async function sendMail({
     html,
     text,
     ...(replyTo ? { replyTo } : {}),
+    ...(attachments ? { attachments } : {}),
   });
 }

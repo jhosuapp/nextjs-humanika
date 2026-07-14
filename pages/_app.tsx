@@ -1,5 +1,6 @@
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import { GoogleTagManager } from "@next/third-parties/google";
 import { AnimatePresence, motion } from "framer-motion";
 import { appWithTranslation, useTranslation } from "next-i18next/pages";
 import type { AppProps } from "next/app";
@@ -60,6 +61,7 @@ function App({ Component, pageProps }: AppProps) {
       <CookieConsent t={t} />
       <ThemeTransitionOverlay />
       <Toast t={t} />
+      <GoogleTagManager gtmId="GTM-T99QFB7B" />
     </div>
   );
 }
