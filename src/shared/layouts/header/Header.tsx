@@ -65,7 +65,7 @@ const Header = ({ t }: HeaderProps) => {
           <div className={styles.ctas}>
             <Button
               text={t('header.scheduleConsulting') as string}
-              style="primary"
+              style="fit"
               type="button"
               redirectTo={SCHEDULER_URL}
             />

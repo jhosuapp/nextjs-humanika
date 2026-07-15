@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { appWithTranslation, useTranslation } from "next-i18next/pages";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
+import Script from "next/script";
 import { useEffect } from "react";
 
 import { jakarta } from "@/src/config/fonts/fonts";
@@ -62,6 +63,23 @@ function App({ Component, pageProps }: AppProps) {
       <ThemeTransitionOverlay />
       <Toast t={t} />
       <GoogleTagManager gtmId="GTM-T99QFB7B" />
+
+      <Script
+        id="google-ads-gtag"
+        src="https://www.googletagmanager.com/gtag/js?id=AW-18323529905"
+        strategy="afterInteractive"
+      />
+      <Script id="google-ads-conversion" strategy="afterInteractive">
+        {`window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-18323529905');
+        gtag('event', 'conversion', {
+          send_to: 'AW-18323529905/2vOkCI2psdAcELHBq6FE',
+          value: 1.0,
+          currency: 'COP'
+        });`}
+      </Script>
     </div>
   );
 }
