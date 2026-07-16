@@ -7,7 +7,7 @@ import {
   contactFormValidation,
 } from "../validations/contact-form.validation";
 import { useToastStore } from "@/src/shared/stores/toast.store";
-import { useEffect } from "react";
+import { pushDataLayer } from "@/src/shared/helpers/data-layer";
 
 const useContactFormController = () => {
   const mutation = useContactFormMutation();
@@ -39,7 +39,14 @@ const useContactFormController = () => {
         phone_number: `${formData.phone_extension} ${formData.phone_number}`,
       });
       showToast("success");
-      reset({ name: "", company: "", email: "", phone_number: "", phone_extension: "" });
+      pushDataLayer({ event: "form_submit_success" });
+      reset({
+        name: "",
+        company: "",
+        email: "",
+        phone_number: "",
+        phone_extension: "",
+      });
     } catch {
       showToast("error");
     }

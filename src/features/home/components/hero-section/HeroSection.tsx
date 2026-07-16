@@ -10,6 +10,7 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 import styles from './hero-section.module.css';
 import { WHATSAPP_URL } from '@/src/config/site';
+import { pushDataLayer } from '@/src/shared/helpers/data-layer';
 
 type HeroSectionProps = {
   t: ITranslations;
@@ -79,6 +80,7 @@ const HeroSection = ({ t, tbot }: HeroSectionProps):JSX.Element => {
                   type="button"
                   iconRight={ faWhatsapp }
                   redirectTo={WHATSAPP_URL}
+                  onClick={() => pushDataLayer({ event: 'whatsapp_click' })}
                 />
               </div>
             </WrapperMotion>

@@ -5,6 +5,7 @@ import { DURATION, EASE } from '@/src/shared/helpers/motion-variants';
 import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
 import { SCHEDULER_URL } from '@/src/config/site';
 import { Button } from '@/src/shared/components/button/Button';
+import { pushDataLayer } from '@/src/shared/helpers/data-layer';
 
 import { headerStaticData } from './header-content';
 import { HeaderBrand } from './header-brand/HeaderBrand';
@@ -68,6 +69,7 @@ const Header = ({ t }: HeaderProps) => {
               style="fit"
               type="button"
               redirectTo={SCHEDULER_URL}
+              onClick={() => pushDataLayer({ event: 'schedule_click' })}
             />
           </div>
           <MobileMenu

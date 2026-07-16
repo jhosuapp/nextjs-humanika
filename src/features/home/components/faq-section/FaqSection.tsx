@@ -15,6 +15,7 @@ import { Text } from '@/src/shared/components/text/Text';
 import { Container } from '../container/Container';
 import { SectionHeader } from '@/src/shared/components/section-header/SectionHeader';
 import { WrapperMotion } from '@/src/shared/components/wrapper-motion/WrapperMotion';
+import { pushDataLayer } from '@/src/shared/helpers/data-layer';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 import styles from './faq-section.module.css';
@@ -156,6 +157,7 @@ const FaqSection = ({ t }: Props) => {
             type="button"
             iconRight={ faWhatsapp }
             redirectTo={WHATSAPP_URL}
+            onClick={() => pushDataLayer({ event: 'whatsapp_click' })}
           />
         </div>
       </Container>

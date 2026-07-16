@@ -6,14 +6,17 @@ import { Text } from '@/src/shared/components/text/Text';
 import { Button } from '@/src/shared/components/button/Button';
 import { Reveal } from '@/src/features/article/components/reveal/Reveal';
 import { WHATSAPP_URL } from '@/src/config/site';
+import { pushDataLayer } from '@/src/shared/helpers/data-layer';
 
 import styles from './article-cta.module.css';
 
 type ArticleCtaProps = { t: ITranslations; tKey?: string };
 
 const ArticleCta = ({ t, tKey = 'cta' }: ArticleCtaProps): JSX.Element => {
-  const openWhatsApp = () =>
+  const openWhatsApp = () => {
+    pushDataLayer({ event: 'whatsapp_click' });
     window.open(WHATSAPP_URL, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <div className={styles.inner}>

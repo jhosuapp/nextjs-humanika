@@ -13,6 +13,7 @@ import { DURATION, EASE } from '@/src/shared/helpers/motion-variants';
 import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
 import { SCHEDULER_URL } from '@/src/config/site';
 import { Button } from '@/src/shared/components/button/Button';
+import { pushDataLayer } from '@/src/shared/helpers/data-layer';
 import { HeaderNavList } from '../header-nav-list/HeaderNavList';
 
 import styles from './mobile-menu.module.css';
@@ -169,7 +170,10 @@ const MobileMenu = ({ open, onClose, onToggle, t, translatedNav }: MobileMenuPro
                     style="primary"
                     type="button"
                     redirectTo={SCHEDULER_URL}
-                    onClick={onClose}
+                    onClick={() => {
+                      pushDataLayer({ event: 'schedule_click' });
+                      onClose();
+                    }}
                   />
                 </motion.div>
               </motion.div>
