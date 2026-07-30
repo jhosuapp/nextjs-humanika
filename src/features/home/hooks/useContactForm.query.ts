@@ -1,14 +1,16 @@
 import { useState } from "react";
 
-import { postContactFormAction } from "../actions/post-contact-form";
-import type { ContactFormInterface } from "../validations/contact-form.validation";
+import {
+  postContactFormAction,
+  type ContactFormPayload,
+} from "../actions/post-contact-form";
 
 type Status = "idle" | "pending" | "success" | "error";
 
 const useContactFormMutation = () => {
   const [status, setStatus] = useState<Status>("idle");
 
-  const mutateAsync = async (body: ContactFormInterface) => {
+  const mutateAsync = async (body: ContactFormPayload) => {
     setStatus("pending");
     try {
       const data = await postContactFormAction(body);

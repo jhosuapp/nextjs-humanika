@@ -1,12 +1,21 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { prisma } from "@/src/shared/libs/prisma";
 import { withRateLimit } from "@/src/shared/libs/rate-limit";
+import { verifyRecaptcha } from "@/src/shared/libs/recaptcha";
 import { sendMail } from "@/src/shared/libs/mailer";
 import { buildUserConfirmationEmail } from "@/src/shared/emails/contact-user-confirmation.template";
 import { buildAdminNotificationEmail } from "@/src/shared/emails/contact-admin-notification.template";
 import { ADMIN_NOTIFICATION_EMAIL, SITE_URL } from "@/src/config/site";
 
-type ContactResponse = { success: true } | { error: string };
+type ContactError =
+  | "method_not_allowed"
+  | "invalid_field_types"
+  | "missing_required_fields"
+  | "captcha_missing"
+  | "captcha_failed"
+  | "internal_server_error";
+
+type ContactResponse = { success: true } | { error: ContactError };
 
 const ALLOWED_ORIGINS =
   process.env.NODE_ENV === "production"
@@ -38,7 +47,8 @@ async function handler(
     return res.status(405).json({ error: "method_not_allowed" });
   }
 
-  const { name, company, email, phone_number } = req.body ?? {};
+  const { name, company, email, phone_number, recaptcha_token } =
+    req.body ?? {};
 
   if (
     typeof name !== "string" ||
@@ -63,6 +73,24 @@ async function handler(
     !trimmed.phone_number
   ) {
     return res.status(400).json({ error: "missing_required_fields" });
+  }
+
+  if (typeof recaptcha_token !== "string" || !recaptcha_token.trim()) {
+    return res.status(400).json({ error: "captcha_missing" });
+  }
+
+  const clientIp =
+    (req.headers["x-real-ip"] as string) ||
+    (req.headers["x-forwarded-for"] as string)?.split(",")[0].trim();
+
+  const captcha = await verifyRecaptcha(recaptcha_token, {
+    action: "contact_form",
+    ip: clientIp,
+  });
+
+  if (!captcha.ok) {
+    console.warn("[contact] captcha rechazado:", captcha.reason);
+    return res.status(403).json({ error: "captcha_failed" });
   }
 
   try {

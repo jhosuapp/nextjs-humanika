@@ -1,8 +1,10 @@
 import { api } from "@/src/shared/api/index.api";
 import { ContactFormInterface } from "../validations/contact-form.validation";
 
+type ContactFormPayload = ContactFormInterface & { recaptcha_token: string };
+
 const postContactFormAction = async (
-  body: ContactFormInterface,
+  body: ContactFormPayload,
 ): Promise<{ success?: boolean; error?: string }> => {
   const data = await api.post<{ success?: boolean; error?: string }>(
     "/contact",
@@ -13,3 +15,4 @@ const postContactFormAction = async (
 };
 
 export { postContactFormAction };
+export type { ContactFormPayload };
