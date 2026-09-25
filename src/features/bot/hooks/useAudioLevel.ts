@@ -65,7 +65,12 @@ const useAudioLevel = ({ enabled }: UseAudioLevelOptions): MotionValue<number> =
           mediaStream = sharedStream;
         } else if (hasNativeSpeech()) {
           // Desktop: el reconocimiento nativo no comparte stream → abrimos el propio.
-          mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+          // Sólo mide nivel: sin cancelación de eco ni supresión. Con ellas Chrome
+          // pasa el audio a «modo llamada» y baja lo que suena por los parlantes;
+          // al cerrar el micrófono el volumen vuelve de golpe y el clip se traba.
+          mediaStream = await navigator.mediaDevices.getUserMedia({
+            audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false },
+          });
           ownsStream = true;
         } else {
           // Móvil: esperar el stream compartido por Whisper (el efecto se re-ejecuta

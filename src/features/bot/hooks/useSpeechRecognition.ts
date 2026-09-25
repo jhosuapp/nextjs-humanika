@@ -6,7 +6,11 @@ type SpeechResultCallback = (transcript: string, isFinal: boolean) => void;
 
 interface UseSpeechRecognitionResult {
   start: () => Promise<void>;
-  stop: () => void;
+  /**
+   * Cierra el micrófono. La promesa se resuelve cuando el navegador lo ha
+   * soltado de verdad (evento `end` del reconocimiento nativo), no al pedirlo.
+   */
+  stop: () => Promise<void>;
   isListening: boolean;
   error: string | null;
   engine: 'native' | 'whisper' | null;
@@ -61,9 +65,29 @@ const WHISPER_CHUNK_MS = 4000;
 // Detección de silencio (VAD): se corta la grabación cuando el usuario deja de
 // hablar, para enviar a Whisper de inmediato en lugar de esperar bloques fijos.
 const SILENCE_MS = 900; // silencio sostenido que cierra el turno
-const VAD_NOISE_FLOOR = 0.025; // RMS por debajo del cual se considera silencio
-const MIN_SPEECH_MS = 300; // duración mínima antes de poder cortar
+const VAD_NOISE_FLOOR = 0.025; // RMS por debajo del cual siempre es silencio
+// Con el ruido de un stand el RMS de fondo supera el umbral fijo: el turno nunca
+// «callaba» y se mandaban 12 s de ruido con la pregunta enterrada dentro. Se
+// estima el ruido ambiente y cuenta como voz lo que lo supera en esta proporción.
+const VAD_NOISE_RATIO = 2.5;
+// El ruido estimado baja rápido (en cuanto hay calma) y sube muy despacio, para
+// que una frase larga no acabe tomándose por ruido de fondo a mitad de turno.
+const VAD_NOISE_FALL = 0.2;
+const VAD_NOISE_RISE = 0.001;
+// Duración mínima de cada grabación antes de poder cortarla. Un «sí» suelto
+// daba un audio tan corto que OpenAI lo rechazaba (400) y la confirmación del
+// registro no se oía; con este margen la palabra va siempre acompañada.
+const MIN_RECORDING_MS = 1500;
 const MAX_UTTERANCE_MS = 12000; // tope de seguridad por turno
+
+/** Extensión que le dice a OpenAI en qué formato viene el audio grabado. */
+const audioFilename = (mimeType: string): string => {
+  if (mimeType.includes('mp4')) return 'speech.mp4';
+  if (mimeType.includes('ogg')) return 'speech.ogg';
+  return 'speech.webm';
+};
+// Si el reconocimiento nativo no dispara `end` tras abortar, se da por cerrado.
+const NATIVE_STOP_TIMEOUT_MS = 1500;
 
 const useSpeechRecognition = ({
   locale = 'es',
@@ -81,6 +105,9 @@ const useSpeechRecognition = ({
   const vadRafRef = useRef<number | null>(null);
   const vadCtxRef = useRef<AudioContext | null>(null);
   const onResultRef = useRef<SpeechResultCallback | undefined>(onResult);
+  // Se conserva entre turnos y entre aperturas del micrófono: el ruido del stand
+  // no cambia porque el avatar haya hablado.
+  const noiseLevelRef = useRef(VAD_NOISE_FLOOR);
   const localeRef = useRef(locale);
 
   useEffect(() => {
@@ -105,22 +132,36 @@ const useSpeechRecognition = ({
     setMicStream(null);
   }, [setMicStream]);
 
-  const stop = useCallback(() => {
+  const stop = useCallback((): Promise<void> => {
     const rec = recognitionRef.current;
+    // Soltar la referencia ANTES de abortar: el onend de startNative sólo
+    // reinicia si la instancia sigue siendo la actual.
+    recognitionRef.current = null;
+    let closed: Promise<void> = Promise.resolve();
     if (rec) {
-      // Detach handlers BEFORE abort() so the onend auto-restart doesn't fire
       rec.onresult = null;
       rec.onerror = null;
-      rec.onend = null;
-      rec.abort();
+      closed = new Promise<void>((resolve) => {
+        const timer = setTimeout(resolve, NATIVE_STOP_TIMEOUT_MS);
+        rec.onend = () => {
+          clearTimeout(timer);
+          rec.onend = null;
+          resolve();
+        };
+      });
+      try {
+        rec.abort();
+      } catch {
+        /* ya estaba parado */
+      }
     }
-    recognitionRef.current = null;
     if (mediaRecorderRef.current?.state === 'recording') {
       mediaRecorderRef.current.stop();
     }
     mediaRecorderRef.current = null;
     cleanupStream();
     setIsListening(false);
+    return closed;
   }, [cleanupStream]);
 
   const startWhisper = useCallback(async () => {
@@ -165,7 +206,7 @@ const useSpeechRecognition = ({
         if (blob.size === 0) return;
         try {
           const form = new FormData();
-          form.append('audio', blob, 'speech.webm');
+          form.append('audio', blob, audioFilename(blob.type));
           form.append('locale', localeRef.current);
           const res = await fetch('/api/transcribe', { method: 'POST', body: form });
           if (!res.ok) throw new Error(`transcribe_${res.status}`);
@@ -230,13 +271,17 @@ const useSpeechRecognition = ({
             }
             const rms = Math.sqrt(sum / vadBuffer.length);
             const now = Date.now();
-            if (rms > VAD_NOISE_FLOOR) {
+            const noise = noiseLevelRef.current;
+            noiseLevelRef.current =
+              noise + (rms - noise) * (rms < noise ? VAD_NOISE_FALL : VAD_NOISE_RISE);
+            const threshold = Math.max(VAD_NOISE_FLOOR, noiseLevelRef.current * VAD_NOISE_RATIO);
+            if (rms > threshold) {
               hasSpoken = true;
               lastVoiceTs = now;
             }
             const elapsed = now - startedAt;
             const silenceFor = now - lastVoiceTs;
-            if (hasSpoken && silenceFor > SILENCE_MS && elapsed > MIN_SPEECH_MS) {
+            if (hasSpoken && silenceFor > SILENCE_MS && elapsed > MIN_RECORDING_MS) {
               stopRecorder();
               return;
             }
@@ -257,7 +302,13 @@ const useSpeechRecognition = ({
       startCycle();
       setIsListening(true);
     } catch (e) {
-      setError(e instanceof Error ? e.message : 'mic_failed');
+      setError(
+        e instanceof DOMException && e.name === 'NotAllowedError'
+          ? 'not-allowed'
+          : e instanceof Error
+            ? e.message
+            : 'mic_failed',
+      );
       cleanupStream();
     }
   }, [cleanupStream, setMicStream, setSpeechEngine]);
@@ -288,6 +339,12 @@ const useSpeechRecognition = ({
     };
     recognition.onerror = (e) => {
       setError(e.error);
+      if (e.error === 'not-allowed' || e.error === 'service-not-allowed') {
+        // Sin permiso no tiene sentido reintentar: el onend reiniciaría en bucle.
+        if (recognitionRef.current === recognition) recognitionRef.current = null;
+        setIsListening(false);
+        return;
+      }
       if (e.error === 'no-speech' || e.error === 'audio-capture') {
         // try restart silently
         return;
@@ -323,7 +380,12 @@ const useSpeechRecognition = ({
     }
   }, [startNative, startWhisper]);
 
-  useEffect(() => stop, [stop]);
+  useEffect(
+    () => () => {
+      void stop();
+    },
+    [stop],
+  );
 
   return { start, stop, isListening, error, engine };
 };

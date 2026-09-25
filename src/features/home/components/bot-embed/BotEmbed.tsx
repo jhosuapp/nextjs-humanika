@@ -23,14 +23,9 @@ const BotEmbedInner = ({ t }: Props): JSX.Element => {
   const { permission, request } = useMicPermission();
   const engine = useBotEngine({ locale });
 
-  const requestedRef = useRef(false);
-  useEffect(() => {
-    if (!requestedRef.current) {
-      requestedRef.current = true;
-      request();
-    }
-  }, [request]);
-
+  // El permiso del micrófono NO se pide aquí: el motor lo abre (y el navegador
+  // lo pide) al terminar el saludo. `request` queda para el PermissionGate si
+  // la persona lo rechaza.
   const autoStartedRef = useRef(false);
   useEffect(() => {
     if (engine.state === 'IDLE' && !autoStartedRef.current) {

@@ -34,12 +34,6 @@ const BotStage = ({
   const errorMessage = useBotStore((s) => s.errorMessage);
   const inactivityWarning = useBotStore((s) => s.inactivityWarning);
 
-  const handleInterrupt = () => {
-    if (engine.state === 'INTRO' || engine.state === 'RESPONDING' || engine.state === 'THINKING') {
-      useBotStore.getState().setState('LISTENING');
-    }
-  };
-
   const containerClass = `${styles.stageContainer} ${embedded ? styles.embedded : ''}`;
 
   return (
@@ -94,7 +88,7 @@ const BotStage = ({
           state={engine.state}
           isListening={engine.speech.isListening}
           onStart={engine.start}
-          onInterrupt={handleInterrupt}
+          onInterrupt={engine.interrupt}
         />
         {engine.state === 'THINKING' ? (
           <StatusIndicator t={t} statusKey={statusKey} />

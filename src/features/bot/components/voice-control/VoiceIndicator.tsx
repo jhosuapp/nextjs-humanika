@@ -2,6 +2,7 @@ import { motion, useTransform, useReducedMotion, type MotionValue } from 'framer
 import type { JSX } from 'react';
 
 import { useAudioLevel } from '@/src/features/bot/hooks/useAudioLevel';
+import { useBotStore } from '@/src/features/bot/stores/bot.store';
 
 import styles from './voice-indicator.module.css';
 
@@ -48,7 +49,12 @@ const Circle = ({ spec, level, staticScale }: CircleProps): JSX.Element => {
 
 const VoiceIndicator = (): JSX.Element => {
   const reduce = useReducedMotion();
-  const level = useAudioLevel({ enabled: true });
+  // El medidor abre su propio micrófono: se cierra en cuanto el bot deja de
+  // escuchar, sin esperar a que termine la animación de salida. Si no, sigue
+  // abierto cuando arranca la respuesta y los audífonos Bluetooth cambian de
+  // modo con el clip ya sonando.
+  const listening = useBotStore((s) => s.state === 'LISTENING');
+  const level = useAudioLevel({ enabled: listening });
   return (
     <div className={styles.row} aria-hidden="true">
       {CIRCLES.map((spec, i) => (
