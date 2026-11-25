@@ -47,8 +47,10 @@ const NODES: Record<DemoNodeRef, Point3D> = {
 
 /** Flat connector from the plane centre to a point on the same plane. */
 const connector = (to: { x: number; y: number }) => ({
-  width: Math.hypot(to.x, to.y),
-  angle: (Math.atan2(to.y, to.x) * 180) / Math.PI,
+  // Rounded so server and client serialize the exact same inline style
+  // (otherwise float precision triggers a hydration mismatch warning).
+  width: Math.round(Math.hypot(to.x, to.y)),
+  angle: Math.round(((Math.atan2(to.y, to.x) * 180) / Math.PI) * 100) / 100,
 });
 
 export { BACK_ROW, CAMERA, LAYER_Z, NODES, OPERATOR, PLANE, ROW, connector };

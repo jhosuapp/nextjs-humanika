@@ -11,9 +11,15 @@
   height: 720px;
   left: -160px;
   top: 30%;
-  filter: blur(90px);
+  /* No `filter: blur()`: on iOS a blurred 720px layer is a ~2000px GPU
+     texture. A wide radial falloff gives the same soft glow for free. */
   opacity: 0.5;
-  background: radial-gradient(circle, rgba(0, 190, 255, 0.35), transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(0, 190, 255, 0.28) 0%,
+    rgba(0, 190, 255, 0.12) 35%,
+    transparent 70%
+  );
 }
 
 .header {

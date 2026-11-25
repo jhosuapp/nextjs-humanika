@@ -2,6 +2,7 @@ import {
   useEffect,
   useMemo,
   useState,
+  useSyncExternalStore,
   type CSSProperties,
   type JSX,
   type PointerEvent,
@@ -66,6 +67,25 @@ type DemoSceneProps = {
 };
 
 type Camera = { rotX: MotionValue<number>; rotZ: MotionValue<number> };
+
+/**
+ * True on touch-first devices. There the scene drops its endless ambient
+ * loops (core rings / orb pulse): on iOS Safari each frame re-composites the
+ * whole 3D stack, and with several layers at DPR 3 that can exhaust GPU
+ * memory and crash the tab.
+ */
+const TOUCH_QUERY = '(hover: none)';
+const subscribeTouch = (onChange: () => void) => {
+  const media = window.matchMedia(TOUCH_QUERY);
+  media.addEventListener('change', onChange);
+  return () => media.removeEventListener('change', onChange);
+};
+const useIsTouch = () =>
+  useSyncExternalStore(
+    subscribeTouch,
+    () => window.matchMedia(TOUCH_QUERY).matches,
+    () => false,
+  );
 
 // Intro choreography (seconds from the moment the scene enters the viewport).
 const INTRO = {
@@ -381,6 +401,9 @@ const DemoScene = ({
   inView,
 }: DemoSceneProps): JSX.Element => {
   const reduce = useReducedMotion();
+  const isTouch = useIsTouch();
+  /** Ambient loops only where they're cheap: pointer devices, motion allowed. */
+  const ambient = !reduce && !isTouch;
 
   // Camera: eased intro spin + gentle sprung pointer tilt.
   const tiltX = useMotionValue(0);
@@ -502,17 +525,17 @@ const DemoScene = ({
                 >
                   <motion.span
                     className={styles.coreRing}
-                    animate={reduce ? undefined : { rotate: 360 }}
+                    animate={ambient ? { rotate: 360 } : undefined}
                     transition={{ duration: 14, ease: 'linear', repeat: Infinity }}
                   />
                   <motion.span
                     className={`${styles.coreRing} ${styles.coreRingInner}`}
-                    animate={reduce ? undefined : { rotate: -360 }}
+                    animate={ambient ? { rotate: -360 } : undefined}
                     transition={{ duration: 9, ease: 'linear', repeat: Infinity }}
                   />
                   <motion.span
                     className={styles.coreOrb}
-                    animate={reduce ? undefined : { scale: [1, 1.08, 1] }}
+                    animate={ambient ? { scale: [1, 1.08, 1] } : undefined}
                     transition={{ duration: 2.4, ease: 'easeInOut', repeat: Infinity }}
                   />
                   {agentArrival !== undefined && (
