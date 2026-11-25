@@ -1,0 +1,165 @@
+@reference "tailwindcss";
+
+.hero {
+  @apply relative overflow-hidden;
+  background: var(--bg-section);
+}
+
+.container {
+  @apply relative z-10;
+}
+
+.wrapper {
+  @apply grid items-center gap-12 lg:gap-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)];
+  @apply pt-10 pb-16 lg:pt-16 lg:pb-24;
+}
+
+/* Copy column */
+.content {
+  @apply flex flex-col gap-6;
+}
+
+.category {
+  @apply inline-flex w-fit items-center gap-2.5 rounded-full px-4 py-1.5 m-0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  background: var(--surface-overlay);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(8px);
+}
+
+.title {
+  @apply m-0 text-3xl sm:text-4xl xl:text-5xl font-bold;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  color: var(--text-secondary);
+  text-wrap: balance;
+}
+
+.brand {
+  @apply block mb-2 text-lg sm:text-xl font-semibold;
+  letter-spacing: -0.01em;
+}
+
+.description {
+  @apply m-0 text-base lg:text-lg leading-relaxed;
+  color: var(--text-muted);
+  max-width: 36rem;
+}
+
+.actions {
+  @apply flex flex-wrap items-center gap-x-6 gap-y-4 mt-2;
+}
+
+.actions button {
+  @apply w-full sm:w-fit;
+}
+
+.actions button span {
+  @apply text-nowrap;
+}
+
+.secondaryLink {
+  @apply inline-flex items-center gap-2 text-sm font-semibold no-underline;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.secondaryLink svg {
+  width: 0.8em;
+  height: 0.8em;
+  transition: transform 0.3s ease;
+}
+
+.secondaryLink:hover {
+  color: var(--primary);
+}
+
+.secondaryLink:hover svg {
+  transform: translateY(3px);
+}
+
+/* Image column */
+.media {
+  @apply relative m-0 w-full;
+}
+
+.frame {
+  @apply relative w-full overflow-hidden rounded-3xl;
+  aspect-ratio: 16 / 10;
+  background: var(--bg-section-alt);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-detail);
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.overlay {
+  @apply pointer-events-none absolute inset-0;
+  background: linear-gradient(
+    180deg,
+    transparent 60%,
+    rgba(0, 22, 67, 0.3) 100%
+  );
+}
+
+.badge {
+  @apply absolute left-3 bottom-3 sm:-left-6 sm:bottom-8 flex items-center gap-2.5 sm:gap-3 rounded-xl sm:rounded-2xl py-2 pl-2 pr-4 sm:py-3 sm:pl-3 sm:pr-5;
+  background: var(--surface-overlay);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-floating);
+  backdrop-filter: blur(14px) saturate(140%);
+}
+
+.badgeIcon {
+  @apply flex h-7 w-7 sm:h-10 sm:w-10 items-center justify-center rounded-lg sm:rounded-xl;
+  background: var(--gradient-brand);
+}
+
+.badgeIcon :global(.gl-dot) {
+  background: #fff;
+}
+
+.badgeText {
+  @apply flex flex-col leading-tight;
+}
+
+.badgeText strong {
+  @apply text-xs sm:text-sm font-semibold;
+  color: var(--text-secondary);
+}
+
+.badgeText span {
+  @apply hidden sm:block text-xs;
+  color: var(--text-muted);
+}
+
+/* Ambient orbs (same treatment as the home hero) */
+.orbs {
+  @apply absolute inset-0 z-0 pointer-events-none overflow-hidden;
+}
+
+.orb {
+  @apply absolute rounded-full opacity-65;
+  filter: blur(60px);
+  will-change: transform;
+}
+
+.orbCyan {
+  @apply h-[420px] w-[420px] top-[-80px] right-[-60px];
+  background: radial-gradient(circle, rgba(0, 190, 255, 0.55), transparent 70%);
+}
+
+.orbTeal {
+  @apply h-[480px] w-[480px] bottom-[-120px] left-[-120px];
+  background: radial-gradient(
+    circle,
+    rgba(23, 241, 209, 0.45),
+    transparent 70%
+  );
+}

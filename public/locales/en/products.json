@@ -1,0 +1,338 @@
+{
+  "ui": {
+    "agentBadge": "Humanika agent",
+    "demoCta": "Request a demo",
+    "useCaseCta": "See use case",
+    "featuresEyebrow": "Features",
+    "featuresTitle": "What {{product}} does",
+    "featuresDescription": "Three concrete capabilities, configured with your organization's information and rules.",
+    "useCaseEyebrow": "Use case",
+    "useCaseTitle": "What it looks like in practice",
+    "useCaseNote": "Illustrative scenario",
+    "ctaEyebrow": "Demo",
+    "ctaTitle": "Want to see {{product}} in action?",
+    "ctaDescription": "Tell us about your organization and we'll show you how it would work with your processes.",
+    "relatedEyebrow": "Related products",
+    "relatedTitle": "Complementary solutions",
+    "relatedDescription": "Other Humanika agents that complement this solution.",
+    "viewProduct": "View product",
+    "whatsappMessage": "Hi, I'd like to request a demo of {{product}}.",
+    "breadcrumbHome": "Home"
+  },
+  "categories": {
+    "atencion-ciudadana": "Citizen services",
+    "documentos-tramites": "Documents, procedures and automation",
+    "contratacion-inversion": "Public procurement and investment",
+    "investigacion-participacion": "Research and participation",
+    "educacion": "Education",
+    "vision-computacional": "Computer vision"
+  },
+  "items": {
+    "atencion-ciudadana-digital": {
+      "title": "Humanika – Digital Citizen Services via Chat and Messaging",
+      "shortTitle": "Digital Citizen Services",
+      "description": "Guide citizens through web chat and messaging. Humanika answers questions about services and procedures using information approved by your organization, and hands the conversation to an operator when a query needs human attention.",
+      "cardLine": "Web chat and messaging that guide procedures with approved information.",
+      "features": [
+        "Guidance on procedures and services",
+        "Answers grounded in institutional sources",
+        "Handoff to operators"
+      ],
+      "useCase": "Someone wants to know which documents they need to request a certificate. The agent explains the requirements and points them to the channel the organization has set up.",
+      "imageAlt": "A citizen checks her phone in a public space while the Humanika agent accompanies her and subtly points out the way to go.",
+      "seo": {
+        "title": "Chatbot for citizen services | Humanika",
+        "description": "Virtual assistant for public organizations: citizen services over messaging and web chat, with answers grounded in institutional sources and operator handoff."
+      }
+    },
+    "telefonia-ia-bidireccional": {
+      "title": "Humanika – Two-Way Institutional AI Telephony",
+      "shortTitle": "Two-Way Institutional Telephony",
+      "description": "Take and make institutional calls with voice agents. On inbound calls, Humanika guides the caller and can transfer them to an operator. On outbound calls, it confirms appointments, delivers reminders and follows up on requests.",
+      "cardLine": "Voice agents for your organization's inbound and outbound calls.",
+      "features": [
+        "Inbound call handling",
+        "Outbound calls with configured flows",
+        "Transfer to operators based on the flow"
+      ],
+      "useCase": "An organization calls to confirm an appointment. Later, the person can call the institutional line to ask about their service and be transferred if they need further help.",
+      "imageAlt": "A person on the phone next to an open planner; the Humanika agent appears as the other party in the conversation, close and attentive.",
+      "seo": {
+        "title": "Voice agents for citizen services | Humanika",
+        "description": "Inbound and outbound AI calls: confirm appointments, send reminders and transfer to operators. Institutional call automation with Humanika."
+      }
+    },
+    "gestion-pqrsd": {
+      "title": "Humanika – Citizen Requests and Case Management (PQRSD)",
+      "shortTitle": "PQRSD Management",
+      "description": "Manage petitions, complaints, claims, suggestions and reports from intake to closure. Humanika helps file, classify and assign cases, and lets you check their status and associated deadlines.",
+      "cardLine": "Filing, assignment and tracking of citizen requests through closure.",
+      "features": [
+        "Intake, filing and classification",
+        "Assignment and tracking by department",
+        "Deadline alerts and traceability"
+      ],
+      "useCase": "A city hall receives a complaint about the condition of a park. The case is filed, assigned to the responsible department, and the team can track it through to closure.",
+      "imageAlt": "A public servant and the Humanika agent assist a citizen at a service desk; the scene conveys that someone is taking charge of her request.",
+      "seo": {
+        "title": "PQRSD management software | Humanika",
+        "description": "Citizen request filing, assignment by department, deadline alerts and request tracking with full traceability."
+      }
+    },
+    "totems-con-avatar": {
+      "title": "Humanika – Self-Service Software for Avatar Kiosks",
+      "shortTitle": "Avatar Kiosks",
+      "description": "Turn a self-service point into a guided service space. A Humanika avatar interacts by voice or touchscreen to guide procedures, help with forms and collect authorized data. The license covers the service point software.",
+      "cardLine": "An avatar that guides procedures by voice or screen at your sites.",
+      "features": [
+        "Guided interaction by voice or screen",
+        "Guidance on services and procedures",
+        "Form assistance and authorized data capture"
+      ],
+      "useCase": "On arriving at a public office, a citizen talks with the agent to find the service she needs and learn the steps to follow before heading to the service desk.",
+      "imageAlt": "A citizen talks with the Humanika agent in the lobby of a public building, next to a kiosk blended into the space.",
+      "seo": {
+        "title": "Software for citizen service kiosks | Humanika",
+        "description": "Self-service kiosks with interactive avatars for public organizations: voice or screen guidance, form assistance and authorized data capture."
+      }
+    },
+    "auditoria-de-atencion": {
+      "title": "Humanika – Service and Quality Auditing",
+      "shortTitle": "Service Auditing",
+      "description": "Review the quality of user interactions and spot opportunities to improve service. Humanika transcribes and analyzes authorized conversations, checks them against defined protocols and organizes findings into reports.",
+      "cardLine": "Interaction analysis against your service protocols.",
+      "features": [
+        "Transcription and analysis of interactions",
+        "Evaluation against service protocols",
+        "Finding classification and quality reports"
+      ],
+      "useCase": "A service team reviews a sample of calls and finds that in several conversations the user hung up without knowing the next step. The team lead uses that finding to shape training.",
+      "imageAlt": "A supervisor listens to a conversation on headphones while the Humanika agent, beside her, helps her pause on a key moment of the interaction.",
+      "seo": {
+        "title": "AI service auditing | Humanika",
+        "description": "Call analysis and citizen service quality control: transcription, protocol evaluation and AI-generated findings reports."
+      }
+    },
+    "copiloto-para-funcionarios": {
+      "title": "Humanika – Institutional Copilot for Public Servants",
+      "shortTitle": "Institutional Copilot",
+      "description": "Look up manuals, procedures and institutional regulations through a conversation. Humanika answers with references to approved sources and helps prepare summaries and drafts for the public servant to review.",
+      "cardLine": "Search internal manuals and rules with source references.",
+      "features": [
+        "Search across approved repositories",
+        "Answers with source references",
+        "Summaries and drafts for human review"
+      ],
+      "useCase": "A public servant asks which procedure applies to an internal request. The copilot finds the relevant section of the manual and prepares a summary she can verify before replying.",
+      "imageAlt": "A public servant and the Humanika agent talk beside a desk covered with documents, at the moment they find the reference they were looking for.",
+      "seo": {
+        "title": "AI copilot for public servants | Humanika",
+        "description": "Institutional knowledge assistant for searching internal regulations, manuals and procedures, with source references and reviewable drafts."
+      }
+    },
+    "inteligencia-documental": {
+      "title": "Humanika – Institutional Document Intelligence",
+      "shortTitle": "Document Intelligence",
+      "description": "Turn institutional documents into information your team can search and verify. Humanika classifies files, extracts fields and cross-checks data to make review traceable.",
+      "cardLine": "Document classification, extraction and cross-checking with traceability.",
+      "features": [
+        "Document classification",
+        "Field extraction and cross-checking",
+        "Search and validation with human review"
+      ],
+      "useCase": "A team receives minutes and forms in different formats. Humanika identifies each document type, extracts dates and references, and leaves the results ready for the team to review.",
+      "imageAlt": "A professional reviews several documents at her desk while the Humanika agent helps her find the common thread between them.",
+      "seo": {
+        "title": "Intelligent document processing | Humanika",
+        "description": "AI document classification and PDF data extraction: turn minutes and forms into verifiable information, with cross-checking and human review."
+      }
+    },
+    "validacion-de-tramites": {
+      "title": "Humanika – Smart Validation of Procedures and Case Files",
+      "shortTitle": "Procedure Validation",
+      "description": "Pre-validate case files before they go to review. Humanika reads the supporting documents, extracts information and checks it against requirements configured by your organization. The reviewer receives the missing items and inconsistencies found and decides how to proceed.",
+      "cardLine": "Case file pre-validation against your organization's requirements.",
+      "features": [
+        "Reading of requests and supporting documents",
+        "Checks against configurable rules",
+        "Detection of missing items and inconsistencies"
+      ],
+      "useCase": "Before reviewing a permit application, the reviewer receives a summary of the supporting documents found and an alert about a pending certificate. With that, they can review the file and guide the correction.",
+      "imageAlt": "A reviewer and the Humanika agent go through a physical case file on a table together, at the moment they spot a missing piece.",
+      "seo": {
+        "title": "AI case file validation | Humanika",
+        "description": "Document requirement checks and review of requests and procedures: Humanika flags missing items and inconsistencies before review."
+      }
+    },
+    "automatizacion-institucional": {
+      "title": "Humanika – AI Agents for Institutional Automation",
+      "shortTitle": "Automation Agents",
+      "description": "Automate repetitive internal tasks with configurable flows. Humanika agents query authorized systems, carry out the defined steps and log what they did so the team can review the operation.",
+      "cardLine": "Configurable flows that run tasks and log every step.",
+      "features": [
+        "Flow and task configuration",
+        "Queries and actions in authorized systems, depending on available integrations",
+        "Execution controls and traceability"
+      ],
+      "useCase": "When a request comes in, the agent looks up the available information, prepares the case and routes it to the person in charge, following the rules set by the organization.",
+      "imageAlt": "A coordinator and the Humanika agent see a request through as it passes between two work areas, in a setting that suggests coordination and continuity.",
+      "seo": {
+        "title": "AI institutional process automation | Humanika",
+        "description": "AI agents for public organizations: automated workflows that query authorized systems, run tasks and keep a full audit trail."
+      }
+    },
+    "asistente-de-contratacion-publica": {
+      "title": "Humanika – Public Procurement Assistant",
+      "shortTitle": "Public Procurement Assistant",
+      "description": "Make it easier to review tender documents in the pre-contract stage. Humanika identifies requirements, cross-checks information and organizes findings into review matrices with source references.",
+      "cardLine": "Tender review with verifiable requirement matrices.",
+      "features": [
+        "Search across tender documents and annexes",
+        "Requirement identification and cross-checking",
+        "Matrices with verifiable references"
+      ],
+      "useCase": "A procurement team reviews a tender and its annexes. The assistant organizes the technical and documentary requirements and shows where each one appears so the team can validate the matrix.",
+      "imageAlt": "Two professionals review a tender at a worktable while the Humanika agent joins the conversation and draws their attention to a specific document.",
+      "seo": {
+        "title": "Public procurement assistant | Humanika",
+        "description": "AI tender analysis: identify and cross-check requirements and build the procurement requirements matrix with verifiable references."
+      }
+    },
+    "supervision-contractual": {
+      "title": "Humanika – Smart Contract Supervision",
+      "shortTitle": "Contract Supervision",
+      "description": "Track obligations, milestones and deliverables while a contract is carried out. Humanika organizes evidence and minutes, alerts you to upcoming deadlines and makes the supervisor's review easier.",
+      "cardLine": "Tracking of contract obligations, milestones and deliverables.",
+      "features": [
+        "Logging of obligations, milestones and deliverables",
+        "Deadline alerts",
+        "Assisted review of evidence and progress reports"
+      ],
+      "useCase": "Before a progress meeting, the supervisor checks which deliverables are about to fall due and what evidence has been received. With that, they prepare the review with the contractor.",
+      "imageAlt": "A supervisor and the Humanika agent walk through a work site, exchanging observations in front of an activity in progress.",
+      "seo": {
+        "title": "Contract supervision software | Humanika",
+        "description": "Track contractual obligations, evidence and minutes, with contract deadline alerts and progress reports for the supervisor."
+      }
+    },
+    "proyectos-e-inversion-publica": {
+      "title": "Humanika – Intelligence for Public Projects and Investment",
+      "shortTitle": "Public Projects and Investment",
+      "description": "Support the formulation and review of projects under Colombia's General Adjusted Methodology (MGA) and analyze the public investment portfolio. Humanika helps compare initiatives, identify similar projects and find uncovered goals, with references to the sources reviewed.",
+      "cardLine": "MGA formulation and public investment portfolio analysis.",
+      "features": [
+        "Formulation and document review of MGA projects",
+        "Project comparison and goal coverage",
+        "Lessons retrieved from closing reports"
+      ],
+      "useCase": "A planning department reviews its initiatives before prioritizing them. Humanika points out which ones have similar objectives and which development plan goals still have no associated projects.",
+      "imageAlt": "A planning professional talks with the Humanika agent around a map of the region, weighing where to focus efforts.",
+      "seo": {
+        "title": "AI for MGA project formulation | Humanika",
+        "description": "Public investment analysis and regional project comparison: formulate and review MGA projects and spot uncovered goals with AI."
+      }
+    },
+    "investigacion-y-consultas-publicas": {
+      "title": "Humanika – AI Research and Public Consultations",
+      "shortTitle": "Research and Public Consultations",
+      "description": "Run interviews and surveys by voice or chat, document processes and analyze comments from public consultations. Humanika groups observations by topic or article and produces editable, traceable matrices so the team can prepare and review its responses.",
+      "cardLine": "Interviews, surveys and analysis of citizen comments.",
+      "features": [
+        "Interviews, surveys and process discovery",
+        "Thematic analysis of comments",
+        "Editable matrices of observations and responses"
+      ],
+      "useCase": "After closing a consultation on a draft regulation, the team groups comments by article and identifies minority contributions. Each observation keeps its link to the original input to make review easier.",
+      "imageAlt": "At a community meeting, a person shares their perspective while the Humanika agent listens attentively.",
+      "seo": {
+        "title": "AI public consultation analysis | Humanika",
+        "description": "Traceable citizen observation matrices, thematic comment analysis, and AI-run interviews and surveys by voice or chat."
+      }
+    },
+    "formacion-institucional": {
+      "title": "Humanika – AI Institutional Training Platform",
+      "shortTitle": "Institutional Training",
+      "description": "Organize onboarding and ongoing training courses into learning paths. Participants have voice and chat tutors, and the training team can follow their progress.",
+      "cardLine": "Onboarding and training paths with voice and chat tutors.",
+      "features": [
+        "Courses and learning paths",
+        "Voice and chat tutoring",
+        "Participant progress tracking"
+      ],
+      "useCase": "An organization welcomes new staff. Each person follows an onboarding path, asks the tutor questions and works through the content while HR reviews the group's progress.",
+      "imageAlt": "A new team member talks with the Humanika agent at their workspace during their first days.",
+      "seo": {
+        "title": "AI institutional training platform | Humanika",
+        "description": "Onboarding and ongoing training software with virtual tutors over voice and chat, plus progress tracking for every participant."
+      }
+    },
+    "simulacion-y-evaluacion": {
+      "title": "Humanika – AI Skills Simulation and Assessment",
+      "shortTitle": "Skills Simulation and Assessment",
+      "description": "Train skills in simulated scenarios by voice or chat. Humanika plays the role of the other party, assesses the practice with configurable rubrics and delivers feedback and performance reports.",
+      "cardLine": "Conversational practice assessed with configurable rubrics.",
+      "features": [
+        "Conversational practice scenarios",
+        "Assessment with configurable rubrics",
+        "Feedback and performance reports"
+      ],
+      "useCase": "A public servant practices handling an upset citizen. The agent plays the user and, at the end, gives feedback on listening, clarity and how the protocol was applied.",
+      "imageAlt": "A public servant rehearses a face-to-face conversation with the Humanika agent, which plays a person arriving with a difficult request.",
+      "seo": {
+        "title": "AI conversational simulation | Humanika",
+        "description": "Rubric-based assessment and citizen service practice in simulated voice or chat scenarios, with feedback and performance reports."
+      }
+    },
+    "ensenanza-de-idiomas": {
+      "title": "Humanika – AI Language Learning",
+      "shortTitle": "Language Learning",
+      "description": "Practice languages with AI tutors by voice and chat. Humanika suggests level-based paths and everyday and professional conversations, with guided activities and individual progress tracking.",
+      "cardLine": "AI tutors to practice languages by voice and chat.",
+      "features": [
+        "Voice and chat conversation",
+        "Level-based paths and activities",
+        "Individual progress tracking"
+      ],
+      "useCase": "A student practices asking for directions in another language. The tutor keeps the conversation within the scenario and suggests activities that match her level.",
+      "imageAlt": "At a station, a student practices asking for directions with the Humanika agent as her conversation partner.",
+      "seo": {
+        "title": "AI language learning platform | Humanika",
+        "description": "Speaking practice with AI tutors and level-based language learning: guided voice and chat conversations with individual progress tracking."
+      }
+    },
+    "analitica-de-espacios": {
+      "title": "Humanika – Space Analytics with Computer Vision",
+      "shortTitle": "Space Analytics",
+      "description": "Understand how service spaces are used and which areas get the most visits. Humanika analyzes counts, occupancy, foot traffic and dwell time by zone and camera, and presents aggregated metrics in dashboards.",
+      "cardLine": "Counts, occupancy and foot traffic by zone, in dashboards.",
+      "features": [
+        "People counting and occupancy measurement",
+        "Foot traffic and dwell time analysis by zone",
+        "Configurable dashboards and alerts"
+      ],
+      "useCase": "An office compares foot traffic in two service areas and identifies the hours when demand peaks. The team uses that information to better organize its service points.",
+      "imageAlt": "From a raised vantage point, an operations manager and the Humanika agent watch people move through a public building.",
+      "seo": {
+        "title": "People counting with computer vision | Humanika",
+        "description": "Occupancy measurement and foot traffic and dwell time analytics by zone and camera, with aggregated dashboards and configurable alerts."
+      }
+    },
+    "inspeccion-y-asistencia-visual": {
+      "title": "Humanika – AI Inspection and Visual Assistance",
+      "shortTitle": "Inspection and Visual Assistance",
+      "description": "Document inspections from photos and field observations. Humanika helps describe evidence, log findings by voice or chat and prepare draft reports for review.",
+      "cardLine": "Photo evidence and draft inspection reports from the field.",
+      "features": [
+        "Assisted photo inspection",
+        "Evidence description and finding logs",
+        "Draft reports for human review"
+      ],
+      "useCase": "During a site visit, an inspector photographs a finding and dictates her observation. The agent helps her describe the evidence and prepare the draft visit report.",
+      "imageAlt": "An inspector photographs a piece of infrastructure while the Humanika agent accompanies her in the field, both focused on the same detail.",
+      "seo": {
+        "title": "AI visual inspection | Humanika",
+        "description": "Photo evidence logging and assisted report generation: describe findings by voice or chat and prepare drafts for review."
+      }
+    }
+  }
+}

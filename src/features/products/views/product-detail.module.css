@@ -1,0 +1,6 @@
+@reference "tailwindcss";
+
+.page {
+  @apply w-full;
+  background: var(--background);
+}

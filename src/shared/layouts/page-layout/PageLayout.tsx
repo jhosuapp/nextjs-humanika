@@ -29,6 +29,9 @@ type PageLayoutProps = {
   description: string;
   image?: string;
   hasNoIndex?: boolean;
+  /** Extra schema.org nodes (Product, BreadcrumbList…) merged into the
+   *  site-wide `@graph`. */
+  jsonLd?: Record<string, unknown>[];
 };
 
 const PageLayout = ({
@@ -37,6 +40,7 @@ const PageLayout = ({
   description,
   image = SITE_OG_IMAGE,
   hasNoIndex = false,
+  jsonLd = [],
 }: PageLayoutProps) => {
   const router = useRouter();
   const locale = router.locale ?? "es";
@@ -73,6 +77,7 @@ const PageLayout = ({
         inLanguage: locale,
         publisher: { "@id": `${SITE_URL}/#organization` },
       },
+      ...jsonLd,
     ],
   };
 

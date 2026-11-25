@@ -1,0 +1,106 @@
+@reference "tailwindcss";
+
+.section {
+  @apply relative w-full overflow-hidden;
+  background: var(--surface-inverted);
+  color: var(--text-on-dark);
+}
+
+.glow {
+  @apply pointer-events-none absolute;
+  width: 640px;
+  height: 640px;
+  right: -200px;
+  top: -240px;
+  border-radius: 9999px;
+  filter: blur(80px);
+  opacity: 0.45;
+  background: radial-gradient(circle, rgba(0, 177, 215, 0.6), transparent 70%);
+}
+
+.container {
+  @apply relative z-10;
+  scroll-margin-top: var(--h-header);
+}
+
+.wrapper {
+  @apply grid items-center gap-10 lg:gap-16 lg:grid-cols-2;
+}
+
+/* Image */
+.media {
+  @apply w-full;
+}
+
+.frame {
+  @apply relative w-full overflow-hidden rounded-3xl;
+  /* Tighter crop than the hero so the scene reads as a close-up. */
+  aspect-ratio: 4 / 3;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6);
+}
+
+/* Taller than the frame so the parallax shift never exposes an edge. */
+.parallax {
+  @apply absolute inset-x-0;
+  top: -8%;
+  bottom: -8%;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.22);
+}
+
+@media (min-width: 1024px) {
+  .frame {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* Copy */
+.content {
+  @apply flex flex-col gap-5;
+}
+
+.eyebrow {
+  @apply m-0 text-xs font-semibold uppercase tracking-[0.2em];
+  color: var(--tertiary);
+}
+
+.title {
+  @apply m-0 text-2xl lg:text-3xl 2xl:text-4xl font-semibold;
+  letter-spacing: -0.02em;
+  color: var(--text-on-dark);
+}
+
+.quote {
+  @apply relative m-0 mt-4 rounded-2xl px-6 pb-6 pt-9 lg:px-8 lg:pb-8 lg:pt-10;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+}
+
+.quote p {
+  @apply relative m-0 text-lg lg:text-xl leading-relaxed;
+  color: var(--text-on-dark);
+}
+
+.quoteIcon {
+  @apply absolute -top-4 left-6 h-8! w-8! rounded-lg p-2;
+  color: #fff;
+  background: var(--gradient-brand);
+}
+
+.note {
+  @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold;
+  color: rgba(243, 246, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.note::before {
+  content: "";
+  @apply h-1.5 w-1.5 rounded-full;
+  background: var(--tertiary);
+}
