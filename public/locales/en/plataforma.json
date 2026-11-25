@@ -1,0 +1,67 @@
+{
+  "seo": {
+    "title": "AI agent platform with governance | Humanika",
+    "description": "Humanika Core lets you build, connect and supervise AI agents with your documents, systems and channels, with roles, audit trails and human review."
+  },
+  "hero": {
+    "eyebrow": "Platform",
+    "title": "The platform to build, run and supervise AI agents",
+    "description": "Humanika Core is the platform we use to configure each organization's digital collaborators. We connect them to your documents, systems and channels, and run them with permissions, traceability and human review.",
+    "primaryCta": "Request a demo",
+    "secondaryCta": "See solutions"
+  },
+  "sections": {
+    "capabilities": {
+      "eyebrow": "What's included",
+      "title": "Everything needed to put an agent to work",
+      "description": "From initial setup to day-to-day monitoring, in one place.",
+      "items": [
+        { "title": "Configurable digital collaborators", "text": "A guided assistant defines the agent's identity, knowledge, AI model, channels and the legal documents each user accepts." },
+        { "title": "Connected knowledge", "text": "The agent learns from PDF, Word and PowerPoint files, websites and folders synced from Google Drive, SharePoint and OneDrive." },
+        { "title": "Specialized agents working together", "text": "An orchestrator coordinates knowledge, analysis, document and evaluation agents to solve each request step by step." },
+        { "title": "Conversations with human handoff", "text": "Every conversation is logged and can go to an operator when a query needs a person's attention." },
+        { "title": "Supervision and metrics", "text": "A dashboard shows conversations by channel, resolved and escalated cases, each agent's performance and model usage and cost." },
+        { "title": "Documents and deliverables", "text": "Agents produce Word, PDF and Excel documents from templates, ready for your team's review." }
+      ]
+    },
+    "connections": {
+      "eyebrow": "Connections",
+      "title": "Channels, systems and AI models",
+      "description": "Humanika integrates with the tools your organization already uses. Available integrations are confirmed for each project.",
+      "groups": [
+        { "title": "Channels", "items": ["Web chat", "WhatsApp Business", "Microsoft Teams", "Voice"] },
+        { "title": "Knowledge and documents", "items": ["Google Drive", "Microsoft 365", "SharePoint", "OneDrive", "Websites"] },
+        { "title": "Systems and data", "items": ["Moodle", "Academusoft", "HubSpot", "Google Ads", "Meta Ads", "Google Analytics 4", "Custom API"] },
+        { "title": "AI and voice models", "items": ["Anthropic Claude", "OpenAI", "Google Gemini", "Qwen", "ElevenLabs", "Azure Speech"] }
+      ]
+    },
+    "governance": {
+      "eyebrow": "Governance and control",
+      "title": "AI with clear rules and people in charge",
+      "description": "Every agent action follows defined permissions and leaves a trail for review.",
+      "items": [
+        { "title": "Roles and permissions", "text": "Built-in and custom roles define who configures, operates, supervises or only views, platform-wide or per client." },
+        { "title": "Audit and traceability", "text": "The platform logs operations, message deliveries and errors, so you can review what happened and when." },
+        { "title": "Human review", "text": "People approve assessments, review deliverables and see which parts the AI completed and with what evidence." },
+        { "title": "Access and consent", "text": "Access is controlled with email codes, Google or Microsoft sign-in, allowed domains or invitations, and each user accepts the terms." }
+      ]
+    },
+    "languages": {
+      "eyebrow": "Languages",
+      "title": "Service in several languages",
+      "description": "Each agent is configured in the language of the people it serves.",
+      "groups": [
+        { "title": "Chat", "items": ["Spanish", "English", "Portuguese"] },
+        { "title": "Voice", "items": ["Spanish", "English", "French", "Portuguese"] }
+      ]
+    }
+  },
+  "cta": {
+    "eyebrow": "Demo",
+    "title": "See the platform working on a case from your organization",
+    "description": "Tell us which process you want to improve and we'll show you how an agent would be configured to handle it.",
+    "button": "Request a demo",
+    "whatsappMessage": "Hi, I'd like to learn about the Humanika platform and request a demo."
+  },
+  "breadcrumb": "Platform"
+}

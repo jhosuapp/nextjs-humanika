@@ -1,0 +1,85 @@
+{
+  "seo": {
+    "title": "Agentes de IA para empresas | Humanika",
+    "description": "Colaboradores digitales de IA para empresas: formación, conocimiento, servicio, ventas y operaciones, conectados a sus sistemas y con revisión humana."
+  },
+  "hero": {
+    "eyebrow": "Empresas",
+    "title": "Colaboradores digitales que trabajan junto a sus equipos",
+    "description": "Humanika diseña agentes de IA que forman, responden, venden y operan con el conocimiento y los sistemas de su empresa. Usted define las reglas; el agente las aplica y pasa el caso a una persona cuando hace falta.",
+    "primaryCta": "Solicitar una demostración",
+    "secondaryCta": "Conocer la plataforma"
+  },
+  "moreLabel": "Ver solución",
+  "sections": {
+    "areas": {
+      "eyebrow": "Áreas",
+      "title": "Un colaborador digital para cada área",
+      "description": "Empiece por el proceso que más le importa y amplíe a otras áreas con la misma plataforma.",
+      "items": [
+        {
+          "title": "Formación",
+          "text": "Tutores disponibles cuando las personas los necesitan: inducción, formación continua y seguimiento del avance."
+        },
+        {
+          "title": "Conocimiento",
+          "text": "Su documentación corporativa, consultable en lenguaje natural y con referencias a la fuente."
+        },
+        {
+          "title": "Servicio y soporte",
+          "text": "Atención por WhatsApp, chat web y voz, con escalamiento a su equipo cuando el caso lo requiere."
+        },
+        {
+          "title": "Ventas",
+          "text": "Acompañamiento de cada oportunidad comercial y registro de la información en su CRM, como HubSpot."
+        },
+        {
+          "title": "Operaciones",
+          "text": "Automatización de tareas repetitivas con flujos configurables y registro de cada paso."
+        },
+        {
+          "title": "Marketing y desempeño",
+          "text": "Revisión de campañas en Google Ads y Meta Ads, con hallazgos y recomendaciones para su equipo."
+        }
+      ]
+    },
+    "connections": {
+      "eyebrow": "Integraciones",
+      "title": "Conectado a las herramientas de su equipo",
+      "description": "Las integraciones disponibles se confirman en cada proyecto.",
+      "groups": [
+        {
+          "title": "Canales",
+          "items": [
+            "Chat web",
+            "WhatsApp Business",
+            "Microsoft Teams",
+            "Voz"
+          ]
+        },
+        {
+          "title": "Sistemas y conocimiento",
+          "items": [
+            "HubSpot",
+            "Moodle",
+            "Google Drive",
+            "Microsoft 365",
+            "SharePoint",
+            "Google Ads",
+            "Meta Ads",
+            "Google Analytics 4",
+            "API propia"
+          ]
+        }
+      ]
+    }
+  },
+  "cta": {
+    "eyebrow": "Demostración",
+    "title": "Pruebe un colaborador digital con un caso de su empresa",
+    "description": "Cuéntenos qué proceso quiere mejorar y le mostramos cómo funcionaría con su información y sus canales.",
+    "button": "Solicitar una demostración",
+    "whatsappMessage": "Hola, quiero solicitar una demostración de Humanika para mi empresa."
+  },
+  "breadcrumb": "Empresas"
+}

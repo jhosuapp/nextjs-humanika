@@ -1,0 +1,65 @@
+{
+  "seo": {
+    "title": "Who we are and how we work | Humanika",
+    "description": "Humanika is an initiative of 150 Por Ciento that designs, integrates and runs AI agents for businesses and public institutions, with people in charge."
+  },
+  "hero": {
+    "eyebrow": "About us",
+    "title": "We make AI work with people, not instead of them",
+    "description": "Humanika is an initiative of 150 Por Ciento. We design, integrate and run AI digital collaborators for businesses and public institutions, with each organization's knowledge and people in charge of decisions.",
+    "primaryCta": "Talk to the team",
+    "secondaryCta": "See success stories"
+  },
+  "sections": {
+    "approach": {
+      "eyebrow": "How we think",
+      "title": "More than a chatbot",
+      "description": "Three ideas guide every project we do.",
+      "items": [
+        {
+          "title": "Agents connected to your operations",
+          "text": "A digital collaborator works with your organization's documents, systems, processes, permissions and channels, not just a script."
+        },
+        {
+          "title": "People decide",
+          "text": "AI prepares, answers and suggests. Your team reviews, approves and handles the cases that need human judgment."
+        },
+        {
+          "title": "Measurable results",
+          "text": "Every agent has usage, resolution and escalation metrics, so you know what works and what to adjust."
+        }
+      ]
+    },
+    "method": {
+      "eyebrow": "Method",
+      "title": "How we take an agent to production",
+      "description": "A four-stage process, from the first use case to daily operations.",
+      "items": [
+        {
+          "title": "We understand the challenge",
+          "text": "We define the process, the people it serves and the expected outcome together with your team."
+        },
+        {
+          "title": "We organize the knowledge",
+          "text": "We gather the documents, sources and rules the agent may use, and what it must not answer."
+        },
+        {
+          "title": "We configure and test",
+          "text": "We design the agent, connect it to your channels and systems and test it with real cases before launch."
+        },
+        {
+          "title": "We operate and improve",
+          "text": "We monitor conversations and metrics, and adjust the agent as your organization changes."
+        }
+      ]
+    }
+  },
+  "cta": {
+    "eyebrow": "Contact",
+    "title": "Let's talk about your next digital collaborator",
+    "description": "Write to us on WhatsApp and we'll reply with a proposal for the process you want to improve.",
+    "button": "Talk to the team",
+    "whatsappMessage": "Hi, I'd like to learn more about Humanika and talk to the team."
+  },
+  "breadcrumb": "About us"
+}

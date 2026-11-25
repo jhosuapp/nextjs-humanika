@@ -31,7 +31,9 @@
     "fuerzaLaboral": "Hybrid workforce",
     "about150": "What is 150%?",
     "products": "Products",
-    "agentesIa": "AI agents for business"
+    "agentesIa": "AI agents for business",
+    "platform": "Platform",
+    "about": "About us"
   },
   "header": {
     "skipLink": "Skip to main content",
@@ -61,7 +63,7 @@
     "heading": "Footer",
     "brand": {
       "name": "150%",
-      "tagline": "Smart avatars built for human communication.",
+      "tagline": "AI agents for businesses and public institutions, connected to each organization’s knowledge and processes.",
       "homeAria": "{{name}} home"
     },
     "nav": {
@@ -72,13 +74,16 @@
         "solutions": "Solutions",
         "process": "Process",
         "faqs": "FAQs",
-        "trust": "Trust"
+        "trust": "Trust",
+        "platform": "Platform",
+        "about": "About us",
+        "business": "Business",
+        "publicSector": "Public sector"
       },
       "company": {
-        "title": "Company",
-        "digitalTransformation": "Digital transformation",
+        "title": "150 Por Ciento",
+        "site": "Website",
         "services": "Services",
-        "blog": "Blog",
         "contact": "Contact"
       },
       "products": {
@@ -95,7 +100,8 @@
         "title": "Resources",
         "caseStudies": "Success stories",
         "articles": "Articles",
-        "agentesIa": "AI agents for business"
+        "agentesIa": "AI agents for business",
+        "faqs": "FAQs"
       }
     },
     "bottom": {

@@ -23,7 +23,7 @@ const headerStaticData: HeaderStaticData = {
   brand: { name: "150%", mark: "L" },
   nav: [
     { key: "bot", href: "/" },
-    { key: "products", href: "/productos" },
+    { key: "platform", href: "/plataforma" },
     { key: "caseStudies", href: "/casos-de-exito" },
     {
       key: "articles",
@@ -36,7 +36,7 @@ const headerStaticData: HeaderStaticData = {
         { key: "allArticles", href: "/blog" },
       ],
     },
-    { key: "about150", href: "https://150porciento.com/", external: true },
+    { key: "about", href: "/nosotros" },
   ],
   primaryCta: { href: "#get-started" },
   secondaryCta: { href: "#signin" },

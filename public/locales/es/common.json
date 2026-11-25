@@ -32,7 +32,9 @@
     "fuerzaLaboral": "Fuerza laboral híbrida",
     "about150": "¿Qué es 150%?",
     "products": "Productos",
-    "agentesIa": "Agentes de IA para empresas"
+    "agentesIa": "Agentes de IA para empresas",
+    "platform": "Plataforma",
+    "about": "Nosotros"
   },
   "header": {
     "skipLink": "Ir al contenido principal",
@@ -62,7 +64,7 @@
     "heading": "Pie de página",
     "brand": {
       "name": "150%",
-      "tagline": "Avatares inteligentes diseñados para comunicación humana.",
+      "tagline": "Agentes de IA para empresas y entidades públicas, conectados al conocimiento y los procesos de cada organización.",
       "homeAria": "Inicio de {{name}}"
     },
     "nav": {
@@ -73,13 +75,16 @@
         "solutions": "Soluciones",
         "process": "Proceso",
         "faqs": "Preguntas frecuentes",
-        "articles": "Artículos"
+        "articles": "Artículos",
+        "platform": "Plataforma",
+        "about": "Nosotros",
+        "business": "Empresas",
+        "publicSector": "Entidades públicas"
       },
       "company": {
-        "title": "Empresa",
-        "digitalTransformation": "Transformación digital",
+        "title": "150 Por Ciento",
+        "site": "Sitio web",
         "services": "Servicios",
-        "blog": "Blog",
         "contact": "Contacto"
       },
       "products": {
@@ -96,7 +101,8 @@
         "title": "Recursos",
         "caseStudies": "Casos de éxito",
         "articles": "Artículos",
-        "agentesIa": "Agentes de IA para empresas"
+        "agentesIa": "Agentes de IA para empresas",
+        "faqs": "Preguntas frecuentes"
       }
     },
     "bottom": {

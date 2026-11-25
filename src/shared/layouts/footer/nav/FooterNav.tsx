@@ -24,6 +24,7 @@ const FooterNav = ({ t }: FooterNavProps) => {
         >
           <Logo alt={brand.name} width={240} height={28} mobileHeight={26} />
         </CustomLink>
+        <p className={styles.tagline}>{t('footer.brand.tagline')}</p>
       </div>
 
       <nav

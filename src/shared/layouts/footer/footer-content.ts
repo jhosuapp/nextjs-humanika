@@ -1,9 +1,5 @@
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import {
-  faGithub,
-  faLinkedinIn,
-  faFacebook,
-} from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 type FooterLinkStatic = {
   key: string;
@@ -40,27 +36,16 @@ type FooterStaticData = {
 const footerStaticData: FooterStaticData = {
   brand: { name: "150%", mark: "L" },
   nav: {
+    // Three short columns on one row: site pages, resources, parent company.
     columns: [
       {
         key: "explore",
         links: [
           { key: "bot", href: "/" },
-          { key: "solutions", href: "/#solutions" },
-          { key: "process", href: "/#process" },
-          { key: "faqs", href: "/#faqs" },
-        ],
-      },
-      {
-        // Crawlable links to the catalog and every product family.
-        key: "products",
-        links: [
-          { key: "catalog", href: "/productos" },
-          { key: "atencionCiudadana", href: "/productos#atencion-ciudadana" },
-          { key: "documentosTramites", href: "/productos#documentos-tramites" },
-          { key: "contratacionInversion", href: "/productos#contratacion-inversion" },
-          { key: "investigacionParticipacion", href: "/productos#investigacion-participacion" },
-          { key: "educacion", href: "/productos#educacion" },
-          { key: "visionComputacional", href: "/productos#vision-computacional" },
+          { key: "platform", href: "/plataforma" },
+          { key: "business", href: "/empresas" },
+          { key: "publicSector", href: "/entidades-publicas" },
+          { key: "about", href: "/nosotros" },
         ],
       },
       {
@@ -68,25 +53,16 @@ const footerStaticData: FooterStaticData = {
         links: [
           { key: "caseStudies", href: "/casos-de-exito" },
           { key: "articles", href: "/blog" },
-          { key: "agentesIa", href: "/blog/agentes-ia-empresas" },
+          { key: "faqs", href: "/#faqs" },
         ],
       },
       {
         key: "company",
         links: [
-          {
-            key: "digitalTransformation",
-            href: "https://150porciento.com/digital-transformation/",
-            external: true,
-          },
+          { key: "site", href: "https://150porciento.com/", external: true },
           {
             key: "services",
             href: "https://150porciento.com/digital-agency-services/",
-            external: true,
-          },
-          {
-            key: "blog",
-            href: "https://150porciento.com/blog",
             external: true,
           },
           {

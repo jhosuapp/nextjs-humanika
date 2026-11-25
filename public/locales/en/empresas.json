@@ -1,0 +1,85 @@
+{
+  "seo": {
+    "title": "AI agents for business | Humanika",
+    "description": "AI digital collaborators for business: training, knowledge, service, sales and operations, connected to your systems and with human review."
+  },
+  "hero": {
+    "eyebrow": "Business",
+    "title": "Digital collaborators that work alongside your teams",
+    "description": "Humanika designs AI agents that train, answer, sell and operate with your company's knowledge and systems. You set the rules; the agent applies them and hands the case to a person when needed.",
+    "primaryCta": "Request a demo",
+    "secondaryCta": "Explore the platform"
+  },
+  "moreLabel": "See solution",
+  "sections": {
+    "areas": {
+      "eyebrow": "Areas",
+      "title": "A digital collaborator for every area",
+      "description": "Start with the process that matters most and expand to other areas on the same platform.",
+      "items": [
+        {
+          "title": "Training",
+          "text": "Tutors available whenever people need them: onboarding, ongoing training and progress tracking."
+        },
+        {
+          "title": "Knowledge",
+          "text": "Your company documentation, searchable in plain language and with references to the source."
+        },
+        {
+          "title": "Service and support",
+          "text": "Service over WhatsApp, web chat and voice, with escalation to your team when a case needs it."
+        },
+        {
+          "title": "Sales",
+          "text": "Support for every sales opportunity, with information recorded in your CRM, such as HubSpot."
+        },
+        {
+          "title": "Operations",
+          "text": "Automation of repetitive tasks with configurable workflows and a record of every step."
+        },
+        {
+          "title": "Marketing performance",
+          "text": "Review of Google Ads and Meta Ads campaigns, with findings and recommendations for your team."
+        }
+      ]
+    },
+    "connections": {
+      "eyebrow": "Integrations",
+      "title": "Connected to your team's tools",
+      "description": "Available integrations are confirmed for each project.",
+      "groups": [
+        {
+          "title": "Channels",
+          "items": [
+            "Web chat",
+            "WhatsApp Business",
+            "Microsoft Teams",
+            "Voice"
+          ]
+        },
+        {
+          "title": "Systems and knowledge",
+          "items": [
+            "HubSpot",
+            "Moodle",
+            "Google Drive",
+            "Microsoft 365",
+            "SharePoint",
+            "Google Ads",
+            "Meta Ads",
+            "Google Analytics 4",
+            "Custom API"
+          ]
+        }
+      ]
+    }
+  },
+  "cta": {
+    "eyebrow": "Demo",
+    "title": "Try a digital collaborator with a case from your company",
+    "description": "Tell us which process you want to improve and we'll show you how it would work with your information and channels.",
+    "button": "Request a demo",
+    "whatsappMessage": "Hi, I'd like to request a Humanika demo for my company."
+  },
+  "breadcrumb": "Business"
+}

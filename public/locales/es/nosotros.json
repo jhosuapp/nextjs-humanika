@@ -1,0 +1,65 @@
+{
+  "seo": {
+    "title": "Quiénes somos y cómo trabajamos | Humanika",
+    "description": "Humanika es una iniciativa de 150 Por Ciento que diseña, integra y opera agentes de IA para empresas y entidades públicas, con personas a cargo."
+  },
+  "hero": {
+    "eyebrow": "Nosotros",
+    "title": "Hacemos que la IA trabaje con las personas, no en su lugar",
+    "description": "Humanika es una iniciativa de 150 Por Ciento. Diseñamos, integramos y operamos colaboradores digitales de IA para empresas y entidades públicas, con el conocimiento de cada organización y personas a cargo de las decisiones.",
+    "primaryCta": "Hablar con el equipo",
+    "secondaryCta": "Ver casos de éxito"
+  },
+  "sections": {
+    "approach": {
+      "eyebrow": "Cómo pensamos",
+      "title": "Más que un chatbot",
+      "description": "Tres ideas guían cada proyecto que hacemos.",
+      "items": [
+        {
+          "title": "Agentes conectados a su operación",
+          "text": "Un colaborador digital trabaja con los documentos, sistemas, procesos, permisos y canales de su organización, no solo con un guion de preguntas."
+        },
+        {
+          "title": "Las personas deciden",
+          "text": "La IA prepara, responde y sugiere. Su equipo revisa, aprueba y atiende los casos que necesitan criterio humano."
+        },
+        {
+          "title": "Resultados que se miden",
+          "text": "Cada agente tiene métricas de uso, resolución y escalamiento para saber qué funciona y qué ajustar."
+        }
+      ]
+    },
+    "method": {
+      "eyebrow": "Método",
+      "title": "Cómo llevamos un agente a producción",
+      "description": "Un proceso en cuatro etapas, del primer caso de uso a la operación diaria.",
+      "items": [
+        {
+          "title": "Entendemos el desafío",
+          "text": "Definimos con su equipo el proceso, las personas que atiende y el resultado que se quiere lograr."
+        },
+        {
+          "title": "Organizamos el conocimiento",
+          "text": "Reunimos los documentos, fuentes y reglas que el agente puede usar, y lo que no debe responder."
+        },
+        {
+          "title": "Configuramos y probamos",
+          "text": "Diseñamos el agente, lo conectamos a sus canales y sistemas y lo probamos con casos reales antes de abrirlo."
+        },
+        {
+          "title": "Operamos y mejoramos",
+          "text": "Supervisamos conversaciones y métricas, y ajustamos el agente a medida que su organización cambia."
+        }
+      ]
+    }
+  },
+  "cta": {
+    "eyebrow": "Contacto",
+    "title": "Hablemos de su próximo colaborador digital",
+    "description": "Escríbanos por WhatsApp y le respondemos con una propuesta para el proceso que quiere mejorar.",
+    "button": "Hablar con el equipo",
+    "whatsappMessage": "Hola, quiero conocer más sobre Humanika y hablar con el equipo."
+  },
+  "breadcrumb": "Nosotros"
+}

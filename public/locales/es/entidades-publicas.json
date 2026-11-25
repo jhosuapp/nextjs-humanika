@@ -1,0 +1,78 @@
+{
+  "seo": {
+    "title": "Inteligencia artificial para entidades públicas | Humanika",
+    "description": "Agentes de IA para entidades públicas: atención ciudadana, PQRSD, trámites, contratación y proyectos MGA, con fuentes autorizadas y revisión humana."
+  },
+  "hero": {
+    "eyebrow": "Entidades públicas",
+    "title": "Inteligencia artificial al servicio de la ciudadanía y de sus equipos",
+    "description": "Humanika ayuda a alcaldías, gobernaciones y entidades del Estado a atender mejor, tramitar con menos reprocesos y decidir con información. Cada agente usa la información autorizada por la entidad y deja las decisiones en manos de sus funcionarios.",
+    "primaryCta": "Solicitar una demostración",
+    "secondaryCta": "Ver las 18 soluciones"
+  },
+  "moreLabel": "Ver soluciones",
+  "sections": {
+    "families": {
+      "eyebrow": "Soluciones",
+      "title": "Agentes para cada frente de la gestión pública",
+      "description": "Seis familias de soluciones que puede implementar por separado o combinar según las prioridades de su entidad.",
+      "items": [
+        {
+          "title": "Atención ciudadana",
+          "text": "Orientación por chat, WhatsApp, voz y tótems, gestión de PQRSD y control de calidad del servicio."
+        },
+        {
+          "title": "Documentos y trámites",
+          "text": "Consulta de manuales y normativa, lectura de documentos, prevalidación de expedientes y automatización de tareas."
+        },
+        {
+          "title": "Contratación e inversión pública",
+          "text": "Revisión de pliegos, seguimiento de contratos y formulación de proyectos de inversión con la metodología MGA."
+        },
+        {
+          "title": "Investigación y participación",
+          "text": "Entrevistas, encuestas y análisis de consultas públicas, con el vínculo a cada aporte original."
+        },
+        {
+          "title": "Formación de servidores",
+          "text": "Rutas de inducción, práctica con escenarios simulados y enseñanza de idiomas con tutores de IA."
+        },
+        {
+          "title": "Visión computacional",
+          "text": "Medición de afluencia en sedes e inspecciones documentadas a partir de fotografías."
+        }
+      ]
+    },
+    "principles": {
+      "eyebrow": "Cómo trabajamos",
+      "title": "IA confiable para el sector público",
+      "description": "Cuatro principios que aplicamos en cada implementación.",
+      "items": [
+        {
+          "title": "Solo información autorizada",
+          "text": "Los agentes responden con las fuentes que la entidad aprueba: manuales, normativa, procedimientos y datos de sus trámites."
+        },
+        {
+          "title": "Los funcionarios deciden",
+          "text": "Los agentes preparan, resumen y sugieren. Las personas revisan, aprueban y atienden los casos que lo requieren."
+        },
+        {
+          "title": "Trazabilidad de cada paso",
+          "text": "Cada conversación, operación y documento queda registrado para auditar qué se hizo, cuándo y con qué información."
+        },
+        {
+          "title": "Canales que la ciudadanía ya usa",
+          "text": "WhatsApp, chat web, líneas telefónicas y tótems en las sedes, con derivación a un operador cuando hace falta."
+        }
+      ]
+    }
+  },
+  "cta": {
+    "eyebrow": "Demostración",
+    "title": "Conozca cómo funcionaría en su entidad",
+    "description": "Cuéntenos qué trámite o servicio quiere mejorar y le mostramos un agente configurado con un caso real de su entidad.",
+    "button": "Solicitar una demostración",
+    "whatsappMessage": "Hola, trabajo en una entidad pública y quiero solicitar una demostración de Humanika."
+  },
+  "breadcrumb": "Entidades públicas"
+}

@@ -1,0 +1,115 @@
+{
+  "seo": {
+    "title": "Plataforma de agentes de IA con gobierno | Humanika",
+    "description": "Humanika Core permite crear, conectar y supervisar agentes de IA con sus documentos, sistemas y canales, con roles, auditoría y revisión humana."
+  },
+  "hero": {
+    "eyebrow": "Plataforma",
+    "title": "La plataforma para crear, operar y supervisar agentes de IA",
+    "description": "Humanika Core es la plataforma con la que configuramos los colaboradores digitales de cada organización. Los conectamos a sus documentos, sistemas y canales, y los operamos con permisos, trazabilidad y revisión humana.",
+    "primaryCta": "Solicitar una demostración",
+    "secondaryCta": "Ver soluciones"
+  },
+  "sections": {
+    "capabilities": {
+      "eyebrow": "Qué incluye",
+      "title": "Todo lo necesario para poner un agente en operación",
+      "description": "Desde la configuración inicial hasta el seguimiento diario, en un mismo lugar.",
+      "items": [
+        {
+          "title": "Colaboradores digitales configurables",
+          "text": "Un asistente guiado define la identidad del agente, su conocimiento, su modelo de IA, sus canales y los documentos legales que acepta cada usuario."
+        },
+        {
+          "title": "Conocimiento conectado",
+          "text": "El agente aprende de documentos PDF, Word y PowerPoint, de sitios web y de carpetas sincronizadas en Google Drive, SharePoint y OneDrive."
+        },
+        {
+          "title": "Agentes especializados que trabajan juntos",
+          "text": "Un orquestador coordina agentes de conocimiento, análisis, documentos y evaluación para resolver cada solicitud por partes."
+        },
+        {
+          "title": "Conversaciones con escalamiento humano",
+          "text": "Cada conversación queda registrada y puede pasar a un operador cuando la consulta necesita atención de una persona."
+        },
+        {
+          "title": "Supervisión y métricas",
+          "text": "Un panel muestra conversaciones por canal, casos resueltos y escalados, desempeño de cada agente y el uso y costo de los modelos."
+        },
+        {
+          "title": "Documentos y entregables",
+          "text": "Los agentes generan documentos en Word, PDF y Excel a partir de plantillas, listos para la revisión de su equipo."
+        }
+      ]
+    },
+    "connections": {
+      "eyebrow": "Conexiones",
+      "title": "Canales, sistemas y modelos de IA",
+      "description": "Humanika se integra con las herramientas que su organización ya usa. Las integraciones disponibles se confirman en cada proyecto.",
+      "groups": [
+        {
+          "title": "Canales",
+          "items": ["Chat web", "WhatsApp Business", "Microsoft Teams", "Voz"]
+        },
+        {
+          "title": "Conocimiento y documentos",
+          "items": ["Google Drive", "Microsoft 365", "SharePoint", "OneDrive", "Sitios web"]
+        },
+        {
+          "title": "Sistemas y datos",
+          "items": ["Moodle", "Academusoft", "HubSpot", "Google Ads", "Meta Ads", "Google Analytics 4", "API propia"]
+        },
+        {
+          "title": "Modelos de IA y voz",
+          "items": ["Anthropic Claude", "OpenAI", "Google Gemini", "Qwen", "ElevenLabs", "Azure Speech"]
+        }
+      ]
+    },
+    "governance": {
+      "eyebrow": "Gobierno y control",
+      "title": "IA con reglas claras y personas a cargo",
+      "description": "Cada acción de un agente responde a permisos definidos y deja rastro para su revisión.",
+      "items": [
+        {
+          "title": "Roles y permisos",
+          "text": "Roles base y personalizados definen quién configura, opera, supervisa o solo consulta, en toda la plataforma o por cliente."
+        },
+        {
+          "title": "Auditoría y trazabilidad",
+          "text": "La plataforma registra las operaciones, las entregas de mensajes y los errores, para revisar qué pasó y cuándo."
+        },
+        {
+          "title": "Revisión humana",
+          "text": "Las personas aprueban evaluaciones, revisan entregables y ven qué partes completó la IA y con qué evidencia."
+        },
+        {
+          "title": "Acceso y consentimiento",
+          "text": "El acceso se controla con código por correo, inicio de sesión con Google o Microsoft, dominios permitidos o invitación, y cada usuario acepta los términos."
+        }
+      ]
+    },
+    "languages": {
+      "eyebrow": "Idiomas",
+      "title": "Atención en varios idiomas",
+      "description": "Cada agente se configura en el idioma de las personas que atiende.",
+      "groups": [
+        {
+          "title": "Chat",
+          "items": ["Español", "Inglés", "Portugués"]
+        },
+        {
+          "title": "Voz",
+          "items": ["Español", "Inglés", "Francés", "Portugués"]
+        }
+      ]
+    }
+  },
+  "cta": {
+    "eyebrow": "Demostración",
+    "title": "Vea la plataforma funcionando con un caso de su organización",
+    "description": "Cuéntenos qué proceso quiere mejorar y le mostramos cómo se configuraría un agente para resolverlo.",
+    "button": "Solicitar una demostración",
+    "whatsappMessage": "Hola, quiero conocer la plataforma Humanika y solicitar una demostración."
+  },
+  "breadcrumb": "Plataforma"
+}

@@ -1,0 +1,92 @@
+@reference "tailwindcss";
+
+.hero {
+  @apply relative overflow-hidden;
+  background: var(--bg-section);
+}
+
+/* Layout on an inner element, never merged onto Container's own class. */
+.container {
+  @apply relative z-10;
+}
+
+.content {
+  @apply flex flex-col items-center text-center gap-6 mx-auto pt-12 pb-16 lg:pt-20 lg:pb-24;
+  max-width: 48rem;
+}
+
+.eyebrow {
+  @apply inline-flex w-fit items-center gap-2.5 rounded-full px-4 py-1.5 m-0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-subtle);
+}
+
+.title {
+  @apply m-0 text-3xl sm:text-4xl xl:text-5xl font-bold;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--text-secondary);
+  text-wrap: balance;
+}
+
+.description {
+  @apply m-0 text-base lg:text-lg leading-relaxed;
+  color: var(--text-muted);
+  max-width: 40rem;
+}
+
+.actions {
+  @apply flex flex-wrap items-center justify-center gap-x-6 gap-y-4 mt-2;
+}
+
+.actions button {
+  @apply w-full sm:w-fit;
+}
+
+.actions button span {
+  @apply text-nowrap;
+}
+
+.secondaryLink {
+  @apply inline-flex items-center gap-2 text-sm font-semibold no-underline;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.secondaryLink svg {
+  width: 0.85em;
+  height: 0.85em;
+  transition: transform 0.3s ease;
+}
+
+.secondaryLink:hover {
+  color: var(--primary);
+}
+
+.secondaryLink:hover svg {
+  transform: translateX(4px);
+}
+
+/* Ambient orbs: radial gradients only (no blur filter; see iOS notes). */
+.orbs {
+  @apply absolute inset-0 z-0 pointer-events-none overflow-hidden;
+}
+
+.orb {
+  @apply absolute rounded-full;
+  will-change: transform;
+}
+
+.orbCyan {
+  @apply h-[520px] w-[520px] top-[-160px] right-[-120px];
+  background: radial-gradient(circle, rgba(0, 190, 255, 0.3), rgba(0, 190, 255, 0.1) 40%, transparent 70%);
+}
+
+.orbTeal {
+  @apply h-[560px] w-[560px] bottom-[-220px] left-[-180px];
+  background: radial-gradient(circle, rgba(23, 241, 209, 0.26), rgba(23, 241, 209, 0.08) 40%, transparent 70%);
+}

@@ -1,0 +1,78 @@
+{
+  "seo": {
+    "title": "Artificial intelligence for public institutions | Humanika",
+    "description": "AI agents for public institutions: citizen services, requests, procedures, procurement and MGA projects, with approved sources and human review."
+  },
+  "hero": {
+    "eyebrow": "Public sector",
+    "title": "Artificial intelligence serving citizens and your teams",
+    "description": "Humanika helps city halls, regional governments and state agencies serve people better, process procedures with less rework and decide with information. Each agent uses the institution's approved information and leaves decisions to its staff.",
+    "primaryCta": "Request a demo",
+    "secondaryCta": "See all 18 solutions"
+  },
+  "moreLabel": "See solutions",
+  "sections": {
+    "families": {
+      "eyebrow": "Solutions",
+      "title": "Agents for every area of public management",
+      "description": "Six solution families you can implement separately or combine based on your institution's priorities.",
+      "items": [
+        {
+          "title": "Citizen services",
+          "text": "Guidance over chat, WhatsApp, voice and kiosks, citizen request management and service quality control."
+        },
+        {
+          "title": "Documents and procedures",
+          "text": "Manual and regulation lookups, document reading, case file pre-validation and task automation."
+        },
+        {
+          "title": "Public procurement and investment",
+          "text": "Tender review, contract tracking and investment project formulation with the MGA methodology."
+        },
+        {
+          "title": "Research and participation",
+          "text": "Interviews, surveys and public consultation analysis, linked to each original contribution."
+        },
+        {
+          "title": "Staff training",
+          "text": "Onboarding paths, simulated practice scenarios and language learning with AI tutors."
+        },
+        {
+          "title": "Computer vision",
+          "text": "Foot traffic measurement on site and inspections documented from photos."
+        }
+      ]
+    },
+    "principles": {
+      "eyebrow": "How we work",
+      "title": "Trustworthy AI for the public sector",
+      "description": "Four principles we apply in every implementation.",
+      "items": [
+        {
+          "title": "Approved information only",
+          "text": "Agents answer with the sources the institution approves: manuals, regulations, procedures and procedure data."
+        },
+        {
+          "title": "Staff make the decisions",
+          "text": "Agents prepare, summarize and suggest. People review, approve and handle the cases that need them."
+        },
+        {
+          "title": "Traceability at every step",
+          "text": "Every conversation, operation and document is logged to audit what was done, when and with what information."
+        },
+        {
+          "title": "Channels citizens already use",
+          "text": "WhatsApp, web chat, phone lines and on-site kiosks, with handoff to an operator when needed."
+        }
+      ]
+    }
+  },
+  "cta": {
+    "eyebrow": "Demo",
+    "title": "See how it would work at your institution",
+    "description": "Tell us which procedure or service you want to improve and we'll show you an agent configured with a real case from your institution.",
+    "button": "Request a demo",
+    "whatsappMessage": "Hi, I work at a public institution and I'd like to request a Humanika demo."
+  },
+  "breadcrumb": "Public sector"
+}

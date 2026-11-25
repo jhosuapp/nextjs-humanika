@@ -1,0 +1,55 @@
+@reference "tailwindcss";
+
+.section {
+  @apply w-full;
+  background: var(--background);
+}
+
+.card {
+  @apply relative flex flex-col lg:flex-row lg:items-center justify-between gap-8 overflow-hidden rounded-3xl p-8 sm:p-10 lg:p-14;
+  --gl-box-fill: linear-gradient(
+    120deg,
+    var(--surface-elevated) 0%,
+    var(--surface-elevated) 55%,
+    var(--cuartary) 100%
+  );
+}
+
+:global([data-theme="dark"]) .card {
+  --gl-box-fill: linear-gradient(
+    120deg,
+    var(--surface-elevated) 0%,
+    var(--surface-elevated) 55%,
+    rgba(0, 177, 215, 0.12) 100%
+  );
+}
+
+.copy {
+  @apply relative flex flex-col gap-3;
+  max-width: 40rem;
+}
+
+.title {
+  @apply m-0 text-2xl lg:text-3xl font-semibold;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--text-secondary);
+  text-wrap: balance;
+}
+
+.description {
+  @apply m-0 text-sm lg:text-base leading-relaxed;
+  color: var(--text-muted);
+}
+
+.action {
+  @apply relative shrink-0;
+}
+
+.action button {
+  @apply w-full sm:w-fit;
+}
+
+.action button span {
+  @apply text-nowrap;
+}
