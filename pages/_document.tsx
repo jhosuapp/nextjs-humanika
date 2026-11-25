@@ -23,7 +23,10 @@ export default class MyDocument extends Document<Props> {
     return (
       <Html lang={this.props.locale} className="h-full antialiased" suppressHydrationWarning>
         <Head>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/favicon.ico" sizes="any" />
+          <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+          <link rel="manifest" href="/site.webmanifest" />
           <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
         </Head>
         <body className="min-h-dvh flex flex-col">

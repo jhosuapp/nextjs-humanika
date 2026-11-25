@@ -44,11 +44,31 @@ const footerStaticData: FooterStaticData = {
       {
         key: "explore",
         links: [
-          { key: "bot", href: "/#hero" },
+          { key: "bot", href: "/" },
           { key: "solutions", href: "/#solutions" },
           { key: "process", href: "/#process" },
           { key: "faqs", href: "/#faqs" },
+        ],
+      },
+      {
+        // Crawlable links to the catalog and every product family.
+        key: "products",
+        links: [
+          { key: "catalog", href: "/productos" },
+          { key: "atencionCiudadana", href: "/productos#atencion-ciudadana" },
+          { key: "documentosTramites", href: "/productos#documentos-tramites" },
+          { key: "contratacionInversion", href: "/productos#contratacion-inversion" },
+          { key: "investigacionParticipacion", href: "/productos#investigacion-participacion" },
+          { key: "educacion", href: "/productos#educacion" },
+          { key: "visionComputacional", href: "/productos#vision-computacional" },
+        ],
+      },
+      {
+        key: "resources",
+        links: [
+          { key: "caseStudies", href: "/casos-de-exito" },
           { key: "articles", href: "/blog" },
+          { key: "agentesIa", href: "/blog/agentes-ia-empresas" },
         ],
       },
       {

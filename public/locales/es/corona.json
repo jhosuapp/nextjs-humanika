@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "Corona México: fidelización masiva por WhatsApp en el Mundial | 150%",
-    "description": "150% participó en una experiencia conversacional masiva para Corona México: corcholatas con códigos únicos, entrega inteligente de premios por localización, Oxxo y TaDa Delivery, avatares, gamification e insights en WhatsApp."
+    "title": "Corona México: fidelización masiva por WhatsApp | Humanika",
+    "description": "Corona México premió a sus consumidores en WhatsApp durante el Mundial con códigos en corcholatas, premios por ubicación, avatares e insights."
   },
   "hero": {
     "eyebrow": "Consumo masivo",
@@ -21,7 +21,11 @@
       "A partir de ese gesto mínimo, 150% participó en la creación de una de las experiencias conversacionales más masivas de la marca en México: un sistema de fidelización capaz de conectar códigos únicos, premios, ubicación, proveedores, e-commerce, avatares personalizados, mensajes masivos e insights de consumo en una sola experiencia."
     ]
   },
-  "categories": ["Consumo masivo", "WhatsApp", "Fidelización"],
+  "categories": [
+    "Consumo masivo",
+    "WhatsApp",
+    "Fidelización"
+  ],
   "metric": {
     "prefix": "+",
     "suffix": "M",

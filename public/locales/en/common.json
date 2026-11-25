@@ -29,7 +29,9 @@
     "digitalCoworkers": "Digital coworkers",
     "trust": "Building trust",
     "fuerzaLaboral": "Hybrid workforce",
-    "about150": "What is 150%?"
+    "about150": "What is 150%?",
+    "products": "Products",
+    "agentesIa": "AI agents for business"
   },
   "header": {
     "skipLink": "Skip to main content",
@@ -66,7 +68,7 @@
       "ariaLabel": "Footer navigation",
       "explore": {
         "title": "Explore",
-        "bot": "Bot",
+        "bot": "Home",
         "solutions": "Solutions",
         "process": "Process",
         "faqs": "FAQs",
@@ -78,6 +80,22 @@
         "services": "Services",
         "blog": "Blog",
         "contact": "Contact"
+      },
+      "products": {
+        "title": "Products",
+        "catalog": "View catalog",
+        "atencionCiudadana": "Citizen services",
+        "documentosTramites": "Documents and procedures",
+        "contratacionInversion": "Procurement and investment",
+        "investigacionParticipacion": "Research and participation",
+        "educacion": "Education",
+        "visionComputacional": "Computer vision"
+      },
+      "resources": {
+        "title": "Resources",
+        "caseStudies": "Success stories",
+        "articles": "Articles",
+        "agentesIa": "AI agents for business"
       }
     },
     "bottom": {
@@ -95,5 +113,17 @@
     "relatedEyebrow": "More stories",
     "relatedTitle": "More success stories",
     "readMore": "View case"
+  },
+  "notFound": {
+    "seoTitle": "Page not found | Humanika",
+    "seoDescription": "The page you're looking for doesn't exist or has moved. Go back to Humanika's home page or explore the solutions catalog and blog articles.",
+    "eyebrow": "Error 404",
+    "title": "We couldn't find this page",
+    "description": "The address may have changed or the link may be incomplete. These pages can help:",
+    "links": {
+      "home": "Go home",
+      "products": "View products",
+      "blog": "Read articles"
+    }
   }
 }

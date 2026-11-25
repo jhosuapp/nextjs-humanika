@@ -29,6 +29,7 @@ export default function ProductPage({ slug }: ProductPageProps) {
     category: t(`categories.${entry.category}`) as string,
     image: entry.image,
     homeLabel: t("ui.breadcrumbHome") as string,
+    catalogLabel: t("catalog.hero.eyebrow") as string,
     localePath: locale && locale !== "es" ? `/${locale}` : "",
   });
 

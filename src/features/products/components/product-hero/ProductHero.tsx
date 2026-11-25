@@ -13,6 +13,7 @@ import { useLenisStore } from "@/src/shared/stores/lenis.store";
 import { fadeUpMotion } from "@/src/shared/motion/fadeUp.motion";
 import { zoomInMotion } from "@/src/shared/motion/zoomIn.motion";
 import { pushDataLayer } from "@/src/shared/helpers/data-layer";
+import { CustomLink } from "@/src/shared/components/custom-link/CustomLink";
 
 import styles from "./product-hero.module.css";
 
@@ -75,10 +76,17 @@ const ProductHero = ({
       <Container className={styles.container}>
         <div className={styles.wrapper}>
           <div className={styles.content}>
-            <motion.p className={styles.category} {...MOTION.category}>
-              <span className="gl-dot" aria-hidden="true" />
-              {category}
-            </motion.p>
+            {/* Category links to its family in the catalog (brief). */}
+            <motion.div className={styles.categoryWrap} {...MOTION.category}>
+              <CustomLink
+                to={`/productos#${entry.category}`}
+                className={styles.category}
+                ariaLabel={t("ui.categoryLinkAria", { category }) as string}
+              >
+                <span className="gl-dot" aria-hidden="true" />
+                {category}
+              </CustomLink>
+            </motion.div>
 
             <motion.h1 className={styles.title} {...MOTION.title}>
               <span className={`${styles.brand} gl-degradete-text`}>

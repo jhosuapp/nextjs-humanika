@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "Stella Artois Perfect Serve: el servido perfecto medido por WhatsApp | 150%",
-    "description": "150%, junto a BeamB., llevó Stella Artois Perfect Serve a WhatsApp: reconocimiento de imagen, gamification, restaurantes aliados e insights para medir, enseñar y premiar el ritual del servido perfecto."
+    "title": "Stella Artois: el servido perfecto en WhatsApp | Humanika",
+    "description": "Stella Artois llevó su Perfect Serve a WhatsApp con reconocimiento de imagen, juegos y restaurantes aliados para medir, enseñar y premiar el ritual."
   },
   "hero": {
     "eyebrow": "Consumo masivo",
@@ -21,7 +21,11 @@
       "La campaña empezó como una experiencia web en 2025 y luego evolucionó hacia WhatsApp, llevando la mecánica al canal más cotidiano del consumidor. 150%, acompañando a BeamB., ayudó a transformar esa experiencia en un sistema conversacional capaz de reconocer imágenes, activar dinámicas de gamification, interoperar con restaurantes aliados y convertir cada servido en una oportunidad de participación."
     ]
   },
-  "categories": ["Consumo masivo", "WhatsApp", "Gamification"],
+  "categories": [
+    "Consumo masivo",
+    "WhatsApp",
+    "Gamification"
+  ],
   "metric": {
     "prefix": "",
     "suffix": "",

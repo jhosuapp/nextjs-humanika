@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "Festival del Pollo Colombiano: IA, recetas y rutas en WhatsApp | 150%",
-    "description": "150% creó una experiencia conversacional en WhatsApp para el Festival del Pollo Colombiano: recetas con IA según tus ingredientes, imágenes generadas, recomendación de restaurantes cercanos y rutas en Maps o Waze."
+    "title": "Festival del Pollo: recetas con IA en WhatsApp | Humanika",
+    "description": "Experiencia en WhatsApp para el Festival del Pollo Colombiano: recetas con IA según sus ingredientes, imágenes generadas y restaurantes con ruta."
   },
   "hero": {
     "eyebrow": "Gastronomía",
@@ -21,7 +21,11 @@
       "150% creó un sistema conversacional en WhatsApp que acompañaba al usuario desde dos momentos distintos: cuando quería cocinar en casa y cuando quería salir a comer. La experiencia combinó inteligencia artificial generativa, ubicación, recomendación de restaurantes, navegación asistida e insights de consumo."
     ]
   },
-  "categories": ["Gastronomía", "WhatsApp", "IA generativa"],
+  "categories": [
+    "Gastronomía",
+    "WhatsApp",
+    "IA generativa"
+  ],
   "metric": {
     "prefix": "",
     "suffix": " marcas",

@@ -1,0 +1,30 @@
+@reference "tailwindcss";
+
+.page {
+  @apply w-full flex-1;
+  background: var(--bg-section);
+}
+
+.content {
+  @apply flex flex-col items-center text-center gap-5 mx-auto py-10 lg:py-16;
+  max-width: 40rem;
+}
+
+.links {
+  @apply flex flex-wrap justify-center gap-3 mt-4;
+}
+
+.link {
+  @apply inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold no-underline;
+  color: var(--text-secondary);
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-subtle);
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.link:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+}

@@ -1,6 +1,6 @@
 {
   "seo": {
-    "title": "Crear confianza, no solo avatares | 150%",
+    "title": "Crear confianza, no solo avatares | Humanika",
     "description": "Por qué el éxito de un agente digital no depende del hiperrealismo, sino de la confianza, la utilidad y la relevancia para las personas."
   },
   "hero": {
@@ -74,7 +74,9 @@
   "comportamiento": {
     "eyebrow": "La clave",
     "title": "La confianza se construye con comportamiento, no con gráficos",
-    "intro": ["Un avatar genera confianza cuando:"],
+    "intro": [
+      "Un avatar genera confianza cuando:"
+    ],
     "bullets": [
       "Entiende el contexto.",
       "Responde con precisión.",

@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "Cerveza Águila: WhatsApp como canal de fidelización en el Mundial | 150%",
-    "description": "Antes y durante el Mundial, 150% convirtió WhatsApp en un canal de fidelización masiva para Cerveza Águila: facturas, trivias, premios automáticos, TaDa y contenido personalizado en una sola conversación."
+    "title": "Cerveza Águila: fidelización por WhatsApp | Humanika",
+    "description": "Cómo Cerveza Águila convirtió WhatsApp en un canal de fidelización en el Mundial: facturas, trivias, premios automáticos y contenido personalizado."
   },
   "hero": {
     "eyebrow": "Consumo masivo",
@@ -20,7 +20,11 @@
       "Desde ahí, 150% diseñó una experiencia promocional para Cerveza Águila antes y durante el Mundial. Por fuera, la mecánica era simple: participar, enviar una factura, responder trivias, acumular oportunidades y recibir premios. Por dentro, era una operación tecnológica de alto volumen conectando validación de datos, reglas promocionales, comercio digital, puntos de venta, automatización y contenido personalizado."
     ]
   },
-  "categories": ["Consumo masivo", "WhatsApp", "Fidelización"],
+  "categories": [
+    "Consumo masivo",
+    "WhatsApp",
+    "Fidelización"
+  ],
   "metric": {
     "prefix": "",
     "suffix": "",

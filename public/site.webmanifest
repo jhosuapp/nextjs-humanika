@@ -1,0 +1,15 @@
+{
+  "name": "Humanika · Colaboradores digitales de IA",
+  "short_name": "Humanika",
+  "description": "Agentes de IA para empresas y entidades públicas, conectados al conocimiento, los sistemas y los procesos de cada organización.",
+  "lang": "es-CO",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

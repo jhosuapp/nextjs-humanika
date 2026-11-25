@@ -19,8 +19,15 @@
   @apply flex flex-col gap-6;
 }
 
+.categoryWrap {
+  @apply w-fit;
+}
+
 .category {
-  @apply inline-flex w-fit items-center gap-2.5 rounded-full px-4 py-1.5 m-0;
+  @apply inline-flex w-fit items-center gap-2.5 rounded-full px-4 py-1.5 m-0 no-underline;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -28,6 +35,11 @@
   background: var(--surface-overlay);
   border: 1px solid var(--border-subtle);
   backdrop-filter: blur(8px);
+}
+
+.category:hover {
+  color: var(--primary);
+  border-color: var(--primary);
 }
 
 .title {

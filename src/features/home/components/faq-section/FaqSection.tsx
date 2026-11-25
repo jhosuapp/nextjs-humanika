@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { useState } from 'react';
 
 import {
@@ -61,43 +61,36 @@ const AccordionItem = ({ id, question, answer, isOpen, onToggle }: AccordionItem
         </button>
       </h3>
 
-      <AnimatePresence initial={false}>
-        {isOpen ? (
-          <motion.div
-            key="panel"
-            id={panelId}
-            role="region"
-            aria-labelledby={buttonId}
-            className={styles.panel}
-            initial={
-              reduce ? { opacity: 0 } : { height: 0, opacity: 0 }
-            }
-            animate={
-              reduce
-                ? { opacity: 1 }
-                : { height: 'auto', opacity: 1 }
-            }
-            exit={
-              reduce ? { opacity: 0 } : { height: 0, opacity: 0 }
-            }
-            transition={{
-              height: { duration: DURATION.fast, ease: EASE },
-              opacity: { duration: 0.2, ease: EASE },
-            }}
-          >
-            <Text
-              className={ styles.answer }
-              tag="p" 
-              variant="description_small" 
-              color="muted"
-              delay={{ enter: 0, exit: 0 }}
-              fadeUpTertiary
-            >
-              {answer}
-            </Text>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
+      {/* Always in the HTML (crawlers and AI search read every answer); only
+          the height animates. Closed panels are inert for keyboard/AT users. */}
+      <motion.div
+        id={panelId}
+        role="region"
+        aria-labelledby={buttonId}
+        aria-hidden={!isOpen}
+        inert={!isOpen}
+        className={styles.panel}
+        initial={false}
+        animate={
+          reduce
+            ? { opacity: isOpen ? 1 : 0, height: isOpen ? 'auto' : 0 }
+            : { height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }
+        }
+        transition={{
+          height: { duration: reduce ? 0 : DURATION.fast, ease: EASE },
+          opacity: { duration: 0.2, ease: EASE },
+        }}
+      >
+        <Text
+          className={styles.answer}
+          tag="p"
+          variant="description_small"
+          color="muted"
+          noMotion
+        >
+          {answer}
+        </Text>
+      </motion.div>
     </div>
   );
 };

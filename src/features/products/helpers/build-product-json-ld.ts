@@ -7,11 +7,12 @@ type ProductJsonLdInput = {
   category: string;
   image: string;
   homeLabel: string;
+  catalogLabel: string;
   localePath: string;
 };
 
 /** schema.org nodes for a product ficha: the software product itself plus a
- *  breadcrumb trail (Home › Product). Merged into PageLayout's `@graph`. */
+ *  breadcrumb trail (Home › Products › Product). Merged into PageLayout's `@graph`. */
 const buildProductJsonLd = ({
   slug,
   name,
@@ -19,6 +20,7 @@ const buildProductJsonLd = ({
   category,
   image,
   homeLabel,
+  catalogLabel,
   localePath,
 }: ProductJsonLdInput): Record<string, unknown>[] => {
   const url = `${SITE_URL}${localePath}/productos/${slug}`;
@@ -47,7 +49,13 @@ const buildProductJsonLd = ({
           name: homeLabel,
           item: `${SITE_URL}${localePath}`,
         },
-        { "@type": "ListItem", position: 2, name, item: url },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: catalogLabel,
+          item: `${SITE_URL}${localePath}/productos`,
+        },
+        { "@type": "ListItem", position: 3, name, item: url },
       ],
     },
   ];

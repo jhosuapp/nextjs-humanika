@@ -10,7 +10,8 @@
     "start": "next start",
     "lint": "eslint",
     "seed": "node prisma/seed.mjs",
-    "experimental": "npx next experimental-analyze"
+    "experimental": "npx next experimental-analyze",
+    "seo:check": "node scripts/seo-check.mjs"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.2.0",

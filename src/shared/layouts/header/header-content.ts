@@ -23,10 +23,13 @@ const headerStaticData: HeaderStaticData = {
   brand: { name: "150%", mark: "L" },
   nav: [
     { key: "bot", href: "/" },
+    { key: "products", href: "/productos" },
+    { key: "caseStudies", href: "/casos-de-exito" },
     {
       key: "articles",
       href: "/blog",
       children: [
+        { key: "agentesIa", href: "/blog/agentes-ia-empresas" },
         { key: "digitalCoworkers", href: "/blog/colaboradores-digitales" },
         { key: "trust", href: "/blog/crear-confianza" },
         { key: "fuerzaLaboral", href: "/blog/fuerza-laboral-hibrida" },

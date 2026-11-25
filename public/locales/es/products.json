@@ -22,7 +22,8 @@
     "demoPlay": "Reproducir",
     "demoPause": "Pausar",
     "demoOnline": "En línea",
-    "demoStep": "Paso"
+    "demoStep": "Paso",
+    "categoryLinkAria": "Ver todas las soluciones de {{category}}"
   },
   "categories": {
     "atencion-ciudadana": "Atención ciudadana",
@@ -44,10 +45,10 @@
         "Derivación a operadores"
       ],
       "useCase": "Una persona quiere saber qué documentos necesita para solicitar un certificado. El agente explica los requisitos y la orienta hacia el canal habilitado por la entidad.",
-      "imageAlt": "Una ciudadana consulta su celular en un espacio público mientras el agente de Humanika la acompaña y le señala de forma sutil la dirección que debe seguir.",
+      "imageAlt": "Una ciudadana consulta su celular en un espacio público mientras el agente de Humanika le indica hacia dónde ir.",
       "seo": {
         "title": "Chatbot para atención ciudadana | Humanika",
-        "description": "Asistente virtual para entidades públicas: atención ciudadana por mensajería y chat web con respuestas basadas en fuentes institucionales y derivación a operadores."
+        "description": "Asistente virtual para entidades públicas: atención ciudadana por chat y mensajería, con fuentes institucionales y derivación a operadores."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
@@ -130,10 +131,10 @@
         "Transferencia a operadores según el flujo"
       ],
       "useCase": "Una entidad llama para confirmar una cita. Más tarde, la persona puede llamar a la línea institucional para resolver una duda sobre la atención y ser transferida si necesita ayuda adicional.",
-      "imageAlt": "Una persona habla por teléfono junto a una agenda abierta; el agente de Humanika aparece como su interlocutor, con una presencia cercana y atenta.",
+      "imageAlt": "Una persona habla por teléfono junto a una agenda abierta, con el agente de Humanika como interlocutor cercano.",
       "seo": {
         "title": "Agentes de voz para atención ciudadana | Humanika",
-        "description": "Llamadas entrantes y salientes con IA: confirme citas, envíe recordatorios y transfiera a operadores. Automatización de llamadas institucionales con Humanika."
+        "description": "Llamadas entrantes y salientes con IA: confirme citas, envíe recordatorios y transfiera a operadores. Automatice las llamadas de su entidad."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
@@ -220,7 +221,7 @@
         "Alertas de vencimiento y trazabilidad"
       ],
       "useCase": "Una alcaldía recibe una queja sobre el estado de un parque. El caso queda radicado, se asigna a la dependencia responsable y el equipo puede seguir su avance hasta el cierre.",
-      "imageAlt": "Una funcionaria y el agente de Humanika atienden a una ciudadana en un espacio de servicio; la escena transmite que alguien se hace cargo de su solicitud.",
+      "imageAlt": "Una funcionaria y el agente de Humanika atienden a una ciudadana en un espacio de servicio y se hacen cargo de su solicitud.",
       "seo": {
         "title": "Software de gestión de PQRSD | Humanika",
         "description": "Radicación de solicitudes ciudadanas, asignación por dependencia, alertas de vencimiento y seguimiento de peticiones con trazabilidad completa."
@@ -306,10 +307,10 @@
         "Acompañamiento de formularios y captura autorizada de datos"
       ],
       "useCase": "Al llegar a una sede pública, una ciudadana conversa con el agente para ubicar el servicio que necesita y conocer los pasos que debe seguir antes de dirigirse al punto de atención.",
-      "imageAlt": "Una ciudadana conversa con el agente de Humanika en el vestíbulo de una sede institucional, junto a un tótem integrado al entorno.",
+      "imageAlt": "Una ciudadana conversa con el agente de Humanika junto a un tótem en el vestíbulo de una sede institucional.",
       "seo": {
         "title": "Software para tótems de atención ciudadana | Humanika",
-        "description": "Quioscos de autoservicio con avatares interactivos para entidades públicas: orientación por voz o pantalla, acompañamiento de formularios y captura autorizada."
+        "description": "Quioscos de autoservicio con avatar para entidades públicas: orientación por voz o pantalla, ayuda con formularios y captura autorizada de datos."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
@@ -396,7 +397,7 @@
         "Clasificación de hallazgos y reportes de calidad"
       ],
       "useCase": "Un equipo de servicio revisa una muestra de llamadas y detecta que en varias conversaciones el usuario terminó sin saber cuál era el siguiente paso. El responsable usa ese hallazgo para orientar la capacitación.",
-      "imageAlt": "Una supervisora escucha una conversación con audífonos mientras el agente de Humanika, a su lado, la ayuda a detenerse en un momento relevante de la interacción.",
+      "imageAlt": "Una supervisora escucha una llamada con audífonos mientras el agente de Humanika señala un momento clave de la conversación.",
       "seo": {
         "title": "Auditoría de atención con IA | Humanika",
         "description": "Análisis de llamadas y control de calidad del servicio al ciudadano: transcripción, evaluación frente a protocolos y reportes de hallazgos con IA."
@@ -482,10 +483,10 @@
         "Resúmenes y borradores para revisión humana"
       ],
       "useCase": "Una funcionaria pregunta qué procedimiento aplica a una solicitud interna. El copiloto identifica la sección pertinente del manual y prepara un resumen que ella puede verificar antes de responder.",
-      "imageAlt": "Una funcionaria y el agente de Humanika conversan junto a una mesa de trabajo con documentos, en el momento en que encuentran la referencia que buscaban.",
+      "imageAlt": "Una funcionaria y el agente de Humanika encuentran la referencia que buscaban en una mesa de trabajo con documentos.",
       "seo": {
         "title": "Copiloto de IA para funcionarios | Humanika",
-        "description": "Asistente de conocimiento institucional para la consulta de normativa interna, manuales y procedimientos, con referencias a fuentes y borradores revisables."
+        "description": "Asistente de conocimiento institucional para consultar normativa interna, manuales y procedimientos, con referencias a fuentes y borradores revisables."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
@@ -572,7 +573,7 @@
         "Búsqueda y validación con revisión humana"
       ],
       "useCase": "Un equipo recibe actas y formularios en distintos formatos. Humanika identifica el tipo de documento, extrae fechas y referencias y deja los resultados listos para que el equipo los revise.",
-      "imageAlt": "Una profesional revisa varios documentos en su escritorio mientras el agente de Humanika la ayuda a encontrar el hilo común entre ellos.",
+      "imageAlt": "Una profesional revisa varios documentos en su escritorio mientras el agente de Humanika le muestra el hilo común.",
       "seo": {
         "title": "Procesamiento inteligente de documentos | Humanika",
         "description": "Clasificación documental con IA y extracción de datos de PDF: convierta actas y formularios en información verificable, con cotejo y revisión humana."
@@ -658,7 +659,7 @@
         "Identificación de faltantes e inconsistencias"
       ],
       "useCase": "Antes de revisar una solicitud de permiso, el funcionario recibe un resumen de los soportes encontrados y una alerta sobre el certificado pendiente. Con esa información puede revisar el expediente y orientar la subsanación.",
-      "imageAlt": "Una revisora y el agente de Humanika recorren juntos un expediente físico sobre una mesa, en el momento en que detectan una pieza faltante.",
+      "imageAlt": "Una revisora y el agente de Humanika recorren un expediente físico y detectan una pieza faltante.",
       "seo": {
         "title": "Validación de expedientes con IA | Humanika",
         "description": "Verificación de requisitos documentales y revisión de solicitudes y trámites: Humanika identifica faltantes e inconsistencias antes de la revisión."
@@ -740,7 +741,7 @@
         "Controles y trazabilidad de ejecución"
       ],
       "useCase": "Al ingresar una solicitud, el agente consulta la información disponible, prepara el caso y lo encamina al responsable siguiendo las reglas configuradas por la entidad.",
-      "imageAlt": "Una coordinadora y el agente de Humanika acompañan el paso de una solicitud entre dos áreas de trabajo, en un entorno que sugiere coordinación y continuidad.",
+      "imageAlt": "Una coordinadora y el agente de Humanika acompañan el paso de una solicitud entre dos áreas de trabajo.",
       "seo": {
         "title": "Automatización de procesos institucionales con IA | Humanika",
         "description": "Agentes de IA para entidades públicas: flujos de trabajo automatizados que consultan sistemas autorizados, ejecutan tareas y dejan trazabilidad."
@@ -826,7 +827,7 @@
         "Matrices con referencias verificables"
       ],
       "useCase": "Un equipo de contratación revisa un pliego y sus anexos. El asistente organiza los requisitos técnicos y documentales e indica dónde aparece cada uno para que el equipo valide la matriz.",
-      "imageAlt": "Dos profesionales revisan un pliego en una mesa de trabajo mientras el agente de Humanika participa en la conversación y dirige su atención hacia un documento concreto.",
+      "imageAlt": "Dos profesionales revisan un pliego mientras el agente de Humanika dirige su atención a un documento concreto.",
       "seo": {
         "title": "Asistente de contratación pública | Humanika",
         "description": "Análisis de pliegos con IA: identifique y contraste requisitos y construya la matriz de requisitos de contratación con referencias verificables."
@@ -912,7 +913,7 @@
         "Revisión asistida de evidencias y reportes de seguimiento"
       ],
       "useCase": "Antes de una reunión de seguimiento, el supervisor consulta qué entregables están próximos a vencer y qué evidencias se han recibido. Con esa información prepara la revisión con el contratista.",
-      "imageAlt": "Un supervisor y el agente de Humanika recorren un lugar de ejecución e intercambian observaciones frente a una actividad en marcha.",
+      "imageAlt": "Un supervisor y el agente de Humanika recorren una obra e intercambian observaciones frente a una actividad en marcha.",
       "seo": {
         "title": "Software de supervisión contractual | Humanika",
         "description": "Seguimiento de obligaciones contractuales, evidencias y actas, con alertas de vencimiento de contratos y reportes de seguimiento para el supervisor."
@@ -994,7 +995,7 @@
         "Recuperación de lecciones de informes de cierre"
       ],
       "useCase": "Una secretaría de Planeación revisa sus iniciativas antes de priorizarlas. Humanika señala cuáles tienen objetivos similares y qué metas del plan de desarrollo aún carecen de proyectos asociados.",
-      "imageAlt": "Una profesional de planeación conversa con el agente de Humanika alrededor de un mapa del territorio, evaluando dónde concentrar esfuerzos.",
+      "imageAlt": "Una profesional de planeación conversa con el agente de Humanika sobre un mapa del territorio para priorizar esfuerzos.",
       "seo": {
         "title": "IA para formulación de proyectos MGA | Humanika",
         "description": "Análisis de inversión pública y comparación de proyectos territoriales: formule y revise proyectos MGA e identifique metas sin cobertura con IA."
@@ -1166,7 +1167,7 @@
         "Seguimiento del avance de los participantes"
       ],
       "useCase": "Una entidad incorpora nuevos funcionarios. Cada persona sigue una ruta de inducción, consulta dudas con el tutor y avanza por los contenidos mientras Talento Humano revisa el progreso del grupo.",
-      "imageAlt": "Una persona recién incorporada a un equipo conversa con el agente de Humanika en su espacio de trabajo durante sus primeros días.",
+      "imageAlt": "Una persona recién incorporada conversa con el agente de Humanika en su espacio de trabajo durante sus primeros días.",
       "seo": {
         "title": "Plataforma de formación institucional con IA | Humanika",
         "description": "Software de inducción y formación continua con tutores virtuales para capacitación por voz y chat, y seguimiento del avance de cada participante."
@@ -1256,7 +1257,7 @@
         "Retroalimentación y reportes de desempeño"
       ],
       "useCase": "Un funcionario practica cómo atender a una persona inconforme. El agente interpreta al usuario y al final devuelve observaciones sobre escucha, claridad y aplicación del protocolo.",
-      "imageAlt": "Un funcionario ensaya una conversación cara a cara con el agente de Humanika, que interpreta a una persona con una solicitud difícil.",
+      "imageAlt": "Un funcionario ensaya una conversación con el agente de Humanika, que interpreta a una persona con una solicitud difícil.",
       "seo": {
         "title": "Simulación conversacional con IA | Humanika",
         "description": "Evaluación por rúbricas y práctica de atención al ciudadano en escenarios simulados por voz o chat, con retroalimentación y reportes de desempeño."
@@ -1514,7 +1515,7 @@
         "Borradores de actas para revisión humana"
       ],
       "useCase": "Durante una visita a una sede, una inspectora toma una fotografía de un hallazgo y dicta su observación. El agente le ayuda a describir la evidencia y a preparar el borrador del acta de visita.",
-      "imageAlt": "Una inspectora fotografía un elemento de infraestructura mientras el agente de Humanika la acompaña en campo y ambos se centran en el mismo detalle.",
+      "imageAlt": "Una inspectora fotografía un elemento de infraestructura mientras el agente de Humanika la acompaña en campo.",
       "seo": {
         "title": "Inspección visual con IA | Humanika",
         "description": "Registro de evidencias fotográficas y generación asistida de actas: describa hallazgos por voz o chat y prepare borradores para revisión."
@@ -1592,6 +1593,26 @@
           }
         ]
       }
+    }
+  },
+  "catalog": {
+    "seo": {
+      "title": "Catálogo de soluciones de IA para entidades | Humanika",
+      "description": "Conozca las 18 soluciones de IA de Humanika: atención ciudadana, trámites, contratación pública, educación y visión computacional, con casos de uso."
+    },
+    "hero": {
+      "eyebrow": "Productos",
+      "title": "Soluciones de IA para cada proceso de su entidad",
+      "description": "Agentes de Humanika que atienden, revisan documentos, acompañan la contratación, forman equipos y analizan espacios. Cada uno trabaja con la información autorizada de su organización y con revisión humana."
+    },
+    "familyCount": "{{count}} soluciones",
+    "families": {
+      "atencion-ciudadana": "Orientación por chat, voz y tótems, gestión de PQRSD y control de calidad del servicio.",
+      "documentos-tramites": "Consulta de manuales, lectura de documentos, prevalidación de expedientes y automatización de tareas internas.",
+      "contratacion-inversion": "Revisión de pliegos, seguimiento de contratos y formulación de proyectos de inversión pública con MGA.",
+      "investigacion-participacion": "Entrevistas, encuestas y análisis de consultas públicas con trazabilidad de cada aporte.",
+      "educacion": "Rutas de formación, práctica con escenarios simulados y enseñanza de idiomas con tutores de IA.",
+      "vision-computacional": "Medición de afluencia en sedes e inspecciones documentadas a partir de fotografías."
     }
   }
 }

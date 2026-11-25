@@ -11,7 +11,7 @@ const MetaPartner = ():JSX.Element => {
     <WrapperMotion fadeUpTertiary delay={{ enter:0, exit: 0 }}>
       <Container padding='xl'>
           <article className={ styles.metaPartner }>
-            <Image className={ styles.metaPartner__image } src={'/svg/logo-150.svg'} width={160} height={58} alt='150porciento' />
+            <Image className={ styles.metaPartner__image } src={'/svg/logo-150.svg'} width={160} height={58} alt='150 Por Ciento' />
             <Text 
                 tag="p" 
                 variant="subtitle_small" 
@@ -24,8 +24,8 @@ const MetaPartner = ():JSX.Element => {
               Official Meta Tech Partner
             </Text>
             <Image className={ styles.metaPartner__image } src={'/svg/logo-meta.svg'} width={160} height={32} alt='Meta' />
-            <Image className={ styles.metaPartner__pill } src={'/svg/pill-meta-1.svg'} width={700} height={200} alt='Pill' />
-            <Image className={ styles.metaPartner__pill__secondary } src={'/svg/pill-meta-2.svg'} width={700} height={200} alt='Pill' />
+            <Image className={ styles.metaPartner__pill } src={'/svg/pill-meta-1.svg'} width={700} height={200} alt='' />
+            <Image className={ styles.metaPartner__pill__secondary } src={'/svg/pill-meta-2.svg'} width={700} height={200} alt='' />
           </article>
       </Container>
     </WrapperMotion>

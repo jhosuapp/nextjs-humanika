@@ -1,0 +1,12 @@
+# humanika.co
+# El sitio público está abierto a buscadores y asistentes de IA (incluidos
+# GPTBot, ClaudeBot, PerplexityBot y Google-Extended): queremos que nos
+# encuentren y nos citen. Solo se excluyen el panel interno y la API.
+
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /login
+Disallow: /api/
+
+Sitemap: https://humanika.co/sitemap.xml

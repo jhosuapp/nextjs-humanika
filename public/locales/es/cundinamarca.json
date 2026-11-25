@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "Universidad de Cundinamarca: WhatsApp como motor de inscripción a posgrados | 150%",
-    "description": "150% acompañó la campaña digital de posgrados de la Universidad de Cundinamarca con pauta, CRM, caracterización, calificación de leads y WhatsApp como canal principal de seguimiento. Resultado: cifras récord de inscritos."
+    "title": "U. de Cundinamarca: posgrados por WhatsApp | Humanika",
+    "description": "La Universidad de Cundinamarca usó WhatsApp, CRM y calificación de leads como eje de su campaña de posgrados y alcanzó cifras récord de inscritos."
   },
   "hero": {
     "eyebrow": "Educación",
@@ -21,7 +21,11 @@
       "150% diseñó y operó una estrategia digital con uso intensivo de WhatsApp, CRM, caracterización de usuarios y calificación de leads. La campaña permitió acompañar mejor a los aspirantes, entender su intención, priorizar oportunidades y activar conversaciones en los momentos clave del proceso."
     ]
   },
-  "categories": ["Educación", "WhatsApp", "Admisiones"],
+  "categories": [
+    "Educación",
+    "WhatsApp",
+    "Admisiones"
+  ],
   "metric": {
     "prefix": "",
     "suffix": "",

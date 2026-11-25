@@ -141,6 +141,15 @@ const MotionTabs = <K extends string>({
                 {current.content}
               </motion.div>
             </AnimatePresence>
+            {/* Inactive tabs stay in the HTML (hidden) so search engines and AI
+                answers can read every audience, not just the default one. */}
+            {tabs
+              .filter((tab) => tab.key !== current.key)
+              .map((tab) => (
+                <div key={tab.key} className={styles.panel} hidden>
+                  {tab.content}
+                </div>
+              ))}
           </div>
         ) : (
           /* Mobile: accordion — content expands under its own header */
@@ -171,31 +180,23 @@ const MotionTabs = <K extends string>({
                     />
                   </button>
 
-                  <AnimatePresence initial={false}>
-                    {isActive ? (
-                      <motion.div
-                        key="panel"
-                        role="tabpanel"
-                        id={`panel-${tab.key}`}
-                        aria-labelledby={`acc-${tab.key}`}
-                        initial={
-                          reduce ? { opacity: 0 } : { height: 0, opacity: 0 }
-                        }
-                        animate={
-                          reduce
-                            ? { opacity: 1 }
-                            : { height: 'auto', opacity: 1 }
-                        }
-                        exit={
-                          reduce ? { opacity: 0 } : { height: 0, opacity: 0 }
-                        }
-                        transition={{ duration: DURATION.fast, ease: EASE }}
-                        className={styles.accPanel}
-                      >
-                        <div className={styles.panelInner}>{tab.content}</div>
-                      </motion.div>
-                    ) : null}
-                  </AnimatePresence>
+                  {/* Always rendered (crawlable); only the height animates. */}
+                  <motion.div
+                    role="tabpanel"
+                    id={`panel-${tab.key}`}
+                    aria-labelledby={`acc-${tab.key}`}
+                    aria-hidden={!isActive}
+                    inert={!isActive}
+                    initial={false}
+                    animate={{
+                      height: isActive ? 'auto' : 0,
+                      opacity: isActive ? 1 : 0,
+                    }}
+                    transition={{ duration: reduce ? 0 : DURATION.fast, ease: EASE }}
+                    className={styles.accPanel}
+                  >
+                    <div className={styles.panelInner}>{tab.content}</div>
+                  </motion.div>
                 </div>
               );
             })}

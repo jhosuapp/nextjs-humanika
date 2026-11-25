@@ -22,7 +22,8 @@
     "demoPlay": "Play",
     "demoPause": "Pause",
     "demoOnline": "Online",
-    "demoStep": "Step"
+    "demoStep": "Step",
+    "categoryLinkAria": "See all {{category}} solutions"
   },
   "categories": {
     "atencion-ciudadana": "Citizen services",
@@ -1592,6 +1593,26 @@
           }
         ]
       }
+    }
+  },
+  "catalog": {
+    "seo": {
+      "title": "AI solutions catalog for organizations | Humanika",
+      "description": "Explore Humanika's 18 AI solutions for citizen services, procedures, public procurement, education and computer vision, each with a use case."
+    },
+    "hero": {
+      "eyebrow": "Products",
+      "title": "AI solutions for every process in your organization",
+      "description": "Humanika agents that serve people, review documents, support procurement, train teams and analyze spaces. Each works with your organization's approved information and with human review."
+    },
+    "familyCount": "{{count}} solutions",
+    "families": {
+      "atencion-ciudadana": "Guidance over chat, voice and kiosks, citizen request management and service quality control.",
+      "documentos-tramites": "Manual lookups, document reading, case file pre-validation and automation of internal tasks.",
+      "contratacion-inversion": "Tender review, contract tracking and public investment project formulation with MGA.",
+      "investigacion-participacion": "Interviews, surveys and public consultation analysis with traceability for every input.",
+      "educacion": "Training paths, simulated practice scenarios and language learning with AI tutors.",
+      "vision-computacional": "Foot traffic measurement on site and inspections documented from photos."
     }
   }
 }

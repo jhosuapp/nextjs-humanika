@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "PepsiCo Colombia · Copa de Sabores: el Mundial en una bolsa de papas | 150%",
-    "description": "150% apoyó a PepsiCo Colombia en Copa de Sabores: una experiencia conversacional en WhatsApp para Margarita y De Todito con juegos mundialistas, conocimiento de gustos y captación de datos bajo governance de marca."
+    "title": "PepsiCo Colombia: Copa de Sabores en WhatsApp | Humanika",
+    "description": "Copa de Sabores de PepsiCo Colombia: una experiencia en WhatsApp para Margarita y De Todito con juegos mundialistas, gustos del público y datos."
   },
   "hero": {
     "eyebrow": "Consumo masivo",
@@ -21,7 +21,11 @@
       "Para Papas Margarita y De Todito, 150% apoyó la creación de una experiencia conversacional en WhatsApp alrededor de dos ediciones limitadas inspiradas en sabores con carácter propio: chimichurri para Margarita y hogao para De Todito."
     ]
   },
-  "categories": ["Consumo masivo", "WhatsApp", "Gamification"],
+  "categories": [
+    "Consumo masivo",
+    "WhatsApp",
+    "Gamification"
+  ],
   "metric": {
     "prefix": "",
     "suffix": "",

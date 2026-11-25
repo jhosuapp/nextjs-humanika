@@ -42,7 +42,7 @@ const ProcessStepsSection = ({ t }: Props) => {
       aria-label={`${t('process.titleLead')}${t('process.titleAccent')}`}
     >
       <div className={styles.sticky}>
-        <Image className={ styles.image } src={'/images/bg-update.jpg'} alt='test' width={1920} height={1220}/>
+        <Image className={ styles.image } src={'/images/bg-update.jpg'} alt='' aria-hidden='true' width={1920} height={1220}/>
         <div className={`${styles.card} gl-gradient-box`}>
           <Text
             tag="h2"

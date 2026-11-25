@@ -1,7 +1,7 @@
 {
   "seo": {
-    "homeTitle": "Colaboradores digitales de IA para empresas | Humanika",
-    "homeDescription": "Humanika crea colaboradores digitales de IA en web, WhatsApp, voz y humanos digitales, conectados al conocimiento y los procesos de tu organización.",
+    "homeTitle": "Agentes de IA para empresas y entidades públicas | Humanika",
+    "homeDescription": "Humanika crea colaboradores digitales de IA que atienden por web, WhatsApp y voz, conectados al conocimiento y los procesos de su organización.",
     "botTitle": "Avatar de IA conversacional en tiempo real | Humanika",
     "botDescription": "Habla con un avatar de IA de Humanika que responde en tiempo real por voz y chat, con conversación natural conectada al conocimiento de tu empresa.",
     "dashboardTitle": "Contactos | Humanika",
@@ -30,7 +30,9 @@
     "digitalCoworkers": "Colaboradores digitales",
     "trust": "Crear confianza",
     "fuerzaLaboral": "Fuerza laboral híbrida",
-    "about150": "¿Qué es 150%?"
+    "about150": "¿Qué es 150%?",
+    "products": "Productos",
+    "agentesIa": "Agentes de IA para empresas"
   },
   "header": {
     "skipLink": "Ir al contenido principal",
@@ -79,6 +81,22 @@
         "services": "Servicios",
         "blog": "Blog",
         "contact": "Contacto"
+      },
+      "products": {
+        "title": "Productos",
+        "catalog": "Ver catálogo",
+        "atencionCiudadana": "Atención ciudadana",
+        "documentosTramites": "Documentos y trámites",
+        "contratacionInversion": "Contratación e inversión",
+        "investigacionParticipacion": "Investigación y participación",
+        "educacion": "Educación",
+        "visionComputacional": "Visión computacional"
+      },
+      "resources": {
+        "title": "Recursos",
+        "caseStudies": "Casos de éxito",
+        "articles": "Artículos",
+        "agentesIa": "Agentes de IA para empresas"
       }
     },
     "bottom": {
@@ -96,5 +114,17 @@
     "relatedEyebrow": "Más historias",
     "relatedTitle": "Otros casos de éxito",
     "readMore": "Ver caso"
+  },
+  "notFound": {
+    "seoTitle": "Página no encontrada | Humanika",
+    "seoDescription": "La página que busca no existe o cambió de dirección. Vuelva al inicio de Humanika o explore el catálogo de soluciones y los artículos del blog.",
+    "eyebrow": "Error 404",
+    "title": "No encontramos esta página",
+    "description": "Es posible que la dirección haya cambiado o que el enlace esté incompleto. Estas páginas pueden ayudarle:",
+    "links": {
+      "home": "Ir al inicio",
+      "products": "Ver productos",
+      "blog": "Leer artículos"
+    }
   }
 }

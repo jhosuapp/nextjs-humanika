@@ -58,6 +58,8 @@ const BotEmbed = ({ t }: Props): JSX.Element => {
         <video
           className={styles.previewVideo}
           src={VIDEOS.defaultWait}
+          // First frame as a light WebP so the hero paints before the video loads.
+          poster="/images/bot-poster.webp"
           autoPlay
           muted
           loop
