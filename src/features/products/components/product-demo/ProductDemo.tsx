@@ -24,7 +24,7 @@ const STEP_MS = 4200;
  * sources / operator) with a light packet following each step, synced with a
  * simulated conversation. Autoplays while in view; steps are also clickable.
  */
-const ProductDemo = ({ t, slug, config }: ProductDemoProps): JSX.Element => {
+const ProductDemo = ({ t, slug, config }: ProductDemoProps): JSX.Element | null => {
   const reduce = useReducedMotion();
   const ref = useRef<HTMLDivElement | null>(null);
   const inView = useInView(ref, { amount: 0.35 });
@@ -56,6 +56,18 @@ const ProductDemo = ({ t, slug, config }: ProductDemoProps): JSX.Element => {
   }, [isAutoplaying, stepIndex, config.steps.length]);
 
   const step = config.steps[stepIndex];
+
+  // If the copy is missing (stale i18n cache or a product without
+  // `items.<slug>.demo`), `t(..., { returnObjects })` returns the key as a
+  // string. Skip the section instead of crashing the whole page.
+  const hasCopy =
+    Array.isArray(steps) &&
+    Array.isArray(chat) &&
+    Array.isArray(sceneLabels.channels) &&
+    Array.isArray(sceneLabels.sources) &&
+    typeof sceneLabels.layers === 'object' &&
+    steps.length === config.steps.length;
+  if (!hasCopy) return null;
 
   return (
     <div className={styles.section}>
