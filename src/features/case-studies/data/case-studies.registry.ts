@@ -30,6 +30,7 @@ import { pepsicoContent } from "@/src/features/case-studies/data/pepsico.content
 const caseStudiesRegistry: ReadonlyArray<CaseStudyEntry> = [
   {
     slug: "festival-pollo",
+    client: "Festival del Pollo Colombiano",
     cover: "/images/formacion-empresarial.jpg",
     logo: "/logos/uses-cases/festival-pollo.png",
     publishedAt: "2026-06-18",
@@ -37,6 +38,7 @@ const caseStudiesRegistry: ReadonlyArray<CaseStudyEntry> = [
   },
   {
     slug: "corona",
+    client: "Corona México",
     cover: "/images/ventas-y-crecimiento.jpg",
     logo: "/logos/uses-cases/corona.svg",
     count: { to: 1 },
@@ -45,6 +47,7 @@ const caseStudiesRegistry: ReadonlyArray<CaseStudyEntry> = [
   },
   {
     slug: "cundinamarca",
+    client: "Universidad de Cundinamarca",
     cover: "/images/servicio-y-soporte.jpg",
     logo: "/logos/uses-cases/cundinamarca.png",
     publishedAt: "2026-06-14",
@@ -52,6 +55,7 @@ const caseStudiesRegistry: ReadonlyArray<CaseStudyEntry> = [
   },
   {
     slug: "aguila",
+    client: "Cerveza Águila",
     cover: "/images/servicio-y-soporte.jpg",
     logo: "/logos/uses-cases/aguila.png",
     publishedAt: "2026-06-14",
@@ -59,6 +63,7 @@ const caseStudiesRegistry: ReadonlyArray<CaseStudyEntry> = [
   },
   {
     slug: "stella",
+    client: "Stella Artois",
     cover: "/images/contociento-organizacional.jpg",
     logo: "/logos/uses-cases/stella.png",
     publishedAt: "2026-06-12",
@@ -66,6 +71,7 @@ const caseStudiesRegistry: ReadonlyArray<CaseStudyEntry> = [
   },
   {
     slug: "pepsico",
+    client: "PepsiCo Colombia",
     cover: "/images/productividad-y-opetaciones.jpg",
     logo: "/logos/uses-cases/pepsico.svg",
     publishedAt: "2026-06-10",

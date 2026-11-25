@@ -13,10 +13,12 @@ import {
   SITE_OG_IMAGE_WIDTH,
   SITE_PARENT_ORG,
   SITE_URL,
+  WHATSAPP_NUMBER,
 } from "@/src/config/site";
 
+// Audience is Colombia-first: es → es_CO (OG) / es-CO (schema.org, BCP 47).
 const OG_LOCALE_MAP: Record<string, string> = {
-  es: "es_ES",
+  es: "es_CO",
   en: "en_US",
   pt: "pt_PT",
   fr: "fr_FR",
@@ -32,7 +34,26 @@ type PageLayoutProps = {
   /** Extra schema.org nodes (Product, BreadcrumbList…) merged into the
    *  site-wide `@graph`. */
   jsonLd?: Record<string, unknown>[];
+  /** "article" for blog posts and case studies (adds article:* tags). */
+  ogType?: "website" | "article";
+  /** ISO dates for articles. */
+  publishedTime?: string;
+  modifiedTime?: string;
 };
+
+const LANGUAGE_TAG_MAP: Record<string, string> = { es: "es-CO", en: "en" };
+
+/** Topics the Organization node declares expertise in (entity signals). */
+const KNOWS_ABOUT = [
+  "Agentes de inteligencia artificial",
+  "Colaboradores digitales",
+  "Atención ciudadana digital",
+  "Chatbots para WhatsApp",
+  "Automatización de procesos",
+  "Inteligencia documental",
+  "Formulación de proyectos MGA",
+  "Formación institucional con IA",
+];
 
 const PageLayout = ({
   children,
@@ -41,13 +62,17 @@ const PageLayout = ({
   image = SITE_OG_IMAGE,
   hasNoIndex = false,
   jsonLd = [],
+  ogType = "website",
+  publishedTime,
+  modifiedTime,
 }: PageLayoutProps) => {
   const router = useRouter();
   const locale = router.locale ?? "es";
   const localePath = locale !== "es" ? `/${locale}` : "";
   const canonicalPath = router.asPath.split("?")[0];
   const canonicalUrl = `${SITE_URL}${localePath}${canonicalPath === "/" ? "" : canonicalPath}`;
-  const ogLocale = OG_LOCALE_MAP[locale] ?? "es_ES";
+  const ogLocale = OG_LOCALE_MAP[locale] ?? "es_CO";
+  const languageTag = LANGUAGE_TAG_MAP[locale] ?? "es-CO";
   // Las dimensiones/tipo declaradas corresponden a la imagen por defecto; si una
   // página pasa su propia imagen, se omiten para no declarar valores incorrectos.
   const isDefaultImage = image === SITE_OG_IMAGE;
@@ -61,20 +86,31 @@ const PageLayout = ({
         "@type": "Organization",
         "@id": `${SITE_URL}/#organization`,
         name: SITE_NAME,
+        alternateName: "Humanika by 150%",
         url: SITE_URL,
         logo: SITE_LOGO,
         image: SITE_OG_IMAGE,
         description: SITE_DESCRIPTION,
         parentOrganization: { "@type": "Organization", name: SITE_PARENT_ORG },
         sameAs: [SITE_LINKEDIN],
+        areaServed: { "@type": "Country", name: "Colombia" },
+        knowsAbout: KNOWS_ABOUT,
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "sales",
+          telephone: `+${WHATSAPP_NUMBER}`,
+          availableLanguage: ["es"],
+          areaServed: "CO",
+        },
       },
       {
         "@type": "WebSite",
         "@id": `${SITE_URL}/#website`,
         name: SITE_NAME,
+        alternateName: ["Humanika by 150%", "humanika.co"],
         url: SITE_URL,
         description: SITE_DESCRIPTION,
-        inLanguage: locale,
+        inLanguage: languageTag,
         publisher: { "@id": `${SITE_URL}/#organization` },
       },
       ...jsonLd,
@@ -90,7 +126,16 @@ const PageLayout = ({
 
         <meta property="og:site_name" content={SITE_NAME} />
         <meta property="og:locale" content={ogLocale} />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content={ogType} />
+        {ogType === "article" && publishedTime && (
+          <meta property="article:published_time" content={publishedTime} />
+        )}
+        {ogType === "article" && (modifiedTime ?? publishedTime) && (
+          <meta
+            property="article:modified_time"
+            content={modifiedTime ?? publishedTime}
+          />
+        )}
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />

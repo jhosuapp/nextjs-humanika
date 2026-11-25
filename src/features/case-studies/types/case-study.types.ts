@@ -30,6 +30,8 @@ type CaseStudyEntry = {
    *  and listing) but is hidden from the home "destacados" and related-cases
    *  rail. */
   featured?: boolean;
+  /** Client brand the story is about (schema.org `about`; not translated). */
+  client: string;
 };
 
 export type { CaseStudyEntry };
