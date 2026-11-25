@@ -44,11 +44,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import type { ProductEntry } from "@/src/features/products/types/product.types";
+import { productDemosStaticData } from "@/src/features/products/data/product-demos.registry";
 
 const img = (slug: string) => `/images/products/${slug}.webp`;
 
 /** The 18 catalog products, in the brief's order (grouped by family). */
-const productsStaticData: ProductEntry[] = [
+const productEntries: ProductEntry[] = [
   // Atención ciudadana
   {
     slug: "atencion-ciudadana-digital",
@@ -187,6 +188,12 @@ const productsStaticData: ProductEntry[] = [
     related: ["supervision-contractual", "inteligencia-documental", "analitica-de-espacios"],
   },
 ];
+
+/** Entries with their 3D demo config attached (see product-demos.registry). */
+const productsStaticData: ProductEntry[] = productEntries.map((entry) => ({
+  ...entry,
+  demo: productDemosStaticData[entry.slug],
+}));
 
 const getProductSlugs = (): string[] => productsStaticData.map((p) => p.slug);
 

@@ -1,0 +1,151 @@
+@reference "tailwindcss";
+
+.panel {
+  @apply flex flex-col gap-6;
+}
+
+/* Steps */
+.steps {
+  @apply flex flex-col gap-2 list-none p-0 m-0;
+}
+
+.step {
+  @apply relative flex w-full cursor-pointer items-start gap-4 overflow-hidden rounded-2xl px-5 py-4 text-left;
+  background: transparent;
+  border: 1px solid transparent;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.step:hover {
+  background: var(--surface-elevated);
+}
+
+.step[data-active="true"] {
+  background: var(--surface-elevated);
+  border-color: var(--border-subtle);
+  box-shadow: var(--shadow-card);
+}
+
+.stepNumber {
+  @apply text-sm font-bold leading-6;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+}
+
+.step[data-active="true"] .stepNumber {
+  color: var(--primary);
+}
+
+.stepBody {
+  @apply flex flex-col;
+}
+
+.stepTitle {
+  @apply text-base font-semibold leading-6;
+  color: var(--text-secondary);
+}
+
+.stepText {
+  @apply block overflow-hidden pt-1 text-sm leading-relaxed;
+  color: var(--text-muted);
+}
+
+.stepProgress {
+  @apply absolute bottom-0 left-0 h-[2px] w-full;
+  transform-origin: left center;
+  background: var(--gradient-brand);
+}
+
+/* Chat mock */
+.chat {
+  @apply flex flex-col overflow-hidden rounded-3xl;
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-elevated);
+}
+
+.chatHeader {
+  @apply flex items-center gap-3 px-5 py-4;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.avatar {
+  @apply flex h-10 w-10 items-center justify-center rounded-full text-sm;
+  color: #fff;
+  background: radial-gradient(circle at 35% 30%, #7ff3ff, #19b6ff 40%, #0a5cff);
+  box-shadow: 0 0 16px rgba(0, 150, 255, 0.45);
+}
+
+.chatTitle {
+  @apply flex flex-1 flex-col leading-tight;
+}
+
+.chatTitle strong {
+  @apply text-sm font-semibold;
+  color: var(--text-secondary);
+}
+
+.chatTitle > span {
+  @apply inline-flex items-center gap-1.5 text-xs;
+  color: var(--text-muted);
+}
+
+.onlineDot {
+  @apply inline-block h-1.5 w-1.5 rounded-full;
+  background: var(--success-soft);
+}
+
+.playButton {
+  @apply flex h-9 w-9 cursor-pointer items-center justify-center rounded-full text-xs;
+  color: var(--text-secondary);
+  background: var(--bg-section);
+  border: 1px solid var(--border-subtle);
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.playButton:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.messages {
+  @apply flex flex-col justify-end gap-2.5 overflow-hidden px-5 py-5;
+  height: 300px;
+  background: var(--bg-section);
+  /* Older lines fade out as new ones push them up. */
+  mask-image: linear-gradient(180deg, transparent 0, #000 56px);
+}
+
+.message {
+  @apply m-0 max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed;
+}
+
+.message[data-from="user"] {
+  @apply self-end rounded-br-md;
+  color: #fff;
+  background: var(--primary);
+}
+
+.message[data-from="bot"] {
+  @apply self-start rounded-bl-md;
+  color: var(--text-secondary);
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-subtle);
+}
+
+.message[data-from="system"] {
+  @apply max-w-full self-center rounded-full px-3 py-1 text-xs font-medium;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px dashed var(--border-subtle);
+}
+
+.chatFooter {
+  @apply px-5 py-3 text-center text-[11px] font-semibold uppercase tracking-[0.18em];
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-soft);
+}

@@ -17,7 +17,12 @@
     "relatedDescription": "Otros agentes de Humanika que complementan esta solución.",
     "viewProduct": "Ver producto",
     "whatsappMessage": "Hola, quiero solicitar una demostración de {{product}}.",
-    "breadcrumbHome": "Inicio"
+    "breadcrumbHome": "Inicio",
+    "demoSimulation": "Simulación ilustrativa",
+    "demoPlay": "Reproducir",
+    "demoPause": "Pausar",
+    "demoOnline": "En línea",
+    "demoStep": "Paso"
   },
   "categories": {
     "atencion-ciudadana": "Atención ciudadana",
@@ -43,6 +48,75 @@
       "seo": {
         "title": "Chatbot para atención ciudadana | Humanika",
         "description": "Asistente virtual para entidades públicas: atención ciudadana por mensajería y chat web con respuestas basadas en fuentes institucionales y derivación a operadores."
+      },
+      "demo": {
+        "eyebrow": "Cómo funciona",
+        "title": "Así atiende el agente una consulta",
+        "description": "Recorra paso a paso cómo Humanika pasa de la pregunta de una persona a la respuesta con información oficial, o al operador cuando hace falta.",
+        "layers": {
+          "channels": "Canales",
+          "agent": "Agente Humanika",
+          "sources": "Fuentes de la entidad",
+          "operator": "Operador"
+        },
+        "channels": [
+          "Chat web",
+          "WhatsApp",
+          "Mensajería"
+        ],
+        "sources": [
+          "Trámites",
+          "Requisitos",
+          "Horarios y sedes"
+        ],
+        "steps": [
+          {
+            "title": "La persona pregunta",
+            "text": "Escribe por el chat web o por mensajería, con sus propias palabras."
+          },
+          {
+            "title": "Consulta fuentes autorizadas",
+            "text": "El agente busca en la información que la entidad ha aprobado: trámites, requisitos y sedes."
+          },
+          {
+            "title": "Responde y orienta",
+            "text": "Explica los requisitos y señala el canal habilitado para continuar."
+          },
+          {
+            "title": "Deriva a un operador",
+            "text": "Si la consulta requiere atención humana, transfiere la conversación."
+          }
+        ],
+        "chat": [
+          {
+            "from": "user",
+            "text": "Hola, ¿qué documentos necesito para solicitar un certificado de residencia?"
+          },
+          {
+            "from": "system",
+            "text": "Consultando fuentes autorizadas de la entidad…"
+          },
+          {
+            "from": "bot",
+            "text": "Según la guía de trámites de la entidad, necesita su documento de identidad y un soporte reciente de su dirección."
+          },
+          {
+            "from": "bot",
+            "text": "Puede radicar la solicitud en el portal de trámites o en la sede principal."
+          },
+          {
+            "from": "user",
+            "text": "Mi caso es distinto: vivo en zona rural y no tengo ese soporte."
+          },
+          {
+            "from": "bot",
+            "text": "Entiendo. Le comunico con un operador para revisar su caso."
+          },
+          {
+            "from": "system",
+            "text": "Conversación transferida a un operador"
+          }
+        ]
       }
     },
     "telefonia-ia-bidireccional": {
@@ -60,6 +134,79 @@
       "seo": {
         "title": "Agentes de voz para atención ciudadana | Humanika",
         "description": "Llamadas entrantes y salientes con IA: confirme citas, envíe recordatorios y transfiera a operadores. Automatización de llamadas institucionales con Humanika."
+      },
+      "demo": {
+        "eyebrow": "Cómo funciona",
+        "title": "Así atiende el agente una llamada",
+        "description": "Recorra cómo Humanika atiende la llamada de una persona que recibió un recordatorio de cita y la transfiere cuando necesita ayuda adicional.",
+        "panel": {
+          "title": "Llamada en curso",
+          "status": "Transcripción simulada"
+        },
+        "layers": {
+          "channels": "Llamadas",
+          "agent": "Agente Humanika",
+          "sources": "Agenda y flujos",
+          "operator": "Operador"
+        },
+        "channels": [
+          "Llamada saliente",
+          "Línea institucional",
+          "Recordatorios"
+        ],
+        "sources": [
+          "Agenda de citas",
+          "Flujos configurados",
+          "Solicitudes"
+        ],
+        "steps": [
+          {
+            "title": "La persona llama",
+            "text": "Devuelve la llamada a la línea institucional para resolver una duda."
+          },
+          {
+            "title": "Consulta la agenda",
+            "text": "El agente revisa la cita y el flujo configurado por la entidad."
+          },
+          {
+            "title": "Confirma y orienta",
+            "text": "Confirma la cita y responde por voz."
+          },
+          {
+            "title": "Transfiere a un operador",
+            "text": "Si la persona necesita ayuda adicional, la llamada pasa a un operador."
+          }
+        ],
+        "chat": [
+          {
+            "from": "user",
+            "text": "Buenos días, me llamaron para recordarme una cita y quería confirmarla."
+          },
+          {
+            "from": "system",
+            "text": "Consultando la agenda de citas…"
+          },
+          {
+            "from": "bot",
+            "text": "Con gusto. Su cita está programada para el jueves a las 9:00 a. m. en la sede principal."
+          },
+          {
+            "from": "bot",
+            "text": "Queda confirmada. ¿Le puedo ayudar en algo más?"
+          },
+          {
+            "from": "user",
+            "text": "Sí, tengo una pregunta sobre los documentos de mi caso."
+          },
+          {
+            "from": "bot",
+            "text": "Le transfiero con un operador que puede revisar su caso."
+          },
+          {
+            "from": "system",
+            "text": "Llamada transferida a un operador"
+          }
+        ]
       }
     },
     "gestion-pqrsd": {
@@ -77,6 +224,75 @@
       "seo": {
         "title": "Software de gestión de PQRSD | Humanika",
         "description": "Radicación de solicitudes ciudadanas, asignación por dependencia, alertas de vencimiento y seguimiento de peticiones con trazabilidad completa."
+      },
+      "demo": {
+        "eyebrow": "Cómo funciona",
+        "title": "Así gestiona el agente una PQRSD",
+        "description": "Siga cómo una queja ciudadana se radica, se clasifica y llega a la dependencia responsable con su vencimiento.",
+        "layers": {
+          "channels": "Recepción",
+          "agent": "Agente Humanika",
+          "sources": "Gestión del caso",
+          "operator": "Dependencia"
+        },
+        "channels": [
+          "Formulario web",
+          "Correo",
+          "Ventanilla"
+        ],
+        "sources": [
+          "Radicación",
+          "Clasificación",
+          "Vencimientos"
+        ],
+        "steps": [
+          {
+            "title": "Llega la solicitud",
+            "text": "Una ciudadana presenta una queja por el canal habilitado."
+          },
+          {
+            "title": "Radica y clasifica",
+            "text": "El agente registra la solicitud y la clasifica por tipo y tema."
+          },
+          {
+            "title": "Informa el estado",
+            "text": "La ciudadana recibe su radicado para consultar el avance."
+          },
+          {
+            "title": "Asigna a la dependencia",
+            "text": "El caso llega al área responsable con alerta de vencimiento."
+          }
+        ],
+        "chat": [
+          {
+            "from": "user",
+            "text": "Quiero presentar una queja: los juegos del parque de mi barrio están dañados."
+          },
+          {
+            "from": "system",
+            "text": "Radicando y clasificando la solicitud…"
+          },
+          {
+            "from": "bot",
+            "text": "Su queja quedó radicada. Tipo: queja · Tema: espacio público."
+          },
+          {
+            "from": "bot",
+            "text": "Con su número de radicado puede consultar el estado y la fecha de respuesta."
+          },
+          {
+            "from": "user",
+            "text": "¿Quién va a revisar mi caso?"
+          },
+          {
+            "from": "bot",
+            "text": "Lo asigno a la dependencia responsable de parques y espacio público."
+          },
+          {
+            "from": "system",
+            "text": "Caso asignado · alerta de vencimiento activada"
+          }
+        ]
       }
     },
     "totems-con-avatar": {
@@ -94,6 +310,79 @@
       "seo": {
         "title": "Software para tótems de atención ciudadana | Humanika",
         "description": "Quioscos de autoservicio con avatares interactivos para entidades públicas: orientación por voz o pantalla, acompañamiento de formularios y captura autorizada."
+      },
+      "demo": {
+        "eyebrow": "Cómo funciona",
+        "title": "Así orienta el avatar en la sede",
+        "description": "Vea cómo una ciudadana conversa con el tótem para ubicar su trámite antes de llegar al punto de atención.",
+        "panel": {
+          "title": "Tótem · Vestíbulo",
+          "status": "Disponible"
+        },
+        "layers": {
+          "channels": "Tótem",
+          "agent": "Agente Humanika",
+          "sources": "Información de la sede",
+          "operator": "Punto de atención"
+        },
+        "channels": [
+          "Voz",
+          "Pantalla táctil",
+          "Formulario"
+        ],
+        "sources": [
+          "Servicios",
+          "Pasos del trámite",
+          "Ubicación"
+        ],
+        "steps": [
+          {
+            "title": "La ciudadana habla con el avatar",
+            "text": "Pregunta por voz qué necesita hacer."
+          },
+          {
+            "title": "Ubica el servicio",
+            "text": "El agente consulta los servicios y los pasos del trámite en la sede."
+          },
+          {
+            "title": "Guía los pasos",
+            "text": "Explica qué hacer y acompaña el formulario con datos autorizados."
+          },
+          {
+            "title": "La dirige al punto de atención",
+            "text": "La persona llega al lugar indicado con su información lista."
+          }
+        ],
+        "chat": [
+          {
+            "from": "user",
+            "text": "Buenos días, vengo a actualizar mis datos para un subsidio."
+          },
+          {
+            "from": "system",
+            "text": "Consultando los servicios de la sede…"
+          },
+          {
+            "from": "bot",
+            "text": "Ese trámite se atiende en el módulo 3, en el segundo piso."
+          },
+          {
+            "from": "bot",
+            "text": "Si quiere, completamos aquí el formulario para que llegue con todo listo."
+          },
+          {
+            "from": "user",
+            "text": "Sí, por favor."
+          },
+          {
+            "from": "bot",
+            "text": "Listo. Diríjase al módulo 3; allí continuarán con su trámite."
+          },
+          {
+            "from": "system",
+            "text": "Orientación completada · módulo 3"
+          }
+        ]
       }
     },
     "auditoria-de-atencion": {
@@ -111,6 +400,75 @@
       "seo": {
         "title": "Auditoría de atención con IA | Humanika",
         "description": "Análisis de llamadas y control de calidad del servicio al ciudadano: transcripción, evaluación frente a protocolos y reportes de hallazgos con IA."
+      },
+      "demo": {
+        "eyebrow": "Cómo funciona",
+        "title": "Así audita el agente las interacciones",
+        "description": "Recorra cómo Humanika analiza una muestra de llamadas frente al protocolo y entrega los hallazgos a supervisión.",
+        "panel": {
+          "title": "Registro de auditoría",
+          "status": "Analizando"
+        },
+        "layers": {
+          "channels": "Interacciones",
+          "agent": "Agente Humanika",
+          "sources": "Protocolos de servicio",
+          "operator": "Supervisión"
+        },
+        "channels": [
+          "Llamadas",
+          "Chats",
+          "Correos"
+        ],
+        "sources": [
+          "Protocolo",
+          "Criterios",
+          "Reportes"
+        ],
+        "steps": [
+          {
+            "title": "Recibe la muestra",
+            "text": "Llegan las conversaciones autorizadas para revisar."
+          },
+          {
+            "title": "Contrasta con el protocolo",
+            "text": "El agente transcribe y evalúa cada interacción frente a los criterios."
+          },
+          {
+            "title": "Clasifica los hallazgos",
+            "text": "Agrupa los resultados en un reporte de calidad."
+          },
+          {
+            "title": "Entrega a supervisión",
+            "text": "El responsable decide cómo usar los hallazgos."
+          }
+        ],
+        "chat": [
+          {
+            "from": "user",
+            "text": "Muestra recibida: 120 llamadas de la última semana."
+          },
+          {
+            "from": "system",
+            "text": "Transcribiendo y evaluando frente al protocolo…"
+          },
+          {
+            "from": "bot",
+            "text": "Hallazgo: en 18 llamadas el usuario terminó sin conocer el siguiente paso."
+          },
+          {
+            "from": "bot",
+            "text": "Reporte de calidad listo, organizado por tipo de hallazgo."
+          },
+          {
+            "from": "bot",
+            "text": "Sugerencia: reforzar el cierre de la llamada en la próxima capacitación."
+          },
+          {
+            "from": "system",
+            "text": "Reporte compartido con supervisión"
+          }
+        ]
       }
     },
     "copiloto-para-funcionarios": {
@@ -128,6 +486,79 @@
       "seo": {
         "title": "Copiloto de IA para funcionarios | Humanika",
         "description": "Asistente de conocimiento institucional para la consulta de normativa interna, manuales y procedimientos, con referencias a fuentes y borradores revisables."
+      },
+      "demo": {
+        "eyebrow": "Cómo funciona",
+        "title": "Así responde el copiloto con fuentes",
+        "description": "Vea cómo Humanika encuentra la sección pertinente del manual y prepara un resumen para que la funcionaria lo verifique.",
+        "panel": {
+          "title": "Copiloto institucional",
+          "status": "Repositorios autorizados"
+        },
+        "layers": {
+          "channels": "Consulta",
+          "agent": "Agente Humanika",
+          "sources": "Repositorios autorizados",
+          "operator": "Funcionaria"
+        },
+        "channels": [
+          "Chat interno",
+          "Portal",
+          "Correo"
+        ],
+        "sources": [
+          "Manuales",
+          "Procedimientos",
+          "Normativa"
+        ],
+        "steps": [
+          {
+            "title": "La funcionaria pregunta",
+            "text": "Consulta qué procedimiento aplica a una solicitud interna."
+          },
+          {
+            "title": "Busca en fuentes autorizadas",
+            "text": "El copiloto revisa manuales, procedimientos y normativa."
+          },
+          {
+            "title": "Responde con referencias",
+            "text": "Indica la sección pertinente y la fuente consultada."
+          },
+          {
+            "title": "Prepara un borrador",
+            "text": "Entrega un resumen para revisión humana antes de responder."
+          }
+        ],
+        "chat": [
+          {
+            "from": "user",
+            "text": "¿Qué procedimiento aplica a una solicitud de vacaciones fuera de calendario?"
+          },
+          {
+            "from": "system",
+            "text": "Buscando en manuales y procedimientos autorizados…"
+          },
+          {
+            "from": "bot",
+            "text": "Aplica el procedimiento de novedades de personal, sección 4.2."
+          },
+          {
+            "from": "bot",
+            "text": "Fuente: Manual de procesos de talento humano, versión vigente."
+          },
+          {
+            "from": "user",
+            "text": "Prepárame un resumen para responder al solicitante."
+          },
+          {
+            "from": "bot",
+            "text": "Aquí tiene un borrador con los pasos y requisitos. Revíselo antes de enviarlo."
+          },
+          {
+            "from": "system",
+            "text": "Borrador listo para revisión de la funcionaria"
+          }
+        ]
       }
     },
     "inteligencia-documental": {
@@ -145,6 +576,75 @@
       "seo": {
         "title": "Procesamiento inteligente de documentos | Humanika",
         "description": "Clasificación documental con IA y extracción de datos de PDF: convierta actas y formularios en información verificable, con cotejo y revisión humana."
+      },
+      "demo": {
+        "eyebrow": "Cómo funciona",
+        "title": "Así procesa el agente un lote de documentos",
+        "description": "Siga cómo Humanika identifica cada documento, extrae sus datos y los deja listos para la revisión del equipo.",
+        "panel": {
+          "title": "Registro de procesamiento",
+          "status": "Procesando"
+        },
+        "layers": {
+          "channels": "Documentos recibidos",
+          "agent": "Agente Humanika",
+          "sources": "Clasificación y cotejo",
+          "operator": "Equipo"
+        },
+        "channels": [
+          "Actas",
+          "Formularios",
+          "PDF escaneados"
+        ],
+        "sources": [
+          "Tipos documentales",
+          "Campos extraídos",
+          "Cotejo"
+        ],
+        "steps": [
+          {
+            "title": "Llega el lote",
+            "text": "El equipo recibe actas y formularios en distintos formatos."
+          },
+          {
+            "title": "Clasifica cada documento",
+            "text": "El agente identifica el tipo documental de cada archivo."
+          },
+          {
+            "title": "Extrae y coteja",
+            "text": "Obtiene fechas y referencias y contrasta los datos entre sí."
+          },
+          {
+            "title": "Entrega para revisión",
+            "text": "El equipo valida los resultados con trazabilidad."
+          }
+        ],
+        "chat": [
+          {
+            "from": "user",
+            "text": "Lote recibido: 34 documentos entre actas y formularios escaneados."
+          },
+          {
+            "from": "system",
+            "text": "Identificando tipos documentales…"
+          },
+          {
+            "from": "bot",
+            "text": "Clasificados: 21 actas, 9 formularios y 4 oficios."
+          },
+          {
+            "from": "bot",
+            "text": "Campos extraídos: fechas, números de referencia y firmantes."
+          },
+          {
+            "from": "bot",
+            "text": "2 documentos tienen fechas que no coinciden entre sí."
+          },
+          {
+            "from": "system",
+            "text": "Resultados listos para revisión del equipo"
+          }
+        ]
       }
     },
     "validacion-de-tramites": {
@@ -162,6 +662,71 @@
       "seo": {
         "title": "Validación de expedientes con IA | Humanika",
         "description": "Verificación de requisitos documentales y revisión de solicitudes y trámites: Humanika identifica faltantes e inconsistencias antes de la revisión."
+      },
+      "demo": {
+        "eyebrow": "Cómo funciona",
+        "title": "Así prevalida el agente un expediente",
+        "description": "Recorra cómo Humanika revisa los soportes de una solicitud de permiso antes de que llegue al funcionario.",
+        "panel": {
+          "title": "Revisión del expediente",
+          "status": "Prevalidando"
+        },
+        "layers": {
+          "channels": "Solicitudes",
+          "agent": "Agente Humanika",
+          "sources": "Reglas de la entidad",
+          "operator": "Revisor"
+        },
+        "channels": [
+          "Radicación web",
+          "Ventanilla",
+          "Correo"
+        ],
+        "sources": [
+          "Requisitos",
+          "Soportes",
+          "Inconsistencias"
+        ],
+        "steps": [
+          {
+            "title": "Ingresa la solicitud",
+            "text": "Llega un expediente de permiso con sus soportes."
+          },
+          {
+            "title": "Coteja contra requisitos",
+            "text": "El agente lee los soportes y los compara con las reglas configuradas."
+          },
+          {
+            "title": "Identifica faltantes",
+            "text": "Detecta el certificado pendiente y las inconsistencias."
+          },
+          {
+            "title": "Entrega al revisor",
+            "text": "El funcionario decide cómo continuar y orienta la subsanación."
+          }
+        ],
+        "chat": [
+          {
+            "from": "user",
+            "text": "Expediente recibido: solicitud de permiso con 6 soportes."
+          },
+          {
+            "from": "system",
+            "text": "Cotejando soportes contra los requisitos configurados…"
+          },
+          {
+            "from": "bot",
+            "text": "5 de 6 requisitos cumplidos."
+          },
+          {
+            "from": "bot",
+            "text": "Falta: certificado vigente de uso del suelo."
+          },
+          {
+            "from": "system",
+            "text": "Resumen y alerta enviados al revisor"
+          }
+        ]
       }
     },
     "automatizacion-institucional": {
@@ -179,6 +744,75 @@
       "seo": {
         "title": "Automatización de procesos institucionales con IA | Humanika",
         "description": "Agentes de IA para entidades públicas: flujos de trabajo automatizados que consultan sistemas autorizados, ejecutan tareas y dejan trazabilidad."
+      },
+      "demo": {
+        "eyebrow": "Cómo funciona",
+        "title": "Así ejecuta el agente un flujo",
+        "description": "Vea cómo Humanika prepara una solicitud, la encamina al responsable y deja registro de cada paso.",
+        "panel": {
+          "title": "Registro de ejecución",
+          "status": "Ejecutando"
+        },
+        "layers": {
+          "channels": "Entradas",
+          "agent": "Agente Humanika",
+          "sources": "Sistemas autorizados",
+          "operator": "Responsable"
+        },
+        "channels": [
+          "Solicitudes",
+          "Correo",
+          "Formularios"
+        ],
+        "sources": [
+          "Consulta de datos",
+          "Reglas del flujo",
+          "Bitácora"
+        ],
+        "steps": [
+          {
+            "title": "Ingresa una solicitud",
+            "text": "Llega una solicitud a un proceso interno."
+          },
+          {
+            "title": "Consulta sistemas autorizados",
+            "text": "El agente busca la información disponible según las integraciones."
+          },
+          {
+            "title": "Prepara el caso",
+            "text": "Aplica las reglas del flujo y registra lo que hizo."
+          },
+          {
+            "title": "Encamina al responsable",
+            "text": "El caso llega a quien corresponde, con trazabilidad."
+          }
+        ],
+        "chat": [
+          {
+            "from": "user",
+            "text": "Nueva solicitud: actualización de datos de un proveedor."
+          },
+          {
+            "from": "system",
+            "text": "Consultando sistemas autorizados…"
+          },
+          {
+            "from": "bot",
+            "text": "Información del proveedor encontrada y verificada."
+          },
+          {
+            "from": "bot",
+            "text": "Regla aplicada: actualización de datos → área financiera."
+          },
+          {
+            "from": "system",
+            "text": "Paso registrado en la bitácora de ejecución"
+          },
+          {
+            "from": "system",
+            "text": "Caso encaminado al responsable"
+          }
+        ]
       }
     },
     "asistente-de-contratacion-publica": {
@@ -196,6 +830,75 @@
       "seo": {
         "title": "Asistente de contratación pública | Humanika",
         "description": "Análisis de pliegos con IA: identifique y contraste requisitos y construya la matriz de requisitos de contratación con referencias verificables."
+      },
+      "demo": {
+        "eyebrow": "Cómo funciona",
+        "title": "Así arma el asistente la matriz de requisitos",
+        "description": "Siga cómo Humanika organiza los requisitos de un pliego e indica dónde aparece cada uno.",
+        "panel": {
+          "title": "Revisión del pliego",
+          "status": "Analizando"
+        },
+        "layers": {
+          "channels": "Documentos del proceso",
+          "agent": "Agente Humanika",
+          "sources": "Matriz de revisión",
+          "operator": "Equipo"
+        },
+        "channels": [
+          "Pliego",
+          "Anexos",
+          "Adendas"
+        ],
+        "sources": [
+          "Requisitos técnicos",
+          "Requisitos documentales",
+          "Referencias"
+        ],
+        "steps": [
+          {
+            "title": "Carga el pliego",
+            "text": "El equipo comparte el pliego y sus anexos."
+          },
+          {
+            "title": "Identifica requisitos",
+            "text": "El asistente separa los requisitos técnicos y documentales."
+          },
+          {
+            "title": "Contrasta y referencia",
+            "text": "Indica dónde aparece cada requisito y marca diferencias."
+          },
+          {
+            "title": "El equipo valida",
+            "text": "La matriz queda lista para revisión humana."
+          }
+        ],
+        "chat": [
+          {
+            "from": "user",
+            "text": "Pliego y 3 anexos cargados para revisión."
+          },
+          {
+            "from": "system",
+            "text": "Identificando requisitos en el pliego y sus anexos…"
+          },
+          {
+            "from": "bot",
+            "text": "Encontré 42 requisitos: 27 técnicos y 15 documentales."
+          },
+          {
+            "from": "bot",
+            "text": "Cada requisito incluye la referencia a su sección de origen."
+          },
+          {
+            "from": "bot",
+            "text": "El anexo 2 modifica un requisito del pliego; lo marqué para revisión."
+          },
+          {
+            "from": "system",
+            "text": "Matriz enviada al equipo para validación"
+          }
+        ]
       }
     },
     "supervision-contractual": {
@@ -213,6 +916,71 @@
       "seo": {
         "title": "Software de supervisión contractual | Humanika",
         "description": "Seguimiento de obligaciones contractuales, evidencias y actas, con alertas de vencimiento de contratos y reportes de seguimiento para el supervisor."
+      },
+      "demo": {
+        "eyebrow": "Cómo funciona",
+        "title": "Así acompaña el agente la supervisión",
+        "description": "Vea cómo Humanika organiza las evidencias y avisa qué entregables están por vencer antes de una reunión de seguimiento.",
+        "panel": {
+          "title": "Seguimiento del contrato",
+          "status": "Actualizado"
+        },
+        "layers": {
+          "channels": "Ejecución",
+          "agent": "Agente Humanika",
+          "sources": "Seguimiento",
+          "operator": "Supervisor"
+        },
+        "channels": [
+          "Actas",
+          "Evidencias",
+          "Informes"
+        ],
+        "sources": [
+          "Obligaciones",
+          "Hitos y entregables",
+          "Vencimientos"
+        ],
+        "steps": [
+          {
+            "title": "Llegan evidencias",
+            "text": "El contratista entrega fotos, actas e informes."
+          },
+          {
+            "title": "Las asocia a los hitos",
+            "text": "El agente organiza cada evidencia según la obligación correspondiente."
+          },
+          {
+            "title": "Revisa vencimientos",
+            "text": "Identifica los entregables próximos a vencer."
+          },
+          {
+            "title": "Prepara al supervisor",
+            "text": "El supervisor llega a la reunión con el estado al día."
+          }
+        ],
+        "chat": [
+          {
+            "from": "user",
+            "text": "Nuevo informe del contratista con 12 evidencias."
+          },
+          {
+            "from": "system",
+            "text": "Asociando evidencias a obligaciones y entregables…"
+          },
+          {
+            "from": "bot",
+            "text": "Hito 3 de 5: evidencias completas."
+          },
+          {
+            "from": "bot",
+            "text": "El entregable 4 vence en 6 días y aún no tiene evidencias."
+          },
+          {
+            "from": "system",
+            "text": "Alerta de vencimiento enviada al supervisor"
+          }
+        ]
       }
     },
     "proyectos-e-inversion-publica": {
@@ -230,6 +998,75 @@
       "seo": {
         "title": "IA para formulación de proyectos MGA | Humanika",
         "description": "Análisis de inversión pública y comparación de proyectos territoriales: formule y revise proyectos MGA e identifique metas sin cobertura con IA."
+      },
+      "demo": {
+        "eyebrow": "Cómo funciona",
+        "title": "Así analiza el agente la cartera de proyectos",
+        "description": "Recorra cómo Humanika compara iniciativas y encuentra metas del plan de desarrollo sin proyectos asociados.",
+        "panel": {
+          "title": "Análisis de cartera",
+          "status": "Analizando"
+        },
+        "layers": {
+          "channels": "Iniciativas",
+          "agent": "Agente Humanika",
+          "sources": "Plan de desarrollo",
+          "operator": "Planeación"
+        },
+        "channels": [
+          "Proyectos MGA",
+          "Informes de cierre",
+          "Fichas"
+        ],
+        "sources": [
+          "Metas del plan",
+          "Proyectos similares",
+          "Lecciones"
+        ],
+        "steps": [
+          {
+            "title": "Recibe las iniciativas",
+            "text": "La secretaría comparte los proyectos formulados en MGA."
+          },
+          {
+            "title": "Compara objetivos",
+            "text": "El agente identifica iniciativas con objetivos similares."
+          },
+          {
+            "title": "Revisa la cobertura de metas",
+            "text": "Señala las metas del plan que aún no tienen proyectos."
+          },
+          {
+            "title": "Apoya la priorización",
+            "text": "Planeación decide con referencias a las fuentes revisadas."
+          }
+        ],
+        "chat": [
+          {
+            "from": "user",
+            "text": "Cartera cargada: 28 iniciativas formuladas en MGA."
+          },
+          {
+            "from": "system",
+            "text": "Comparando objetivos de las iniciativas…"
+          },
+          {
+            "from": "bot",
+            "text": "3 pares de iniciativas tienen objetivos muy similares."
+          },
+          {
+            "from": "bot",
+            "text": "4 metas del plan de desarrollo aún no tienen proyectos asociados."
+          },
+          {
+            "from": "bot",
+            "text": "Recuperé 2 lecciones de informes de cierre relacionados."
+          },
+          {
+            "from": "system",
+            "text": "Análisis enviado a Planeación con sus fuentes"
+          }
+        ]
       }
     },
     "investigacion-y-consultas-publicas": {
@@ -247,6 +1084,75 @@
       "seo": {
         "title": "Análisis de consultas públicas con IA | Humanika",
         "description": "Matriz de observaciones ciudadanas con trazabilidad, análisis temático de comentarios y entrevistas y encuestas con IA por voz o chat."
+      },
+      "demo": {
+        "eyebrow": "Cómo funciona",
+        "title": "Así organiza el agente una consulta pública",
+        "description": "Siga cómo Humanika agrupa los comentarios por artículo sin perder el vínculo con cada aporte original.",
+        "panel": {
+          "title": "Análisis de la consulta",
+          "status": "Analizando"
+        },
+        "layers": {
+          "channels": "Participación",
+          "agent": "Agente Humanika",
+          "sources": "Análisis",
+          "operator": "Equipo"
+        },
+        "channels": [
+          "Entrevistas por voz",
+          "Chat",
+          "Comentarios"
+        ],
+        "sources": [
+          "Temas",
+          "Artículos",
+          "Aportes originales"
+        ],
+        "steps": [
+          {
+            "title": "Llegan los aportes",
+            "text": "La ciudadanía comenta por voz, chat o formulario."
+          },
+          {
+            "title": "Agrupa por tema y artículo",
+            "text": "El agente clasifica cada observación."
+          },
+          {
+            "title": "Conserva el origen",
+            "text": "Destaca aportes minoritarios y mantiene el vínculo con cada aporte."
+          },
+          {
+            "title": "Entrega la matriz",
+            "text": "El equipo prepara y revisa sus respuestas con trazabilidad."
+          }
+        ],
+        "chat": [
+          {
+            "from": "user",
+            "text": "Consulta cerrada: 640 comentarios sobre el proyecto normativo."
+          },
+          {
+            "from": "system",
+            "text": "Agrupando observaciones por tema y artículo…"
+          },
+          {
+            "from": "bot",
+            "text": "El artículo 5 concentra el 38 % de los comentarios."
+          },
+          {
+            "from": "bot",
+            "text": "Identifiqué 12 aportes minoritarios con propuestas nuevas."
+          },
+          {
+            "from": "bot",
+            "text": "Cada observación conserva el vínculo con su aporte original."
+          },
+          {
+            "from": "system",
+            "text": "Matriz editable lista para el equipo"
+          }
+        ]
       }
     },
     "formacion-institucional": {
@@ -264,6 +1170,79 @@
       "seo": {
         "title": "Plataforma de formación institucional con IA | Humanika",
         "description": "Software de inducción y formación continua con tutores virtuales para capacitación por voz y chat, y seguimiento del avance de cada participante."
+      },
+      "demo": {
+        "eyebrow": "Cómo funciona",
+        "title": "Así acompaña el tutor una inducción",
+        "description": "Vea cómo un nuevo funcionario resuelve sus dudas con el tutor mientras Talento Humano sigue el avance del grupo.",
+        "panel": {
+          "title": "Tutor de inducción",
+          "status": "En línea"
+        },
+        "layers": {
+          "channels": "Participante",
+          "agent": "Agente Humanika",
+          "sources": "Ruta de aprendizaje",
+          "operator": "Talento Humano"
+        },
+        "channels": [
+          "Chat",
+          "Voz",
+          "Plataforma"
+        ],
+        "sources": [
+          "Cursos",
+          "Contenidos",
+          "Progreso"
+        ],
+        "steps": [
+          {
+            "title": "El participante pregunta",
+            "text": "Un nuevo funcionario consulta una duda de su inducción."
+          },
+          {
+            "title": "Consulta la ruta",
+            "text": "El tutor revisa el curso y los contenidos asignados."
+          },
+          {
+            "title": "Explica y guía",
+            "text": "Responde y propone el siguiente contenido."
+          },
+          {
+            "title": "Actualiza el seguimiento",
+            "text": "Talento Humano ve el progreso del grupo."
+          }
+        ],
+        "chat": [
+          {
+            "from": "user",
+            "text": "¿Dónde encuentro el módulo sobre atención al ciudadano?"
+          },
+          {
+            "from": "system",
+            "text": "Consultando su ruta de inducción…"
+          },
+          {
+            "from": "bot",
+            "text": "Está en el módulo 3 de su ruta. Ya completó los dos primeros."
+          },
+          {
+            "from": "bot",
+            "text": "Le dejo un resumen de lo que verá y un ejercicio corto para empezar."
+          },
+          {
+            "from": "user",
+            "text": "Listo, ya terminé el ejercicio."
+          },
+          {
+            "from": "bot",
+            "text": "¡Bien hecho! Registré su avance en la ruta."
+          },
+          {
+            "from": "system",
+            "text": "Progreso actualizado para Talento Humano"
+          }
+        ]
       }
     },
     "simulacion-y-evaluacion": {
@@ -281,6 +1260,75 @@
       "seo": {
         "title": "Simulación conversacional con IA | Humanika",
         "description": "Evaluación por rúbricas y práctica de atención al ciudadano en escenarios simulados por voz o chat, con retroalimentación y reportes de desempeño."
+      },
+      "demo": {
+        "eyebrow": "Cómo funciona",
+        "title": "Así funciona una práctica simulada",
+        "description": "Recorra cómo el agente interpreta a un usuario inconforme y evalúa la práctica con una rúbrica configurable.",
+        "panel": {
+          "title": "Práctica · Usuario inconforme",
+          "status": "Escenario activo"
+        },
+        "layers": {
+          "channels": "Práctica",
+          "agent": "Agente Humanika",
+          "sources": "Evaluación",
+          "operator": "Reporte"
+        },
+        "channels": [
+          "Voz",
+          "Chat",
+          "Escenarios"
+        ],
+        "sources": [
+          "Rúbrica",
+          "Protocolo",
+          "Criterios"
+        ],
+        "steps": [
+          {
+            "title": "Comienza el escenario",
+            "text": "El agente interpreta a una persona inconforme y el funcionario responde."
+          },
+          {
+            "title": "Evalúa con la rúbrica",
+            "text": "Contrasta la práctica con los criterios configurados."
+          },
+          {
+            "title": "Devuelve observaciones",
+            "text": "Señala aciertos y aspectos por mejorar."
+          },
+          {
+            "title": "Genera el reporte",
+            "text": "El desempeño queda registrado para seguimiento."
+          }
+        ],
+        "chat": [
+          {
+            "from": "bot",
+            "text": "Llevo tres semanas esperando una respuesta y nadie me dice nada."
+          },
+          {
+            "from": "user",
+            "text": "Entiendo su molestia. Permítame revisar el estado de su solicitud."
+          },
+          {
+            "from": "system",
+            "text": "Evaluando la práctica con la rúbrica…"
+          },
+          {
+            "from": "bot",
+            "text": "Escucha: muy bien, reconoció la molestia del usuario."
+          },
+          {
+            "from": "bot",
+            "text": "Claridad: faltó indicar un plazo concreto de respuesta."
+          },
+          {
+            "from": "system",
+            "text": "Reporte de desempeño generado"
+          }
+        ]
       }
     },
     "ensenanza-de-idiomas": {
@@ -298,6 +1346,79 @@
       "seo": {
         "title": "Plataforma de idiomas con IA | Humanika",
         "description": "Práctica oral con tutores de IA y aprendizaje de idiomas por niveles: conversaciones guiadas por voz y chat con seguimiento del progreso individual."
+      },
+      "demo": {
+        "eyebrow": "Cómo funciona",
+        "title": "Así practica una estudiante con el tutor",
+        "description": "Vea cómo el tutor mantiene una conversación realista en otro idioma y propone actividades según el nivel.",
+        "panel": {
+          "title": "Tutor de inglés · Nivel A2",
+          "status": "En línea"
+        },
+        "layers": {
+          "channels": "Conversación",
+          "agent": "Agente Humanika",
+          "sources": "Ruta por nivel",
+          "operator": "Progreso"
+        },
+        "channels": [
+          "Voz",
+          "Chat",
+          "Escenarios"
+        ],
+        "sources": [
+          "Nivel",
+          "Vocabulario",
+          "Actividades"
+        ],
+        "steps": [
+          {
+            "title": "La estudiante habla",
+            "text": "Practica cómo pedir indicaciones en una estación."
+          },
+          {
+            "title": "Ajusta al nivel",
+            "text": "El tutor consulta su nivel y vocabulario."
+          },
+          {
+            "title": "Responde en el escenario",
+            "text": "Mantiene la conversación y sugiere una forma más natural."
+          },
+          {
+            "title": "Registra el progreso",
+            "text": "Propone una actividad y actualiza el seguimiento."
+          }
+        ],
+        "chat": [
+          {
+            "from": "user",
+            "text": "Excuse me, where is train to the airport?"
+          },
+          {
+            "from": "system",
+            "text": "Ajustando la respuesta al nivel A2…"
+          },
+          {
+            "from": "bot",
+            "text": "It leaves from platform 4. Go straight and turn left at the café."
+          },
+          {
+            "from": "bot",
+            "text": "Tip: you can say “Where is the train to the airport?”"
+          },
+          {
+            "from": "user",
+            "text": "Thank you! Where is the train to the airport?"
+          },
+          {
+            "from": "bot",
+            "text": "Perfect! That sounds very natural."
+          },
+          {
+            "from": "system",
+            "text": "Progreso actualizado · nueva actividad sugerida"
+          }
+        ]
       }
     },
     "analitica-de-espacios": {
@@ -315,6 +1436,71 @@
       "seo": {
         "title": "Conteo de personas con visión computacional | Humanika",
         "description": "Medición de ocupación y analítica de afluencia y permanencia por zonas y cámaras, con métricas agregadas en tableros y alertas configurables."
+      },
+      "demo": {
+        "eyebrow": "Cómo funciona",
+        "title": "Así mide el agente la afluencia de una sede",
+        "description": "Recorra cómo Humanika compara dos zonas de atención e identifica a qué horas se concentra la demanda.",
+        "panel": {
+          "title": "Tablero de la sede",
+          "status": "Métricas agregadas"
+        },
+        "layers": {
+          "channels": "Cámaras y zonas",
+          "agent": "Agente Humanika",
+          "sources": "Métricas",
+          "operator": "Operaciones"
+        },
+        "channels": [
+          "Entrada",
+          "Zona A",
+          "Zona B"
+        ],
+        "sources": [
+          "Ocupación",
+          "Afluencia",
+          "Permanencia"
+        ],
+        "steps": [
+          {
+            "title": "Llegan los conteos",
+            "text": "Las cámaras autorizadas reportan conteos por zona."
+          },
+          {
+            "title": "Calcula la ocupación",
+            "text": "El agente agrega los datos en métricas por zona."
+          },
+          {
+            "title": "Detecta patrones",
+            "text": "Identifica horas pico y diferencias entre zonas."
+          },
+          {
+            "title": "Alerta a operaciones",
+            "text": "El equipo reorganiza sus puntos de servicio."
+          }
+        ],
+        "chat": [
+          {
+            "from": "user",
+            "text": "Zona A: 46 personas · Zona B: 12 personas."
+          },
+          {
+            "from": "system",
+            "text": "Calculando ocupación y permanencia por zona…"
+          },
+          {
+            "from": "bot",
+            "text": "Hora pico en la zona A: de 9:00 a 11:00 a. m."
+          },
+          {
+            "from": "bot",
+            "text": "Permanencia promedio: 24 min en A frente a 8 min en B."
+          },
+          {
+            "from": "system",
+            "text": "Alerta de ocupación enviada a operaciones"
+          }
+        ]
       }
     },
     "inspeccion-y-asistencia-visual": {
@@ -332,6 +1518,79 @@
       "seo": {
         "title": "Inspección visual con IA | Humanika",
         "description": "Registro de evidencias fotográficas y generación asistida de actas: describa hallazgos por voz o chat y prepare borradores para revisión."
+      },
+      "demo": {
+        "eyebrow": "Cómo funciona",
+        "title": "Así documenta el agente una inspección",
+        "description": "Siga cómo una inspectora pasa de una fotografía en campo al borrador del acta de visita.",
+        "panel": {
+          "title": "Visita de inspección",
+          "status": "En campo"
+        },
+        "layers": {
+          "channels": "Campo",
+          "agent": "Agente Humanika",
+          "sources": "Registro de la visita",
+          "operator": "Revisor"
+        },
+        "channels": [
+          "Fotografía",
+          "Dictado por voz",
+          "Chat"
+        ],
+        "sources": [
+          "Evidencias",
+          "Hallazgos",
+          "Acta"
+        ],
+        "steps": [
+          {
+            "title": "Toma la evidencia",
+            "text": "La inspectora fotografía un hallazgo y dicta su observación."
+          },
+          {
+            "title": "Registra el hallazgo",
+            "text": "El agente describe la evidencia y la agrega al registro."
+          },
+          {
+            "title": "Confirma con la inspectora",
+            "text": "Muestra lo registrado para que ella lo complete."
+          },
+          {
+            "title": "Prepara el acta",
+            "text": "El borrador queda listo para revisión humana."
+          }
+        ],
+        "chat": [
+          {
+            "from": "user",
+            "text": "Foto enviada: grieta en el muro norte, junto a la escalera."
+          },
+          {
+            "from": "system",
+            "text": "Registrando la evidencia…"
+          },
+          {
+            "from": "bot",
+            "text": "Hallazgo 3: fisura vertical de unos 40 cm en el muro norte, junto a la escalera de acceso."
+          },
+          {
+            "from": "bot",
+            "text": "¿Desea agregar alguna observación sobre el riesgo?"
+          },
+          {
+            "from": "user",
+            "text": "Sí: requiere revisión estructural."
+          },
+          {
+            "from": "bot",
+            "text": "Agregado. Preparo el borrador del acta con los 3 hallazgos."
+          },
+          {
+            "from": "system",
+            "text": "Borrador del acta listo para revisión"
+          }
+        ]
       }
     }
   }

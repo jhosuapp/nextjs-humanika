@@ -1,0 +1,326 @@
+@reference "tailwindcss";
+
+/* Viewport of the 3D scene. Perspective lives here; every descendant down to
+   the nodes keeps `preserve-3d` so layers stack in real depth. */
+.stage {
+  @apply relative w-full select-none;
+  height: 440px;
+  perspective: 1800px;
+  perspective-origin: 50% 35%;
+  touch-action: pan-y;
+}
+
+@media (min-width: 768px) {
+  .stage {
+    height: 600px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .stage {
+    height: 680px;
+  }
+}
+
+.scale {
+  @apply absolute left-1/2 h-0 w-0;
+  top: 74%;
+  transform-style: preserve-3d;
+  transform: scale(0.62);
+}
+
+@media (min-width: 768px) {
+  .scale {
+    top: 76%;
+    transform: scale(0.8);
+  }
+}
+
+@media (min-width: 1280px) {
+  .scale {
+    transform: scale(0.92);
+  }
+}
+
+.scene {
+  @apply absolute left-0 top-0 h-0 w-0;
+  transform-style: preserve-3d;
+}
+
+/* Layers */
+.layer {
+  @apply absolute;
+  left: -160px;
+  top: -160px;
+  transform-style: preserve-3d;
+}
+
+.surface {
+  @apply absolute inset-0;
+}
+
+.plane {
+  @apply absolute inset-0;
+  border-radius: 32px;
+  border: 1px solid rgba(0, 177, 215, 0.28);
+  background-color: color-mix(in srgb, var(--surface-elevated) 42%, transparent);
+  backdrop-filter: blur(2px);
+  background-image:
+    linear-gradient(rgba(0, 177, 215, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 177, 215, 0.09) 1px, transparent 1px);
+  background-size: 34px 34px;
+  background-position: center;
+  box-shadow:
+    0 40px 80px -40px rgba(0, 22, 67, 0.45),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+:global([data-theme="dark"]) .plane {
+  background-color: rgba(15, 21, 48, 0.45);
+  box-shadow:
+    0 40px 80px -40px rgba(0, 0, 0, 0.8),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.planeGlow {
+  @apply pointer-events-none absolute inset-0;
+  border-radius: 32px;
+  border: 1.5px solid var(--primary);
+  box-shadow:
+    0 0 0 6px rgba(0, 177, 215, 0.08),
+    0 0 70px rgba(0, 177, 215, 0.35);
+}
+
+.planeLabel {
+  @apply absolute left-6 top-5 text-[11px] font-semibold uppercase tracking-[0.2em];
+  color: var(--text-muted);
+}
+
+.planeLabel[data-active="true"] {
+  color: var(--primary);
+}
+
+/* Flat dashed line from the plane centre to a node (rotation on the wrapper,
+   draw-in scale on the inner line). */
+.connector {
+  @apply absolute left-1/2 top-1/2;
+  height: 2px;
+  margin-top: -1px;
+  transform-origin: left center;
+}
+
+.connectorLine {
+  @apply absolute inset-0 block;
+  transform-origin: left center;
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 177, 215, 0.55) 50%,
+    transparent 50%
+  );
+  background-size: 10px 2px;
+}
+
+/* A point on a plane; children stand on it. */
+.slot {
+  @apply absolute h-0 w-0;
+  transform-style: preserve-3d;
+}
+
+.billboard {
+  @apply absolute left-0 top-0 h-0 w-0;
+  transform-style: preserve-3d;
+}
+
+/* Nodes */
+.nodeShadowWrap {
+  @apply absolute left-0 top-0 h-0 w-0;
+}
+
+.nodeShadow {
+  @apply absolute rounded-full;
+  width: 64px;
+  height: 64px;
+  left: -32px;
+  top: -32px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 177, 215, 0.4),
+    rgba(0, 177, 215, 0) 70%
+  );
+}
+
+.nodeEnter {
+  @apply absolute bottom-0 left-0;
+  translate: -50% 0;
+  transform-origin: bottom center;
+}
+
+.node {
+  @apply relative flex flex-col items-center gap-1.5 rounded-2xl px-3 py-2.5 whitespace-nowrap;
+  transform-origin: bottom center;
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 14px 30px -16px rgba(0, 22, 67, 0.45);
+}
+
+/* Active state as an overlay so it can fade in on the packet's arrival. */
+.nodeGlow {
+  @apply pointer-events-none absolute rounded-2xl;
+  inset: -1px;
+  border: 1px solid var(--primary);
+  box-shadow:
+    0 0 0 4px rgba(0, 177, 215, 0.14),
+    0 18px 36px -14px rgba(0, 177, 215, 0.55);
+}
+
+.nodeIcon {
+  @apply relative flex h-9 w-9 items-center justify-center rounded-xl text-base;
+  color: var(--primary);
+  background: var(--bg-section);
+}
+
+.nodeIconActive {
+  @apply absolute inset-0 flex items-center justify-center rounded-xl;
+  color: #fff;
+  background: var(--gradient-brand);
+}
+
+.nodeLabel {
+  @apply relative text-xs font-semibold;
+  color: var(--text-secondary);
+}
+
+.ripple {
+  @apply pointer-events-none absolute inset-0 rounded-2xl;
+  border: 2px solid var(--tertiary);
+}
+
+/* Agent core */
+.coreShadow {
+  @apply absolute rounded-full;
+  width: 150px;
+  height: 150px;
+  left: -75px;
+  top: -75px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 120, 255, 0.4),
+    rgba(0, 177, 215, 0) 70%
+  );
+}
+
+.core {
+  @apply absolute bottom-0 left-0 flex flex-col items-center;
+  translate: -50% 0;
+  width: 112px;
+  padding-top: 100px;
+}
+
+.coreRing {
+  @apply absolute rounded-full;
+  top: 0;
+  left: 6px;
+  width: 100px;
+  height: 100px;
+  border: 1.5px dashed rgba(0, 177, 215, 0.6);
+}
+
+.coreRingInner {
+  top: 12px;
+  left: 18px;
+  width: 76px;
+  height: 76px;
+  border-style: solid;
+  border-color: rgba(23, 241, 209, 0.45) transparent;
+}
+
+.coreOrb {
+  @apply absolute rounded-full;
+  top: 24px;
+  left: 30px;
+  width: 52px;
+  height: 52px;
+  background: radial-gradient(
+    circle at 35% 30%,
+    #7ff3ff 0%,
+    #19b6ff 38%,
+    #0a5cff 75%,
+    #0a3fd1 100%
+  );
+  box-shadow:
+    0 0 30px rgba(0, 177, 255, 0.75),
+    0 0 80px rgba(0, 120, 255, 0.45);
+}
+
+.coreRipple {
+  @apply pointer-events-none absolute rounded-full;
+  top: 0;
+  left: 6px;
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--tertiary);
+  box-shadow: 0 0 24px rgba(23, 241, 209, 0.5);
+}
+
+.coreLabel {
+  @apply mt-2 rounded-full px-3 py-1 text-xs font-semibold whitespace-nowrap;
+  color: #fff;
+  background: var(--gradient-brand);
+  box-shadow: 0 10px 24px -10px rgba(0, 177, 215, 0.8);
+}
+
+/* Vertical spine joining the hubs (rotated to run along +Z). */
+.spine {
+  @apply absolute left-0 top-0;
+  width: 2px;
+  margin-left: -1px;
+  transform-origin: top center;
+  transform: rotateX(90deg);
+}
+
+.spineLine {
+  @apply absolute inset-0 block;
+  transform-origin: top center;
+  background-image: linear-gradient(
+    180deg,
+    rgba(23, 241, 209, 0.9) 50%,
+    transparent 50%
+  );
+  background-size: 2px 10px;
+}
+
+/* Travelling light packet */
+.packet {
+  @apply absolute left-0 top-0 h-0 w-0;
+  transform-style: preserve-3d;
+}
+
+.packetGlow {
+  @apply absolute block rounded-full;
+  width: 22px;
+  height: 22px;
+  left: -11px;
+  top: -11px;
+  background: radial-gradient(circle, #ffffff 0%, #8ff7ff 40%, #17f1d1 100%);
+  box-shadow:
+    0 0 18px 6px rgba(23, 241, 209, 0.75),
+    0 0 46px 14px rgba(0, 177, 215, 0.45);
+}
+
+.packetGlow[data-size="trail"] {
+  width: 14px;
+  height: 14px;
+  left: -7px;
+  top: -7px;
+  filter: opacity(0.55);
+  box-shadow: 0 0 14px 4px rgba(23, 241, 209, 0.5);
+}
+
+.packetGlow[data-size="tail"] {
+  width: 9px;
+  height: 9px;
+  left: -4.5px;
+  top: -4.5px;
+  filter: opacity(0.3);
+  box-shadow: 0 0 10px 3px rgba(23, 241, 209, 0.35);
+}

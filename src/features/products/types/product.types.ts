@@ -10,6 +10,41 @@ type ProductCategoryId =
   | "educacion"
   | "vision-computacional";
 
+/** Points of the 3D demo scene the light packet can travel through. */
+type DemoNodeRef =
+  | "channel-0"
+  | "channel-1"
+  | "channel-2"
+  | "source-0"
+  | "source-1"
+  | "source-2"
+  | "channels-hub"
+  | "sources-hub"
+  | "agent"
+  | "operator";
+
+/** Scene area highlighted while a step plays. */
+type DemoFocus = "channels" | "sources" | "agent" | "operator";
+
+type ProductDemoStep = {
+  /** Path the light packet follows during the step. */
+  route: DemoNodeRef[];
+  focus: DemoFocus;
+  /** How many chat lines (`demo.chat`) are visible once the step plays. */
+  messages: number;
+};
+
+/**
+ * Structural config of the interactive 3D "how it works" scene. Copy lives in
+ * `items.<slug>.demo` (layers, node labels, steps and the chat script).
+ */
+type ProductDemoConfig = {
+  channelIcons: [IconDefinition, IconDefinition, IconDefinition];
+  sourceIcons: [IconDefinition, IconDefinition, IconDefinition];
+  operatorIcon: IconDefinition;
+  steps: ProductDemoStep[];
+};
+
 /**
  * Structural data for a product detail page ("ficha").
  *
@@ -26,6 +61,15 @@ type ProductEntry = {
   featureIcons: [IconDefinition, IconDefinition, IconDefinition];
   /** Exactly three related product slugs, as listed in the brief. */
   related: [string, string, string];
+  /** Optional interactive 3D demo shown between features and use case. */
+  demo?: ProductDemoConfig;
 };
 
-export type { ProductCategoryId, ProductEntry };
+export type {
+  DemoFocus,
+  DemoNodeRef,
+  ProductCategoryId,
+  ProductDemoConfig,
+  ProductDemoStep,
+  ProductEntry,
+};
