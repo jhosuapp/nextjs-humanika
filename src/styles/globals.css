@@ -246,9 +246,27 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .dot {
+  .gl-dot {
     animation: none;
   }
+}
+
+/* Lenis recommended styles (smooth scroll). */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
 }
 
 @keyframes statusDot {

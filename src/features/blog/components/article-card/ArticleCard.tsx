@@ -54,8 +54,7 @@ const ArticleCard = ({
           variant="description_xs"
           color="primary"
           weight="semibold"
-          immediate
-          fadeUpTertiary
+          noMotion
         >
           {eyebrow}
         </Text>
@@ -66,8 +65,7 @@ const ArticleCard = ({
           variant="subtitle_small"
           color="secondary"
           weight="normal"
-          immediate
-          fadeUpTertiary
+          noMotion
         >
           {titleLead}
           <strong className="gl-degradete-text font-bold">{titleAccent}</strong>
@@ -80,8 +78,7 @@ const ArticleCard = ({
           variant="description_small"
           color="muted"
           weight="normal"
-          immediate
-          fadeUpTertiary
+          noMotion
         >
           {excerpt}
         </Text>

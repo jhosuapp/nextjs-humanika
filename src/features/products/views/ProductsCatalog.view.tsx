@@ -11,6 +11,7 @@ import { MainContent } from '@/src/shared/components/main-content/MainContent';
 import { Text } from '@/src/shared/components/text/Text';
 import { SectionHeader } from '@/src/shared/components/section-header/SectionHeader';
 import { StaggerGroup, StaggerItem } from '@/src/shared/components/motion/StaggerGroup';
+import { REVEAL } from '@/src/shared/helpers/motion-variants';
 
 import { ProductCard } from '../components/product-card/ProductCard';
 import styles from './products-catalog.module.css';
@@ -83,7 +84,7 @@ const ProductsCatalogView = ({ t }: ProductsCatalogViewProps): JSX.Element => (
             title={t(`categories.${category}`) as string}
             description={t(`catalog.families.${category}`) as string}
           />
-          <StaggerGroup as="ul" className={styles.grid} stagger={0.08}>
+          <StaggerGroup as="ul" className={styles.grid} stagger={REVEAL.stagger}>
             {entries.map((item) => (
               <StaggerItem as="li" key={item.slug} className={styles.item}>
                 <ProductCard

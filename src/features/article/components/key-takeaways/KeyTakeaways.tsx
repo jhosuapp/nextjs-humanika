@@ -2,7 +2,7 @@ import type { JSX } from 'react';
 
 import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
 import { Text } from '@/src/shared/components/text/Text';
-import { Reveal } from '@/src/features/article/components/reveal/Reveal';
+import { Reveal } from '@/src/shared/components/motion/Reveal';
 
 import styles from './key-takeaways.module.css';
 

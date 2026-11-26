@@ -4,6 +4,7 @@ import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
 import { Container } from '@/src/features/home/components/container/Container';
 import { Text } from '@/src/shared/components/text/Text';
 import { WrapperMotion } from '@/src/shared/components/wrapper-motion/WrapperMotion';
+import { revealDelay } from '@/src/shared/helpers/motion-variants';
 import { getSortedCaseStudies } from '@/src/features/case-studies/data/case-studies.registry';
 import { CaseStudyCard } from '@/src/features/case-studies/components/case-study-card/CaseStudyCard';
 
@@ -65,8 +66,7 @@ const CaseStudiesView = ({ t }: CaseStudiesViewProps): JSX.Element => {
               <WrapperMotion
                 key={ns}
                 className={styles.gridItem}
-                delay={{ enter: 0.56, exit: 0.12 }}
-                immediate
+                delay={{ enter: revealDelay(index % 3), exit: 0.12 }}
               >
                 <CaseStudyCard
                   href={`/casos-de-exito/${ns}`}

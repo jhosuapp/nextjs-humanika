@@ -6,6 +6,7 @@ import type { ProductEntry } from '@/src/features/products/types/product.types';
 import { Container } from '@/src/features/home/components/container/Container';
 import { SectionHeader } from '@/src/shared/components/section-header/SectionHeader';
 import { StaggerGroup, StaggerItem } from '@/src/shared/components/motion/StaggerGroup';
+import { REVEAL } from '@/src/shared/helpers/motion-variants';
 import { Spotlight } from '@/src/shared/components/spotlight/Spotlight';
 
 import styles from './product-features.module.css';
@@ -35,7 +36,7 @@ const ProductFeatures = ({
           description={t('ui.featuresDescription') as string}
         />
 
-        <StaggerGroup as="ol" className={styles.grid} stagger={0.1}>
+        <StaggerGroup as="ol" className={styles.grid} stagger={REVEAL.stagger}>
           {features.map((feature, index) => (
             <StaggerItem as="li" key={feature} className={styles.item}>
               <article className={`${styles.card} gl-gradient-box gl-card`}>

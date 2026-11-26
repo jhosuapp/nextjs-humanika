@@ -6,6 +6,7 @@ import { getProductBySlug } from '@/src/features/products/data/products.registry
 import { Container } from '@/src/features/home/components/container/Container';
 import { SectionHeader } from '@/src/shared/components/section-header/SectionHeader';
 import { StaggerGroup, StaggerItem } from '@/src/shared/components/motion/StaggerGroup';
+import { REVEAL } from '@/src/shared/helpers/motion-variants';
 
 import { ProductCard } from '../product-card/ProductCard';
 import styles from './product-related.module.css';
@@ -30,7 +31,7 @@ const ProductRelated = ({ t, entry }: ProductRelatedProps): JSX.Element => {
           description={t('ui.relatedDescription') as string}
         />
 
-        <StaggerGroup as="ul" className={styles.grid} stagger={0.1}>
+        <StaggerGroup as="ul" className={styles.grid} stagger={REVEAL.stagger}>
           {related.map((item) => (
             <StaggerItem as="li" key={item.slug} className={styles.item}>
               <ProductCard

@@ -2,7 +2,7 @@ import type { JSX } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 
-import { Reveal } from '@/src/features/article/components/reveal/Reveal';
+import { Reveal } from '@/src/shared/components/motion/Reveal';
 
 import styles from './pull-quote.module.css';
 

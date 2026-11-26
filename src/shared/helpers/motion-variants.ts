@@ -8,11 +8,21 @@ const DURATION = {
   slow: 0.9,
 } as const;
 
-// Shared scroll-reveal timing for every home section (the hero is excluded —
-// it owns its own intro animation). Keeps the viewport trigger, the grid
-// stagger and the header cascade identical across sections.
+/**
+ * THE scroll-reveal language of the site (single source of truth).
+ *
+ * Every element that appears on scroll — section headers, cards, lists,
+ * article blocks — uses these values: fade + 24px rise, 0.6s tween with the
+ * brand ease, fired once when 15% is visible, children staggered by 0.08s.
+ * Page heroes are the only exception: they play on mount, synced with the
+ * PageTransition curtain (see `shared/motion/fadeUp.motion.ts`).
+ */
 const REVEAL = {
+  y: 24, // px the element rises while fading in
+  duration: DURATION.base, // 0.6s
+  ease: EASE,
   amount: 0.15, // fraction of the element visible before it animates in
+  once: true,
   stagger: 0.08, // gap between staggered grid/list children
   step: 0.08, // delay added per element in a header cascade
 } as const;

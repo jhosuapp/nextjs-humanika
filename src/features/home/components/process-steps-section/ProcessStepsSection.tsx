@@ -24,7 +24,11 @@ const ProcessStepsSection = ({ t }: Props) => {
 
   // -1 = nothing revealed yet. Once in view, the steps light up one after
   // another via staggered timers (reduced motion shows them all at once).
-  const [activeStep, setActiveStep] = useState(reduce ? STEP_COUNT - 1 : -1);
+  const [activeStep, setActiveStep] = useState(-1);
+  // Derived, not stored: useReducedMotion() is null on the first render, so a
+  // state initialised from it stayed at -1 and hid every step for users who
+  // prefer reduced motion. With reduced motion all steps show at once.
+  const visibleStep = reduce ? STEP_COUNT - 1 : activeStep;
 
   useEffect(() => {
     if (!inView || reduce) return;
@@ -84,7 +88,7 @@ const ProcessStepsSection = ({ t }: Props) => {
                 <ProcessStep
                   key={step.id}
                   index={i}
-                  active={i <= activeStep}
+                  active={i <= visibleStep}
                   icon={step.icon}
                   label={t(`process.steps.${step.id}.label`) as string}
                 />

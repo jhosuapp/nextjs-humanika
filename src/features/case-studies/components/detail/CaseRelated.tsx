@@ -8,7 +8,7 @@ import { getFeaturedCaseStudies } from '@/src/features/case-studies/data/case-st
 import { CaseStudyCard } from '@/src/features/case-studies/components/case-study-card/CaseStudyCard';
 
 import styles from './case-related.module.css';
-import { Reveal } from '@/src/features/article/components/reveal/Reveal';
+import { Reveal } from '@/src/shared/components/motion/Reveal';
 
 type Props = { t: ITranslations; entry: CaseStudyEntry };
 
@@ -31,9 +31,7 @@ const CaseRelated = ({ t, entry }: Props): JSX.Element | null => {
               variant="description_xs"
               color="primary"
               weight="semibold"
-              delay={{ enter: 0.05, exit: 0 }}
-              fadeUpTertiary
-              immediate
+              noMotion
             >
               {t('common:caseStudy.relatedEyebrow') as string}
             </Text>
@@ -44,9 +42,7 @@ const CaseRelated = ({ t, entry }: Props): JSX.Element | null => {
               variant="title_small"
               color="secondary"
               weight="bold"
-              delay={{ enter: 0.1, exit: 0 }}
-              fadeUpTertiary
-              immediate
+              noMotion
             >
               {t('common:caseStudy.relatedTitle') as string}
             </Text>

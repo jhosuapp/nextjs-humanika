@@ -9,7 +9,7 @@ import {
   Reveal,
   RevealGroup,
   RevealItem,
-} from '@/src/features/article/components/reveal/Reveal';
+} from '@/src/shared/components/motion/Reveal';
 
 import styles from './icon-grid.module.css';
 

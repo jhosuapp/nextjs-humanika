@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
 import { Text } from '@/src/shared/components/text/Text';
-import { RevealGroup, RevealItem } from '@/src/features/article/components/reveal/Reveal';
+import { RevealGroup, RevealItem } from '@/src/shared/components/motion/Reveal';
 
 type ArticleParagraphsProps = { items: string[] };
 

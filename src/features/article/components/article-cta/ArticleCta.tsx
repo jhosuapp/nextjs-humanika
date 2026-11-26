@@ -4,7 +4,7 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
 import { Text } from '@/src/shared/components/text/Text';
 import { Button } from '@/src/shared/components/button/Button';
-import { Reveal } from '@/src/features/article/components/reveal/Reveal';
+import { Reveal } from '@/src/shared/components/motion/Reveal';
 import { WHATSAPP_URL } from '@/src/config/site';
 import { pushDataLayer } from '@/src/shared/helpers/data-layer';
 

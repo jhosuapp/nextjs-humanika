@@ -60,8 +60,7 @@ const CaseStudyCard = ({
           variant="description_xs"
           color="primary"
           weight="semibold"
-          immediate
-          fadeUpTertiary
+          noMotion
         >
           {eyebrow}
         </Text>
@@ -72,8 +71,7 @@ const CaseStudyCard = ({
           variant="subtitle_small"
           color="secondary"
           weight="normal"
-          immediate
-          fadeUpTertiary
+          noMotion
         >
           {title}
         </Text>
@@ -84,8 +82,7 @@ const CaseStudyCard = ({
           variant="description_small"
           color="muted"
           weight="normal"
-          immediate
-          fadeUpTertiary
+          noMotion
         >
           {excerpt}
         </Text>

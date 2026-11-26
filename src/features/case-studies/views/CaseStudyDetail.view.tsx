@@ -10,7 +10,7 @@ import { ArticleCta } from '@/src/features/article/components/article-cta/Articl
 import { ArticleRenderer } from '@/src/features/article/renderer/ArticleRenderer';
 
 import styles from './case-study-detail.module.css';
-import { Reveal } from '../../article/components/reveal/Reveal';
+import { Reveal } from '@/src/shared/components/motion/Reveal';
 import { CaseRelated } from '../components/detail/CaseRelated';
 
 type CaseStudyDetailViewProps = {
@@ -118,8 +118,7 @@ const CaseStudyDetailView = ({
                   variant="description"
                   color="muted"
                   weight="normal"
-                  delay={{ enter: 0, exit: 0.1 }}
-                  immediate
+                  noMotion
                 >
                   {paragraph}
                 </Text>

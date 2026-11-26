@@ -7,24 +7,13 @@ import {
 import type { ElementType, ReactNode, Ref } from 'react';
 import { useRef } from 'react';
 
-import { DURATION, EASE } from '@/src/shared/helpers/motion-variants';
+import { REVEAL } from '@/src/shared/helpers/motion-variants';
 
 /**
- * Single source of truth for every article entrance animation.
- *
- * All article blocks reveal identically: fade + 24px rise, same duration,
- * easing and scroll trigger. Collections stagger their children by one shared
- * value. Change a number here and the whole article stays consistent.
+ * Scroll reveal primitives (single element, or a group whose items stagger).
+ * Timing comes from the shared `REVEAL` tokens so every section of the site
+ * appears the same way.
  */
-const REVEAL = {
-  y: 24,
-  duration: DURATION.base, // 0.6s
-  ease: EASE,
-  amount: 0.2, // portion visible before it fires
-  stagger: 0.08,
-  once: true,
-} as const;
-
 const itemVariants = (reduce: boolean): Variants => ({
   hidden: reduce ? { opacity: 0 } : { opacity: 0, y: REVEAL.y },
   visible: {

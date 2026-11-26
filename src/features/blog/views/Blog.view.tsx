@@ -4,6 +4,7 @@ import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
 import { Container } from '@/src/features/home/components/container/Container';
 import { Text } from '@/src/shared/components/text/Text';
 import { WrapperMotion } from '@/src/shared/components/wrapper-motion/WrapperMotion';
+import { revealDelay } from '@/src/shared/helpers/motion-variants';
 import { getSortedArticles } from '@/src/features/article/data/articles.registry';
 import { ArticleCard } from '@/src/features/blog/components/article-card/ArticleCard';
 import { useColumnCount } from '@/src/features/blog/hooks/useColumnCount';
@@ -35,8 +36,7 @@ const BlogView = ({ t }: BlogViewProps): JSX.Element => {
       <WrapperMotion
         key={ns}
         className={styles.gridItem}
-        delay={{ enter: 0.56, exit: 0.12 }}
-        immediate
+        delay={{ enter: revealDelay(index % columnCount), exit: 0.12 }}
       >
         <ArticleCard
           href={`/blog/${ns}`}

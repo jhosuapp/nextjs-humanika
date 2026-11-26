@@ -1,7 +1,7 @@
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { GoogleTagManager } from "@next/third-parties/google";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import { appWithTranslation, useTranslation } from "next-i18next/pages";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
@@ -49,6 +49,9 @@ function App({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
+    // reducedMotion="user": every framer-motion animation honours the OS
+    // "reduce motion" setting (transforms off, opacity fades kept).
+    <MotionConfig reducedMotion="user">
     <div className={`${jakarta.variable} contents`}>
       <SmoothScroll />
       <CustomScrollbar />
@@ -81,6 +84,7 @@ function App({ Component, pageProps }: AppProps) {
         });`}
       </Script>
     </div>
+    </MotionConfig>
   );
 }
 

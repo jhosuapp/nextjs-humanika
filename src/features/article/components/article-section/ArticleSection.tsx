@@ -1,7 +1,7 @@
 import type { JSX, ReactNode } from 'react';
 
 import { Text } from '@/src/shared/components/text/Text';
-import { Reveal } from '@/src/features/article/components/reveal/Reveal';
+import { Reveal } from '@/src/shared/components/motion/Reveal';
 
 import styles from './article-section.module.css';
 

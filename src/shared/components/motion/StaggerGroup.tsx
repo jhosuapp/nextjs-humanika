@@ -7,7 +7,7 @@ import {
 import type { ElementType, ReactNode, Ref } from 'react';
 import { useRef } from 'react';
 
-import { DURATION, EASE } from '@/src/shared/helpers/motion-variants';
+import { REVEAL } from '@/src/shared/helpers/motion-variants';
 
 type StaggerGroupProps = {
   children: ReactNode;
@@ -23,10 +23,10 @@ const StaggerGroup = ({
   children,
   className,
   as = 'div',
-  stagger = 0.08,
+  stagger = REVEAL.stagger,
   delayChildren = 0,
-  once = true,
-  amount = 0.1,
+  once = REVEAL.once,
+  amount = REVEAL.amount,
 }: StaggerGroupProps) => {
   const reduce = useReducedMotion();
   const ref = useRef<HTMLElement | null>(null);
@@ -66,7 +66,7 @@ const StaggerItem = ({
   children,
   className,
   as = 'div',
-  y = 16,
+  y = REVEAL.y,
 }: StaggerItemProps) => {
   const reduce = useReducedMotion();
   const MotionTag = motion[as as keyof typeof motion] as typeof motion.div;
@@ -76,7 +76,7 @@ const StaggerItem = ({
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: DURATION.base, ease: EASE },
+      transition: { duration: REVEAL.duration, ease: REVEAL.ease },
     },
   };
 

@@ -1,7 +1,7 @@
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import type { JSX } from 'react';
 
-import { staggerParent, staggerChild } from '@/src/shared/helpers/motion-variants';
+import { REVEAL } from '@/src/shared/helpers/motion-variants';
 import { CustomLink } from '@/src/shared/components/custom-link/CustomLink';
 
 import styles from './rich-text.module.css';
@@ -18,26 +18,34 @@ type RichTextProps = {
   className?: string;
 };
 
+/**
+ * Each block reveals on its own as it scrolls in (REVEAL tokens). The whole
+ * document is NOT revealed as one unit: a tall container may never reach the
+ * in-view threshold (legal pages are several screens long).
+ */
+const blockVariants: Variants = {
+  hidden: { opacity: 0, y: REVEAL.y },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: REVEAL.duration, ease: REVEAL.ease },
+  },
+};
+
+const blockMotion = {
+  variants: blockVariants,
+  initial: 'hidden',
+  whileInView: 'visible',
+  viewport: { once: REVEAL.once, amount: REVEAL.amount },
+} as const;
+
 const RichText = ({ blocks, className = '' }: RichTextProps): JSX.Element => {
-  const reduce = useReducedMotion();
-
-  const parentVariants = staggerParent(0.06, 0.05);
-  const childVariants = reduce
-    ? { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { duration: 0.3 } } }
-    : staggerChild;
-
   return (
-    <motion.div
-      className={`${styles.root} ${className}`}
-      variants={parentVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.04 }}
-    >
+    <div className={`${styles.root} ${className}`}>
       {blocks.map((block, i) => {
         if (block.type === 'divider') {
           return (
-            <motion.div key={i} variants={childVariants}>
+            <motion.div key={i} {...blockMotion}>
               <hr className={styles.divider} />
             </motion.div>
           );
@@ -47,7 +55,7 @@ const RichText = ({ blocks, className = '' }: RichTextProps): JSX.Element => {
             block.type === 'h4' || block.type === 'h5' || block.type === 'h6') {
           const Tag = block.type;
           return (
-            <motion.div key={i} variants={childVariants}>
+            <motion.div key={i} {...blockMotion}>
               <Tag className={styles[block.type]}>{block.text}</Tag>
             </motion.div>
           );
@@ -55,7 +63,7 @@ const RichText = ({ blocks, className = '' }: RichTextProps): JSX.Element => {
 
         if (block.type === 'p') {
           return (
-            <motion.div key={i} variants={childVariants}>
+            <motion.div key={i} {...blockMotion}>
               <p className={styles.p}>{block.text}</p>
             </motion.div>
           );
@@ -64,7 +72,7 @@ const RichText = ({ blocks, className = '' }: RichTextProps): JSX.Element => {
         if (block.type === 'ul' || block.type === 'ol') {
           const ListTag = block.type;
           return (
-            <motion.div key={i} variants={childVariants}>
+            <motion.div key={i} {...blockMotion}>
               <ListTag className={styles[block.type]}>
                 {block.items.map((item, j) => (
                   <li key={j} className={styles.li}>{item}</li>
@@ -76,7 +84,7 @@ const RichText = ({ blocks, className = '' }: RichTextProps): JSX.Element => {
 
         if (block.type === 'link') {
           return (
-            <motion.div key={i} variants={childVariants}>
+            <motion.div key={i} {...blockMotion}>
               <CustomLink
                 to={block.href}
                 className={styles.linkBlock}
@@ -90,7 +98,7 @@ const RichText = ({ blocks, className = '' }: RichTextProps): JSX.Element => {
 
         return null;
       })}
-    </motion.div>
+    </div>
   );
 };
 

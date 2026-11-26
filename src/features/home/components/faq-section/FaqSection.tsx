@@ -14,7 +14,6 @@ import { Button } from '@/src/shared/components/button/Button';
 import { Text } from '@/src/shared/components/text/Text';
 import { Container } from '../container/Container';
 import { SectionHeader } from '@/src/shared/components/section-header/SectionHeader';
-import { WrapperMotion } from '@/src/shared/components/wrapper-motion/WrapperMotion';
 import { pushDataLayer } from '@/src/shared/helpers/data-layer';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
@@ -113,13 +112,11 @@ const FaqSection = ({ t }: Props) => {
         <SectionHeader
           className={styles.header}
           descriptionClassName={styles.headerDescription}
-          y={16}
           eyebrow={t('faq.eyebrow')}
           title={t('faq.title')}
           description={t('faq.description')}
         />
-        <WrapperMotion delay={{ enter: 0.1, exit: 0 }} fadeUpTertiary>
-          <StaggerGroup className={styles.list} stagger={REVEAL.stagger} amount={REVEAL.amount}>
+        <StaggerGroup className={styles.list} stagger={REVEAL.stagger} amount={REVEAL.amount}>
             {faq.items.map((item) => (
               <StaggerItem key={item.id}>
                 <AccordionItem
@@ -131,8 +128,7 @@ const FaqSection = ({ t }: Props) => {
                 />
               </StaggerItem>
             ))}
-          </StaggerGroup>
-        </WrapperMotion>
+        </StaggerGroup>
 
         <div className={styles.footer}>
           <Text
@@ -140,7 +136,6 @@ const FaqSection = ({ t }: Props) => {
             variant="description_small" 
             color="muted"
             delay={{ enter: 0, exit: 0 }}
-            immediate
           >
             {t('faq.stillHaveQuestion')}
           </Text>

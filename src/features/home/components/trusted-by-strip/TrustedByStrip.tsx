@@ -1,6 +1,5 @@
 import Image from 'next/image';
 
-import { FadeIn } from '@/src/shared/components/motion/FadeIn';
 import { Marquee } from '@/src/shared/components/motion/Marquee';
 import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
 import { homeStaticData } from '@/src/features/home/data/home-content';
@@ -22,7 +21,6 @@ const TrustedByStrip = ({ t }: TrustedByStripProps) => {
 
   return (
     <Container className={styles.section} padding="xl" aria-label={label}>
-      <FadeIn y={8} duration="fast">
         <Text
           tag="p"
           variant="description_xs"
@@ -33,7 +31,6 @@ const TrustedByStrip = ({ t }: TrustedByStripProps) => {
         >
           {label}
         </Text>
-      </FadeIn>
       <WrapperMotion delay={{ enter: revealDelay(1), exit: 0 }} fadeUpTertiary>
         <div className={styles.rows}>
           {rows.map((row, rowIndex) => (

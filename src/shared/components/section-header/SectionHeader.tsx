@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react';
 
-import { FadeIn } from '@/src/shared/components/motion/FadeIn';
 import { Text } from '@/src/shared/components/text/Text';
 import { revealDelay } from '@/src/shared/helpers/motion-variants';
 
@@ -9,12 +8,10 @@ type SectionHeaderProps = {
   eyebrow?: ReactNode;
   title: ReactNode;
   description?: ReactNode;
-  /** Wrapper (FadeIn) class — owns the section head layout/spacing. */
+  /** Wrapper class — owns the section head layout/spacing. */
   className?: string;
   titleClassName?: string;
   descriptionClassName?: string;
-  /** Initial Y offset for the wrapper reveal (defaults to FadeIn's own). */
-  y?: number;
 };
 
 /**
@@ -30,9 +27,10 @@ const SectionHeader = ({
   className,
   titleClassName,
   descriptionClassName,
-  y,
 }: SectionHeaderProps) => (
-  <FadeIn className={className} y={y}>
+  // One cascade only: each line reveals on scroll (REVEAL tokens), staggered
+  // by revealDelay. No outer animated wrapper (it used to animate twice).
+  <div className={className}>
     {eyebrow ? (
       <Text
         tag="p"
@@ -68,7 +66,7 @@ const SectionHeader = ({
         {description}
       </Text>
     ) : null}
-  </FadeIn>
+  </div>
 );
 
 export { SectionHeader };

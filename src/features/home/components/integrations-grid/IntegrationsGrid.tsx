@@ -7,7 +7,7 @@ import {
 import type { ITranslations } from '@/src/shared/interfaces/i18n.interface';
 import { homeStaticData } from '@/src/features/home/data/home-content';
 import { Spotlight } from '@/src/shared/components/spotlight/Spotlight';
-import { REVEAL, revealDelay } from '@/src/shared/helpers/motion-variants';
+import { REVEAL } from '@/src/shared/helpers/motion-variants';
 
 import styles from './integrations-grid.module.css';
 import { Container } from '../container/Container';
@@ -48,9 +48,7 @@ const IntegrationsGrid = ({ t }: IntegrationsGridProps) => {
                   tag="p" 
                   variant="description_small" 
                   color="muted"
-                  delay={{ enter: revealDelay(1), exit: 0 }}
-                  fadeUpTertiary
-                  immediate
+                  noMotion
                 >
                   {logo.name}
                 </Text>

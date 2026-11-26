@@ -7,7 +7,7 @@ import {
 import type { ElementType, ReactNode, Ref } from 'react';
 import { useRef } from 'react';
 
-import { DURATION, EASE } from '@/src/shared/helpers/motion-variants';
+import { DURATION, EASE, REVEAL } from '@/src/shared/helpers/motion-variants';
 
 type FadeInProps = {
   children: ReactNode;
@@ -25,9 +25,9 @@ const FadeIn = ({
   className,
   as = 'div',
   delay = 0,
-  y = 24,
-  once = true,
-  amount = 0.15,
+  y = REVEAL.y,
+  once = REVEAL.once,
+  amount = REVEAL.amount,
   duration = 'base',
 }: FadeInProps) => {
   const reduce = useReducedMotion();

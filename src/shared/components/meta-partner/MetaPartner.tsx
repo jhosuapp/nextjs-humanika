@@ -17,8 +17,7 @@ const MetaPartner = ():JSX.Element => {
                 variant="subtitle_small" 
                 color="secondary"
                 weight='bold'
-                fadeUpTertiary
-                immediate
+                noMotion
                 className={ styles.metaPartner__text }
             >
               Official Meta Tech Partner

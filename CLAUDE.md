@@ -63,6 +63,19 @@ export default function Home() {
 
 **All page and component animations must use [framer-motion](https://www.framer.com/motion/).** Do not use CSS transitions/keyframes or other JS animation libraries for anything beyond static hover effects. Use `motion.*` components and `AnimatePresence` for enter/exit transitions.
 
+### Scroll reveals: one language for the whole site
+
+Every element that appears on scroll uses the `REVEAL` tokens in `src/shared/helpers/motion-variants.ts`: fade + 24px rise, 0.6s tween with `EASE`, fired once at 15% visibility, children staggered by `REVEAL.stagger`, header cascades via `revealDelay(i)`. Never hard-code those numbers.
+
+- **Primitives (pick one per element):** `Reveal` / `RevealGroup` / `RevealItem` (`shared/components/motion/Reveal.tsx`), `FadeIn`, `StaggerGroup` / `StaggerItem`, `SectionHeader` for section heads, and `Text` / `WrapperMotion` (on scroll they use the same tokens via `shared/motion/reveal.motion.ts`).
+- **Never nest animations:** if a parent reveals (`StaggerItem`, `Reveal`, a card wrapper), its texts use `<Text noMotion>`. Don't wrap `SectionHeader` or animated `Text` in `FadeIn`.
+- **`immediate` is only for page heroes** (and above-the-fold content next to them): it plays on mount, timed with the `PageTransition` curtain (`fadeUpMotion` delays ≈ 0.52–0.61s, exits cascade bottom → top). Below the fold, never use `immediate`: it animates off-screen.
+- **Don't reveal very tall containers** (whole documents, long lists): reveal their children instead — a tall element may never reach the in-view threshold.
+- **`MainContent` has no entrance** (only the exit for page changes): the page must be visible on first paint.
+- **Reduced motion** is handled globally by `<MotionConfig reducedMotion="user">` in `_app.tsx`; Lenis also switches to native scroll. Don't read `useReducedMotion()` into initial state (it's `null` on the first render) — derive from it instead.
+- **3D scenes:** never animate `opacity` on an element that contains `preserve-3d` children (it flattens them); avoid `backdrop-filter` / `filter: blur()` inside 3D stacks (iOS Safari crashes).
+- **Bespoke motion** (ProductDemo 3D, ProcessSteps, Parallax, Marquee, AnimatedCounter, PageTransition) is allowed, but still uses `EASE` / `REVEAL.amount` where it has a scroll trigger.
+
 ## State management
 
 Zustand v5 is the only store solution. Place stores in `src/shared/stores/` if global, or `src/features/<feature>/stores/` if scoped to one feature.

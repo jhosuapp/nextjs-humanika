@@ -5,10 +5,12 @@ import { useLenisStore } from '@/src/shared/stores/lenis.store';
 
 const SmoothScroll = () => {
   useEffect(() => {
+    // Users who prefer reduced motion get native scrolling (lerp 1 = no
+    // easing). `duration`/`easing` were ignored anyway because `lerp` wins.
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      lerp: 0.1,
+      lerp: reduce ? 1 : 0.1,
+      smoothWheel: !reduce,
     });
 
     useLenisStore.getState().setLenis(lenis);

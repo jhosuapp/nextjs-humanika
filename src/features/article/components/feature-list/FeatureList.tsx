@@ -2,7 +2,7 @@ import type { JSX } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 
-import { RevealGroup, RevealItem } from '@/src/features/article/components/reveal/Reveal';
+import { RevealGroup, RevealItem } from '@/src/shared/components/motion/Reveal';
 
 import styles from './feature-list.module.css';
 

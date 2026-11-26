@@ -1,6 +1,5 @@
 import Image from 'next/image';
 
-import { FadeIn } from '@/src/shared/components/motion/FadeIn';
 import {
   MotionTabs,
   type Tab,
@@ -101,7 +100,7 @@ const AudienceTabsSection = ({ t }: Props) => {
   return (
     <section className={ styles.bg }>
       <Container id="solutions" className={styles.section} aria-labelledby="audience-title" padding='xl'>
-        <FadeIn className={styles.header} y={16}>
+        <div className={styles.header}>
           <Text
             tag="p"
             variant="description_xs"
@@ -131,7 +130,7 @@ const AudienceTabsSection = ({ t }: Props) => {
           >
             {t('audience.description')}
           </Text>
-        </FadeIn>
+        </div>
 
         <MotionTabs<TabKey>
           tabs={tabs}
