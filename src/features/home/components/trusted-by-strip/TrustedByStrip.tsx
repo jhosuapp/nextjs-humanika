@@ -21,16 +21,16 @@ const TrustedByStrip = ({ t }: TrustedByStripProps) => {
 
   return (
     <Container className={styles.section} padding="xl" aria-label={label}>
-        <Text
-          tag="p"
-          variant="description_xs"
-          color="primary"
-          weight="semibold"
-          delay={{ enter: revealDelay(0), exit: 0 }}
-          fadeUpTertiary
-        >
-          {label}
-        </Text>
+      <Text
+        tag="p"
+        variant="description_xs"
+        color="primary"
+        weight="semibold"
+        delay={{ enter: revealDelay(0), exit: 0 }}
+        className={styles.label}
+      >
+        {label}
+      </Text>
       <WrapperMotion delay={{ enter: revealDelay(1), exit: 0 }} fadeUpTertiary>
         <div className={styles.rows}>
           {rows.map((row, rowIndex) => (

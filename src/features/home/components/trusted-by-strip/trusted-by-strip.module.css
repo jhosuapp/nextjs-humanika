@@ -4,6 +4,11 @@
   @apply items-center gap-8;
 }
 
+/* The Text wrapper spans the full width, so center the label itself. */
+.label {
+  @apply text-center;
+}
+
 .rows {
   @apply flex w-full flex-col;
   gap: clamp(1rem, 2.5vw, 1.75rem);
