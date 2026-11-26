@@ -23,7 +23,8 @@
     "demoPause": "Pausar",
     "demoOnline": "En línea",
     "demoStep": "Paso",
-    "categoryLinkAria": "Ver todas las soluciones de {{category}}"
+    "categoryLinkAria": "Ver todas las soluciones de {{category}}",
+    "highlightsEyebrow": "Más capacidades"
   },
   "categories": {
     "atencion-ciudadana": "Atención ciudadana",
@@ -1068,6 +1069,17 @@
             "text": "Análisis enviado a Planeación con sus fuentes"
           }
         ]
+      },
+      "highlights": {
+        "title": "Todo el ciclo de formulación MGA en un solo lugar",
+        "items": [
+          "Árboles de problemas, objetivos y soluciones que su equipo puede editar.",
+          "Formulación por conversación o por formulario, sobre el mismo proyecto.",
+          "Documentos y matrices en plantillas oficiales, listos en Word, PDF y Excel.",
+          "Biblioteca de proyectos de referencia MGA para comparar y aprender de experiencias previas.",
+          "Autoría visible en cada campo: qué completó la IA, qué una persona y con qué evidencia.",
+          "Trabajo en equipo con invitaciones al proyecto y revisión antes de entregar."
+        ]
       }
     },
     "investigacion-y-consultas-publicas": {
@@ -1419,6 +1431,16 @@
             "from": "system",
             "text": "Progreso actualizado · nueva actividad sugerida"
           }
+        ]
+      },
+      "highlights": {
+        "title": "Práctica, evaluación y nivelación en una misma plataforma",
+        "items": [
+          "Práctica por voz con puntuación de la pronunciación.",
+          "Evaluaciones con rúbricas configurables y revisión humana de los resultados.",
+          "Prueba de clasificación adaptativa que mide cinco habilidades y asigna un nivel del MCER a cada una.",
+          "Resultados en PDF y recomendación de la siguiente práctica según el desempeño.",
+          "Acceso con código por correo o con cuenta de Google o Microsoft."
         ]
       }
     },

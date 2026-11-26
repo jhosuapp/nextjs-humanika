@@ -102,10 +102,18 @@
     "titleLead": "We ",
     "titleAccent": "handle everything",
     "steps": {
-      "design": { "label": "Design the avatar" },
-      "train": { "label": "Train the intelligence" },
-      "integrate": { "label": "Integrate the experience" },
-      "operate": { "label": "Operate and support" }
+      "design": {
+        "label": "Design the avatar"
+      },
+      "train": {
+        "label": "Train the intelligence"
+      },
+      "integrate": {
+        "label": "Integrate the experience"
+      },
+      "operate": {
+        "label": "Operate and support"
+      }
     }
   },
   "stats": {
@@ -129,7 +137,6 @@
       }
     }
   },
-
   "caseStudies": {
     "eyebrow": "Success stories",
     "title": "Real results across industries.",
@@ -137,7 +144,6 @@
     "cardCta": "View case",
     "viewAll": "View all cases"
   },
-
   "pricing": {
     "eyebrow": "Enterprise investment",
     "titleLead": "Enterprise solutions from",
@@ -188,6 +194,22 @@
       "vs-tools": {
         "question": "What makes Humanika different from tools like ChatGPT or Claude?",
         "answer": "Tools like ChatGPT or Claude generate answers. Humanika helps organizations turn that potential into concrete solutions for training, knowledge, service, sales and operations. We design digital workers aligned with real business processes, goals and needs."
+      }
+    }
+  },
+  "doors": {
+    "title": "Solutions for businesses and the public sector",
+    "description": "Choose your starting point and explore the solutions designed for your type of organization.",
+    "items": {
+      "business": {
+        "title": "Businesses",
+        "text": "Digital collaborators for training, knowledge, service, sales, operations and marketing, connected to your systems.",
+        "cta": "See business solutions"
+      },
+      "public": {
+        "title": "Public institutions",
+        "text": "Agents for citizen services, requests, procedures, public procurement and MGA projects, with approved information and human review.",
+        "cta": "See public sector solutions"
       }
     }
   }

@@ -5,7 +5,8 @@ import { Text } from '@/src/shared/components/text/Text';
 import { revealDelay } from '@/src/shared/helpers/motion-variants';
 
 type SectionHeaderProps = {
-  eyebrow: ReactNode;
+  /** Optional kicker above the title; omitted when not provided. */
+  eyebrow?: ReactNode;
   title: ReactNode;
   description?: ReactNode;
   /** Wrapper (FadeIn) class — owns the section head layout/spacing. */
@@ -32,16 +33,18 @@ const SectionHeader = ({
   y,
 }: SectionHeaderProps) => (
   <FadeIn className={className} y={y}>
-    <Text
-      tag="p"
-      variant="description_xs"
-      color="primary"
-      weight="semibold"
-      delay={{ enter: revealDelay(0), exit: 0 }}
-      fadeUpTertiary
-    >
-      {eyebrow}
-    </Text>
+    {eyebrow ? (
+      <Text
+        tag="p"
+        variant="description_xs"
+        color="primary"
+        weight="semibold"
+        delay={{ enter: revealDelay(0), exit: 0 }}
+        fadeUpTertiary
+      >
+        {eyebrow}
+      </Text>
+    ) : null}
     <Text
       className={titleClassName}
       tag="h2"

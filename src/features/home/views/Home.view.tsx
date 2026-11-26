@@ -10,6 +10,7 @@ import { HeroSection } from '../components/hero-section/HeroSection';
 import { ContactForm } from '../components/contact-form/ContactForm';
 import { IntegrationsGrid } from '../components/integrations-grid/IntegrationsGrid';
 import { CaseStudiesSection } from '../components/case-studies-section/CaseStudiesSection';
+import { AudienceDoors } from '../components/audience-doors/AudienceDoors';
 
 import styles from './home.module.css';
 import { MetaPartner } from '@/src/shared/components/meta-partner/MetaPartner';
@@ -22,6 +23,7 @@ const HomeView = ({ t, tBot }: HomeViewProps): JSX.Element => {
       <HeroSection t={t} tbot={tBot} />
       <ContactForm t={t} />
       <TrustedByStrip t={t} />
+      <AudienceDoors t={t} />
       <AudienceTabsSection t={t} />
       <MetaPartner />
       <ProcessStepsSection t={t} />

@@ -1,0 +1,28 @@
+@reference "tailwindcss";
+
+.section {
+  @apply w-full;
+  background: var(--bg-section);
+}
+
+.header {
+  @apply flex flex-col gap-3 mb-8 lg:mb-10;
+  max-width: 42rem;
+}
+
+.list {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 list-none p-0 m-0;
+}
+
+.item {
+  @apply flex items-start gap-3 rounded-2xl p-4 text-base leading-relaxed;
+  color: var(--text-secondary);
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-subtle);
+}
+
+.check {
+  @apply mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs;
+  color: #fff;
+  background: var(--gradient-brand);
+}

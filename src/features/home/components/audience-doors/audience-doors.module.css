@@ -1,0 +1,62 @@
+@reference "tailwindcss";
+
+.section {
+  @apply w-full;
+  background: var(--background);
+}
+
+.header {
+  @apply flex flex-col items-center text-center gap-3 mx-auto mb-10 lg:mb-12;
+  max-width: 44rem;
+}
+
+/* Balanced line breaks: never leave a single word alone on the last line. */
+.headerTitle {
+  text-wrap: balance;
+}
+
+.grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6 list-none p-0 m-0;
+}
+
+.item {
+  @apply h-full;
+}
+
+.card {
+  @apply relative flex h-full flex-col gap-3 overflow-hidden rounded-3xl p-7 lg:p-10 no-underline;
+}
+
+.icon {
+  @apply relative mb-3 flex h-14 w-14 items-center justify-center rounded-2xl text-xl;
+  color: #fff;
+  background: var(--gradient-brand);
+  box-shadow: 0 12px 28px -12px rgba(0, 177, 215, 0.65);
+}
+
+.title {
+  @apply relative m-0 text-2xl lg:text-3xl font-semibold;
+  letter-spacing: -0.02em;
+  color: var(--text-secondary);
+}
+
+.text {
+  @apply relative m-0 text-base leading-relaxed;
+  color: var(--text-muted);
+  max-width: 32rem;
+}
+
+.cta {
+  @apply relative inline-flex items-center gap-2 mt-auto pt-4 text-sm font-semibold;
+  color: var(--primary);
+}
+
+.cta svg {
+  width: 0.9em;
+  height: 0.9em;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .cta svg {
+  transform: translateX(4px);
+}

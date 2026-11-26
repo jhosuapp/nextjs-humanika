@@ -23,7 +23,8 @@
     "demoPause": "Pause",
     "demoOnline": "Online",
     "demoStep": "Step",
-    "categoryLinkAria": "See all {{category}} solutions"
+    "categoryLinkAria": "See all {{category}} solutions",
+    "highlightsEyebrow": "More capabilities"
   },
   "categories": {
     "atencion-ciudadana": "Citizen services",
@@ -1068,6 +1069,17 @@
             "text": "Analysis sent to Planning with its sources"
           }
         ]
+      },
+      "highlights": {
+        "title": "The full MGA formulation cycle in one place",
+        "items": [
+          "Problem, objective and solution trees your team can edit.",
+          "Formulation by conversation or by form, on the same project.",
+          "Documents and matrices on official templates, ready in Word, PDF and Excel.",
+          "A library of MGA reference projects to compare and learn from past experience.",
+          "Visible authorship on every field: what the AI completed, what a person did and with what evidence.",
+          "Teamwork with project invitations and review before delivery."
+        ]
       }
     },
     "investigacion-y-consultas-publicas": {
@@ -1419,6 +1431,16 @@
             "from": "system",
             "text": "Progress updated · new activity suggested"
           }
+        ]
+      },
+      "highlights": {
+        "title": "Practice, assessment and placement on one platform",
+        "items": [
+          "Voice practice with pronunciation scoring.",
+          "Assessments with configurable rubrics and human review of results.",
+          "An adaptive placement test that measures five skills and assigns a CEFR level to each.",
+          "PDF results and a recommended next practice based on performance.",
+          "Access with an email code or a Google or Microsoft account."
         ]
       }
     },
