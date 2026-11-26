@@ -68,6 +68,8 @@ const main = async () => {
   // 1. Site files
   const robots = await get("/robots.txt");
   if (robots.status !== 200 || !robots.body.includes("Sitemap:")) fail("/robots.txt", "falta o sin Sitemap");
+  const llms = await get("/llms.txt");
+  if (llms.status !== 200 || !llms.body.startsWith("# Humanika\n\n> ")) fail("/llms.txt", "falta o no sigue el formato");
   for (const file of ["/site.webmanifest", "/icon.svg", "/apple-touch-icon.png", "/favicon.ico"]) {
     const res = await fetch(`${BASE}${file}`);
     if (res.status !== 200) fail(file, `HTTP ${res.status}`);
