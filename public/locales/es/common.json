@@ -72,37 +72,22 @@
       "explore": {
         "title": "Explorar",
         "bot": "Inicio",
-        "solutions": "Soluciones",
-        "process": "Proceso",
-        "faqs": "Preguntas frecuentes",
-        "articles": "Artículos",
         "platform": "Plataforma",
-        "about": "Nosotros",
         "business": "Empresas",
-        "publicSector": "Entidades públicas"
+        "publicSector": "Entidades públicas",
+        "about": "Nosotros"
+      },
+      "resources": {
+        "title": "Recursos",
+        "caseStudies": "Casos de éxito",
+        "articles": "Artículos",
+        "faqs": "Preguntas frecuentes"
       },
       "company": {
         "title": "150 Por Ciento",
         "site": "Sitio web",
         "services": "Servicios",
         "contact": "Contacto"
-      },
-      "products": {
-        "title": "Productos",
-        "catalog": "Ver catálogo",
-        "atencionCiudadana": "Atención ciudadana",
-        "documentosTramites": "Documentos y trámites",
-        "contratacionInversion": "Contratación e inversión",
-        "investigacionParticipacion": "Investigación y participación",
-        "educacion": "Educación",
-        "visionComputacional": "Visión computacional"
-      },
-      "resources": {
-        "title": "Recursos",
-        "caseStudies": "Casos de éxito",
-        "articles": "Artículos",
-        "agentesIa": "Agentes de IA para empresas",
-        "faqs": "Preguntas frecuentes"
       }
     },
     "bottom": {

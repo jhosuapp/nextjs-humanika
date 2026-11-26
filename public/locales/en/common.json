@@ -33,7 +33,8 @@
     "products": "Products",
     "agentesIa": "AI agents for business",
     "platform": "Platform",
-    "about": "About us"
+    "about": "About us",
+    "allArticles": "View all"
   },
   "header": {
     "skipLink": "Skip to main content",
@@ -71,37 +72,22 @@
       "explore": {
         "title": "Explore",
         "bot": "Home",
-        "solutions": "Solutions",
-        "process": "Process",
-        "faqs": "FAQs",
-        "trust": "Trust",
         "platform": "Platform",
-        "about": "About us",
         "business": "Business",
-        "publicSector": "Public sector"
+        "publicSector": "Public sector",
+        "about": "About us"
+      },
+      "resources": {
+        "title": "Resources",
+        "caseStudies": "Success stories",
+        "articles": "Articles",
+        "faqs": "FAQs"
       },
       "company": {
         "title": "150 Por Ciento",
         "site": "Website",
         "services": "Services",
         "contact": "Contact"
-      },
-      "products": {
-        "title": "Products",
-        "catalog": "View catalog",
-        "atencionCiudadana": "Citizen services",
-        "documentosTramites": "Documents and procedures",
-        "contratacionInversion": "Procurement and investment",
-        "investigacionParticipacion": "Research and participation",
-        "educacion": "Education",
-        "visionComputacional": "Computer vision"
-      },
-      "resources": {
-        "title": "Resources",
-        "caseStudies": "Success stories",
-        "articles": "Articles",
-        "agentesIa": "AI agents for business",
-        "faqs": "FAQs"
       }
     },
     "bottom": {
