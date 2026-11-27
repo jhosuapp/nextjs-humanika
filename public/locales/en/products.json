@@ -1560,9 +1560,9 @@
       }
     },
     "analitica-de-espacios": {
-      "title": "Humanika – AI for Citizen Management of Public Spaces",
-      "shortTitle": "Public Space Management",
-      "description": "Space analytics software using computer vision and operational indicators. It measures foot traffic, occupancy and dwell time by zone and camera, and presents aggregated metrics in dashboards.",
+      "title": "Humanika – Video Analytics with Computer Vision",
+      "shortTitle": "Video Analytics",
+      "description": "Software that analyzes video from stores, factories and public spaces to measure foot traffic, occupancy, dwell time and interactions, detect operational events and estimate audience reactions from visual signals. It presents aggregated metrics in dashboards for data-driven decisions.",
       "cardLine": "Counts, occupancy and foot traffic by zone, in dashboards.",
       "features": [
         "People counting and occupancy measurement",
@@ -1572,8 +1572,8 @@
       "useCase": "An office compares foot traffic in two service areas and identifies the hours when demand peaks. The team uses that information to better organize its service points.",
       "imageAlt": "From a raised vantage point, an operations manager and the Humanika agent watch people move through a public building.",
       "seo": {
-        "title": "AI for public space management | Humanika",
-        "description": "Computer vision for service centers and public spaces: foot traffic, occupancy and dwell time by zone, in dashboards with operational indicators."
+        "title": "Video analytics with computer vision | Humanika",
+        "description": "AI video analytics for stores, factories and public spaces: foot traffic, occupancy, dwell time, operational events and audience reactions in dashboards."
       },
       "demo": {
         "eyebrow": "How it works",

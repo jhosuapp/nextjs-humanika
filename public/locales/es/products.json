@@ -1560,9 +1560,9 @@
       }
     },
     "analitica-de-espacios": {
-      "title": "Humanika – IA para la gestión ciudadana en espacios públicos",
-      "shortTitle": "Gestión de espacios públicos",
-      "description": "Software de analítica de espacios mediante visión computacional e indicadores operativos. Mide afluencia, ocupación y permanencia por zonas y cámaras, y presenta métricas agregadas en tableros.",
+      "title": "Humanika – Analítica de video con visión computacional",
+      "shortTitle": "Analítica de video",
+      "description": "Software que analiza video de comercios, fábricas y espacios públicos para medir afluencia, ocupación, tiempos de permanencia e interacciones, detectar eventos operativos y estimar reacciones del público a partir de señales visuales. Presenta métricas agregadas en tableros para decidir con datos.",
       "cardLine": "Conteo, ocupación y afluencia por zonas en tableros.",
       "features": [
         "Conteo y medición de ocupación",
@@ -1572,8 +1572,8 @@
       "useCase": "Una sede compara la afluencia en dos zonas de atención e identifica a qué horas se concentra la demanda. El equipo usa esa información para organizar mejor sus puntos de servicio.",
       "imageAlt": "Desde un punto elevado, una responsable de operaciones y el agente de Humanika observan cómo se mueve la gente por una sede.",
       "seo": {
-        "title": "IA para la gestión de espacios públicos | Humanika",
-        "description": "Visión computacional para sedes de atención y espacios públicos: afluencia, ocupación y permanencia por zonas en tableros con indicadores operativos."
+        "title": "Analítica de video con visión computacional | Humanika",
+        "description": "Analítica de video con IA para comercios, fábricas y espacios públicos: afluencia, ocupación, permanencia, eventos operativos y reacciones del público."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
