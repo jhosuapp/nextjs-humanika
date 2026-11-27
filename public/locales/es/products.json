@@ -24,7 +24,8 @@
     "demoOnline": "En línea",
     "demoStep": "Paso",
     "categoryLinkAria": "Ver todas las soluciones de {{category}}",
-    "highlightsEyebrow": "Más capacidades"
+    "highlightsEyebrow": "Más capacidades",
+    "processEyebrow": "Paso a paso"
   },
   "categories": {
     "atencion-ciudadana": "Atención ciudadana",
@@ -36,9 +37,9 @@
   },
   "items": {
     "atencion-ciudadana-digital": {
-      "title": "Humanika – Atención Ciudadana Digital por Chat y Mensajería",
-      "shortTitle": "Atención Ciudadana Digital",
-      "description": "Oriente a la ciudadanía por chat web y mensajería. Humanika responde preguntas sobre servicios y trámites con información autorizada por la entidad y deriva la conversación a un operador cuando la consulta requiere atención humana.",
+      "title": "Humanika – Atención ciudadana digital con IA",
+      "shortTitle": "Atención ciudadana digital",
+      "description": "Asistente conversacional de IA para orientación ciudadana y respuestas sobre servicios y trámites institucionales. Atiende por chat web y mensajería con información autorizada por la entidad y deriva a un funcionario cuando la consulta lo requiere.",
       "cardLine": "Chat web y mensajería que orientan trámites con información autorizada.",
       "features": [
         "Orientación sobre trámites y servicios",
@@ -48,8 +49,8 @@
       "useCase": "Una persona quiere saber qué documentos necesita para solicitar un certificado. El agente explica los requisitos y la orienta hacia el canal habilitado por la entidad.",
       "imageAlt": "Una ciudadana consulta su celular en un espacio público mientras el agente de Humanika le indica hacia dónde ir.",
       "seo": {
-        "title": "Chatbot para atención ciudadana | Humanika",
-        "description": "Asistente virtual para entidades públicas: atención ciudadana por chat y mensajería, con fuentes institucionales y derivación a operadores."
+        "title": "Atención ciudadana digital con IA | Humanika",
+        "description": "Asistente de IA para entidades públicas que orienta a la ciudadanía sobre servicios y trámites por chat y mensajería, con información oficial."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
@@ -122,9 +123,9 @@
       }
     },
     "telefonia-ia-bidireccional": {
-      "title": "Humanika – Telefonía Institucional Bidireccional con IA",
-      "shortTitle": "Telefonía Institucional Bidireccional",
-      "description": "Reciba y realice llamadas institucionales con agentes de voz. En llamadas entrantes, Humanika orienta a la persona y puede transferirla a un operador. En llamadas salientes, confirma citas, comunica recordatorios y hace seguimiento a solicitudes.",
+      "title": "Humanika – Telefonía IA bidireccional",
+      "shortTitle": "Telefonía IA bidireccional",
+      "description": "Software de telefonía conversacional con IA para llamadas entrantes y salientes y atención automatizada. Orienta, confirma citas, envía recordatorios y transfiere a un operador cuando hace falta.",
       "cardLine": "Agentes de voz para llamadas entrantes y salientes de la entidad.",
       "features": [
         "Atención de llamadas entrantes",
@@ -134,8 +135,8 @@
       "useCase": "Una entidad llama para confirmar una cita. Más tarde, la persona puede llamar a la línea institucional para resolver una duda sobre la atención y ser transferida si necesita ayuda adicional.",
       "imageAlt": "Una persona habla por teléfono junto a una agenda abierta, con el agente de Humanika como interlocutor cercano.",
       "seo": {
-        "title": "Agentes de voz para atención ciudadana | Humanika",
-        "description": "Llamadas entrantes y salientes con IA: confirme citas, envíe recordatorios y transfiera a operadores. Automatice las llamadas de su entidad."
+        "title": "Telefonía IA bidireccional | Humanika",
+        "description": "Agentes de voz con IA para llamadas entrantes y salientes de entidades públicas: orientación, confirmación de citas, recordatorios y transferencia."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
@@ -212,9 +213,9 @@
       }
     },
     "gestion-pqrsd": {
-      "title": "Humanika – Gestión de PQRSD y Casos Ciudadanos",
+      "title": "Humanika – Gestión agéntica (IA) de PQRSD",
       "shortTitle": "Gestión de PQRSD",
-      "description": "Gestione peticiones, quejas, reclamos, sugerencias y denuncias desde su recepción hasta el cierre. Humanika ayuda a radicar, clasificar y asignar casos, y permite consultar su estado y los vencimientos asociados.",
+      "description": "Plataforma para recepción, clasificación, seguimiento y gestión de peticiones, quejas, reclamos, sugerencias y denuncias. Humanika ayuda a radicar y asignar cada caso, y avisa de los vencimientos para responder a tiempo.",
       "cardLine": "Radicación, asignación y seguimiento de PQRSD hasta el cierre.",
       "features": [
         "Recepción, radicación y clasificación",
@@ -224,8 +225,8 @@
       "useCase": "Una alcaldía recibe una queja sobre el estado de un parque. El caso queda radicado, se asigna a la dependencia responsable y el equipo puede seguir su avance hasta el cierre.",
       "imageAlt": "Una funcionaria y el agente de Humanika atienden a una ciudadana en un espacio de servicio y se hacen cargo de su solicitud.",
       "seo": {
-        "title": "Software de gestión de PQRSD | Humanika",
-        "description": "Radicación de solicitudes ciudadanas, asignación por dependencia, alertas de vencimiento y seguimiento de peticiones con trazabilidad completa."
+        "title": "Gestión agéntica de PQRSD con IA | Humanika",
+        "description": "Plataforma con IA para recibir, clasificar, asignar y hacer seguimiento a PQRSD, con alertas de vencimiento y trazabilidad hasta el cierre de cada caso."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
@@ -298,9 +299,9 @@
       }
     },
     "totems-con-avatar": {
-      "title": "Humanika – Software de Autoservicio para Tótems con Avatar",
-      "shortTitle": "Tótems con Avatar",
-      "description": "Convierta un punto de autoservicio en un espacio de atención guiada. Un avatar de Humanika interactúa por voz o pantalla para orientar trámites, acompañar formularios y recoger datos autorizados. La licencia cubre el software del punto de atención.",
+      "title": "Humanika – Tótems con avatar inteligente (IA)",
+      "shortTitle": "Tótems con avatar",
+      "description": "Licencia anual del software de avatar conversacional para puntos de atención y tótems; no incluye suministro de hardware. El avatar orienta trámites por voz o pantalla, acompaña formularios y recoge datos autorizados.",
       "cardLine": "Un avatar que guía trámites por voz o pantalla en sus sedes.",
       "features": [
         "Interacción guiada por voz o pantalla",
@@ -310,8 +311,8 @@
       "useCase": "Al llegar a una sede pública, una ciudadana conversa con el agente para ubicar el servicio que necesita y conocer los pasos que debe seguir antes de dirigirse al punto de atención.",
       "imageAlt": "Una ciudadana conversa con el agente de Humanika junto a un tótem en el vestíbulo de una sede institucional.",
       "seo": {
-        "title": "Software para tótems de atención ciudadana | Humanika",
-        "description": "Quioscos de autoservicio con avatar para entidades públicas: orientación por voz o pantalla, ayuda con formularios y captura autorizada de datos."
+        "title": "Tótems con avatar inteligente (IA) | Humanika",
+        "description": "Licencia anual de software de avatar conversacional para tótems y puntos de atención: orientación por voz o pantalla. No incluye suministro de hardware."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
@@ -388,9 +389,9 @@
       }
     },
     "auditoria-de-atencion": {
-      "title": "Humanika – Auditoría de Atención y Calidad",
-      "shortTitle": "Auditoría de Atención",
-      "description": "Revise la calidad de las interacciones con usuarios y detecte oportunidades de mejora en el servicio. Humanika transcribe y analiza conversaciones autorizadas, las contrasta con los protocolos definidos y organiza los hallazgos en reportes.",
+      "title": "Humanika – Auditoría de Atención y Calidad con IA",
+      "shortTitle": "Auditoría de atención y calidad",
+      "description": "Software de análisis y seguimiento de interacciones de atención, reportes y controles de calidad. Transcribe conversaciones autorizadas, las contrasta con sus protocolos y organiza los hallazgos para mejorar el servicio.",
       "cardLine": "Análisis de interacciones frente a sus protocolos de servicio.",
       "features": [
         "Transcripción y análisis de interacciones",
@@ -400,8 +401,8 @@
       "useCase": "Un equipo de servicio revisa una muestra de llamadas y detecta que en varias conversaciones el usuario terminó sin saber cuál era el siguiente paso. El responsable usa ese hallazgo para orientar la capacitación.",
       "imageAlt": "Una supervisora escucha una llamada con audífonos mientras el agente de Humanika señala un momento clave de la conversación.",
       "seo": {
-        "title": "Auditoría de atención con IA | Humanika",
-        "description": "Análisis de llamadas y control de calidad del servicio al ciudadano: transcripción, evaluación frente a protocolos y reportes de hallazgos con IA."
+        "title": "Auditoría de atención y calidad con IA | Humanika",
+        "description": "Análisis con IA de llamadas y conversaciones de atención ciudadana: evaluación frente a protocolos, controles de calidad y reportes de seguimiento."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
@@ -474,9 +475,9 @@
       }
     },
     "copiloto-para-funcionarios": {
-      "title": "Humanika – Copiloto Institucional para Funcionarios",
-      "shortTitle": "Copiloto Institucional",
-      "description": "Consulte manuales, procedimientos y normativa institucional desde una conversación. Humanika responde con referencias a fuentes autorizadas y ayuda a preparar resúmenes y borradores para revisión del funcionario.",
+      "title": "Humanika – Copiloto/Agente (IA) para funcionarios",
+      "shortTitle": "Copiloto para funcionarios",
+      "description": "Asistente de IA para consultas internas, búsqueda de conocimiento y apoyo a tareas de funcionarios. Responde con referencias a manuales, procedimientos y normativa de la entidad, y prepara resúmenes y borradores para revisión.",
       "cardLine": "Consulte manuales y normativa interna con referencias a la fuente.",
       "features": [
         "Consulta de repositorios autorizados",
@@ -486,8 +487,8 @@
       "useCase": "Una funcionaria pregunta qué procedimiento aplica a una solicitud interna. El copiloto identifica la sección pertinente del manual y prepara un resumen que ella puede verificar antes de responder.",
       "imageAlt": "Una funcionaria y el agente de Humanika encuentran la referencia que buscaban en una mesa de trabajo con documentos.",
       "seo": {
-        "title": "Copiloto de IA para funcionarios | Humanika",
-        "description": "Asistente de conocimiento institucional para consultar normativa interna, manuales y procedimientos, con referencias a fuentes y borradores revisables."
+        "title": "Copiloto de IA para funcionarios públicos | Humanika",
+        "description": "Agente de IA para funcionarios: consulte manuales y normativa interna, encuentre conocimiento institucional y prepare borradores con referencias."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
@@ -564,9 +565,9 @@
       }
     },
     "inteligencia-documental": {
-      "title": "Humanika – Inteligencia Documental Institucional",
-      "shortTitle": "Inteligencia Documental",
-      "description": "Convierta documentos institucionales en información que el equipo pueda consultar y verificar. Humanika clasifica archivos, extrae campos y contrasta datos para facilitar la revisión con trazabilidad.",
+      "title": "Humanika – IA para la gestión documental",
+      "shortTitle": "Gestión documental con IA",
+      "description": "Software de consulta, clasificación y análisis asistido por IA de documentos y repositorios institucionales. Extrae campos, coteja datos y conserva la referencia a cada documento para una revisión con trazabilidad.",
       "cardLine": "Clasificación, extracción y cotejo de documentos con trazabilidad.",
       "features": [
         "Clasificación documental",
@@ -576,8 +577,8 @@
       "useCase": "Un equipo recibe actas y formularios en distintos formatos. Humanika identifica el tipo de documento, extrae fechas y referencias y deja los resultados listos para que el equipo los revise.",
       "imageAlt": "Una profesional revisa varios documentos en su escritorio mientras el agente de Humanika le muestra el hilo común.",
       "seo": {
-        "title": "Procesamiento inteligente de documentos | Humanika",
-        "description": "Clasificación documental con IA y extracción de datos de PDF: convierta actas y formularios en información verificable, con cotejo y revisión humana."
+        "title": "IA para la gestión documental | Humanika",
+        "description": "Consulte, clasifique y analice con IA los documentos y repositorios de su entidad: extracción de datos, cotejo y trazabilidad para la revisión humana."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
@@ -650,9 +651,9 @@
       }
     },
     "validacion-de-tramites": {
-      "title": "Humanika – Validación Inteligente de Trámites y Expedientes",
-      "shortTitle": "Validación de Trámites",
-      "description": "Prevalide expedientes antes de que pasen a revisión. Humanika lee los soportes, extrae información y la coteja contra requisitos configurados por la entidad. El funcionario recibe los faltantes y las inconsistencias identificadas para decidir cómo continuar.",
+      "title": "Humanika – Validación con IA agéntica de Trámites y Expedientes",
+      "shortTitle": "Validación de trámites y expedientes",
+      "description": "Software de revisión y validación asistida de requisitos y documentos para trámites institucionales. Coteja los soportes contra los requisitos de la entidad y entrega al funcionario los faltantes e inconsistencias para decidir.",
       "cardLine": "Prevalidación de expedientes contra los requisitos de su entidad.",
       "features": [
         "Lectura de solicitudes y soportes",
@@ -662,8 +663,8 @@
       "useCase": "Antes de revisar una solicitud de permiso, el funcionario recibe un resumen de los soportes encontrados y una alerta sobre el certificado pendiente. Con esa información puede revisar el expediente y orientar la subsanación.",
       "imageAlt": "Una revisora y el agente de Humanika recorren un expediente físico y detectan una pieza faltante.",
       "seo": {
-        "title": "Validación de expedientes con IA | Humanika",
-        "description": "Verificación de requisitos documentales y revisión de solicitudes y trámites: Humanika identifica faltantes e inconsistencias antes de la revisión."
+        "title": "Validación de trámites y expedientes con IA | Humanika",
+        "description": "Agentes de IA que revisan requisitos y soportes de trámites y expedientes: detectan faltantes e inconsistencias antes de la revisión del funcionario."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
@@ -732,9 +733,9 @@
       }
     },
     "automatizacion-institucional": {
-      "title": "Humanika – Agentes de IA para Automatización Institucional",
-      "shortTitle": "Agentes de Automatización",
-      "description": "Automatice tareas repetitivas de procesos internos con flujos configurables. Los agentes de Humanika consultan sistemas autorizados, ejecutan los pasos definidos y registran lo que hicieron para que el equipo pueda revisar la operación.",
+      "title": "Humanika – Automatización institucional a través de agentes IA",
+      "shortTitle": "Automatización institucional",
+      "description": "Agentes de IA para orquestar flujos, tareas y procesos administrativos institucionales. Consultan sistemas autorizados, ejecutan los pasos definidos y registran lo que hicieron para que el equipo revise la operación.",
       "cardLine": "Flujos configurables que ejecutan tareas y registran cada paso.",
       "features": [
         "Configuración de flujos y tareas",
@@ -744,8 +745,8 @@
       "useCase": "Al ingresar una solicitud, el agente consulta la información disponible, prepara el caso y lo encamina al responsable siguiendo las reglas configuradas por la entidad.",
       "imageAlt": "Una coordinadora y el agente de Humanika acompañan el paso de una solicitud entre dos áreas de trabajo.",
       "seo": {
-        "title": "Automatización de procesos institucionales con IA | Humanika",
-        "description": "Agentes de IA para entidades públicas: flujos de trabajo automatizados que consultan sistemas autorizados, ejecutan tareas y dejan trazabilidad."
+        "title": "Automatización institucional con agentes IA | Humanika",
+        "description": "Agentes de IA que orquestan flujos, tareas y procesos administrativos de su entidad pública, con cada paso registrado para revisión del equipo."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
@@ -818,25 +819,25 @@
       }
     },
     "asistente-de-contratacion-publica": {
-      "title": "Humanika – Asistente de Contratación Pública",
-      "shortTitle": "Asistente de Contratación Pública",
-      "description": "Facilite la revisión de pliegos y documentos en la etapa precontractual. Humanika identifica requisitos, contrasta información y organiza los hallazgos en matrices de revisión con referencias a las fuentes.",
-      "cardLine": "Revisión de pliegos con matrices de requisitos verificables.",
+      "title": "Humanika – Asistente IA de contratación pública",
+      "shortTitle": "Asistente de contratación pública",
+      "description": "Asistente de IA para consulta y apoyo documental en procesos de contratación pública. Ayuda a su equipo a revisar estudios previos y pliegos, a construir la matriz de requisitos y a verificar ofertas, indicando siempre en qué documento y sección está cada dato.",
+      "cardLine": "Pliegos, requisitos y ofertas revisados con referencia a la fuente.",
       "features": [
-        "Consulta de pliegos y anexos",
-        "Identificación y contraste de requisitos",
-        "Matrices con referencias verificables"
+        "Revisión de estudios previos y pliegos",
+        "Matriz de requisitos habilitantes y ponderables",
+        "Verificación de ofertas y apoyo al comité evaluador"
       ],
-      "useCase": "Un equipo de contratación revisa un pliego y sus anexos. El asistente organiza los requisitos técnicos y documentales e indica dónde aparece cada uno para que el equipo valide la matriz.",
+      "useCase": "Una gobernación prepara una licitación de obra con pliego, cinco anexos y dos adendas. Humanika arma la matriz de requisitos habilitantes y señala que una adenda cambió la experiencia exigida sin actualizar el anexo técnico. Al cierre, compara las ofertas con esa matriz y entrega al comité la lista de soportes faltantes por oferente.",
       "imageAlt": "Dos profesionales revisan un pliego mientras el agente de Humanika dirige su atención a un documento concreto.",
       "seo": {
-        "title": "Asistente de contratación pública | Humanika",
-        "description": "Análisis de pliegos con IA: identifique y contraste requisitos y construya la matriz de requisitos de contratación con referencias verificables."
+        "title": "Asistente IA de contratación pública | Humanika",
+        "description": "IA para la etapa precontractual: revise estudios previos y pliegos, arme la matriz de requisitos y verifique ofertas con referencias a cada documento."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
-        "title": "Así arma el asistente la matriz de requisitos",
-        "description": "Siga cómo Humanika organiza los requisitos de un pliego e indica dónde aparece cada uno.",
+        "title": "Así revisa el asistente un proceso de contratación",
+        "description": "Siga cómo Humanika arma la matriz de requisitos y detecta inconsistencias entre documentos.",
         "panel": {
           "title": "Revisión del pliego",
           "status": "Analizando"
@@ -859,70 +860,108 @@
         ],
         "steps": [
           {
-            "title": "Carga el pliego",
-            "text": "El equipo comparte el pliego y sus anexos."
+            "title": "Carga los documentos",
+            "text": "El equipo comparte el pliego, sus anexos y adendas."
           },
           {
-            "title": "Identifica requisitos",
-            "text": "El asistente separa los requisitos técnicos y documentales."
+            "title": "Arma la matriz",
+            "text": "El asistente separa los requisitos habilitantes y ponderables."
           },
           {
-            "title": "Contrasta y referencia",
-            "text": "Indica dónde aparece cada requisito y marca diferencias."
+            "title": "Detecta inconsistencias",
+            "text": "Marca diferencias entre documentos e indica dónde aparece cada requisito."
           },
           {
-            "title": "El equipo valida",
-            "text": "La matriz queda lista para revisión humana."
+            "title": "El comité valida",
+            "text": "La matriz queda lista para revisión y decisión humana."
           }
         ],
         "chat": [
           {
             "from": "user",
-            "text": "Pliego y 3 anexos cargados para revisión."
+            "text": "Pliego, 5 anexos y 2 adendas cargados."
           },
           {
             "from": "system",
-            "text": "Identificando requisitos en el pliego y sus anexos…"
+            "text": "Identificando requisitos en todos los documentos…"
           },
           {
             "from": "bot",
-            "text": "Encontré 42 requisitos: 27 técnicos y 15 documentales."
+            "text": "Encontré 38 requisitos: 22 habilitantes y 16 ponderables."
           },
           {
             "from": "bot",
-            "text": "Cada requisito incluye la referencia a su sección de origen."
+            "text": "La adenda 2 cambia la experiencia exigida, pero el anexo técnico no se actualizó."
           },
           {
             "from": "bot",
-            "text": "El anexo 2 modifica un requisito del pliego; lo marqué para revisión."
+            "text": "Cada requisito incluye su numeral y documento de origen."
           },
           {
             "from": "system",
             "text": "Matriz enviada al equipo para validación"
           }
         ]
+      },
+      "process": {
+        "title": "Cómo acompaña cada etapa del proceso de contratación",
+        "description": "Un proceso de contratación reúne decenas de documentos que deben ser coherentes entre sí. Humanika los lee junto a su equipo; las decisiones siguen siendo de la entidad.",
+        "stages": [
+          {
+            "label": "Planeación",
+            "title": "Estudios previos completos",
+            "text": "Revisa que los estudios previos incluyan lo que exige el manual de contratación (necesidad, objeto, presupuesto, análisis del sector y riesgos) y señala lo que falta antes de radicarlos."
+          },
+          {
+            "label": "Pliego",
+            "title": "Un pliego claro y coherente",
+            "text": "Contrasta el pliego con los estudios previos, sus anexos y adendas, y marca requisitos ambiguos, duplicados o contradictorios, que suelen generar observaciones o un proceso desierto."
+          },
+          {
+            "label": "Observaciones",
+            "title": "Respuestas ordenadas a los interesados",
+            "text": "Agrupa las observaciones recibidas por tema y numeral del pliego y prepara borradores de respuesta para que el equipo los revise dentro de los plazos del cronograma."
+          },
+          {
+            "label": "Evaluación",
+            "title": "Verificación de ofertas con soporte",
+            "text": "Compara cada oferta con la matriz de requisitos, indica dónde está cada soporte y qué documento falta o no coincide, para que el comité evaluador solicite subsanaciones y firme su informe con más seguridad."
+          }
+        ]
+      },
+      "highlights": {
+        "eyebrow": "Por qué invertir",
+        "title": "Lo que gana su entidad",
+        "items": [
+          "Menos horas de lectura manual de pliegos, anexos y ofertas.",
+          "Requisitos coherentes entre estudios previos, pliego y adendas.",
+          "Cada hallazgo con la referencia exacta al documento de origen.",
+          "Un comité evaluador que decide con la información ordenada.",
+          "Alineado con el Manual de Contratación de Colombia Compra Eficiente, que promueve herramientas de inteligencia institucional en la compra pública.",
+          "Humanika no adjudica ni decide: el equipo valida y firma cada documento."
+        ]
       }
     },
     "supervision-contractual": {
-      "title": "Humanika – Supervisión Contractual Inteligente",
-      "shortTitle": "Supervisión Contractual",
-      "description": "Haga seguimiento a obligaciones, hitos y entregables durante la ejecución de un contrato. Humanika organiza evidencias y actas, alerta sobre vencimientos y facilita la revisión del supervisor.",
-      "cardLine": "Seguimiento de obligaciones, hitos y entregables del contrato.",
+      "title": "Humanika – Supervisión contractual con IA agéntica",
+      "shortTitle": "Supervisión contractual",
+      "description": "Plataforma de seguimiento de obligaciones, entregables y alertas para la supervisión de contratos. Humanika revisa los informes y evidencias del contratista frente a lo pactado, avisa antes de cada vencimiento y mantiene el expediente listo para pagos, liquidación y entes de control.",
+      "cardLine": "Obligaciones, entregables, pagos y garantías bajo control.",
       "features": [
-        "Registro de obligaciones, hitos y entregables",
-        "Alertas de vencimiento",
-        "Revisión asistida de evidencias y reportes de seguimiento"
+        "Seguimiento de obligaciones, entregables y plazos",
+        "Revisión de informes, evidencias y soportes de pago",
+        "Alertas tempranas e informes de supervisión"
       ],
-      "useCase": "Antes de una reunión de seguimiento, el supervisor consulta qué entregables están próximos a vencer y qué evidencias se han recibido. Con esa información prepara la revisión con el contratista.",
+      "useCase": "Un supervisor de la Secretaría de Infraestructura lleva doce contratos a la vez. Cada lunes Humanika le indica qué entregables vencen, qué póliza está por expirar y qué informe llegó sin evidencias completas. Antes de aprobar un pago, el supervisor ve en una sola vista si están todos los soportes.",
       "imageAlt": "Un supervisor y el agente de Humanika recorren una obra e intercambian observaciones frente a una actividad en marcha.",
       "seo": {
-        "title": "Software de supervisión contractual | Humanika",
-        "description": "Seguimiento de obligaciones contractuales, evidencias y actas, con alertas de vencimiento de contratos y reportes de seguimiento para el supervisor."
+        "title": "Supervisión contractual con IA agéntica | Humanika",
+        "description": "Seguimiento con IA de obligaciones, entregables, pagos y garantías de cada contrato, con alertas tempranas y expediente al día para el supervisor."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
         "title": "Así acompaña el agente la supervisión",
-        "description": "Vea cómo Humanika organiza las evidencias y avisa qué entregables están por vencer antes de una reunión de seguimiento.",
+        "description": "Vea cómo Humanika revisa las evidencias del contratista y avisa qué vence antes de que sea tarde.",
         "panel": {
           "title": "Seguimiento del contrato",
           "status": "Actualizado"
@@ -946,25 +985,25 @@
         "steps": [
           {
             "title": "Llegan evidencias",
-            "text": "El contratista entrega fotos, actas e informes."
+            "text": "El contratista entrega su informe con fotos y actas."
           },
           {
-            "title": "Las asocia a los hitos",
-            "text": "El agente organiza cada evidencia según la obligación correspondiente."
+            "title": "Las asocia a las obligaciones",
+            "text": "El agente revisa cada evidencia frente a lo pactado."
           },
           {
-            "title": "Revisa vencimientos",
-            "text": "Identifica los entregables próximos a vencer."
+            "title": "Revisa pagos y garantías",
+            "text": "Identifica entregables y pólizas próximos a vencer."
           },
           {
-            "title": "Prepara al supervisor",
-            "text": "El supervisor llega a la reunión con el estado al día."
+            "title": "Alerta al supervisor",
+            "text": "El supervisor recibe el estado del contrato al día."
           }
         ],
         "chat": [
           {
             "from": "user",
-            "text": "Nuevo informe del contratista con 12 evidencias."
+            "text": "Informe mensual del contratista con 12 evidencias."
           },
           {
             "from": "system",
@@ -972,23 +1011,61 @@
           },
           {
             "from": "bot",
-            "text": "Hito 3 de 5: evidencias completas."
+            "text": "Obligaciones 1 a 4 con evidencia completa; a la 5 le falta el acta de pruebas."
           },
           {
             "from": "bot",
-            "text": "El entregable 4 vence en 6 días y aún no tiene evidencias."
+            "text": "La póliza de cumplimiento vence en 10 días y el entregable 4 en 6 días."
           },
           {
             "from": "system",
-            "text": "Alerta de vencimiento enviada al supervisor"
+            "text": "Alerta enviada al supervisor"
           }
+        ]
+      },
+      "process": {
+        "title": "Cómo acompaña la supervisión, del acta de inicio a la liquidación",
+        "description": "La ley exige vigilar cada contrato en lo técnico, administrativo, financiero, contable y jurídico. Humanika convierte el contrato en una lista de verificación viva para el supervisor.",
+        "stages": [
+          {
+            "label": "Inicio",
+            "title": "El contrato, convertido en tareas",
+            "text": "Lee el contrato, el pliego y la oferta, y extrae obligaciones, entregables, plazos, forma de pago y garantías en un cronograma de seguimiento."
+          },
+          {
+            "label": "Ejecución",
+            "title": "Evidencias revisadas frente a lo pactado",
+            "text": "Cuando el contratista entrega informes, fotos o actas, los asocia a cada obligación y señala lo que falta o no coincide con lo pactado."
+          },
+          {
+            "label": "Pagos",
+            "title": "Cada pago con sus soportes",
+            "text": "Antes de cada pago, verifica que estén el recibo a satisfacción, los soportes de seguridad social y la vigencia de las garantías, y controla el saldo del contrato y el anticipo."
+          },
+          {
+            "label": "Cierre",
+            "title": "Expediente listo para liquidar",
+            "text": "Consolida actas, informes y pagos en el expediente, prepara borradores de informes de supervisión y facilita el balance para la liquidación."
+          }
+        ]
+      },
+      "highlights": {
+        "eyebrow": "Por qué invertir",
+        "title": "Lo que gana su entidad",
+        "items": [
+          "Ningún vencimiento de entregables, pagos o garantías pasa desapercibido.",
+          "Alertas a tiempo para actuar mientras la obligación aún puede cumplirse.",
+          "Expediente completo y ordenado ante los entes de control.",
+          "Supervisores con muchos contratos a cargo, con el estado de cada uno al día.",
+          "Soportes documentados para informar posibles incumplimientos, como exige la ley al supervisor.",
+          "El supervisor decide y firma; Humanika prepara y alerta."
         ]
       }
     },
     "proyectos-e-inversion-publica": {
-      "title": "Humanika – Inteligencia para Proyectos e Inversión Pública",
-      "shortTitle": "Proyectos e Inversión Pública",
-      "description": "Apoye la formulación y revisión de proyectos bajo la Metodología General Ajustada (MGA) y analice la cartera de inversión pública. Humanika ayuda a comparar iniciativas, identificar proyectos similares y encontrar metas sin cobertura, con referencias a las fuentes revisadas.",
+      "title": "Humanika – Proyectos e inversión pública con IA agéntica",
+      "shortTitle": "Proyectos e inversión pública",
+      "description": "Software de apoyo al seguimiento y consulta de proyectos e información de inversión pública. Ayuda a formular y revisar proyectos bajo la MGA, comparar iniciativas y encontrar metas sin cobertura, con referencias a las fuentes.",
       "cardLine": "Formulación MGA y análisis de la cartera de inversión pública.",
       "features": [
         "Formulación y revisión documental de proyectos MGA",
@@ -998,8 +1075,8 @@
       "useCase": "Una secretaría de Planeación revisa sus iniciativas antes de priorizarlas. Humanika señala cuáles tienen objetivos similares y qué metas del plan de desarrollo aún carecen de proyectos asociados.",
       "imageAlt": "Una profesional de planeación conversa con el agente de Humanika sobre un mapa del territorio para priorizar esfuerzos.",
       "seo": {
-        "title": "IA para formulación de proyectos MGA | Humanika",
-        "description": "Análisis de inversión pública y comparación de proyectos territoriales: formule y revise proyectos MGA e identifique metas sin cobertura con IA."
+        "title": "Proyectos e inversión pública con IA | Humanika",
+        "description": "IA agéntica para formular y revisar proyectos MGA y analizar la cartera de inversión pública territorial, con referencias a las fuentes consultadas."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
@@ -1083,95 +1160,133 @@
       }
     },
     "investigacion-y-consultas-publicas": {
-      "title": "Humanika – Investigación y Consultas Públicas con IA",
-      "shortTitle": "Investigación y Consultas Públicas",
-      "description": "Realice entrevistas y encuestas por voz o chat, documente procesos y analice comentarios de consultas públicas. Humanika organiza las observaciones por tema o artículo y genera matrices editables con trazabilidad para que el equipo prepare y revise sus respuestas.",
-      "cardLine": "Entrevistas, encuestas y análisis de comentarios ciudadanos.",
+      "title": "Humanika – IA para escuchar a la ciudadanía: consultas públicas, participación y rendición de cuentas",
+      "shortTitle": "IA para escuchar a la ciudadanía",
+      "description": "Herramienta de apoyo a consultas, análisis de documentos e investigación sobre fuentes públicas con la ayuda de agentes IA. Recoge aportes por voz, chat y formularios, los organiza por tema y ayuda a su entidad a responder a tiempo y a hacer seguimiento a lo que se compromete en la rendición de cuentas.",
+      "cardLine": "Consultas, rendición de cuentas y compromisos con la ciudadanía.",
       "features": [
-        "Entrevistas, encuestas y levantamiento de procesos",
-        "Análisis temático de comentarios",
-        "Matrices editables de observaciones y respuestas"
+        "Consultas y encuestas ciudadanas por voz y chat",
+        "Análisis de aportes por tema, territorio o artículo",
+        "Respuestas y compromisos con seguimiento"
       ],
-      "useCase": "Tras cerrar una consulta sobre un proyecto normativo, el equipo agrupa los comentarios por artículo e identifica aportes minoritarios. Cada observación conserva su vínculo con el aporte original para facilitar la revisión.",
+      "useCase": "Después de la audiencia de rendición de cuentas, la gobernación tiene 900 preguntas y propuestas de 25 municipios. Humanika las agrupa por tema y municipio, asigna cada pregunta a su secretaría y avisa cuáles están cerca del plazo de 15 días. Las propuestas viables pasan a una matriz de compromisos con seguimiento.",
       "imageAlt": "En un encuentro comunitario, una persona comparte su perspectiva mientras el agente de Humanika escucha con atención.",
       "seo": {
-        "title": "Análisis de consultas públicas con IA | Humanika",
-        "description": "Matriz de observaciones ciudadanas con trazabilidad, análisis temático de comentarios y entrevistas y encuestas con IA por voz o chat."
+        "title": "IA para rendición de cuentas y consultas | Humanika",
+        "description": "IA para escuchar a la ciudadanía: organice aportes de consultas y rendición de cuentas, responda preguntas a tiempo y haga seguimiento a compromisos."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
-        "title": "Así organiza el agente una consulta pública",
-        "description": "Siga cómo Humanika agrupa los comentarios por artículo sin perder el vínculo con cada aporte original.",
+        "title": "Así organiza el agente la rendición de cuentas",
+        "description": "Siga cómo Humanika agrupa las preguntas ciudadanas, las asigna y controla el plazo de respuesta.",
         "panel": {
-          "title": "Análisis de la consulta",
+          "title": "Rendición de cuentas",
           "status": "Analizando"
         },
         "layers": {
           "channels": "Participación",
           "agent": "Agente Humanika",
-          "sources": "Análisis",
+          "sources": "Seguimiento",
           "operator": "Equipo"
         },
         "channels": [
-          "Entrevistas por voz",
+          "Voz",
           "Chat",
-          "Comentarios"
+          "Formularios"
         ],
         "sources": [
           "Temas",
-          "Artículos",
-          "Aportes originales"
+          "Responsables",
+          "Compromisos"
         ],
         "steps": [
           {
             "title": "Llegan los aportes",
-            "text": "La ciudadanía comenta por voz, chat o formulario."
+            "text": "La ciudadanía pregunta y propone por voz, chat o formulario."
           },
           {
-            "title": "Agrupa por tema y artículo",
-            "text": "El agente clasifica cada observación."
+            "title": "Agrupa por tema y territorio",
+            "text": "El agente clasifica cada pregunta y propuesta."
           },
           {
-            "title": "Conserva el origen",
-            "text": "Destaca aportes minoritarios y mantiene el vínculo con cada aporte."
+            "title": "Controla plazos",
+            "text": "Asigna cada pregunta a su área y vigila los 15 días de respuesta."
           },
           {
             "title": "Entrega la matriz",
-            "text": "El equipo prepara y revisa sus respuestas con trazabilidad."
+            "text": "El equipo revisa respuestas y compromisos con trazabilidad."
           }
         ],
         "chat": [
           {
             "from": "user",
-            "text": "Consulta cerrada: 640 comentarios sobre el proyecto normativo."
+            "text": "Audiencia cerrada: 900 preguntas y propuestas."
           },
           {
             "from": "system",
-            "text": "Agrupando observaciones por tema y artículo…"
+            "text": "Agrupando por tema, municipio y secretaría…"
           },
           {
             "from": "bot",
-            "text": "El artículo 5 concentra el 38 % de los comentarios."
+            "text": "Salud y vías concentran el 46 % de las preguntas."
           },
           {
             "from": "bot",
-            "text": "Identifiqué 12 aportes minoritarios con propuestas nuevas."
+            "text": "Asigné 312 preguntas a 8 secretarías; 40 vencen en 3 días."
           },
           {
             "from": "bot",
-            "text": "Cada observación conserva el vínculo con su aporte original."
+            "text": "Cada respuesta conserva el vínculo con la pregunta original."
           },
           {
             "from": "system",
-            "text": "Matriz editable lista para el equipo"
+            "text": "Matriz de respuestas y compromisos lista"
           }
+        ]
+      },
+      "process": {
+        "title": "Cómo acompaña la rendición de cuentas",
+        "description": "Rendir cuentas es informar, dialogar y responder por los resultados. Humanika ayuda en cada etapa para que la ciudadanía sea escuchada y reciba respuesta.",
+        "stages": [
+          {
+            "label": "Antes",
+            "title": "Preguntar qué le interesa a la ciudadanía",
+            "text": "Consulta por voz, chat o formulario qué temas quieren conocer los distintos grupos de valor y ayuda a preparar el informe de gestión en lenguaje claro."
+          },
+          {
+            "label": "Durante",
+            "title": "Recoger cada pregunta y aporte",
+            "text": "Registra las preguntas y propuestas que llegan por los canales habilitados para el espacio de diálogo y las organiza por tema y territorio."
+          },
+          {
+            "label": "Respuesta",
+            "title": "Responder dentro de los 15 días",
+            "text": "Asigna cada pregunta al área responsable, controla el plazo de 15 días que fija la Ley 1757 y prepara borradores de respuesta para publicar."
+          },
+          {
+            "label": "Seguimiento",
+            "title": "Cumplir lo comprometido",
+            "text": "Convierte las conclusiones en una matriz de compromisos con responsables y fechas, y ayuda a informar a la ciudadanía sobre su avance."
+          }
+        ]
+      },
+      "highlights": {
+        "eyebrow": "Por qué invertir",
+        "title": "Lo que gana su entidad",
+        "items": [
+          "Escuchar a miles de personas sin perder ningún aporte.",
+          "Respuestas dentro del plazo legal, con responsable asignado.",
+          "Informes y respuestas en lenguaje claro.",
+          "Cada conclusión conserva el vínculo con el aporte ciudadano original.",
+          "Seguimiento visible a los compromisos y al plan de mejoramiento.",
+          "También sirve para consultas sobre proyectos de decreto, políticas o planes."
         ]
       }
     },
     "formacion-institucional": {
-      "title": "Humanika – Plataforma de Formación Institucional con IA",
-      "shortTitle": "Formación Institucional",
-      "description": "Organice cursos de inducción y formación continua en rutas de aprendizaje. Los participantes cuentan con tutores por voz y chat, y el equipo de formación puede seguir su avance.",
+      "title": "Humanika – Formación institucional con IA",
+      "shortTitle": "Formación institucional",
+      "description": "Plataforma SaaS de capacitación institucional con recursos conversacionales de IA. Organiza inducción y formación continua en rutas, con tutores por voz y chat y seguimiento del avance.",
       "cardLine": "Rutas de inducción y formación con tutores por voz y chat.",
       "features": [
         "Cursos y rutas de aprendizaje",
@@ -1181,8 +1296,8 @@
       "useCase": "Una entidad incorpora nuevos funcionarios. Cada persona sigue una ruta de inducción, consulta dudas con el tutor y avanza por los contenidos mientras Talento Humano revisa el progreso del grupo.",
       "imageAlt": "Una persona recién incorporada conversa con el agente de Humanika en su espacio de trabajo durante sus primeros días.",
       "seo": {
-        "title": "Plataforma de formación institucional con IA | Humanika",
-        "description": "Software de inducción y formación continua con tutores virtuales para capacitación por voz y chat, y seguimiento del avance de cada participante."
+        "title": "Formación institucional con IA | Humanika",
+        "description": "Plataforma SaaS de capacitación para servidores públicos: rutas de inducción y formación continua con tutores de IA por voz y chat y avance medible."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
@@ -1259,9 +1374,9 @@
       }
     },
     "simulacion-y-evaluacion": {
-      "title": "Humanika – Simulación y Evaluación de Competencias con IA",
-      "shortTitle": "Simulación y Evaluación de Competencias",
-      "description": "Entrene competencias en escenarios simulados por voz o chat. Humanika interpreta el papel de un interlocutor, evalúa la práctica con rúbricas configurables y entrega retroalimentación y reportes de desempeño.",
+      "title": "Humanika – Simulación y evaluación",
+      "shortTitle": "Simulación y evaluación",
+      "description": "Plataforma para simulaciones formativas, ejercicios interactivos y evaluación asistida. Humanika interpreta a un interlocutor por voz o chat, evalúa con rúbricas configurables y entrega retroalimentación.",
       "cardLine": "Práctica conversacional evaluada con rúbricas configurables.",
       "features": [
         "Escenarios de práctica conversacional",
@@ -1271,8 +1386,8 @@
       "useCase": "Un funcionario practica cómo atender a una persona inconforme. El agente interpreta al usuario y al final devuelve observaciones sobre escucha, claridad y aplicación del protocolo.",
       "imageAlt": "Un funcionario ensaya una conversación con el agente de Humanika, que interpreta a una persona con una solicitud difícil.",
       "seo": {
-        "title": "Simulación conversacional con IA | Humanika",
-        "description": "Evaluación por rúbricas y práctica de atención al ciudadano en escenarios simulados por voz o chat, con retroalimentación y reportes de desempeño."
+        "title": "Simulación y evaluación con IA | Humanika",
+        "description": "Plataforma de simulaciones formativas con IA: ejercicios interactivos por voz o chat, evaluación con rúbricas configurables y reportes de desempeño."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
@@ -1345,9 +1460,9 @@
       }
     },
     "ensenanza-de-idiomas": {
-      "title": "Humanika – Enseñanza de Idiomas con IA",
-      "shortTitle": "Enseñanza de Idiomas",
-      "description": "Practique idiomas con tutores de IA por voz y chat. Humanika propone rutas por nivel y conversaciones de la vida cotidiana y profesional, con actividades guiadas y seguimiento del progreso individual.",
+      "title": "Humanika – Enseñanza de idiomas con IA",
+      "shortTitle": "Enseñanza de idiomas",
+      "description": "Plataforma SaaS para aprendizaje de idiomas con tutor conversacional de inteligencia artificial. Propone rutas por nivel y conversaciones guiadas por voz y chat, con seguimiento del progreso individual.",
       "cardLine": "Tutores de IA para practicar idiomas por voz y chat.",
       "features": [
         "Conversación por voz y chat",
@@ -1357,8 +1472,8 @@
       "useCase": "Una estudiante practica cómo pedir indicaciones en otro idioma. El tutor mantiene la conversación dentro del escenario y le propone actividades acordes con su nivel.",
       "imageAlt": "En una estación, una estudiante practica cómo pedir indicaciones con el agente de Humanika como interlocutor.",
       "seo": {
-        "title": "Plataforma de idiomas con IA | Humanika",
-        "description": "Práctica oral con tutores de IA y aprendizaje de idiomas por niveles: conversaciones guiadas por voz y chat con seguimiento del progreso individual."
+        "title": "Enseñanza de idiomas con IA | Humanika",
+        "description": "Plataforma SaaS de idiomas con tutor conversacional de IA: práctica oral por voz y chat, rutas por nivel y seguimiento del progreso de cada persona."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
@@ -1445,9 +1560,9 @@
       }
     },
     "analitica-de-espacios": {
-      "title": "Humanika – Analítica de Espacios con Visión Computacional",
-      "shortTitle": "Analítica de Espacios",
-      "description": "Entienda cómo se usan los espacios de atención y qué zonas reciben más visitas. Humanika analiza conteos, ocupación, afluencia y permanencia por zonas y cámaras, y presenta métricas agregadas en tableros.",
+      "title": "Humanika – IA para la gestión ciudadana en espacios públicos",
+      "shortTitle": "Gestión de espacios públicos",
+      "description": "Software de analítica de espacios mediante visión computacional e indicadores operativos. Mide afluencia, ocupación y permanencia por zonas y cámaras, y presenta métricas agregadas en tableros.",
       "cardLine": "Conteo, ocupación y afluencia por zonas en tableros.",
       "features": [
         "Conteo y medición de ocupación",
@@ -1457,8 +1572,8 @@
       "useCase": "Una sede compara la afluencia en dos zonas de atención e identifica a qué horas se concentra la demanda. El equipo usa esa información para organizar mejor sus puntos de servicio.",
       "imageAlt": "Desde un punto elevado, una responsable de operaciones y el agente de Humanika observan cómo se mueve la gente por una sede.",
       "seo": {
-        "title": "Conteo de personas con visión computacional | Humanika",
-        "description": "Medición de ocupación y analítica de afluencia y permanencia por zonas y cámaras, con métricas agregadas en tableros y alertas configurables."
+        "title": "IA para la gestión de espacios públicos | Humanika",
+        "description": "Visión computacional para sedes de atención y espacios públicos: afluencia, ocupación y permanencia por zonas en tableros con indicadores operativos."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
@@ -1527,9 +1642,9 @@
       }
     },
     "inspeccion-y-asistencia-visual": {
-      "title": "Humanika – Inspección y Asistencia Visual con IA",
-      "shortTitle": "Inspección y Asistencia Visual",
-      "description": "Documente inspecciones a partir de fotografías y observaciones en campo. Humanika ayuda a describir evidencias, registrar hallazgos por voz o chat y preparar borradores de actas para revisión.",
+      "title": "Humanika – Inspección, vigilancia y control con IA",
+      "shortTitle": "Inspección, vigilancia y control",
+      "description": "Software de apoyo a inspecciones mediante captura y análisis visual asistido por inteligencia artificial. Describe evidencias fotográficas, registra hallazgos por voz o chat y prepara borradores de actas para revisión.",
       "cardLine": "Evidencias fotográficas y borradores de actas desde campo.",
       "features": [
         "Inspección asistida de fotografías",
@@ -1539,8 +1654,8 @@
       "useCase": "Durante una visita a una sede, una inspectora toma una fotografía de un hallazgo y dicta su observación. El agente le ayuda a describir la evidencia y a preparar el borrador del acta de visita.",
       "imageAlt": "Una inspectora fotografía un elemento de infraestructura mientras el agente de Humanika la acompaña en campo.",
       "seo": {
-        "title": "Inspección visual con IA | Humanika",
-        "description": "Registro de evidencias fotográficas y generación asistida de actas: describa hallazgos por voz o chat y prepare borradores para revisión."
+        "title": "Inspección, vigilancia y control con IA | Humanika",
+        "description": "IA para inspección, vigilancia y control: capture evidencias en campo, analícelas visualmente, registre hallazgos y prepare borradores de actas."
       },
       "demo": {
         "eyebrow": "Cómo funciona",
@@ -1632,7 +1747,7 @@
       "atencion-ciudadana": "Orientación por chat, voz y tótems, gestión de PQRSD y control de calidad del servicio.",
       "documentos-tramites": "Consulta de manuales, lectura de documentos, prevalidación de expedientes y automatización de tareas internas.",
       "contratacion-inversion": "Revisión de pliegos, seguimiento de contratos y formulación de proyectos de inversión pública con MGA.",
-      "investigacion-participacion": "Entrevistas, encuestas y análisis de consultas públicas con trazabilidad de cada aporte.",
+      "investigacion-participacion": "Consultas ciudadanas, rendición de cuentas y análisis de aportes con trazabilidad y seguimiento a compromisos.",
       "educacion": "Rutas de formación, práctica con escenarios simulados y enseñanza de idiomas con tutores de IA.",
       "vision-computacional": "Medición de afluencia en sedes e inspecciones documentadas a partir de fotografías."
     }

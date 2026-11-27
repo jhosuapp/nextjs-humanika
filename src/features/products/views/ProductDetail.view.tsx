@@ -8,6 +8,7 @@ import { buildDemoWhatsappUrl } from '@/src/features/products/helpers/build-demo
 import { ProductHero } from '../components/product-hero/ProductHero';
 import { ProductFeatures } from '../components/product-features/ProductFeatures';
 import { ProductDemo } from '../components/product-demo/ProductDemo';
+import { ProductProcess } from '../components/product-process/ProductProcess';
 import { ProductHighlights } from '../components/product-highlights/ProductHighlights';
 import { ProductUseCase } from '../components/product-use-case/ProductUseCase';
 import { ProductCta } from '../components/product-cta/ProductCta';
@@ -42,6 +43,7 @@ const ProductDetailView = ({
         useCaseId={USE_CASE_ID}
       />
       <ProductFeatures t={t} entry={entry} shortTitle={shortTitle} />
+      <ProductProcess t={t} slug={entry.slug} />
       <ProductHighlights t={t} slug={entry.slug} />
       {entry.demo && (
         <ProductDemo t={t} slug={entry.slug} config={entry.demo} />

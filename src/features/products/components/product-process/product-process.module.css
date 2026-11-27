@@ -1,0 +1,62 @@
+@reference "tailwindcss";
+
+.section {
+  @apply w-full;
+  background: var(--bg-section);
+}
+
+.header {
+  @apply flex flex-col gap-3 mb-10 lg:mb-14;
+  max-width: 44rem;
+}
+
+.grid {
+  @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 lg:gap-6 list-none p-0 m-0;
+}
+
+.item {
+  @apply h-full;
+}
+
+.card {
+  @apply relative flex h-full flex-col gap-3 overflow-hidden rounded-2xl p-6 lg:p-7;
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-subtle);
+}
+
+/* Brand accent along the top edge: reads as a timeline across the stages. */
+.card::before {
+  content: "";
+  @apply absolute top-0 left-0 h-[3px] w-full;
+  background: var(--gradient-brand);
+}
+
+.cardTop {
+  @apply flex items-center gap-3 mb-1;
+}
+
+.number {
+  @apply flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-bold;
+  font-variant-numeric: tabular-nums;
+  color: #fff;
+  background: var(--gradient-brand);
+}
+
+.label {
+  @apply text-xs font-semibold uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+}
+
+.title {
+  @apply m-0 text-lg font-semibold;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--text-secondary);
+  text-wrap: balance;
+}
+
+.text {
+  @apply m-0 text-base leading-relaxed;
+  color: var(--text-muted);
+}

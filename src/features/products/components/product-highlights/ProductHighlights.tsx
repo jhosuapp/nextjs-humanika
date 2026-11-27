@@ -15,7 +15,8 @@ type ProductHighlightsProps = {
   slug: string;
 };
 
-type HighlightsCopy = { title: string; items: string[] };
+/** `eyebrow` overrides the shared "more capabilities" kicker (e.g. "Why invest"). */
+type HighlightsCopy = { eyebrow?: string; title: string; items: string[] };
 
 /**
  * Optional "more capabilities" list for products whose platform support goes
@@ -31,7 +32,7 @@ const ProductHighlights = ({ t, slug }: ProductHighlightsProps): JSX.Element | n
       <Container padding="xl">
         <SectionHeader
           className={styles.header}
-          eyebrow={t('ui.highlightsEyebrow') as string}
+          eyebrow={copy.eyebrow ?? (t('ui.highlightsEyebrow') as string)}
           title={copy.title}
         />
         <StaggerGroup as="ul" className={styles.list} stagger={REVEAL.stagger} amount={REVEAL.amount}>

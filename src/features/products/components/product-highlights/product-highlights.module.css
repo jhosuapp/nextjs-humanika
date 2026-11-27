@@ -5,6 +5,12 @@
   background: var(--bg-section);
 }
 
+/* After the (grey) step-by-step section, switch to white so the two
+   sections and the grey demo below don't merge into one block. */
+:global([data-section="process"]) + .section {
+  background: var(--background);
+}
+
 .header {
   @apply flex flex-col gap-3 mb-8 lg:mb-10;
   max-width: 42rem;
